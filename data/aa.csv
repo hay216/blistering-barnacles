@@ -1,0 +1,941 @@
+"boatID","days1","days2","midTrips","boatType","boatCode","paintType","paintRating","LocID","n","n0"
+"1",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent","DG",1,1
+"2",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent","PM",1,1
+"3",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent","PB",1,0
+"4",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent","PJ",2,0
+"5",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent","HK",1,0
+"6",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent","HA",6,0
+"7",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent","IA",1,1
+"8",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent","HAB",1,0
+"9",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent","PN",1,1
+"10",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent","IH",1,1
+"11",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent","IV",1,1
+"12",2,8,305,8.5,"Yacht",2,"Ablative","Good","ID",1,1
+"13",2,8,305,8.5,"Yacht",2,"Ablative","Good","HD",2,0
+"14",2,8,305,8.5,"Yacht",2,"Ablative","Good","IH",1,1
+"15",2,8,305,8.5,"Yacht",2,"Ablative","Good","II",1,1
+"16",2,8,305,8.5,"Yacht",2,"Ablative","Good","DA",1,1
+"17",2,8,305,8.5,"Yacht",2,"Ablative","Good","PB",1,1
+"18",2,8,305,8.5,"Yacht",2,"Ablative","Good","HAC",1,1
+"19",2,8,305,8.5,"Yacht",2,"Ablative","Good","DE",1,1
+"20",2,8,305,8.5,"Yacht",2,"Ablative","Good","IB",5,0
+"21",2,8,305,8.5,"Yacht",2,"Ablative","Good","HA",4,0
+"22",2,8,305,8.5,"Yacht",2,"Ablative","Good","HK",1,0
+"23",2,8,305,8.5,"Yacht",2,"Ablative","Good","DC",1,1
+"24",2,8,305,8.5,"Yacht",2,"Ablative","Good","PJ",2,0
+"25",2,8,305,8.5,"Yacht",2,"Ablative","Good","IV",1,1
+"26",2,8,305,8.5,"Yacht",2,"Ablative","Good","PA",1,0
+"27",2,8,305,8.5,"Yacht",2,"Ablative","Good","HP",2,0
+"28",2,8,305,8.5,"Yacht",2,"Ablative","Good","IW",1,1
+"29",2,8,305,8.5,"Yacht",2,"Ablative","Good","PM",1,1
+"30",2,8,305,8.5,"Yacht",2,"Ablative","Good","HAB",1,1
+"31",2,8,305,8.5,"Yacht",2,"Ablative","Good","IA",4,4
+"32",2,8,305,8.5,"Yacht",2,"Ablative","Good","PN",1,1
+"33",3,69,328,30.5,"Motor cruiser",17,NA,NA,"PB",1,1
+"34",3,69,328,30.5,"Motor cruiser",17,NA,NA,"IW",1,1
+"35",3,69,328,30.5,"Motor cruiser",17,NA,NA,"PM",1,1
+"36",3,69,328,30.5,"Motor cruiser",17,NA,NA,"IV",1,1
+"37",3,69,328,30.5,"Motor cruiser",17,NA,NA,"HD",1,0
+"38",3,69,328,30.5,"Motor cruiser",17,NA,NA,"PJ",2,0
+"39",3,69,328,30.5,"Motor cruiser",17,NA,NA,"IB",4,0
+"40",3,69,328,30.5,"Motor cruiser",17,NA,NA,"HAB",1,0
+"41",3,69,328,30.5,"Motor cruiser",17,NA,NA,"HX",1,0
+"42",3,69,328,30.5,"Motor cruiser",17,NA,NA,"IQ",1,1
+"43",3,69,328,30.5,"Motor cruiser",17,NA,NA,"IA",2,2
+"44",3,69,328,30.5,"Motor cruiser",17,NA,NA,"HP",2,0
+"45",3,69,328,30.5,"Motor cruiser",17,NA,NA,"ID",2,2
+"46",3,69,328,30.5,"Motor cruiser",17,NA,NA,"HH",2,0
+"47",3,69,328,30.5,"Motor cruiser",17,NA,NA,"PN",1,1
+"48",3,69,328,30.5,"Motor cruiser",17,NA,NA,"HK",1,0
+"49",3,69,328,30.5,"Motor cruiser",17,NA,NA,"PA",1,1
+"50",3,69,328,30.5,"Motor cruiser",17,NA,NA,"HA",4,0
+"51",3,69,328,30.5,"Motor cruiser",17,NA,NA,"PG",1,0
+"52",3,69,328,30.5,"Motor cruiser",17,NA,NA,"IH",1,1
+"53",4,NA,192,NA,"Motor cruiser",17,NA,NA,"II",1,1
+"54",4,NA,192,NA,"Motor cruiser",17,NA,NA,"IF",2,2
+"55",4,NA,192,NA,"Motor cruiser",17,NA,NA,"IB",3,2
+"56",4,NA,192,NA,"Motor cruiser",17,NA,NA,"PG",2,0
+"57",4,NA,192,NA,"Motor cruiser",17,NA,NA,"PM",1,1
+"58",4,NA,192,NA,"Motor cruiser",17,NA,NA,"PB",2,0
+"59",4,NA,192,NA,"Motor cruiser",17,NA,NA,"HAB",1,0
+"60",4,NA,192,NA,"Motor cruiser",17,NA,NA,"HC",1,0
+"61",4,NA,192,NA,"Motor cruiser",17,NA,NA,"HA",6,6
+"62",4,NA,192,NA,"Motor cruiser",17,NA,NA,"PA",2,0
+"63",4,NA,192,NA,"Motor cruiser",17,NA,NA,"PJ",2,0
+"64",4,NA,192,NA,"Motor cruiser",17,NA,NA,"DA",1,1
+"65",4,NA,192,NA,"Motor cruiser",17,NA,NA,"IH",1,1
+"66",4,NA,192,NA,"Motor cruiser",17,NA,NA,"HK",1,1
+"67",4,NA,192,NA,"Motor cruiser",17,NA,NA,"HH",1,0
+"68",4,NA,192,NA,"Motor cruiser",17,NA,NA,"HD",2,0
+"69",5,148,222,55,"Yacht",2,"Ablative","Good","PG",1,1
+"70",5,148,222,55,"Yacht",2,"Ablative","Good","HA",6,2
+"71",5,148,222,55,"Yacht",2,"Ablative","Good","IB",2,2
+"72",5,148,222,55,"Yacht",2,"Ablative","Good","PJ",2,0
+"73",5,148,222,55,"Yacht",2,"Ablative","Good","IA",2,2
+"74",5,148,222,55,"Yacht",2,"Ablative","Good","PA",1,0
+"75",5,148,222,55,"Yacht",2,"Ablative","Good","HD",1,1
+"76",5,148,222,55,"Yacht",2,"Ablative","Good","PB",1,0
+"77",5,148,222,55,"Yacht",2,"Ablative","Good","HK",1,1
+"78",6,3,78,47.5,"Yacht",2,"Ablative","Good","IF",1,1
+"79",6,3,78,47.5,"Yacht",2,"Ablative","Good","IB",2,2
+"80",6,3,78,47.5,"Yacht",2,"Ablative","Good","HP",2,2
+"81",6,3,78,47.5,"Yacht",2,"Ablative","Good","ID",1,1
+"82",6,3,78,47.5,"Yacht",2,"Ablative","Good","IU",1,1
+"83",6,3,78,47.5,"Yacht",2,"Ablative","Good","HAC",1,1
+"84",6,3,78,47.5,"Yacht",2,"Ablative","Good","PN",1,1
+"85",6,3,78,47.5,"Yacht",2,"Ablative","Good","IH",1,1
+"86",6,3,78,47.5,"Yacht",2,"Ablative","Good","PA",1,1
+"87",6,3,78,47.5,"Yacht",2,"Ablative","Good","PB",1,1
+"88",6,3,78,47.5,"Yacht",2,"Ablative","Good","IW",1,1
+"89",6,3,78,47.5,"Yacht",2,"Ablative","Good","PJ",2,0
+"90",6,3,78,47.5,"Yacht",2,"Ablative","Good","IT",1,1
+"91",6,3,78,47.5,"Yacht",2,"Ablative","Good","PM",1,1
+"92",6,3,78,47.5,"Yacht",2,"Ablative","Good","IA",2,2
+"93",6,3,78,47.5,"Yacht",2,"Ablative","Good","IV",1,1
+"94",6,3,78,47.5,"Yacht",2,"Ablative","Good","HA",6,6
+"95",6,3,78,47.5,"Yacht",2,"Ablative","Good","PE",1,1
+"96",6,3,78,47.5,"Yacht",2,"Ablative","Good","HK",1,1
+"97",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","PB",1,1
+"98",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","IB",4,4
+"99",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","PA",1,1
+"100",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","HAB",1,1
+"101",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","HK",2,2
+"102",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","PM",1,1
+"103",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","II",1,1
+"104",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","HH",1,1
+"105",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","IA",3,3
+"106",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","PJ",2,1
+"107",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","PH",1,1
+"108",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","HA",4,3
+"109",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","HP",2,2
+"110",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","IH",1,1
+"111",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","HAC",1,1
+"112",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","HD",1,1
+"113",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor","PN",1,1
+"114",8,4,249,11.5,"Yacht",2,NA,NA,"ID",1,1
+"115",8,4,249,11.5,"Yacht",2,NA,NA,"IA",2,2
+"116",8,4,249,11.5,"Yacht",2,NA,NA,"HD",1,0
+"117",8,4,249,11.5,"Yacht",2,NA,NA,"IB",2,1
+"118",8,4,249,11.5,"Yacht",2,NA,NA,"HA",4,0
+"119",8,4,249,11.5,"Yacht",2,NA,NA,"PJ",2,0
+"120",8,4,249,11.5,"Yacht",2,NA,NA,"II",1,1
+"121",8,4,249,11.5,"Yacht",2,NA,NA,"PA",1,0
+"122",8,4,249,11.5,"Yacht",2,NA,NA,"IH",1,1
+"123",8,4,249,11.5,"Yacht",2,NA,NA,"HP",2,0
+"124",8,4,249,11.5,"Yacht",2,NA,NA,"HK",1,0
+"125",8,4,249,11.5,"Yacht",2,NA,NA,"PB",1,0
+"126",9,1,251,35,"Yacht",2,"Self-polishing",NA,"HC",1,1
+"127",9,1,251,35,"Yacht",2,"Self-polishing",NA,"HP",2,0
+"128",9,1,251,35,"Yacht",2,"Self-polishing",NA,"HH",1,0
+"129",9,1,251,35,"Yacht",2,"Self-polishing",NA,"HK",1,0
+"130",9,1,251,35,"Yacht",2,"Self-polishing",NA,"PA",1,0
+"131",9,1,251,35,"Yacht",2,"Self-polishing",NA,"IA",3,3
+"132",9,1,251,35,"Yacht",2,"Self-polishing",NA,"HA",4,0
+"133",9,1,251,35,"Yacht",2,"Self-polishing",NA,"HD",1,0
+"134",9,1,251,35,"Yacht",2,"Self-polishing",NA,"PJ",2,0
+"135",9,1,251,35,"Yacht",2,"Self-polishing",NA,"PB",1,0
+"136",9,1,251,35,"Yacht",2,"Self-polishing",NA,"IB",6,4
+"137",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","PF",1,1
+"138",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","PM",1,1
+"139",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","ID",1,1
+"140",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","IW",1,1
+"141",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","HP",2,2
+"142",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","IF",2,2
+"143",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","HAC",1,1
+"144",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","PA",1,1
+"145",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","HA",4,4
+"146",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","IH",1,1
+"147",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","PJ",2,2
+"148",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","IB",2,2
+"149",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","HAB",3,3
+"150",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","HK",1,1
+"151",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","PN",1,1
+"152",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","IV",1,1
+"153",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","PC",1,1
+"154",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","PG",1,1
+"155",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","HD",1,1
+"156",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","PB",1,1
+"157",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","HZ",1,1
+"158",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","II",1,1
+"159",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","IX",1,1
+"160",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor","IY",1,1
+"161",11,34,20,12.5,"Fish",15,"Hard","Very Poor","PA",2,2
+"162",11,34,20,12.5,"Fish",15,"Hard","Very Poor","HAB",1,1
+"163",11,34,20,12.5,"Fish",15,"Hard","Very Poor","IP",1,1
+"164",11,34,20,12.5,"Fish",15,"Hard","Very Poor","HP",1,1
+"165",11,34,20,12.5,"Fish",15,"Hard","Very Poor","HD",3,2
+"166",11,34,20,12.5,"Fish",15,"Hard","Very Poor","IL",1,1
+"167",11,34,20,12.5,"Fish",15,"Hard","Very Poor","IQ",1,1
+"168",11,34,20,12.5,"Fish",15,"Hard","Very Poor","IH",1,1
+"169",11,34,20,12.5,"Fish",15,"Hard","Very Poor","II",1,1
+"170",11,34,20,12.5,"Fish",15,"Hard","Very Poor","HA",6,4
+"171",11,34,20,12.5,"Fish",15,"Hard","Very Poor","HZ",1,0
+"172",11,34,20,12.5,"Fish",15,"Hard","Very Poor","PJ",2,2
+"173",11,34,20,12.5,"Fish",15,"Hard","Very Poor","PG",2,2
+"174",11,34,20,12.5,"Fish",15,"Hard","Very Poor","IN",1,1
+"175",11,34,20,12.5,"Fish",15,"Hard","Very Poor","IB",9,4
+"176",12,42,79,15,"Yacht",2,"Ablative","Excellent","HAF",1,0
+"177",12,42,79,15,"Yacht",2,"Ablative","Excellent","HC",1,1
+"178",12,42,79,15,"Yacht",2,"Ablative","Excellent","PG",1,1
+"179",12,42,79,15,"Yacht",2,"Ablative","Excellent","HA",4,2
+"180",12,42,79,15,"Yacht",2,"Ablative","Excellent","IA",2,2
+"181",12,42,79,15,"Yacht",2,"Ablative","Excellent","HH",1,1
+"182",12,42,79,15,"Yacht",2,"Ablative","Excellent","PA",1,0
+"183",12,42,79,15,"Yacht",2,"Ablative","Excellent","HD",1,1
+"184",12,42,79,15,"Yacht",2,"Ablative","Excellent","IB",10,8
+"185",12,42,79,15,"Yacht",2,"Ablative","Excellent","IF",1,1
+"186",12,42,79,15,"Yacht",2,"Ablative","Excellent","PJ",2,2
+"187",12,42,79,15,"Yacht",2,"Ablative","Excellent","PB",1,0
+"188",12,42,79,15,"Yacht",2,"Ablative","Excellent","HP",2,2
+"189",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","IL",2,2
+"190",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","ID",1,1
+"191",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","HF",1,0
+"192",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","PJ",2,0
+"193",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","HH",3,1
+"194",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","IN",1,1
+"195",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","HA",4,1
+"196",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","PA",1,0
+"197",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","HAB",2,2
+"198",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","PN",1,1
+"199",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","PM",1,1
+"200",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","HD",1,1
+"201",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","IB",2,0
+"202",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","HR",1,0
+"203",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","PB",1,0
+"204",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","IH",2,2
+"205",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","PH",2,0
+"206",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent","HP",2,2
+"207",14,44,6,12.5,"Yacht",2,"Ablative","Good","PA",1,1
+"208",14,44,6,12.5,"Yacht",2,"Ablative","Good","HAB",1,0
+"209",14,44,6,12.5,"Yacht",2,"Ablative","Good","HAC",1,1
+"210",14,44,6,12.5,"Yacht",2,"Ablative","Good","HA",5,3
+"211",14,44,6,12.5,"Yacht",2,"Ablative","Good","HY",1,1
+"212",14,44,6,12.5,"Yacht",2,"Ablative","Good","HC",1,1
+"213",14,44,6,12.5,"Yacht",2,"Ablative","Good","ID",1,1
+"214",14,44,6,12.5,"Yacht",2,"Ablative","Good","PN",1,1
+"215",14,44,6,12.5,"Yacht",2,"Ablative","Good","HD",1,1
+"216",14,44,6,12.5,"Yacht",2,"Ablative","Good","IB",4,4
+"217",14,44,6,12.5,"Yacht",2,"Ablative","Good","PB",1,0
+"218",14,44,6,12.5,"Yacht",2,"Ablative","Good","IH",1,1
+"219",14,44,6,12.5,"Yacht",2,"Ablative","Good","PH",1,0
+"220",14,44,6,12.5,"Yacht",2,"Ablative","Good","IF",1,1
+"221",14,44,6,12.5,"Yacht",2,"Ablative","Good","HL",1,0
+"222",14,44,6,12.5,"Yacht",2,"Ablative","Good","HP",1,1
+"223",14,44,6,12.5,"Yacht",2,"Ablative","Good","HX",1,1
+"224",14,44,6,12.5,"Yacht",2,"Ablative","Good","II",1,1
+"225",14,44,6,12.5,"Yacht",2,"Ablative","Good","PM",1,1
+"226",14,44,6,12.5,"Yacht",2,"Ablative","Good","PJ",1,0
+"227",15,237,435,8,"Yacht",2,"Ablative","Good","HAC",1,1
+"228",15,237,435,8,"Yacht",2,"Ablative","Good","PA",1,0
+"229",15,237,435,8,"Yacht",2,"Ablative","Good","HH",1,0
+"230",15,237,435,8,"Yacht",2,"Ablative","Good","IB",1,0
+"231",15,237,435,8,"Yacht",2,"Ablative","Good","PN",1,1
+"232",15,237,435,8,"Yacht",2,"Ablative","Good","DH",1,1
+"233",15,237,435,8,"Yacht",2,"Ablative","Good","HAB",2,1
+"234",15,237,435,8,"Yacht",2,"Ablative","Good","ID",1,1
+"235",15,237,435,8,"Yacht",2,"Ablative","Good","IF",1,1
+"236",15,237,435,8,"Yacht",2,"Ablative","Good","HX",1,0
+"237",15,237,435,8,"Yacht",2,"Ablative","Good","HD",1,1
+"238",15,237,435,8,"Yacht",2,"Ablative","Good","II",1,1
+"239",15,237,435,8,"Yacht",2,"Ablative","Good","DA",1,1
+"240",15,237,435,8,"Yacht",2,"Ablative","Good","DD",1,1
+"241",15,237,435,8,"Yacht",2,"Ablative","Good","HA",4,0
+"242",15,237,435,8,"Yacht",2,"Ablative","Good","PJ",2,0
+"243",15,237,435,8,"Yacht",2,"Ablative","Good","HP",2,0
+"244",15,237,435,8,"Yacht",2,"Ablative","Good","HK",2,0
+"245",15,237,435,8,"Yacht",2,"Ablative","Good","PB",1,0
+"246",15,237,435,8,"Yacht",2,"Ablative","Good","HZ",1,1
+"247",15,237,435,8,"Yacht",2,"Ablative","Good","IH",1,1
+"248",15,237,435,8,"Yacht",2,"Ablative","Good","PM",1,1
+"249",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good","PJ",2,0
+"250",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good","HA",5,0
+"251",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good","HH",1,0
+"252",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good","IB",2,1
+"253",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good","DA",1,1
+"254",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good","HD",2,1
+"255",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good","HK",1,1
+"256",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good","PB",1,0
+"257",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good","PH",1,0
+"258",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good","ID",1,0
+"259",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good","HP",1,0
+"260",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good","HC",1,0
+"261",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good","PG",1,0
+"262",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good","PM",1,1
+"263",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good","IH",1,1
+"264",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good","PN",1,1
+"265",17,4,352,155,"Fish",15,"Hard","Very Poor","PA",1,0
+"266",17,4,352,155,"Fish",15,"Hard","Very Poor","PJ",2,0
+"267",17,4,352,155,"Fish",15,"Hard","Very Poor","IF",1,1
+"268",17,4,352,155,"Fish",15,"Hard","Very Poor","HA",6,0
+"269",17,4,352,155,"Fish",15,"Hard","Very Poor","IL",1,0
+"270",17,4,352,155,"Fish",15,"Hard","Very Poor","IB",9,0
+"271",17,4,352,155,"Fish",15,"Hard","Very Poor","IA",2,2
+"272",17,4,352,155,"Fish",15,"Hard","Very Poor","HD",2,0
+"273",17,4,352,155,"Fish",15,"Hard","Very Poor","HAB",3,0
+"274",17,4,352,155,"Fish",15,"Hard","Very Poor","HK",1,0
+"275",17,4,352,155,"Fish",15,"Hard","Very Poor","HR",2,0
+"276",17,4,352,155,"Fish",15,"Hard","Very Poor","HX",3,0
+"277",17,4,352,155,"Fish",15,"Hard","Very Poor","ID",2,2
+"278",17,4,352,155,"Fish",15,"Hard","Very Poor","HC",2,0
+"279",17,4,352,155,"Fish",15,"Hard","Very Poor","PB",1,0
+"280",18,6,353,10,"Fish",15,"Self-polishing","Good","HD",1,1
+"281",18,6,353,10,"Fish",15,"Self-polishing","Good","HH",2,0
+"282",18,6,353,10,"Fish",15,"Self-polishing","Good","HAA",1,1
+"283",18,6,353,10,"Fish",15,"Self-polishing","Good","HAB",1,0
+"284",18,6,353,10,"Fish",15,"Self-polishing","Good","PJ",1,0
+"285",18,6,353,10,"Fish",15,"Self-polishing","Good","IB",3,0
+"286",18,6,353,10,"Fish",15,"Self-polishing","Good","HX",1,0
+"287",18,6,353,10,"Fish",15,"Self-polishing","Good","IP",1,1
+"288",18,6,353,10,"Fish",15,"Self-polishing","Good","HA",6,0
+"289",18,6,353,10,"Fish",15,"Self-polishing","Good","IH",1,1
+"290",18,6,353,10,"Fish",15,"Self-polishing","Good","PG",1,0
+"291",18,6,353,10,"Fish",15,"Self-polishing","Good","II",1,1
+"292",18,6,353,10,"Fish",15,"Self-polishing","Good","HAF",1,0
+"293",18,6,353,10,"Fish",15,"Self-polishing","Good","PN",1,1
+"294",18,6,353,10,"Fish",15,"Self-polishing","Good","PM",1,1
+"295",18,6,353,10,"Fish",15,"Self-polishing","Good","DA",1,1
+"296",18,6,353,10,"Fish",15,"Self-polishing","Good","PH",1,0
+"297",18,6,353,10,"Fish",15,"Self-polishing","Good","PB",1,0
+"298",18,6,353,10,"Fish",15,"Self-polishing","Good","HF",2,0
+"299",18,6,353,10,"Fish",15,"Self-polishing","Good","ID",1,1
+"300",18,6,353,10,"Fish",15,"Self-polishing","Good","IQ",1,1
+"301",18,6,353,10,"Fish",15,"Self-polishing","Good","DC",1,1
+"302",19,7,271,15,"Fish",15,"Ablative","Good","HAA",2,2
+"303",19,7,271,15,"Fish",15,"Ablative","Good","PA",1,1
+"304",19,7,271,15,"Fish",15,"Ablative","Good","IB",7,1
+"305",19,7,271,15,"Fish",15,"Ablative","Good","HA",5,1
+"306",19,7,271,15,"Fish",15,"Ablative","Good","IW",1,1
+"307",19,7,271,15,"Fish",15,"Ablative","Good","HAC",1,1
+"308",19,7,271,15,"Fish",15,"Ablative","Good","IH",1,1
+"309",19,7,271,15,"Fish",15,"Ablative","Good","HX",1,0
+"310",19,7,271,15,"Fish",15,"Ablative","Good","IP",1,1
+"311",19,7,271,15,"Fish",15,"Ablative","Good","IN",2,0
+"312",19,7,271,15,"Fish",15,"Ablative","Good","HAB",2,2
+"313",19,7,271,15,"Fish",15,"Ablative","Good","PG",1,1
+"314",19,7,271,15,"Fish",15,"Ablative","Good","HH",2,0
+"315",19,7,271,15,"Fish",15,"Ablative","Good","II",1,1
+"316",19,7,271,15,"Fish",15,"Ablative","Good","IV",1,1
+"317",19,7,271,15,"Fish",15,"Ablative","Good","HP",1,1
+"318",19,7,271,15,"Fish",15,"Ablative","Good","PB",1,1
+"319",19,7,271,15,"Fish",15,"Ablative","Good","PJ",2,0
+"320",19,7,271,15,"Fish",15,"Ablative","Good","PN",1,1
+"321",19,7,271,15,"Fish",15,"Ablative","Good","PM",1,1
+"322",19,7,271,15,"Fish",15,"Ablative","Good","IQ",1,1
+"323",19,7,271,15,"Fish",15,"Ablative","Good","PH",1,0
+"324",19,7,271,15,"Fish",15,"Ablative","Good","HF",2,0
+"325",20,11,41,NA,"Yacht",2,"Hard","Very Poor","DA",1,1
+"326",20,11,41,NA,"Yacht",2,"Hard","Very Poor","PA",1,1
+"327",20,11,41,NA,"Yacht",2,"Hard","Very Poor","HA",4,3
+"328",20,11,41,NA,"Yacht",2,"Hard","Very Poor","PB",1,1
+"329",20,11,41,NA,"Yacht",2,"Hard","Very Poor","HK",1,1
+"330",20,11,41,NA,"Yacht",2,"Hard","Very Poor","IW",1,1
+"331",20,11,41,NA,"Yacht",2,"Hard","Very Poor","IT",1,1
+"332",20,11,41,NA,"Yacht",2,"Hard","Very Poor","IH",1,1
+"333",20,11,41,NA,"Yacht",2,"Hard","Very Poor","IU",1,1
+"334",20,11,41,NA,"Yacht",2,"Hard","Very Poor","HD",1,1
+"335",20,11,41,NA,"Yacht",2,"Hard","Very Poor","DG",1,1
+"336",20,11,41,NA,"Yacht",2,"Hard","Very Poor","HH",1,1
+"337",20,11,41,NA,"Yacht",2,"Hard","Very Poor","PE",1,1
+"338",20,11,41,NA,"Yacht",2,"Hard","Very Poor","PM",1,1
+"339",20,11,41,NA,"Yacht",2,"Hard","Very Poor","PN",1,1
+"340",20,11,41,NA,"Yacht",2,"Hard","Very Poor","IV",1,1
+"341",20,11,41,NA,"Yacht",2,"Hard","Very Poor","HP",2,2
+"342",20,11,41,NA,"Yacht",2,"Hard","Very Poor","PJ",2,2
+"343",20,11,41,NA,"Yacht",2,"Hard","Very Poor","IB",3,3
+"344",21,425,107,27.5,"Yacht",2,"Ablative","Good","IW",1,1
+"345",21,425,107,27.5,"Yacht",2,"Ablative","Good","IV",1,1
+"346",21,425,107,27.5,"Yacht",2,"Ablative","Good","PA",1,0
+"347",21,425,107,27.5,"Yacht",2,"Ablative","Good","PH",2,0
+"348",21,425,107,27.5,"Yacht",2,"Ablative","Good","HY",1,1
+"349",21,425,107,27.5,"Yacht",2,"Ablative","Good","PB",1,0
+"350",21,425,107,27.5,"Yacht",2,"Ablative","Good","IH",1,1
+"351",21,425,107,27.5,"Yacht",2,"Ablative","Good","HA",4,0
+"352",21,425,107,27.5,"Yacht",2,"Ablative","Good","HD",1,0
+"353",21,425,107,27.5,"Yacht",2,"Ablative","Good","IF",1,1
+"354",21,425,107,27.5,"Yacht",2,"Ablative","Good","PM",1,1
+"355",21,425,107,27.5,"Yacht",2,"Ablative","Good","HP",2,0
+"356",21,425,107,27.5,"Yacht",2,"Ablative","Good","PG",1,0
+"357",21,425,107,27.5,"Yacht",2,"Ablative","Good","HH",1,0
+"358",21,425,107,27.5,"Yacht",2,"Ablative","Good","HAB",4,0
+"359",21,425,107,27.5,"Yacht",2,"Ablative","Good","II",1,1
+"360",21,425,107,27.5,"Yacht",2,"Ablative","Good","PJ",2,0
+"361",21,425,107,27.5,"Yacht",2,"Ablative","Good","PN",1,1
+"362",22,5,719,300,"Fish",15,NA,NA,"HD",1,0
+"363",22,5,719,300,"Fish",15,NA,NA,"PH",1,0
+"364",22,5,719,300,"Fish",15,NA,NA,"ID",1,1
+"365",22,5,719,300,"Fish",15,NA,NA,"HA",6,0
+"366",22,5,719,300,"Fish",15,NA,NA,"HX",1,0
+"367",22,5,719,300,"Fish",15,NA,NA,"IH",1,1
+"368",22,5,719,300,"Fish",15,NA,NA,"PB",1,0
+"369",22,5,719,300,"Fish",15,NA,NA,"IB",3,0
+"370",22,5,719,300,"Fish",15,NA,NA,"PG",1,0
+"371",22,5,719,300,"Fish",15,NA,NA,"HAB",2,0
+"372",22,5,719,300,"Fish",15,NA,NA,"IL",2,2
+"373",22,5,719,300,"Fish",15,NA,NA,"HC",1,0
+"374",22,5,719,300,"Fish",15,NA,NA,"HH",3,0
+"375",22,5,719,300,"Fish",15,NA,NA,"PJ",2,0
+"376",23,0,915,260,"Tug",16,"Self-polishing","Good","DE",1,1
+"377",23,0,915,260,"Tug",16,"Self-polishing","Good","IH",1,1
+"378",23,0,915,260,"Tug",16,"Self-polishing","Good","HAC",1,1
+"379",23,0,915,260,"Tug",16,"Self-polishing","Good","DF",1,1
+"380",23,0,915,260,"Tug",16,"Self-polishing","Good","HX",1,0
+"381",23,0,915,260,"Tug",16,"Self-polishing","Good","HP",2,0
+"382",23,0,915,260,"Tug",16,"Self-polishing","Good","DD",1,1
+"383",23,0,915,260,"Tug",16,"Self-polishing","Good","HS",2,0
+"384",23,0,915,260,"Tug",16,"Self-polishing","Good","PS",2,0
+"385",23,0,915,260,"Tug",16,"Self-polishing","Good","PM",1,1
+"386",23,0,915,260,"Tug",16,"Self-polishing","Good","IF",2,2
+"387",23,0,915,260,"Tug",16,"Self-polishing","Good","DI",1,1
+"388",23,0,915,260,"Tug",16,"Self-polishing","Good","HD",2,0
+"389",23,0,915,260,"Tug",16,"Self-polishing","Good","HAB",4,0
+"390",23,0,915,260,"Tug",16,"Self-polishing","Good","PN",1,1
+"391",23,0,915,260,"Tug",16,"Self-polishing","Good","PA",2,0
+"392",23,0,915,260,"Tug",16,"Self-polishing","Good","HR",2,0
+"393",23,0,915,260,"Tug",16,"Self-polishing","Good","HA",4,0
+"394",23,0,915,260,"Tug",16,"Self-polishing","Good","II",1,1
+"395",23,0,915,260,"Tug",16,"Self-polishing","Good","HC",1,0
+"396",24,183,443,12.5,"Yacht",2,"Ablative","Excellent","IH",1,1
+"397",24,183,443,12.5,"Yacht",2,"Ablative","Excellent","PM",1,1
+"398",24,183,443,12.5,"Yacht",2,"Ablative","Excellent","IA",2,2
+"399",24,183,443,12.5,"Yacht",2,"Ablative","Excellent","HP",1,0
+"400",24,183,443,12.5,"Yacht",2,"Ablative","Excellent","HAB",1,0
+"401",24,183,443,12.5,"Yacht",2,"Ablative","Excellent","ID",1,1
+"402",24,183,443,12.5,"Yacht",2,"Ablative","Excellent","PB",1,0
+"403",24,183,443,12.5,"Yacht",2,"Ablative","Excellent","HD",1,1
+"404",24,183,443,12.5,"Yacht",2,"Ablative","Excellent","PN",1,1
+"405",24,183,443,12.5,"Yacht",2,"Ablative","Excellent","PJ",2,0
+"406",24,183,443,12.5,"Yacht",2,"Ablative","Excellent","HA",5,0
+"407",24,183,443,12.5,"Yacht",2,"Ablative","Excellent","II",1,1
+"408",24,183,443,12.5,"Yacht",2,"Ablative","Excellent","HC",1,0
+"409",24,183,443,12.5,"Yacht",2,"Ablative","Excellent","PG",1,0
+"410",25,7,374,160,"Fish",15,"Self-polishing","Excellent","PM",1,1
+"411",25,7,374,160,"Fish",15,"Self-polishing","Excellent","HX",1,1
+"412",25,7,374,160,"Fish",15,"Self-polishing","Excellent","PO",1,1
+"413",25,7,374,160,"Fish",15,"Self-polishing","Excellent","PB",1,1
+"414",25,7,374,160,"Fish",15,"Self-polishing","Excellent","IV",1,1
+"415",25,7,374,160,"Fish",15,"Self-polishing","Excellent","HR",2,0
+"416",25,7,374,160,"Fish",15,"Self-polishing","Excellent","PH",1,0
+"417",25,7,374,160,"Fish",15,"Self-polishing","Excellent","PN",1,1
+"418",25,7,374,160,"Fish",15,"Self-polishing","Excellent","HP",2,1
+"419",25,7,374,160,"Fish",15,"Self-polishing","Excellent","PA",1,1
+"420",25,7,374,160,"Fish",15,"Self-polishing","Excellent","ID",1,1
+"421",25,7,374,160,"Fish",15,"Self-polishing","Excellent","HH",1,1
+"422",25,7,374,160,"Fish",15,"Self-polishing","Excellent","HA",4,2
+"423",25,7,374,160,"Fish",15,"Self-polishing","Excellent","HF",1,1
+"424",25,7,374,160,"Fish",15,"Self-polishing","Excellent","HAB",2,2
+"425",25,7,374,160,"Fish",15,"Self-polishing","Excellent","PJ",2,0
+"426",25,7,374,160,"Fish",15,"Self-polishing","Excellent","PG",1,1
+"427",25,7,374,160,"Fish",15,"Self-polishing","Excellent","IW",1,1
+"428",25,7,374,160,"Fish",15,"Self-polishing","Excellent","HS",2,2
+"429",25,7,374,160,"Fish",15,"Self-polishing","Excellent","IB",2,2
+"430",26,51,104,10,"Yacht",2,"Self-polishing",NA,"PB",1,0
+"431",26,51,104,10,"Yacht",2,"Self-polishing",NA,"HK",1,0
+"432",26,51,104,10,"Yacht",2,"Self-polishing",NA,"HX",1,0
+"433",26,51,104,10,"Yacht",2,"Self-polishing",NA,"DA",1,1
+"434",26,51,104,10,"Yacht",2,"Self-polishing",NA,"HH",1,0
+"435",26,51,104,10,"Yacht",2,"Self-polishing",NA,"PM",1,1
+"436",26,51,104,10,"Yacht",2,"Self-polishing",NA,"HP",1,0
+"437",26,51,104,10,"Yacht",2,"Self-polishing",NA,"IH",1,1
+"438",26,51,104,10,"Yacht",2,"Self-polishing",NA,"IA",2,2
+"439",26,51,104,10,"Yacht",2,"Self-polishing",NA,"HAF",1,0
+"440",26,51,104,10,"Yacht",2,"Self-polishing",NA,"HD",1,0
+"441",26,51,104,10,"Yacht",2,"Self-polishing",NA,"PN",1,1
+"442",26,51,104,10,"Yacht",2,"Self-polishing",NA,"ID",1,1
+"443",26,51,104,10,"Yacht",2,"Self-polishing",NA,"PJ",2,0
+"444",26,51,104,10,"Yacht",2,"Self-polishing",NA,"HA",5,0
+"445",26,51,104,10,"Yacht",2,"Self-polishing",NA,"IB",4,2
+"446",26,51,104,10,"Yacht",2,"Self-polishing",NA,"II",1,1
+"447",26,51,104,10,"Yacht",2,"Self-polishing",NA,"PG",1,0
+"448",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","IV",1,1
+"449",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","HX",1,0
+"450",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","PM",1,1
+"451",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","HH",1,0
+"452",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","HR",2,0
+"453",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","IH",1,1
+"454",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","PH",1,0
+"455",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","PB",1,0
+"456",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","HK",1,0
+"457",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","IF",1,1
+"458",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","IT",1,1
+"459",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","DE",1,1
+"460",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","HA",5,1
+"461",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","HP",1,0
+"462",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","HD",1,0
+"463",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","FV",1,1
+"464",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","FO",1,1
+"465",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","DD",1,1
+"466",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","II",1,1
+"467",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","FT",1,1
+"468",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","DA",1,1
+"469",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","IA",1,1
+"470",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","PN",1,1
+"471",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","HAB",2,2
+"472",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","HF",2,0
+"473",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","ID",1,1
+"474",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","FN",1,1
+"475",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","IW",1,1
+"476",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","PJ",2,0
+"477",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","FU",1,1
+"478",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","IY",1,1
+"479",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","HS",2,0
+"480",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","PT",1,0
+"481",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","IU",1,1
+"482",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","PG",1,0
+"483",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","IB",5,0
+"484",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent","IX",1,1
+"485",28,39,208,15,"Fish",15,"Hard","Very Poor","HAB",2,2
+"486",28,39,208,15,"Fish",15,"Hard","Very Poor","PB",1,1
+"487",28,39,208,15,"Fish",15,"Hard","Very Poor","PN",1,1
+"488",28,39,208,15,"Fish",15,"Hard","Very Poor","HK",1,1
+"489",28,39,208,15,"Fish",15,"Hard","Very Poor","HH",1,0
+"490",28,39,208,15,"Fish",15,"Hard","Very Poor","IH",1,1
+"491",28,39,208,15,"Fish",15,"Hard","Very Poor","HA",5,0
+"492",28,39,208,15,"Fish",15,"Hard","Very Poor","PM",1,1
+"493",28,39,208,15,"Fish",15,"Hard","Very Poor","PJ",1,1
+"494",28,39,208,15,"Fish",15,"Hard","Very Poor","HR",2,0
+"495",28,39,208,15,"Fish",15,"Hard","Very Poor","HP",2,0
+"496",28,39,208,15,"Fish",15,"Hard","Very Poor","FAC",1,1
+"497",28,39,208,15,"Fish",15,"Hard","Very Poor","IN",1,1
+"498",28,39,208,15,"Fish",15,"Hard","Very Poor","IB",2,1
+"499",28,39,208,15,"Fish",15,"Hard","Very Poor","FU",1,1
+"500",28,39,208,15,"Fish",15,"Hard","Very Poor","HF",2,0
+"501",28,39,208,15,"Fish",15,"Hard","Very Poor","HS",1,1
+"502",28,39,208,15,"Fish",15,"Hard","Very Poor","PG",1,1
+"503",29,4,371,265,"Yacht",2,"Self-polishing","Excellent","HX",1,0
+"504",29,4,371,265,"Yacht",2,"Self-polishing","Excellent","PB",1,0
+"505",29,4,371,265,"Yacht",2,"Self-polishing","Excellent","HK",1,0
+"506",29,4,371,265,"Yacht",2,"Self-polishing","Excellent","PH",1,0
+"507",29,4,371,265,"Yacht",2,"Self-polishing","Excellent","ID",1,1
+"508",29,4,371,265,"Yacht",2,"Self-polishing","Excellent","IH",1,1
+"509",29,4,371,265,"Yacht",2,"Self-polishing","Excellent","HP",2,0
+"510",29,4,371,265,"Yacht",2,"Self-polishing","Excellent","IA",1,1
+"511",29,4,371,265,"Yacht",2,"Self-polishing","Excellent","HF",1,0
+"512",29,4,371,265,"Yacht",2,"Self-polishing","Excellent","PJ",2,0
+"513",29,4,371,265,"Yacht",2,"Self-polishing","Excellent","HAB",3,1
+"514",29,4,371,265,"Yacht",2,"Self-polishing","Excellent","HH",1,0
+"515",29,4,371,265,"Yacht",2,"Self-polishing","Excellent","II",1,1
+"516",29,4,371,265,"Yacht",2,"Self-polishing","Excellent","HD",1,0
+"517",29,4,371,265,"Yacht",2,"Self-polishing","Excellent","HA",4,0
+"518",29,4,371,265,"Yacht",2,"Self-polishing","Excellent","PG",1,0
+"519",30,10,270,7,"Yacht",2,"Ablative","Good","IH",1,1
+"520",30,10,270,7,"Yacht",2,"Ablative","Good","ID",1,1
+"521",30,10,270,7,"Yacht",2,"Ablative","Good","IA",3,3
+"522",30,10,270,7,"Yacht",2,"Ablative","Good","HA",5,0
+"523",30,10,270,7,"Yacht",2,"Ablative","Good","PB",1,0
+"524",30,10,270,7,"Yacht",2,"Ablative","Good","IF",1,1
+"525",30,10,270,7,"Yacht",2,"Ablative","Good","HH",1,0
+"526",30,10,270,7,"Yacht",2,"Ablative","Good","IV",1,1
+"527",30,10,270,7,"Yacht",2,"Ablative","Good","HX",1,0
+"528",30,10,270,7,"Yacht",2,"Ablative","Good","IB",1,1
+"529",30,10,270,7,"Yacht",2,"Ablative","Good","HD",1,1
+"530",30,10,270,7,"Yacht",2,"Ablative","Good","HP",1,0
+"531",30,10,270,7,"Yacht",2,"Ablative","Good","HAF",2,0
+"532",30,10,270,7,"Yacht",2,"Ablative","Good","PA",1,0
+"533",30,10,270,7,"Yacht",2,"Ablative","Good","II",1,1
+"534",30,10,270,7,"Yacht",2,"Ablative","Good","IW",1,1
+"535",30,10,270,7,"Yacht",2,"Ablative","Good","PJ",2,0
+"536",30,10,270,7,"Yacht",2,"Ablative","Good","HC",1,0
+"537",31,10,365,NA,"Ferry",22,"Self-polishing","Good","IA",1,1
+"538",31,10,365,NA,"Ferry",22,"Self-polishing","Good","HD",2,0
+"539",31,10,365,NA,"Ferry",22,"Self-polishing","Good","HA",6,1
+"540",31,10,365,NA,"Ferry",22,"Self-polishing","Good","PH",1,0
+"541",31,10,365,NA,"Ferry",22,"Self-polishing","Good","HK",1,0
+"542",31,10,365,NA,"Ferry",22,"Self-polishing","Good","HX",1,0
+"543",31,10,365,NA,"Ferry",22,"Self-polishing","Good","IB",1,0
+"544",31,10,365,NA,"Ferry",22,"Self-polishing","Good","PB",1,0
+"545",31,10,365,NA,"Ferry",22,"Self-polishing","Good","PG",1,0
+"546",31,10,365,NA,"Ferry",22,"Self-polishing","Good","HF",1,0
+"547",31,10,365,NA,"Ferry",22,"Self-polishing","Good","ID",1,1
+"548",31,10,365,NA,"Ferry",22,"Self-polishing","Good","HAB",2,1
+"549",31,10,365,NA,"Ferry",22,"Self-polishing","Good","PJ",2,0
+"550",31,10,365,NA,"Ferry",22,"Self-polishing","Good","HAH",1,0
+"551",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"IA",1,1
+"552",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"HD",3,1
+"553",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"HS",2,0
+"554",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"HH",2,1
+"555",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"HR",2,0
+"556",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"PB",1,1
+"557",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"HAB",1,0
+"558",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"PJ",1,1
+"559",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"HA",6,0
+"560",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"IB",2,1
+"561",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"HAH",3,0
+"562",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"HK",2,2
+"563",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"PA",1,1
+"564",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"PG",2,0
+"565",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"ID",1,1
+"566",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"IF",2,2
+"567",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"IP",1,1
+"568",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"HAF",1,0
+"569",32,35,170,40,"Motor cruiser",17,"Ablative",NA,"PC",1,1
+"570",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","HA",6,6
+"571",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","PM",1,1
+"572",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","HAB",1,1
+"573",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","PJ",2,2
+"574",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","HAC",2,2
+"575",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","HH",1,1
+"576",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","DE",1,1
+"577",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","HD",4,4
+"578",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","IV",1,1
+"579",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","HP",1,1
+"580",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","IH",1,1
+"581",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","PN",1,1
+"582",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","PE",1,1
+"583",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","HK",1,1
+"584",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","DG",1,1
+"585",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","PG",1,1
+"586",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","IP",1,1
+"587",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","ID",1,1
+"588",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","PA",1,1
+"589",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","PB",2,2
+"590",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","DA",1,1
+"591",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","IF",1,1
+"592",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","II",1,1
+"593",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","IW",1,1
+"594",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","HZ",1,1
+"595",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","HAH",3,0
+"596",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent","IQ",1,1
+"597",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","HAC",1,1
+"598",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","PM",1,1
+"599",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","HR",1,0
+"600",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","HAA",1,1
+"601",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","HA",7,4
+"602",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","PB",1,0
+"603",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","IF",2,2
+"604",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","PN",1,1
+"605",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","PJ",1,0
+"606",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","PA",1,0
+"607",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","HAH",2,0
+"608",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","HD",5,3
+"609",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","IB",1,0
+"610",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","HAF",1,0
+"611",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","ID",1,1
+"612",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","PG",1,0
+"613",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","HZ",1,1
+"614",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor","HAB",1,1
+"615",35,31,366,32,"Yacht",2,"Ablative","Excellent","HK",1,0
+"616",35,31,366,32,"Yacht",2,"Ablative","Excellent","IH",1,1
+"617",35,31,366,32,"Yacht",2,"Ablative","Excellent","PJ",2,0
+"618",35,31,366,32,"Yacht",2,"Ablative","Excellent","HD",1,0
+"619",35,31,366,32,"Yacht",2,"Ablative","Excellent","PM",1,1
+"620",35,31,366,32,"Yacht",2,"Ablative","Excellent","PU",1,0
+"621",35,31,366,32,"Yacht",2,"Ablative","Excellent","PA",1,0
+"622",35,31,366,32,"Yacht",2,"Ablative","Excellent","PN",1,1
+"623",35,31,366,32,"Yacht",2,"Ablative","Excellent","PB",1,0
+"624",35,31,366,32,"Yacht",2,"Ablative","Excellent","IB",2,1
+"625",35,31,366,32,"Yacht",2,"Ablative","Excellent","HP",2,0
+"626",35,31,366,32,"Yacht",2,"Ablative","Excellent","HH",1,0
+"627",35,31,366,32,"Yacht",2,"Ablative","Excellent","DA",1,1
+"628",35,31,366,32,"Yacht",2,"Ablative","Excellent","PE",1,0
+"629",35,31,366,32,"Yacht",2,"Ablative","Excellent","HAH",2,0
+"630",35,31,366,32,"Yacht",2,"Ablative","Excellent","II",1,1
+"631",35,31,366,32,"Yacht",2,"Ablative","Excellent","HA",4,0
+"632",35,31,366,32,"Yacht",2,"Ablative","Excellent","HAF",1,0
+"633",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","HX",1,0
+"634",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","HAC",1,1
+"635",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","HP",2,0
+"636",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","PM",1,1
+"637",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","HAH",3,0
+"638",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","IH",1,1
+"639",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","PH",1,0
+"640",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","PN",1,1
+"641",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","DA",1,1
+"642",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","PG",1,0
+"643",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","HD",2,0
+"644",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","PB",1,0
+"645",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","IW",1,0
+"646",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","II",1,1
+"647",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","ID",1,1
+"648",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","PJ",2,0
+"649",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","HZ",1,1
+"650",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","HH",1,0
+"651",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","HA",4,0
+"652",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","IF",1,1
+"653",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent","HAB",1,1
+"654",37,3,31,NA,"Racing Yacht",2,"Hard","Good","HP",2,2
+"655",37,3,31,NA,"Racing Yacht",2,"Hard","Good","PB",1,1
+"656",37,3,31,NA,"Racing Yacht",2,"Hard","Good","PE",1,1
+"657",37,3,31,NA,"Racing Yacht",2,"Hard","Good","PJ",2,2
+"658",37,3,31,NA,"Racing Yacht",2,"Hard","Good","PA",1,1
+"659",37,3,31,NA,"Racing Yacht",2,"Hard","Good","HY",1,1
+"660",37,3,31,NA,"Racing Yacht",2,"Hard","Good","IB",2,2
+"661",37,3,31,NA,"Racing Yacht",2,"Hard","Good","HA",4,4
+"662",37,3,31,NA,"Racing Yacht",2,"Hard","Good","HK",1,1
+"663",38,0,352,0.5,"Yacht",2,"Ablative","Poor","HP",2,0
+"664",38,0,352,0.5,"Yacht",2,"Ablative","Poor","PJ",2,0
+"665",38,0,352,0.5,"Yacht",2,"Ablative","Poor","HY",1,1
+"666",38,0,352,0.5,"Yacht",2,"Ablative","Poor","IH",1,1
+"667",38,0,352,0.5,"Yacht",2,"Ablative","Poor","PM",1,1
+"668",38,0,352,0.5,"Yacht",2,"Ablative","Poor","HAH",2,0
+"669",38,0,352,0.5,"Yacht",2,"Ablative","Poor","IW",1,1
+"670",38,0,352,0.5,"Yacht",2,"Ablative","Poor","DA",1,1
+"671",38,0,352,0.5,"Yacht",2,"Ablative","Poor","PN",1,1
+"672",38,0,352,0.5,"Yacht",2,"Ablative","Poor","PE",1,0
+"673",38,0,352,0.5,"Yacht",2,"Ablative","Poor","IV",1,1
+"674",38,0,352,0.5,"Yacht",2,"Ablative","Poor","IA",1,0
+"675",38,0,352,0.5,"Yacht",2,"Ablative","Poor","IT",1,1
+"676",38,0,352,0.5,"Yacht",2,"Ablative","Poor","II",1,1
+"677",38,0,352,0.5,"Yacht",2,"Ablative","Poor","HA",4,0
+"678",39,184,153,26,"Yacht",2,"Hard","Good","PM",1,1
+"679",39,184,153,26,"Yacht",2,"Hard","Good","HAC",1,1
+"680",39,184,153,26,"Yacht",2,"Hard","Good","PB",1,1
+"681",39,184,153,26,"Yacht",2,"Hard","Good","HP",2,1
+"682",39,184,153,26,"Yacht",2,"Hard","Good","PJ",2,0
+"683",39,184,153,26,"Yacht",2,"Hard","Good","II",1,1
+"684",39,184,153,26,"Yacht",2,"Hard","Good","DA",1,1
+"685",39,184,153,26,"Yacht",2,"Hard","Good","HK",1,0
+"686",39,184,153,26,"Yacht",2,"Hard","Good","PG",1,0
+"687",39,184,153,26,"Yacht",2,"Hard","Good","PH",1,0
+"688",39,184,153,26,"Yacht",2,"Hard","Good","HA",4,0
+"689",39,184,153,26,"Yacht",2,"Hard","Good","HAF",1,0
+"690",39,184,153,26,"Yacht",2,"Hard","Good","HAH",1,0
+"691",39,184,153,26,"Yacht",2,"Hard","Good","IV",1,1
+"692",39,184,153,26,"Yacht",2,"Hard","Good","PN",1,1
+"693",39,184,153,26,"Yacht",2,"Hard","Good","IH",1,1
+"694",39,184,153,26,"Yacht",2,"Hard","Good","HD",4,0
+"695",39,184,153,26,"Yacht",2,"Hard","Good","HAB",1,1
+"696",40,124,18,7.5,"Yacht",2,"Ablative","Good","PM",1,1
+"697",40,124,18,7.5,"Yacht",2,"Ablative","Good","HP",2,2
+"698",40,124,18,7.5,"Yacht",2,"Ablative","Good","IH",1,1
+"699",40,124,18,7.5,"Yacht",2,"Ablative","Good","PB",1,1
+"700",40,124,18,7.5,"Yacht",2,"Ablative","Good","PH",1,0
+"701",40,124,18,7.5,"Yacht",2,"Ablative","Good","IB",9,6
+"702",40,124,18,7.5,"Yacht",2,"Ablative","Good","IV",1,1
+"703",40,124,18,7.5,"Yacht",2,"Ablative","Good","ID",1,1
+"704",40,124,18,7.5,"Yacht",2,"Ablative","Good","DA",1,1
+"705",40,124,18,7.5,"Yacht",2,"Ablative","Good","PN",1,1
+"706",40,124,18,7.5,"Yacht",2,"Ablative","Good","DG",1,1
+"707",40,124,18,7.5,"Yacht",2,"Ablative","Good","HAC",1,1
+"708",40,124,18,7.5,"Yacht",2,"Ablative","Good","HA",5,0
+"709",40,124,18,7.5,"Yacht",2,"Ablative","Good","PJ",2,2
+"710",40,124,18,7.5,"Yacht",2,"Ablative","Good","HAH",2,1
+"711",40,124,18,7.5,"Yacht",2,"Ablative","Good","HK",1,1
+"712",40,124,18,7.5,"Yacht",2,"Ablative","Good","IP",1,1
+"713",40,124,18,7.5,"Yacht",2,"Ablative","Good","IF",1,1
+"714",40,124,18,7.5,"Yacht",2,"Ablative","Good","HD",1,1
+"715",40,124,18,7.5,"Yacht",2,"Ablative","Good","HAF",2,2
+"716",40,124,18,7.5,"Yacht",2,"Ablative","Good","IW",1,1
+"717",40,124,18,7.5,"Yacht",2,"Ablative","Good","DD",1,1
+"718",40,124,18,7.5,"Yacht",2,"Ablative","Good","IA",1,1
+"719",40,124,18,7.5,"Yacht",2,"Ablative","Good","II",1,1
+"720",40,124,18,7.5,"Yacht",2,"Ablative","Good","HAB",2,2
+"721",40,124,18,7.5,"Yacht",2,"Ablative","Good","IQ",1,1
+"722",41,428,428,0.5,"Yacht",2,"Self-polishing","Good","HAC",2,2
+"723",41,428,428,0.5,"Yacht",2,"Self-polishing","Good","PM",1,1
+"724",41,428,428,0.5,"Yacht",2,"Self-polishing","Good","HA",4,0
+"725",41,428,428,0.5,"Yacht",2,"Self-polishing","Good","HAH",3,0
+"726",41,428,428,0.5,"Yacht",2,"Self-polishing","Good","HY",1,1
+"727",41,428,428,0.5,"Yacht",2,"Self-polishing","Good","HD",1,0
+"728",41,428,428,0.5,"Yacht",2,"Self-polishing","Good","HP",2,0
+"729",41,428,428,0.5,"Yacht",2,"Self-polishing","Good","PA",1,0
+"730",41,428,428,0.5,"Yacht",2,"Self-polishing","Good","HC",1,0
+"731",41,428,428,0.5,"Yacht",2,"Self-polishing","Good","PB",1,0
+"732",41,428,428,0.5,"Yacht",2,"Self-polishing","Good","PH",2,0
+"733",41,428,428,0.5,"Yacht",2,"Self-polishing","Good","PJ",2,0
+"734",41,428,428,0.5,"Yacht",2,"Self-polishing","Good","HH",1,0
+"735",41,428,428,0.5,"Yacht",2,"Self-polishing","Good","PN",1,1
+"736",42,7,56,16,"Yacht",2,"Hard","Good","HAC",1,1
+"737",42,7,56,16,"Yacht",2,"Hard","Good","HA",4,0
+"738",42,7,56,16,"Yacht",2,"Hard","Good","HZ",1,1
+"739",42,7,56,16,"Yacht",2,"Hard","Good","PJ",2,0
+"740",42,7,56,16,"Yacht",2,"Hard","Good","ID",1,1
+"741",42,7,56,16,"Yacht",2,"Hard","Good","HP",2,0
+"742",42,7,56,16,"Yacht",2,"Hard","Good","PH",1,0
+"743",42,7,56,16,"Yacht",2,"Hard","Good","HH",1,0
+"744",42,7,56,16,"Yacht",2,"Hard","Good","IB",2,1
+"745",42,7,56,16,"Yacht",2,"Hard","Good","DG",1,1
+"746",42,7,56,16,"Yacht",2,"Hard","Good","IA",1,1
+"747",42,7,56,16,"Yacht",2,"Hard","Good","HAH",2,0
+"748",42,7,56,16,"Yacht",2,"Hard","Good","HAF",1,0
+"749",42,7,56,16,"Yacht",2,"Hard","Good","DE",1,1
+"750",42,7,56,16,"Yacht",2,"Hard","Good","HK",1,1
+"751",42,7,56,16,"Yacht",2,"Hard","Good","DI",1,1
+"752",42,7,56,16,"Yacht",2,"Hard","Good","HD",2,1
+"753",42,7,56,16,"Yacht",2,"Hard","Good","PB",1,0
+"754",42,7,56,16,"Yacht",2,"Hard","Good","DA",1,1
+"755",43,123,283,7,"Yacht",2,"Ablative","Very Poor","DG",1,1
+"756",43,123,283,7,"Yacht",2,"Ablative","Very Poor","HA",4,0
+"757",43,123,283,7,"Yacht",2,"Ablative","Very Poor","HD",1,0
+"758",43,123,283,7,"Yacht",2,"Ablative","Very Poor","DA",1,1
+"759",43,123,283,7,"Yacht",2,"Ablative","Very Poor","HK",1,0
+"760",43,123,283,7,"Yacht",2,"Ablative","Very Poor","HAH",2,0
+"761",43,123,283,7,"Yacht",2,"Ablative","Very Poor","IB",3,2
+"762",43,123,283,7,"Yacht",2,"Ablative","Very Poor","HAB",1,0
+"763",43,123,283,7,"Yacht",2,"Ablative","Very Poor","HAC",1,1
+"764",43,123,283,7,"Yacht",2,"Ablative","Very Poor","DF",1,1
+"765",43,123,283,7,"Yacht",2,"Ablative","Very Poor","PG",1,0
+"766",43,123,283,7,"Yacht",2,"Ablative","Very Poor","HP",2,0
+"767",43,123,283,7,"Yacht",2,"Ablative","Very Poor","IH",1,1
+"768",43,123,283,7,"Yacht",2,"Ablative","Very Poor","IV",1,1
+"769",43,123,283,7,"Yacht",2,"Ablative","Very Poor","PB",1,0
+"770",43,123,283,7,"Yacht",2,"Ablative","Very Poor","IA",1,1
+"771",43,123,283,7,"Yacht",2,"Ablative","Very Poor","HH",1,0
+"772",43,123,283,7,"Yacht",2,"Ablative","Very Poor","HX",1,0
+"773",43,123,283,7,"Yacht",2,"Ablative","Very Poor","PJ",2,0
+"774",43,123,283,7,"Yacht",2,"Ablative","Very Poor","PH",1,0
+"775",43,123,283,7,"Yacht",2,"Ablative","Very Poor","DC",1,1
+"776",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","DA",1,1
+"777",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","HAA",1,1
+"778",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","PJ",1,1
+"779",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","IB",2,1
+"780",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","HAB",1,1
+"781",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","HK",1,1
+"782",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","ID",1,1
+"783",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","HH",2,1
+"784",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","PF",1,1
+"785",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","HF",1,0
+"786",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","IP",1,1
+"787",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","PN",1,1
+"788",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","HC",1,1
+"789",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","IH",1,1
+"790",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","PB",1,1
+"791",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","HA",6,5
+"792",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","PA",1,1
+"793",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","IV",1,1
+"794",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","HX",2,1
+"795",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","PM",1,1
+"796",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","PG",1,1
+"797",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent","HAH",2,1
+"798",45,0,14,55,"Yacht",2,"Self-polishing","Poor","HAC",1,1
+"799",45,0,14,55,"Yacht",2,"Self-polishing","Poor","PB",1,0
+"800",45,0,14,55,"Yacht",2,"Self-polishing","Poor","PE",1,0
+"801",45,0,14,55,"Yacht",2,"Self-polishing","Poor","IB",5,3
+"802",45,0,14,55,"Yacht",2,"Self-polishing","Poor","DA",1,1
+"803",45,0,14,55,"Yacht",2,"Self-polishing","Poor","PJ",2,0
+"804",45,0,14,55,"Yacht",2,"Self-polishing","Poor","II",1,1
+"805",45,0,14,55,"Yacht",2,"Self-polishing","Poor","HP",2,0
+"806",45,0,14,55,"Yacht",2,"Self-polishing","Poor","HA",4,0
+"807",45,0,14,55,"Yacht",2,"Self-polishing","Poor","PO",1,1
+"808",45,0,14,55,"Yacht",2,"Self-polishing","Poor","HY",1,1
+"809",45,0,14,55,"Yacht",2,"Self-polishing","Poor","PM",1,1
+"810",45,0,14,55,"Yacht",2,"Self-polishing","Poor","PP",1,1
+"811",45,0,14,55,"Yacht",2,"Self-polishing","Poor","IW",1,1
+"812",45,0,14,55,"Yacht",2,"Self-polishing","Poor","PN",1,1
+"813",45,0,14,55,"Yacht",2,"Self-polishing","Poor","IA",1,1
+"814",45,0,14,55,"Yacht",2,"Self-polishing","Poor","IV",1,1
+"815",45,0,14,55,"Yacht",2,"Self-polishing","Poor","IH",1,1
+"816",45,0,14,55,"Yacht",2,"Self-polishing","Poor","HAH",2,0
+"817",46,1,319,25,"Motor cruiser",17,"Ablative","Good","DG",1,1
+"818",46,1,319,25,"Motor cruiser",17,"Ablative","Good","ID",2,2
+"819",46,1,319,25,"Motor cruiser",17,"Ablative","Good","HD",4,2
+"820",46,1,319,25,"Motor cruiser",17,"Ablative","Good","HK",1,1
+"821",46,1,319,25,"Motor cruiser",17,"Ablative","Good","IB",1,0
+"822",46,1,319,25,"Motor cruiser",17,"Ablative","Good","PS",2,0
+"823",46,1,319,25,"Motor cruiser",17,"Ablative","Good","HAF",1,1
+"824",46,1,319,25,"Motor cruiser",17,"Ablative","Good","PB",2,0
+"825",46,1,319,25,"Motor cruiser",17,"Ablative","Good","HA",6,0
+"826",46,1,319,25,"Motor cruiser",17,"Ablative","Good","PM",1,1
+"827",46,1,319,25,"Motor cruiser",17,"Ablative","Good","DI",1,1
+"828",46,1,319,25,"Motor cruiser",17,"Ablative","Good","PN",1,1
+"829",46,1,319,25,"Motor cruiser",17,"Ablative","Good","HAH",2,0
+"830",46,1,319,25,"Motor cruiser",17,"Ablative","Good","HAA",1,1
+"831",46,1,319,25,"Motor cruiser",17,"Ablative","Good","DC",1,1
+"832",46,1,319,25,"Motor cruiser",17,"Ablative","Good","HAB",1,1
+"833",46,1,319,25,"Motor cruiser",17,"Ablative","Good","DA",1,1
+"834",46,1,319,25,"Motor cruiser",17,"Ablative","Good","PV",2,0
+"835",47,14,14,0.5,"Yacht",2,NA,NA,"PM",1,1
+"836",47,14,14,0.5,"Yacht",2,NA,NA,"ID",1,1
+"837",47,14,14,0.5,"Yacht",2,NA,NA,"IH",1,1
+"838",47,14,14,0.5,"Yacht",2,NA,NA,"PJ",2,1
+"839",47,14,14,0.5,"Yacht",2,NA,NA,"PB",1,0
+"840",47,14,14,0.5,"Yacht",2,NA,NA,"II",1,1
+"841",47,14,14,0.5,"Yacht",2,NA,NA,"HAF",1,0
+"842",47,14,14,0.5,"Yacht",2,NA,NA,"PN",1,1
+"843",47,14,14,0.5,"Yacht",2,NA,NA,"HL",2,0
+"844",47,14,14,0.5,"Yacht",2,NA,NA,"HA",6,0
+"845",47,14,14,0.5,"Yacht",2,NA,NA,"PA",1,0
+"846",47,14,14,0.5,"Yacht",2,NA,NA,"HD",2,0
+"847",47,14,14,0.5,"Yacht",2,NA,NA,"IB",1,1
+"848",47,14,14,0.5,"Yacht",2,NA,NA,"HAH",2,1
+"849",48,33,442,13.5,"Yacht",2,"Self-polishing","Good","PJ",2,0
+"850",48,33,442,13.5,"Yacht",2,"Self-polishing","Good","PB",1,0
+"851",48,33,442,13.5,"Yacht",2,"Self-polishing","Good","HC",1,0
+"852",48,33,442,13.5,"Yacht",2,"Self-polishing","Good","IB",5,0
+"853",48,33,442,13.5,"Yacht",2,"Self-polishing","Good","HP",2,0
+"854",48,33,442,13.5,"Yacht",2,"Self-polishing","Good","PE",1,0
+"855",48,33,442,13.5,"Yacht",2,"Self-polishing","Good","HA",4,0
+"856",48,33,442,13.5,"Yacht",2,"Self-polishing","Good","HAH",2,0
+"857",49,2,473,30,"Yacht",2,"Ablative","Excellent","PB",1,0
+"858",49,2,473,30,"Yacht",2,"Ablative","Excellent","HP",2,0
+"859",49,2,473,30,"Yacht",2,"Ablative","Excellent","IH",1,1
+"860",49,2,473,30,"Yacht",2,"Ablative","Excellent","IW",1,1
+"861",49,2,473,30,"Yacht",2,"Ablative","Excellent","II",1,1
+"862",49,2,473,30,"Yacht",2,"Ablative","Excellent","PJ",2,0
+"863",49,2,473,30,"Yacht",2,"Ablative","Excellent","DA",1,1
+"864",49,2,473,30,"Yacht",2,"Ablative","Excellent","HD",1,0
+"865",49,2,473,30,"Yacht",2,"Ablative","Excellent","IA",1,1
+"866",49,2,473,30,"Yacht",2,"Ablative","Excellent","HK",1,0
+"867",49,2,473,30,"Yacht",2,"Ablative","Excellent","HAH",2,0
+"868",49,2,473,30,"Yacht",2,"Ablative","Excellent","IB",2,0
+"869",49,2,473,30,"Yacht",2,"Ablative","Excellent","HL",1,0
+"870",49,2,473,30,"Yacht",2,"Ablative","Excellent","HA",4,0
+"871",49,2,473,30,"Yacht",2,"Ablative","Excellent","IV",1,1
+"872",49,2,473,30,"Yacht",2,"Ablative","Excellent","DE",1,1
+"873",49,2,473,30,"Yacht",2,"Ablative","Excellent","HAA",1,0
+"874",50,4,47,145,"Yacht",2,"Hard","Good","HP",2,0
+"875",50,4,47,145,"Yacht",2,"Hard","Good","DA",1,1
+"876",50,4,47,145,"Yacht",2,"Hard","Good","PJ",2,0
+"877",50,4,47,145,"Yacht",2,"Hard","Good","HK",1,1
+"878",50,4,47,145,"Yacht",2,"Hard","Good","IH",1,1
+"879",50,4,47,145,"Yacht",2,"Hard","Good","PE",1,1
+"880",50,4,47,145,"Yacht",2,"Hard","Good","HA",4,0
+"881",50,4,47,145,"Yacht",2,"Hard","Good","HAB",1,1
+"882",50,4,47,145,"Yacht",2,"Hard","Good","HC",1,1
+"883",50,4,47,145,"Yacht",2,"Hard","Good","PB",1,1
+"884",50,4,47,145,"Yacht",2,"Hard","Good","HY",1,1
+"885",50,4,47,145,"Yacht",2,"Hard","Good","HAC",1,1
+"886",50,4,47,145,"Yacht",2,"Hard","Good","PM",1,1
+"887",50,4,47,145,"Yacht",2,"Hard","Good","PG",1,1
+"888",50,4,47,145,"Yacht",2,"Hard","Good","IV",1,1
+"889",50,4,47,145,"Yacht",2,"Hard","Good","PN",1,1
+"890",50,4,47,145,"Yacht",2,"Hard","Good","PA",1,1
+"891",50,4,47,145,"Yacht",2,"Hard","Good","HD",1,1
+"892",50,4,47,145,"Yacht",2,"Hard","Good","IB",4,2
+"893",50,4,47,145,"Yacht",2,"Hard","Good","HAH",2,2
+"894",50,4,47,145,"Yacht",2,"Hard","Good","DE",1,1
+"895",51,335,1082,1.5,"Yacht",2,"Ablative",NA,"HP",2,0
+"896",51,335,1082,1.5,"Yacht",2,"Ablative",NA,"DD",1,1
+"897",51,335,1082,1.5,"Yacht",2,"Ablative",NA,"PN",1,1
+"898",51,335,1082,1.5,"Yacht",2,"Ablative",NA,"HA",4,0
+"899",51,335,1082,1.5,"Yacht",2,"Ablative",NA,"PJ",2,0
+"900",51,335,1082,1.5,"Yacht",2,"Ablative",NA,"DA",1,1
+"901",51,335,1082,1.5,"Yacht",2,"Ablative",NA,"DG",1,1
+"902",51,335,1082,1.5,"Yacht",2,"Ablative",NA,"ID",1,1
+"903",51,335,1082,1.5,"Yacht",2,"Ablative",NA,"PM",1,1
+"904",51,335,1082,1.5,"Yacht",2,"Ablative",NA,"HAH",2,0
+"905",52,8,291,47.5,"Yacht",2,"Ablative","Good","ID",1,1
+"906",52,8,291,47.5,"Yacht",2,"Ablative","Good","PB",1,0
+"907",52,8,291,47.5,"Yacht",2,"Ablative","Good","HAH",2,1
+"908",52,8,291,47.5,"Yacht",2,"Ablative","Good","HA",4,0
+"909",52,8,291,47.5,"Yacht",2,"Ablative","Good","HK",1,0
+"910",52,8,291,47.5,"Yacht",2,"Ablative","Good","HC",1,0
+"911",52,8,291,47.5,"Yacht",2,"Ablative","Good","HAF",1,0
+"912",52,8,291,47.5,"Yacht",2,"Ablative","Good","PE",1,0
+"913",52,8,291,47.5,"Yacht",2,"Ablative","Good","PJ",2,0
+"914",52,8,291,47.5,"Yacht",2,"Ablative","Good","HP",2,0
+"915",52,8,291,47.5,"Yacht",2,"Ablative","Good","IB",4,0
+"916",53,235,14,21.5,"Yacht",2,"Hard","Good","PB",1,0
+"917",53,235,14,21.5,"Yacht",2,"Hard","Good","HA",5,1
+"918",53,235,14,21.5,"Yacht",2,"Hard","Good","PE",1,0
+"919",53,235,14,21.5,"Yacht",2,"Hard","Good","IH",1,1
+"920",53,235,14,21.5,"Yacht",2,"Hard","Good","HAH",2,0
+"921",53,235,14,21.5,"Yacht",2,"Hard","Good","IB",3,0
+"922",53,235,14,21.5,"Yacht",2,"Hard","Good","HAF",1,0
+"923",53,235,14,21.5,"Yacht",2,"Hard","Good","ID",2,2
+"924",53,235,14,21.5,"Yacht",2,"Hard","Good","IV",1,1
+"925",53,235,14,21.5,"Yacht",2,"Hard","Good","II",1,1
+"926",53,235,14,21.5,"Yacht",2,"Hard","Good","PJ",2,0
+"927",53,235,14,21.5,"Yacht",2,"Hard","Good","HP",2,0
+"928",53,235,14,21.5,"Yacht",2,"Hard","Good","IA",2,1
+"929",53,235,14,21.5,"Yacht",2,"Hard","Good","HC",1,0
+"930",54,2,141,NA,"Yacht",2,"Hard","Very Poor","PE",1,0
+"931",54,2,141,NA,"Yacht",2,"Hard","Very Poor","HH",1,0
+"932",54,2,141,NA,"Yacht",2,"Hard","Very Poor","HA",4,0
+"933",54,2,141,NA,"Yacht",2,"Hard","Very Poor","PN",1,1
+"934",54,2,141,NA,"Yacht",2,"Hard","Very Poor","HAH",1,1
+"935",54,2,141,NA,"Yacht",2,"Hard","Very Poor","PJ",2,0
+"936",54,2,141,NA,"Yacht",2,"Hard","Very Poor","PB",1,1
+"937",54,2,141,NA,"Yacht",2,"Hard","Very Poor","PM",1,1
+"938",54,2,141,NA,"Yacht",2,"Hard","Very Poor","HD",1,0
+"939",54,2,141,NA,"Yacht",2,"Hard","Very Poor","IB",3,1
+"940",54,2,141,NA,"Yacht",2,"Hard","Very Poor","HP",2,0
