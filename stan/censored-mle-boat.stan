@@ -4,8 +4,8 @@
 // Author: Steve Lane
 // Date: Wednesday, 08 March 2017
 // Synopsis: Sampling statements to fit a regression with censored outcome data.
-// Includes boat-level intercept.
-// Time-stamp: <2017-03-09 15:48:38 (slane)>
+// Includes boat-level intercept. Edited to include predictions.
+// Time-stamp: <2017-03-09 15:58:55 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -94,5 +94,13 @@ model{
 }
 
 generated quantities{
-  // Statements for predictive outputs, e.g. new data
+  /* Predict the censored values (for use in multiple imputation) */
+  vector[nCens] yCens;
+  {
+    vector[nCens] muCens;
+    for(j in 1:nCens){
+      muCens[j] = mu + beta1 * days1Cens[j] + beta2 * days2Cens[j] + beta3 * midTripsCens[j] + alpha1[paintTypeCens[j]] + alpha2[locIDCens[j]] + alphaBoat[boatIDCens[j]];
+      yCens[j] = lognormal_rng(muCens[j], sigma);
+    }
+  }
 }
