@@ -1,10 +1,10 @@
 ################################################################################
 ################################################################################
-## Title: Truncated MLE
+## Title: Censored MLE
 ## Author: Steve Lane
 ## Date: Wednesday, 08 March 2017
-## Synopsis: Tests fitting a truncated model to the biofouling data
-## Time-stamp: <2017-03-09 15:47:38 (slane)>
+## Synopsis: Tests fitting a censored model to the biofouling data
+## Time-stamp: <2017-03-09 16:43:27 (slane)>
 ################################################################################
 ################################################################################
 ipak <- function(pkg){
@@ -31,26 +31,26 @@ data1 <- samplesdata %>% filter(!(boatID %in% c(24, 51)),
                                 LocID %in% c("HA", "PJ", "HP")) %>%
     select(-boatType, -boatCode, -paintRating, -Location, -LocCode, -samLab,
            -wetWeight1, -wetWeight2) %>% na.omit() %>%
-    mutate(trunc = ifelse(wetWeight < 1.5, 1, 0),
+    mutate(cens = ifelse(wetWeight < 1.5, 1, 0),
            paintTypeInt = as.integer(factor(paintType)),
            locIDInt = as.integer(factor(LocID)),
            days1S = as.numeric(scale(log(days1 + 0.1))),
            days2S = as.numeric(scale(log(days2 + 0.1))),
            midTripsS = as.numeric(scale(log(midTrips + 0.1))),
            boatIDInt = as.numeric(as.factor(boatID)))
-obsData <- data1 %>% filter(trunc == 0)
-truncData <- data1 %>% filter(trunc == 1)
+obsData <- data1 %>% filter(cens == 0)
+censData <- data1 %>% filter(cens == 1)
 stanData <- c(with(obsData, list(N = nrow(obsData), days1 = days1S,
                                  days2 = days2S, midTrips = midTripsS,
                                  numPaint = max(paintTypeInt),
                                  paintType = paintTypeInt,
                                  numLoc = max(locIDInt),
                                  locID = locIDInt, Y = wetWeight)),
-              with(truncData, list(nCens = nrow(truncData), days1Cens = days1S,
+              with(censData, list(nCens = nrow(censData), days1Cens = days1S,
                                    days2Cens = days2S, midTripsCens = midTripsS,
                                    paintTypeCens = paintTypeInt,
                                    locIDCens = locIDInt,
-                                   U = rep(1.5, nrow(truncData)))))
+                                   U = rep(1.5, nrow(censData)))))
 
 ################################################################################
 ################################################################################
@@ -60,7 +60,7 @@ stanData <- c(with(obsData, list(N = nrow(obsData), days1 = days1S,
 ## At present, I'm ignoring the clustering...
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores()/2)
-model <- stan_model("../stan/truncated-mle.stan")
+model <- stan_model("../stan/censored-mle.stan")
 ## Try fitting the MLE
 mleOutput <- optimizing(model, data = stanData)
 ## HMC sampling
@@ -76,9 +76,9 @@ hmcOutput <- sampling(model, data = stanData,
 ################################################################################
 ################################################################################
 stanData2 <- c(stanData, list(boatID = obsData$boatIDInt),
-               list(boatIDCens = truncData$boatIDInt),
+               list(boatIDCens = censData$boatIDInt),
                list(numBoat = max(obsData$boatIDInt)))
-model2 <- stan_model("../stan/truncated-mle-boat.stan")
+model2 <- stan_model("../stan/censored-mle-boat.stan")
 ## Try fitting the MLE
 mleOutput2 <- optimizing(model2, data = stanData2)
 ## HMC sampling
@@ -86,4 +86,5 @@ hmcOutput2 <- sampling(model2, data = stanData2,
                        pars = c("mu", "beta1", "beta2", "beta3", "alpha1",
                                 "alpha2", "alphaBoat", "sigma_alpha1",
                                 "sigma_alpha2", "sigma_alphaBoat",
-                                "sigma"), iter = 500, chains = 4)
+                                "sigma", "yCens"), iter = 500, chains = 4)
+## That works, but unfortunately
