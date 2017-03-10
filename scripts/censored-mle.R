@@ -4,7 +4,7 @@
 ## Author: Steve Lane
 ## Date: Wednesday, 08 March 2017
 ## Synopsis: Tests fitting a censored model to the biofouling data
-## Time-stamp: <2017-03-09 16:43:27 (slane)>
+## Time-stamp: <2017-03-10 15:15:58 (slane)>
 ################################################################################
 ################################################################################
 ipak <- function(pkg){
@@ -86,5 +86,18 @@ hmcOutput2 <- sampling(model2, data = stanData2,
                        pars = c("mu", "beta1", "beta2", "beta3", "alpha1",
                                 "alpha2", "alphaBoat", "sigma_alpha1",
                                 "sigma_alpha2", "sigma_alphaBoat",
-                                "sigma", "yCens"), iter = 500, chains = 4)
-## That works, but unfortunately
+                                "sigma"), iter = 500, chains = 4)
+## That works, but unfortunately predictions are too large (this is due to the
+## generated data section not obeying the censoring).
+
+model3 <- stan_model("../stan/censored-mle-boat2.stan")
+## HMC sampling
+stanData3 <- stanData2
+stanData3$U <- 1.5
+hmcOutput3 <- sampling(model3, data = stanData3,
+                       pars = c("mu", "beta1", "beta2", "beta3", "alpha1",
+                                "alpha2", "alphaBoat", "sigma_alpha1",
+                                "sigma_alpha2", "sigma_alphaBoat",
+                                "sigma", "yCens"), iter = 500, chains = 4,
+                       control = list(adapt_delta = 0.95))
+## This works, but adaptation is slower.

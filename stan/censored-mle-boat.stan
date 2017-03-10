@@ -5,7 +5,7 @@
 // Date: Wednesday, 08 March 2017
 // Synopsis: Sampling statements to fit a regression with censored outcome data.
 // Includes boat-level intercept. Edited to include predictions.
-// Time-stamp: <2017-03-09 15:58:55 (slane)>
+// Time-stamp: <2017-03-10 14:36:17 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -95,7 +95,7 @@ model{
 
 generated quantities{
   /* Predict the censored values (for use in multiple imputation) */
-  vector[nCens] yCens;
+  vector<lower=0,upper=1.5>[nCens] yCens;
   {
     vector[nCens] muCens;
     for(j in 1:nCens){
