@@ -5,7 +5,7 @@
 // Date: Wednesday, 08 March 2017
 // Synopsis: Sampling statements to fit a regression with censored outcome data.
 // Includes boat-level intercept. Edited to include predictions.
-// Time-stamp: <2017-03-10 14:36:17 (slane)>
+// Time-stamp: <2017-03-16 12:02:07 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -34,8 +34,13 @@ data{
   int<lower=1,upper=numBoat> boatIDCens[nCens];
   /* Observed data */
   real<lower=1.5> Y[N];
-  /* Truncated data (brute force, all equal */
-  real<upper=1.5> U[nCens];
+  /* Truncated data */
+  real<lower=0,upper=min(Y)> U;
+}
+
+transformed data {
+  vector[nCens] uCens;
+  uCens = rep_vector(U, nCens);
 }
 
 parameters{
@@ -90,17 +95,10 @@ model{
   /* Observed log-likelihood */
   target += lognormal_lpdf(Y | muHat, sigma);
   /* Truncated log-likelihood */
-  target += lognormal_lcdf(U | muHatCens, sigma);
+  target += lognormal_lcdf(uCens | muHatCens, sigma);
 }
 
 generated quantities{
-  /* Predict the censored values (for use in multiple imputation) */
-  vector<lower=0,upper=1.5>[nCens] yCens;
-  {
-    vector[nCens] muCens;
-    for(j in 1:nCens){
-      muCens[j] = mu + beta1 * days1Cens[j] + beta2 * days2Cens[j] + beta3 * midTripsCens[j] + alpha1[paintTypeCens[j]] + alpha2[locIDCens[j]] + alphaBoat[boatIDCens[j]];
-      yCens[j] = lognormal_rng(muCens[j], sigma);
-    }
-  }
+  /* Can't do this because stan doesn't have an inverse cdf function. */
+  /* Do this in R instead. */
 }
