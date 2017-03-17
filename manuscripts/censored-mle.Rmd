@@ -1,4 +1,4 @@
-<!-- Time-stamp: <2017-03-10 12:21:42 (slane)> -->
+<!-- Time-stamp: <2017-03-17 12:17:00 (slane)> -->
 
 ---
 title: "Censored MLE Investigation"
@@ -7,7 +7,7 @@ date: `r format(Sys.Date(), format = '%B %d, %Y')`
 output: html_document
 ---
 
-## Testing
+## Introduction
 
 In this document, I detail the investigation into performing a censored regression on the *blistering barnacles* (otherwise known as *biofouling*) project. This document and the ensuing analyses should be seen as exploratory, not definitive. The main reason for this document is to have notes and code/output interspersed, rather than existing as random bits of paper everywhere!
 
@@ -16,3 +16,68 @@ In this document, I detail the investigation into performing a censored regressi
 So, the idea for this project is to test the effect of certain variables on the measured wet weight of biofouling on boats. Measurements are taken in different locations (e.g. hull, propeller).
 
 Complicating the analysis is that the scales used for measuring the wet weight have a limit of detection of 1.5gm. That is, any measurements under 1.5gm are unreliable and are thus censored. So, to take this into account, we need to have a model that adjusts for the probability of censoring; that is, the model adjusts for the probability that a measurement will be less than 1.5gm.
+
+```{r,setup,echo=FALSE,warning=FALSE,message=FALSE,results="hide"}
+ipak <- function(pkg){
+    ## Check for github packages (throw away github username)
+    chk.git <- gsub(".*/", "", pkg)    
+    new.pkg <- pkg[!(chk.git %in% installed.packages()[, "Package"])]
+    if(!(length(new.pkg) == 0)){
+        git.ind <- grep("/", new.pkg)
+        if(length(git.ind) == 0){
+            install.packages(new.pkg, dependencies = TRUE)
+        } else {
+            devtools::install_github(new.pkg[git.ind])
+        }
+    }
+    sapply(chk.git, require, character.only = TRUE)
+}
+## Add github packages using gitname/reponame format
+packages <- c("dplyr", "tidyr", "ggplot2")
+ipak(packages)
+samplesdata <- read.csv("../data/samples.csv")
+```
+
+The figure below shows histograms for the wet weight in each of the locations we're interested in. The first column shows the raw values, the second shows logged values (which are approximately normal; the data have had 0.1gm added to them, so that log is defined).
+
+```{r,echo=FALSE}
+## Don't remove outliers
+histData <- samplesdata %>% filter(LocID %in% c("HA", "PJ", "HP")) %>%
+    mutate(wwLog = log(wetWeight + 0.1)) %>%
+    select(LocID, wetWeight, wwLog) %>% gather("logged", "ww", 2:3)
+pl <- ggplot(histData, aes(x = ww)) + geom_histogram(bins = 11) +
+    facet_grid(LocID ~ logged, scales = "free_x")
+print(pl)
+```
+
+The next figure shows the same set of data, but wet weights greater than 1000gm have been removed. This makes it easier to see the distribution of the data without thinking about the outliers.
+
+```{r,echo=FALSE}
+## Remove outliers
+histData2 <- histData %>%
+    filter((logged == "wetWeight" & ww <= 1000) |
+           (logged == "wwLog" & ww <= log(1000)))
+pl2 <- ggplot(histData2, aes(x = ww)) + geom_histogram(bins = 11) +
+    facet_grid(LocID ~ logged, scales = "free_x")
+print(pl2)
+```
+
+### Possible model for wet weight
+
+Hmm, this probably won't be as complicated as it sounds. A censored regression should be pretty simple to do, either via maximum likelihood, or MCMC. I think MCMC will be better in the long run though, with multiple random effects floating around.
+
+The likelihood is pretty simple. Let $f$ be the density of wet weight with parameter vector $\theta$. If the value of wet weight is greater than 1.5gm, then
+
+\[
+L(\theta; Y) \sim f(\beta X, \sigma)
+\]
+
+and if the wet weight is below 1.5gm, then the likelihood contribution is
+
+\[
+L(\theta; Y) \sim \int_{0}^{1.5} f(\beta X, \sigma)
+\]
+
+Now, a possible choice of $f$ would be the log-normal density, as the logged values in the figures above look pretty close to normal. There are some outliers as we've already shown though. Perhaps then a more robust distribution is in order. The log-cauchy distribution is one such distribution that has heavier tails.
+
+> I should try both the log-normal and log-cauchy distributions when fitting.
