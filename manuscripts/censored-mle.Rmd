@@ -1,4 +1,4 @@
-<!-- Time-stamp: <2017-03-17 12:17:00 (slane)> -->
+<!-- Time-stamp: <2017-03-21 08:10:46 (slane)> -->
 
 ---
 title: "Censored MLE Investigation"
@@ -33,16 +33,19 @@ ipak <- function(pkg){
     sapply(chk.git, require, character.only = TRUE)
 }
 ## Add github packages using gitname/reponame format
-packages <- c("dplyr", "tidyr", "ggplot2")
+packages <- c("dplyr", "tidyr", "ggplot2", "mice")
 ipak(packages)
 samplesdata <- read.csv("../data/samples.csv")
+## Restrict to locations of interest
+sampData <- samplesdata %>% filter(LocID %in% c("HA", "PJ", "HP"))
+
 ```
 
-The figure below shows histograms for the wet weight in each of the locations we're interested in. The first column shows the raw values, the second shows logged values (which are approximately normal; the data have had 0.1gm added to them, so that log is defined).
+The figure below shows histograms for the wet weight in each of the locations we're interested in (there are `r nrow(sampData)` observations of wet weight made on `r length(unique(sampData$boatID))`). The first column shows the raw values, the second shows logged values (which are approximately normal; the data have had 0.1gm added to them, so that log is defined).
 
 ```{r,echo=FALSE}
 ## Don't remove outliers
-histData <- samplesdata %>% filter(LocID %in% c("HA", "PJ", "HP")) %>%
+histData <- sampData %>%
     mutate(wwLog = log(wetWeight + 0.1)) %>%
     select(LocID, wetWeight, wwLog) %>% gather("logged", "ww", 2:3)
 pl <- ggplot(histData, aes(x = ww)) + geom_histogram(bins = 11) +
@@ -81,3 +84,49 @@ L(\theta; Y) \sim \int_{0}^{1.5} f(\beta X, \sigma)
 Now, a possible choice of $f$ would be the log-normal density, as the logged values in the figures above look pretty close to normal. There are some outliers as we've already shown though. Perhaps then a more robust distribution is in order. The log-cauchy distribution is one such distribution that has heavier tails.
 
 > I should try both the log-normal and log-cauchy distributions when fitting.
+
+## Measurements within boats
+
+Up to six hull quadrats were sampled on each boat, placed *haphazardly* along fore, mid-ships and aft (three port, three starboard). Each of these had a 0.5m^2 scraping taken, so the amount of biofouling within hull quadrats can be considered consistent. Unfortunately, the labelling of each quadrat in the dataset is insufficient, and so further analysis at the quadrat level is not possible. Thus, measurements within quadrats will need to be considered as a random sample from some distribution (perhaps $t$-distribution to be robust?).
+
+Samples were taken from other external surfaces of the boat, and some easily accesible internal surfaces. We also include the rudder surface and fixed keel in this analysis. All other surfaces were too inconsistently measured, and so were not considered.
+
+## Missing data
+
+There is missing data in the $X$ variables, which unfortunately means that the model above cannot be fit to the full data set as it currently is. The missing data is at the second level, that is, variables relating to the boat itself are missing. The table below shows the missingness patterns in the boat-level data.
+
+```{r, missingness, echo = FALSE}
+boatData <- sampData %>%
+    select(-boatType, -boatCode, -paintRating, -Location, -LocCode, -samLab,
+           -LocID, -wetWeight, -wetWeight1, -wetWeight2) %>% distinct() %>%
+    select(-boatID) %>%
+    mutate(paintType = as.integer(factor(paintType)))
+miss <- md.pattern(boatData)
+print(miss)
+
+## Now, just check what amount would be missing in observation level.
+ccData <- sampData %>%
+    select(-boatType, -boatCode, -paintRating, -Location, -LocCode, -samLab,
+           -LocID, -wetWeight, -wetWeight1, -wetWeight2) %>% na.omit()
+
+```
+
+We can see that there are `r rownames(miss)[1]` observations with complete boat-level data; `r paste0(rownames(miss)[2:4], collapse = ",")` missing data on `days1`, `midTrips` and `paintType` respectively; and `r paste0(rownames(miss)[5:6], collapse = ",")` missing data on both (`days1` and `midTrips`), and (`days1`, `paintType` and `midTrips`) respectively.
+
+A complete-case data analysis would only utilise `r as.integer(rownames(miss)[1])/nrow(boatData)*100`% of the boat-level data. At the first level, the number of observations available for a complete-case analysis is `r nrow(ccData)` (`r nrow(ccData)/nrow(sampData)*100`%).
+
+
+## Imputation
+
+Multiple imputation is a possible way to deal with the missing data. There doesn't appear to be any obvious pattern to the missingness (shown above), so an iterative approach will probably be sufficient.
+
+Because all missing variables are at the boat level, it would make sense to do the imputation at the boat level. Of course, an immediately apparent issue is that we have multiple measurements of wet weight within each boat, so how do we deal with that? The outcome needs to be included in any imputations, so that all relationships are explored. A simple approach would be to use a summary measure, such as the mean/median wet weight within each boat. A further complication is the nesting of locations within boats (as described above), but we will ignore this for imputation.
+
+I'll try using the median (given the skewed nature of the data). The imputation will work something like the following:
+
+0. Set all censored data as 1.5gm, and calculate the median wet weight within each boat. This aggregation should be done over all locations sampled.
+1. Create prediction models for each variable with missing data.
+     - Start with the least missing and work up, so `days1`, `paintType` and `midTrips`.
+2. 
+
+> I wonder whether I need to fit the outcome model in the imputation iterations? This could be a good little side project: in a censored regression, do we need predictions for the censored variables to make imputation work 'well'?
