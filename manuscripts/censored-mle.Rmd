@@ -1,4 +1,4 @@
-<!-- Time-stamp: <2017-03-21 08:10:46 (slane)> -->
+<!-- Time-stamp: <2017-03-23 19:15:01 (slane)> -->
 
 ---
 title: "Censored MLE Investigation"
@@ -41,7 +41,7 @@ sampData <- samplesdata %>% filter(LocID %in% c("HA", "PJ", "HP"))
 
 ```
 
-The figure below shows histograms for the wet weight in each of the locations we're interested in (there are `r nrow(sampData)` observations of wet weight made on `r length(unique(sampData$boatID))`). The first column shows the raw values, the second shows logged values (which are approximately normal; the data have had 0.1gm added to them, so that log is defined).
+The figure below shows histograms for the wet weight in each of the locations we're interested in (there are `r nrow(sampData)` observations of wet weight made on `r length(unique(sampData$boatID))` boats). The first column shows the raw values, the second shows logged values (which are approximately normal; the data have had 0.1gm added to them, so that log is defined).
 
 ```{r,echo=FALSE}
 ## Don't remove outliers
@@ -87,7 +87,9 @@ Now, a possible choice of $f$ would be the log-normal density, as the logged val
 
 ## Measurements within boats
 
-Up to six hull quadrats were sampled on each boat, placed *haphazardly* along fore, mid-ships and aft (three port, three starboard). Each of these had a 0.5m^2 scraping taken, so the amount of biofouling within hull quadrats can be considered consistent. Unfortunately, the labelling of each quadrat in the dataset is insufficient, and so further analysis at the quadrat level is not possible. Thus, measurements within quadrats will need to be considered as a random sample from some distribution (perhaps $t$-distribution to be robust?).
+Up to six hull quadrats were sampled on each boat, placed *haphazardly* along fore, mid-ships and aft (three port, three starboard). Each of these had a 0.5m^2^ scraping taken, so the amount of biofouling within hull quadrats can be considered consistent. Unfortunately, the labelling of each quadrat in the dataset is insufficient, and so further analysis at the quadrat level is not possible.
+
+> Thus, measurements within quadrats will need to be considered as a random sample from some distribution (perhaps $t$-distribution to be robust?).
 
 Samples were taken from other external surfaces of the boat, and some easily accesible internal surfaces. We also include the rudder surface and fixed keel in this analysis. All other surfaces were too inconsistently measured, and so were not considered.
 
@@ -124,9 +126,45 @@ Because all missing variables are at the boat level, it would make sense to do t
 
 I'll try using the median (given the skewed nature of the data). The imputation will work something like the following:
 
-0. Set all censored data as 1.5gm, and calculate the median wet weight within each boat. This aggregation should be done over all locations sampled.
-1. Create prediction models for each variable with missing data.
-     - Start with the least missing and work up, so `days1`, `paintType` and `midTrips`.
-2. 
+0. Set all censored data as 1.5gm, and calculate the median wet weight within each boat. This aggregation should be done over all locations sampled
+1. Create prediction models for each variable with missing data
+     - Start with the least missing and work up, so `days1`, `paintType` and `midTrips`
+2. Create a predicted observation for each missing value in `days1`, `paintType` and `midTrips`
+3. Fit the censored regression model:
+    i) Use the imputed values in the censored regression model
+    ii) Predicted the censored values --- this prediction shouldn't just be a vanilla prediction though. It should use the full joint distribution, i.e. a draw from the distribution, so that all variance is accounted for. See my note in Shah et al. (2014)
+    iii) Take the median within boat, and return to (1)
+4. Repeat the cycle, $r$ times ($r=20$ should suffice)
+5. Draw a final imputation for the missing $X$ variables. This is one imputation.
+6. Repeat the whole procedure $m$ times.
 
 > I wonder whether I need to fit the outcome model in the imputation iterations? This could be a good little side project: in a censored regression, do we need predictions for the censored variables to make imputation work 'well'?
+
+### Goodness of imputation
+
+I'll need to check out the *goodness* of imputation. I can do this by plotting boxplots of the observed data, alongside the imputed data. The distributions should remain similar.
+
+The article by Bondarenko (2016) may be useful for graphical checking of imputations.
+
+## Where to from here?
+
+I think that an appropriate place to go from here, is to do the simulation study (prior to the actual data fit).
+
+How would this look?
+
+- Generate $X$ data
+- Generate $Y$ data from a regression model
+- Generate missing $X$ data, that depends on $Y$
+    - I probably need to look at White, Carlin or Lee for some tips here
+    - The Lee and Carlin (2010) paper doesn't explain in great deal the simulations, and many were based off a so-called *synthetic* dataset
+    - Another possibility is Shah et al. (2014)
+- Censor the $Y$ values
+    - Do a simple cutoff, i.e. if less than $c$, put $c$
+- This should mean that the imputation model depends on having a good model for $Y$
+    - We need to come up with ways of modelling this
+    - First thing to try is just use the censored value
+    - Then, probably a midpoint of the censored value and a lower bound (if relevant)
+    - Then, use the actual regression form that generated the data
+        - This one should work best
+    - If we don't know the actual data though, what's a reasonable alternative?
+        - I.e. we need some nonparametric alternative
