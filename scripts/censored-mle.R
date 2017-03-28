@@ -4,7 +4,7 @@
 ## Author: Steve Lane
 ## Date: Wednesday, 08 March 2017
 ## Synopsis: Tests fitting a censored model to the biofouling data
-## Time-stamp: <2017-03-17 08:07:29 (slane)>
+## Time-stamp: <2017-03-29 07:45:46 (slane)>
 ################################################################################
 ################################################################################
 ipak <- function(pkg){
@@ -27,6 +27,8 @@ ipak(packages)
 samplesdata <- read.csv("../data/samples.csv")
 ## Filter out crap, and transform stuff. Scale the logged variables (just cause
 ## it's easy at the moment, do something better later).
+## Double-checked these, and 51 doesn't seem bad? Don't know why it was chosen
+## as an outlier?
 data1 <- samplesdata %>% filter(!(boatID %in% c(24, 51)),
                                 LocID %in% c("HA", "PJ", "HP")) %>%
     select(-boatType, -boatCode, -paintRating, -Location, -LocCode, -samLab,
@@ -135,12 +137,15 @@ data <- samplesdata %>% filter(!(boatID %in% c(24, 51)),
            days1S = as.numeric(scale(log(days1 + 0.1))),
            days2S = as.numeric(scale(log(days2 + 0.1))),
            midTripsS = as.numeric(scale(log(midTrips + 0.1))),
-           boatIDInt = as.numeric(as.factor(boatID)))
-lvl2 <- data %>% group_by(days1S, days2S, midTripsS, paintType) %>%
+           boatIDInt = as.numeric(as.factor(boatID)),
+           paintTypeF = factor(paintTypeInt))
+lvl2 <- data %>% group_by(days1S, days2S, midTripsS, paintTypeF) %>%
     summarise(m = mean(wetWeight)) %>% ungroup()
 miLvl2 <- mice(lvl2, m = 1, method = c(rep("pmm", 3), "polyreg", "pmm"),
                maxit = 10)
-## Not gettting anything for paint type...
+miLvl2 <- mice(lvl2, m = 1, method = "rf", maxit = 10)
+## Not gettting anything for paint type... that's because it needs to be a
+## factor :) fixed now.
 ## days1, midTrips and paintType are the variables with missing data. What about
 ## using randomForests?
 ## First, put in some random values.
