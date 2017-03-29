@@ -1,4 +1,4 @@
-<!-- Time-stamp: <2017-03-23 19:15:01 (slane)> -->
+<!-- Time-stamp: <2017-03-29 08:06:37 (slane)> -->
 
 ---
 title: "Censored MLE Investigation"
@@ -129,6 +129,7 @@ I'll try using the median (given the skewed nature of the data). The imputation 
 0. Set all censored data as 1.5gm, and calculate the median wet weight within each boat. This aggregation should be done over all locations sampled
 1. Create prediction models for each variable with missing data
      - Start with the least missing and work up, so `days1`, `paintType` and `midTrips`
+     - This part can be done using `MICE`; categorical variables just need to be changed to factors for this to work
 2. Create a predicted observation for each missing value in `days1`, `paintType` and `midTrips`
 3. Fit the censored regression model:
     i) Use the imputed values in the censored regression model
