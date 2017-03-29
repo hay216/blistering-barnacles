@@ -1,4 +1,4 @@
-<!-- Time-stamp: <2017-03-29 08:06:37 (slane)> -->
+<!-- Time-stamp: <2017-03-29 12:45:13 (slane)> -->
 
 ---
 title: "Censored MLE Investigation"
@@ -135,6 +135,9 @@ I'll try using the median (given the skewed nature of the data). The imputation 
     i) Use the imputed values in the censored regression model
     ii) Predicted the censored values --- this prediction shouldn't just be a vanilla prediction though. It should use the full joint distribution, i.e. a draw from the distribution, so that all variance is accounted for. See my note in Shah et al. (2014)
     iii) Take the median within boat, and return to (1)
+	
+	> Note: because I want to do some variable selection, it may be good to generate a single multiply-imputed dataset. To do this, in the censored regression we could include all interactions that may be of interest. Then, when it comes to model fitting, use whatever form required on that single multiply-imputed dataset.
+	
 4. Repeat the cycle, $r$ times ($r=20$ should suffice)
 5. Draw a final imputation for the missing $X$ variables. This is one imputation.
 6. Repeat the whole procedure $m$ times.
