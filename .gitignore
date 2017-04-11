@@ -25,8 +25,8 @@
 *.bcf
 *.rec
 *.run.xml
-paper/cache/*
-paper/auto/*
+manuscripts/cache/*
+manuscripts/auto/*
 stan/*.rds
 .txt
 .DS_Store
