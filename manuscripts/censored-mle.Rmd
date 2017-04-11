@@ -1,4 +1,4 @@
-<!-- Time-stamp: <2017-03-29 12:45:13 (slane)> -->
+<!-- Time-stamp: <2017-04-11 14:42:26 (slane)> -->
 
 ---
 title: "Censored MLE Investigation"
@@ -172,3 +172,39 @@ How would this look?
         - This one should work best
     - If we don't know the actual data though, what's a reasonable alternative?
         - I.e. we need some nonparametric alternative
+
+## Simulation 1
+
+Let's start simple. Our first goal will be to investigate imputation in a cross-sectional model. Let's call our *main* model, the substantive model; this is the model that predicts $Y$.
+
+In the first case, the substantive model should be linear in the predictors, and then we'll test a model that includes product terms.
+
+We will test the following specifications to impute $Y$ (for use in the $X$ imputations):
+
+- Fill-in imputations
+    - The censoring value, $c$
+    - The midpoint, $c/2$
+- An over-specified regression model
+    - Include two-way product terms
+- A correctly-specified regression model
+    - i.e. in the form of the substantive model
+	
+In all cases, the final analysis model will use the true substantive model form for fitting.
+
+The correctly-specified model should perform the best, but it will obviously be more computationally demanding. This should really be nothing terribly novel.
+
+## Simulation 2
+
+This simulation will involve a multilevel dataset. This is where the imputation model is likely to be more influential? We'll follow the same general recipe as above, creating a linear substantive model, and then a substantive model that includes product terms.
+
+Again, we will test the following specifications to impute $Y$ (for use in the $X$ imputations):
+
+- Fill-in imputations
+    - The censoring value, $c$
+    - The midpoint, $c/2$
+- An over-specified regression model
+    - Include two-way product terms
+- A correctly-specified regression model
+    - i.e. in the form of the substantive model
+
+In all cases, the final analysis model will use the true substantive model form for fitting.
