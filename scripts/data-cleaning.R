@@ -4,7 +4,7 @@
 ## Author: Steve Lane
 ## Date: Wednesday, 08 March 2017
 ## Synopsis: Cleans data for manuscript and model fitting.
-## Time-stamp: <2017-04-12 13:45:01 (slane)>
+## Time-stamp: <2017-04-12 13:52:05 (slane)>
 ################################################################################
 ################################################################################
 ipak <- function(pkg){
@@ -24,9 +24,9 @@ ipak <- function(pkg){
 ## Add github packages using gitname/reponame format
 packages <- c("dplyr")
 ipak(packages)
-samplesdata <- read.csv("../data/samples.csv")
+samplesdata <- read.csv("../data-raw/samples.csv")
 ## Bring in vessel data as well.
-vessels <- read.csv("../data/vessel.csv")
+vessels <- read.csv("../data-raw/vessel.csv")
 ################################################################################
 ################################################################################
 
