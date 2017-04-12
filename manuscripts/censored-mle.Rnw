@@ -1,4 +1,4 @@
-% Time-stamp: <2017-04-12 15:22:21 (slane)>
+% Time-stamp: <2017-04-12 17:30:56 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -76,11 +76,11 @@ ipak <- function(pkg){
     sapply(chk.git, require, character.only = TRUE)
 }
 ## Add github packages using gitname/reponame format
-packages <- c("dplyr")
+packages <- c("dplyr", "tidyr", "ggplot2")
 ipak(packages)
 knitr::opts_chunk$set(cache = FALSE, error = FALSE, warning = FALSE,
                       message = FALSE, fig.align = "center", echo = FALSE,
-                      out.width = "0.8\\textwidth")
+                      out.width = "0.8\\textwidth", fig.pos = "!hbp")
 knitr::opts_knit$set(out.format = "latex")
 knitr::knit_theme$set("acid")
 
@@ -128,6 +128,26 @@ For more details on the data collected during the survey, see CSIRO report ref X
 
 \subsection{Statistical analysis}
 \label{sec:statistical-analysis}
+
+Figure~\ref{fig:obs-weight} shows histograms of the observed wet weight of biomass from the samples. Samples that were below the limit of detection (1.5gm, of which there were \Sexpr{sum(biofoul[['wetWeight']] < 1.5)}) are not shown in this figure. The left column shows the measured wet weight, whilst the right column shows the log-transformed wet weight; the rows correspond to the sampled locations on each vessel (hull, keel and rudder).
+
+<<obs-weight,fig.cap = paste("Measured wet weight of sampled biomass from the", nrow(vessels), "vessels. The left column shows the measured wet weight, whilst the right column shows the log-transformed wet weight. Samples that measured less than the limit of detection (1.5gm) have been removed.")>>=
+histData <- biofoul %>%
+    filter(wetWeight >= 1.5) %>%
+    select(LocID, `Weight (gm)` = wetWeight,
+           `Weight (gm), log-scale` = wwLog) %>%
+    gather("logged", "ww", 2:3)
+pl <- ggplot(histData, aes(x = ww)) + geom_histogram(bins = 11) +
+    facet_grid(LocID ~ logged, scales = "free_x") +
+    xlab("") +
+    ylab("Count")
+print(pl)
+
+@ 
+
+Figure~\ref{fig:obs-weight} suggests that the log-transform of the wet weight of biomass is approximately normal, but it is also apparent there are outliers in all locations, and especially within the hull and rudder. For this reason, we will compare two models for the distribution of the wet weight of biomass: the log-normal and the log-$t$. We use the log-normal for the reason that if $W \sim \text{LN}(\mu, \sigma^{2})$, then $\log(W) \sim \text{N}(\mu, \sigma^{2})$ (i.e. the usual normal regression model). The presence of outliers suggests that a distribution with wider tails may provide a better fit to the data, hence our choice of the log-$t$ distribution.
+
+See \href{https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations}{this link} for choice of priors. Also, the \texttt{alt} version of stan code shows how to log transform in the model statement.
 
 Model 1: imputation model with log-normal errors
 
