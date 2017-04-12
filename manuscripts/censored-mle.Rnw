@@ -1,0 +1,119 @@
+% Time-stamp: <2017-04-12 11:08:39 (slane)>
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{newpxtext,newpxmath}
+\usepackage[scaled=0.85]{DejaVuSansMono}
+\usepackage[table, usenames, dvipsnames]{xcolor}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[margin=25mm]{geometry}
+\usepackage{threeparttable}
+\usepackage{parskip}
+\usepackage{lineno}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{units}
+\usepackage{graphicx}
+\usepackage[margin=15pt,font=small,labelfont=bf]{caption}
+\usepackage[backend=biber,style=numeric,natbib=true,url=false,doi=true]{biblatex}
+\usepackage{pdflscape}
+\usepackage{verbatim}
+\usepackage{longtable}
+\usepackage{appendix}
+\usepackage{multirow}
+\usepackage[bottom]{footmisc} %ensure footnotes aren't glued to bottom of body text
+\usepackage{authblk}
+\usepackage{subfig}
+\usepackage{setspace}
+
+% Define colours
+\definecolor{mylinkcolour}{HTML}{FC8D62}
+\definecolor{myurlcolour}{HTML}{8DA0CB}
+\definecolor{mycitecolour}{HTML}{66C2A5}
+
+\newcommand{\ua}[1]{\underaccent{\tilde}{#1}}
+\newcommand{\argmin}[1]{\underset{#1}{\operatorname{arg\,min}}\;}
+\newcommand{\argmax}[1]{\underset{#1}{\operatorname{arg\,max}}\;}
+\newcommand{\up}[1]{\ensuremath{^\textrm{\scriptsize#1}}}
+\newcommand{\bs}[1]{\ensuremath{\boldsymbol{#1}}} % Command to bold
+% greek for vectors
+\newcommand{\dd}{\, \mathrm{d}} % Roman d in integrals
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\usepackage{hyperref}
+\hypersetup{
+  linkcolor = mylinkcolour,
+  urlcolor = myurlcolour,
+  citecolor = mycitecolour,
+  colorlinks = true,
+  bookmarksnumbered = true,
+  pdfauthor = {Stephen E Lane},
+  pdftitle = {Risk factors for fouling biomass}
+}
+
+\DeclareGraphicsExtensions{.pdf,.PDF,.png,.PNG}
+
+\author[1]{Stephen E.\ Lane}
+\author[1]{Andrew P.\ Robinson}
+\affil[1]{CEBRA, The University of Melbourne}
+\date{\today}
+\title{Risk factors for fouling biomass: Evidence from small vessels in Australia}
+
+<<knitr-setup,echo=FALSE,warning=FALSE,message=FALSE,cache=FALSE,results="hide">>=
+ipak <- function(pkg){
+    ## Check for github packages (throw away github username)
+    chk.git <- gsub(".*/", "", pkg)    
+    new.pkg <- pkg[!(chk.git %in% installed.packages()[, "Package"])]
+    if(!(length(new.pkg) == 0)){
+        git.ind <- grep("/", new.pkg)
+        if(length(git.ind) == 0){
+            install.packages(new.pkg, dependencies = TRUE)
+        } else {
+            devtools::install_github(new.pkg[git.ind])
+        }
+    }
+    sapply(chk.git, require, character.only = TRUE)
+}
+## Add github packages using gitname/reponame format
+packages <- c("dplyr")
+ipak(packages)
+knitr::opts_chunk$set(cache = FALSE, error = FALSE, warning = FALSE,
+                      message = FALSE, fig.align = "center", echo = FALSE,
+                      out.width = "0.8\\textwidth")
+knitr::opts_knit$set(out.format = "latex")
+knitr::knit_theme$set("acid")
+
+@ 
+
+
+\begin{document}
+
+\maketitle
+
+\onehalfspacing
+
+\begin{abstract}
+
+  Here is an abstract.
+
+\end{abstract}
+
+\section{Methods}
+\label{sec:methods}
+
+\subsection{Data}\footnote{Polish this.}
+\label{sec:data}
+
+% Load data here and plug in to the values in the next paragraph.
+
+The data used in this paper came from a prospective survey in Australia conducted by the Commonwealth Scientific and Industrial Research Organisation (CSIRO) project team. The team sampled $54$ vessels at $5$ locations during the project. Most vessels were sampled in Hobart at the Domain Slipway ($16$) and Royal Hobart Yacht Club ($18$). The remaining vessels were sampled in Melbourne at the Sandringham Yacht Club ($14$), the Hobson's Bay Yacht Club ($4$) and the Royal Yacht Club of Victoria ($2$). Most of the sample vessels were yachts ($32$), followed by fishing vessels ($10$) and motor cruisers ($10$). The project team also sampled a ferry and a tug. The team inspected $64$ different locations in and around the hull, propeller, rudder and anchor, internal spaces, fishing gear and deck of the sample vessels. $1116$ samples were taken mainly from the hull. A further $365$ inspections were made on board. The wet weight of fouling biomass is taken from each sample. The samples containing weight $\leq 0.5$ grams or less were assumed to contain no biomass and were regarded as clean samples. The response variable is the wet weight of fouling biomass and is treated as a binary variable by assigning the value $'0'$ signifying 'clean samples' and the value $'1'$ signifying the event of having biomass. The predictor variables are the number of days since the vessel was last used (days1), the number of days since the vessel was last cleaned (days2), median number of trips per year (midTrips) and the qualitative predictor (paint type) with three levels (ablative, hard and self-polishing).
+
+\subsection{Statistical analysis}
+\label{sec:statistical-analysis}
+
+Model 1: imputation model with log-normal errors
+
+Model 2: imputation model with log-cauchy errors (more robust for outliers)
+
+\end{document}
