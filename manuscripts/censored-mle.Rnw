@@ -1,4 +1,4 @@
-% Time-stamp: <2017-04-12 11:08:39 (slane)>
+% Time-stamp: <2017-04-12 15:22:21 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -102,12 +102,29 @@ knitr::knit_theme$set("acid")
 \section{Methods}
 \label{sec:methods}
 
-\subsection{Data}\footnote{Polish this.}
+\subsection{Data}
 \label{sec:data}
 
-% Load data here and plug in to the values in the next paragraph.
+<<load-data>>=
+biofoul <- readRDS("../data/biofouling.rds")
+vessels <- biofoul %>% distinct(boatID, .keep_all = TRUE)
+locs <- sort(table(vessels$samLoc), decr = TRUE)
+types <- sort(table(vessels$boatType), decr = TRUE)
+quads <- sort(table(biofoul$LocID), decr = TRUE)
 
-The data used in this paper came from a prospective survey in Australia conducted by the Commonwealth Scientific and Industrial Research Organisation (CSIRO) project team. The team sampled $54$ vessels at $5$ locations during the project. Most vessels were sampled in Hobart at the Domain Slipway ($16$) and Royal Hobart Yacht Club ($18$). The remaining vessels were sampled in Melbourne at the Sandringham Yacht Club ($14$), the Hobson's Bay Yacht Club ($4$) and the Royal Yacht Club of Victoria ($2$). Most of the sample vessels were yachts ($32$), followed by fishing vessels ($10$) and motor cruisers ($10$). The project team also sampled a ferry and a tug. The team inspected $64$ different locations in and around the hull, propeller, rudder and anchor, internal spaces, fishing gear and deck of the sample vessels. $1116$ samples were taken mainly from the hull. A further $365$ inspections were made on board. The wet weight of fouling biomass is taken from each sample. The samples containing weight $\leq 0.5$ grams or less were assumed to contain no biomass and were regarded as clean samples. The response variable is the wet weight of fouling biomass and is treated as a binary variable by assigning the value $'0'$ signifying 'clean samples' and the value $'1'$ signifying the event of having biomass. The predictor variables are the number of days since the vessel was last used (days1), the number of days since the vessel was last cleaned (days2), median number of trips per year (midTrips) and the qualitative predictor (paint type) with three levels (ablative, hard and self-polishing).
+@ 
+
+The data used in this paper came from a prospective survey in Australia conducted by the Commonwealth Scientific and Industrial Research Organisation (CSIRO). Biomass samples were collected from sampled \Sexpr{nrow(vessels)} vessels at \Sexpr{length(locs)} locations during the project. All vessels were selected based on convenience, with access and permission gathered from owners via the Bosun and slipway managers at each of the sites.
+
+Samples were collected from both external and internal surfaces using plastic and metal putty knives. All samples were washed with 0.2$\mu$m filtered seawater, sieved and subsequently weighed using Sartorius BL3100 scales. Due to the unreliability of low wet weight measurements, samples that weighed less than 1.5gm were assigned a biomass of 0.5gm; that is, the lower limit of detection was 1.5gm.
+
+Most vessels were sampled in Hobart at the \Sexpr{names(locs)[1]} (\Sexpr{locs[1]}) and the \Sexpr{names(locs)[2]} (\Sexpr{locs[2]}). The remaining vessels were sampled in Melbourne at the \Sexpr{names(locs)[3]} (\Sexpr{locs[3]}), the \Sexpr{names(locs)[4]} (\Sexpr{locs[4]}), and the \Sexpr{names(locs)[5]} (\Sexpr{locs[5]}). Most of the sample vessels were yachts (\Sexpr{types[1]}), followed by fishing vessels (\Sexpr{types[2]}), motor cruisers (\Sexpr{types[3]}), and others (\Sexpr{types[4]}).
+
+Samples were collected from as many as 64 different locations in and around the hull, propeller, rudder and anchor, internal spaces, fishing gear and deck of the vessels. Samples taken from the hull, fixed keel and rudder surface were consistently collected using 0.5m\up{2} quadrats, so these form the focus of our analysis. In all, \Sexpr{quads[1]} samples were collected from the hull, \Sexpr{quads[2]} from the rudder surface, and \Sexpr{quads[3]} from the fixed keel.
+
+Vessel-level data collected from owners included: dimensions of the vessel; the type of antifouling paint applied (ablative, hard, and self-polishing); voyage history (number of days since the vessel was last used, median number of trips per year); and the number of days since the vessel was last cleaned.
+
+For more details on the data collected during the survey, see CSIRO report ref XXX.
 
 \subsection{Statistical analysis}
 \label{sec:statistical-analysis}
