@@ -16,9 +16,9 @@ rm(list=ls())
 
 # covars<-read.table("I:\\ACERA\\Biofouling\\Biofouling\\data\\Data\\samples data\\covars.csv", sep=",")
 
-samplesdata <- read.csv("../data/samples.csv")
-propzerodata <- read.csv("../data/aa.csv")
-covars <- read.csv("../data/covars.csv")
+samplesdata <- read.csv("../data-raw/samples.csv")
+propzerodata <- read.csv("../data-raw/aa.csv")
+covars <- read.csv("../data-raw/covars.csv")
 
 
  nonzerosamples<-samplesdata[samplesdata$wetWeight>.5, ]

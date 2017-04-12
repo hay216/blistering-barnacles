@@ -157,11 +157,11 @@ imputeLRT.c <- cmpfun(imputeLRT)
 #                           Read in data
 # ========================================================================================
 
-samplesdata <- read.csv("../data/samples.csv")
+samplesdata <- read.csv("../data-raw/samples.csv")
 
-propzerodata <- read.csv("../data/aa.csv")
+propzerodata <- read.csv("../data-raw/aa.csv")
 
-covars <- read.csv("../data/covars.csv")
+covars <- read.csv("../data-raw/covars.csv")
 
 # samplesdata<-read.table("C:\\Enamul\\ACERA\\Biofouling\\Biofouling\\Analysis_sep_12\\samples.csv", sep=",")
 

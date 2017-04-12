@@ -4,7 +4,7 @@
 ## Author: Steve Lane
 ## Date: Wednesday, 08 March 2017
 ## Synopsis: Tests fitting a censored model to the biofouling data
-## Time-stamp: <2017-03-29 12:33:04 (slane)>
+## Time-stamp: <2017-04-12 13:57:44 (slane)>
 ################################################################################
 ################################################################################
 ipak <- function(pkg){
@@ -26,7 +26,7 @@ packages <- c("dplyr", "rstan", "mice", "ggplot2")
 ipak(packages)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores()/2)
-samplesdata <- read.csv("../data/samples.csv")
+samplesdata <- read.csv("../data-raw/samples.csv")
 source("../scripts/imputation-functions.R")
 ## Filter out crap, and transform stuff. Scale the logged variables (just cause
 ## it's easy at the moment, do something better later).
