@@ -1,11 +1,13 @@
-# Time-stamp: <2017-03-17 10:05:45 (slane)>
+# Time-stamp: <2017-04-12 14:12:02 (slane)>
 .PHONY: all models input-data output-data clean-data clean-manuscripts clobber
 
-all: manuscripts/censored-mle.html
+all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf
+
+.INTERMEDIATES: manuscripts/censored-mle.tex
 
 # models: stan/dynamic-governance-m0.rds
 
-# input-data: data/data-KIWI-10.rda
+input-data: data/biofouling.rds
 
 # output-data: data/stanfit-KIWI-dynamic-governance-m0-10.rda
 
@@ -16,10 +18,11 @@ all: manuscripts/censored-mle.html
 # 	Rscript $(<F) mname=dynamic-governance-m0
 
 ################################################################################
-# Rules to make data for feeding into models
-# data/data-KIWI-10.rda: R/create-data.R data/fruit.RData
-# 	cd $(<D); \
-# 	Rscript $(<F) pathway=KIWI size=10
+# Make data for feeding into models and manuscript
+data/biofouling.rds: scripts/data-cleaning.R data-raw/samples.csv \
+	data-raw/vessel.csv
+	cd $(<D); \
+	Rscript $(<F) --no-save --no-restore
 
 ################################################################################
 # Rules to fit models with data
@@ -30,17 +33,17 @@ all: manuscripts/censored-mle.html
 
 ################################################################################
 # Rules to make manuscripts
-%.html: %.Rmd data/biofouling.csv
+%.html: %.Rmd data-raw/samples.csv
 	cd $(<D); \
-	echo "rmarkdown::render('$(<F)')" | R --no-save --no-restore
+	Rscript -e "rmarkdown::render('$(<F)')" --no-save --no-restore
 
-# %.tex: %.Rnw data/stanfit-KIWI-dynamic-governance-m1-10.rda
-# 	cd $(<D); \
-# 	echo "knitr::knit('$(<F)')" | R --no-save --no-restore
+%.tex: %.Rnw data/biofouling.rds
+	cd $(<D); \
+	Rscript -e "knitr::knit('$(<F)')" --no-save --no-restore
 
-# %.pdf: %.tex
-# 	cd $(<D); \
-# 	latexmk -pdf $(<F)
+%.pdf: %.tex
+	cd $(<D); \
+	latexmk -pdf $(<F)
 
 ################################################################################
 # Cleaning targets
@@ -50,10 +53,10 @@ clean-data:
 
 clean-manuscripts:
 	cd manuscripts/; \
-	rm -f *.aux *.bbl *.bcf *.blg *.fdb_latexmk *.fls *.lof *.log *.lot \
-		*.code *.loe *.toc *.rec *.out *.run.xml *~
-
-clobber:
-	cd manuscripts/; \
 	rm -rf *.aux *.bbl *.bcf *.blg *.fdb_latexmk *.fls *.lof *.log *.lot \
-		*.code *.loe *.toc *.rec *.out *.run.xml *~ auto/ cache/ figure/
+		*.code *.loe *.toc *.rec *.out *.run.xml *~ *.prv \
+		censored-mle.tex _region_*
+
+clobber: clean-data clean-manuscripts
+	cd manuscripts/; \
+	rm -rf auto/ cache/ figure/
