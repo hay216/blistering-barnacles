@@ -4,7 +4,7 @@
 ## Author: Steve Lane
 ## Date: Wednesday, 08 March 2017
 ## Synopsis: Tests fitting a censored model to the biofouling data
-## Time-stamp: <2017-04-12 13:57:44 (slane)>
+## Time-stamp: <2017-04-13 08:53:26 (slane)>
 ################################################################################
 ################################################################################
 ipak <- function(pkg){
@@ -47,6 +47,10 @@ data <- samplesdata %>% filter(!(boatID %in% c(24, 51)),
            -wetWeight1, -wetWeight2) %>%
     mutate(cens = ifelse(wetWeight < 1.5, 1, 0),
            paintTypeInt = as.integer(factor(paintType)),
+           ## Change paint to indicator variables for fixed effects - Ablative
+           ## as the base category.
+           paint2 = ifelse(paintType == "Hard", 1, 0),
+           paint3 = ifelse(paintType == "Self-polishing", 1, 0),
            locIDInt = as.integer(factor(LocID)),
            days1S = as.numeric(scale(log(days1 + 0.1))),
            days2S = as.numeric(scale(log(days2 + 0.1))),
