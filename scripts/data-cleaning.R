@@ -4,7 +4,7 @@
 ## Author: Steve Lane
 ## Date: Wednesday, 08 March 2017
 ## Synopsis: Cleans data for manuscript and model fitting.
-## Time-stamp: <2017-04-12 13:52:05 (slane)>
+## Time-stamp: <2017-04-12 14:39:15 (slane)>
 ################################################################################
 ################################################################################
 ipak <- function(pkg){
@@ -55,7 +55,18 @@ data <- samplesdata %>% filter(LocID %in% c("HA", "PJ", "HP")) %>%
 data <- left_join(
     data,
     vessels
-)
+) %>%
+    mutate(
+        samLoc = recode(samLoc,
+                        "SaNAringham Yacht Club" = "Sandringham Yacht Club",
+                        "Hobsons Bay Yacht Club " = "Hobsons Bay Yacht Club"),
+        boatType = recode(boatType,
+                          "Fishing vessel (Lobster/scallop)" = "Fishing",
+                          "Fishing vessel (Abalone mothership)" = "Fishing",
+                          "Fishing vessel (Long line)" = "Fishing",
+                          "Ferry" = "Other",
+                          "Tug" = "Other")
+    )
 ## Save as rds for further use.
 if(!dir.exists("../data/")) dir.create("../data/")
 saveRDS(data, file = "../data/biofouling.rds")
