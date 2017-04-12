@@ -4,7 +4,7 @@
 ## Author: Steve Lane
 ## Date: Wednesday, 08 March 2017
 ## Synopsis: Cleans data for manuscript and model fitting.
-## Time-stamp: <2017-04-12 14:39:15 (slane)>
+## Time-stamp: <2017-04-12 15:41:44 (slane)>
 ################################################################################
 ################################################################################
 ipak <- function(pkg){
@@ -42,7 +42,6 @@ data <- samplesdata %>% filter(LocID %in% c("HA", "PJ", "HP")) %>%
            -wetWeight1, -wetWeight2) %>%
     mutate(cens = ifelse(wetWeight < 1.5, 1, 0),
            paintTypeInt = as.integer(factor(paintType)),
-           locIDInt = as.integer(factor(LocID)),
            days1S = as.numeric(scale(log(days1 + 0.1))),
            days2S = as.numeric(scale(log(days2 + 0.1))),
            midTripsS = as.numeric(scale(log(midTrips + 0.1))),
@@ -65,7 +64,10 @@ data <- left_join(
                           "Fishing vessel (Abalone mothership)" = "Fishing",
                           "Fishing vessel (Long line)" = "Fishing",
                           "Ferry" = "Other",
-                          "Tug" = "Other")
+                          "Tug" = "Other"),
+        LocID = recode(LocID,
+                       "HA" = "Hull", "HP" = "Keel", "PJ" = "Rudder"),
+        locIDInt = as.integer(factor(LocID))
     )
 ## Save as rds for further use.
 if(!dir.exists("../data/")) dir.create("../data/")
