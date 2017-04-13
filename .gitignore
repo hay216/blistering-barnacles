@@ -27,6 +27,6 @@
 *.run.xml
 manuscripts/cache/*
 manuscripts/auto/*
-stan/*.rds
+*.rds
 .txt
 .DS_Store
