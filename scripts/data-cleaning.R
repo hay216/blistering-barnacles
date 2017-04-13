@@ -5,7 +5,7 @@
 ## Date: Wednesday, 08 March 2017
 ## Synopsis: Cleans data for manuscript and model fitting, and performs
 ## imputation on the vessel level.
-## Time-stamp: <2017-04-13 15:15:43 (slane)>
+## Time-stamp: <2017-04-13 15:46:16 (slane)>
 ################################################################################
 ################################################################################
 ipak <- function(pkg){
@@ -25,6 +25,7 @@ ipak <- function(pkg){
 ## Add github packages using gitname/reponame format
 packages <- c("dplyr", "mice", "parallel")
 ipak(packages)
+source("../scripts/imputation-functions.R")
 samplesdata <- read.csv("../data-raw/samples.csv")
 ## Bring in vessel data as well.
 vessels <- read.csv("../data-raw/vessel.csv")
