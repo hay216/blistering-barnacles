@@ -1,4 +1,4 @@
-<!-- Time-stamp: <2017-04-12 14:11:10 (slane)> -->
+<!-- Time-stamp: <2017-04-13 09:55:49 (slane)> -->
 
 ---
 title: "Censored MLE Investigation"
@@ -143,6 +143,17 @@ I'll try using the median (given the skewed nature of the data). The imputation 
 6. Repeat the whole procedure $m$ times.
 
 > I wonder whether I need to fit the outcome model in the imputation iterations? This could be a good little side project: in a censored regression, do we need predictions for the censored variables to make imputation work 'well'?
+
+### **New!**
+
+```{r,echo=FALSE}
+sub <- sampData %>% filter(wetWeight >= 1.5)
+mSub <- mean(log(sub$wetWeight))
+sdSub <- sd(log(sub$wetWeight))
+
+```
+
+Actually, I don't really need to consider the censoring model for the imputation above. The censored data only lies between [0, 1.5]gm. Looking at the non-censored data, it is approximately log-normal with mean `r mSub` and standard deviation `r sdSub`. On this log-scale, the censored data lies below log(1.5) $\approx `r log(1.5)`$; this corresponds to approximately `r pnorm(log(1.5), mSub, sdSub)*100`% of the distribution, which should not materially affect imputation at the boat-level. This is because we still need to summarise within boats, so any variation in that miniscule range will be swamped.
 
 ### Goodness of imputation
 

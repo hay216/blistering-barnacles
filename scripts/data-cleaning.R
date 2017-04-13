@@ -1,10 +1,11 @@
 ################################################################################
 ################################################################################
-## Title: Data cleaning
+## Title: Data cleaning and imputation
 ## Author: Steve Lane
 ## Date: Wednesday, 08 March 2017
-## Synopsis: Cleans data for manuscript and model fitting.
-## Time-stamp: <2017-04-12 15:41:44 (slane)>
+## Synopsis: Cleans data for manuscript and model fitting, and performs
+## imputation on the vessel level.
+## Time-stamp: <2017-04-13 15:46:16 (slane)>
 ################################################################################
 ################################################################################
 ipak <- function(pkg){
@@ -22,8 +23,9 @@ ipak <- function(pkg){
     sapply(chk.git, require, character.only = TRUE)
 }
 ## Add github packages using gitname/reponame format
-packages <- c("dplyr")
+packages <- c("dplyr", "mice", "parallel")
 ipak(packages)
+source("../scripts/imputation-functions.R")
 samplesdata <- read.csv("../data-raw/samples.csv")
 ## Bring in vessel data as well.
 vessels <- read.csv("../data-raw/vessel.csv")
@@ -35,25 +37,19 @@ vessels <- read.csv("../data-raw/vessel.csv")
 ## Begin Section: Filter out locations not used and mutate data as necessary.
 ################################################################################
 ################################################################################
-## First time around, use uniform imputation for censored outcome.
 ## First prepare data.
 data <- samplesdata %>% filter(LocID %in% c("HA", "PJ", "HP")) %>%
     select(-boatType, -boatCode, -paintRating, -Location, -LocCode, -samLab,
-           -wetWeight1, -wetWeight2) %>%
-    mutate(cens = ifelse(wetWeight < 1.5, 1, 0),
-           paintTypeInt = as.integer(factor(paintType)),
-           days1S = as.numeric(scale(log(days1 + 0.1))),
-           days2S = as.numeric(scale(log(days2 + 0.1))),
-           midTripsS = as.numeric(scale(log(midTrips + 0.1))),
-           boatIDInt = as.numeric(as.factor(boatID)),
-           paintTypeF = factor(paintTypeInt),
-           wwImp = wetWeight,
-           wwLog = log(ifelse(wetWeight < 1.5, runif(1, 0, 1.5), wetWeight))) %>%
-    group_by(boatIDInt) %>% mutate(obsNum = seq_len(n())) %>% ungroup()
+           -wetWeight1, -wetWeight2)
+vessels <- vessels %>%
+    distinct(boatID, .keep_all = TRUE) %>%
+    select(boatID, samLoc, boatType, ApproxHullSA) %>%
+    filter(!is.na(boatID))
 ## Merge on vessel data
 data <- left_join(
     data,
-    vessels
+    vessels,
+    by = "boatID"
 ) %>%
     mutate(
         samLoc = recode(samLoc,
@@ -65,12 +61,27 @@ data <- left_join(
                           "Fishing vessel (Long line)" = "Fishing",
                           "Ferry" = "Other",
                           "Tug" = "Other"),
+        boatType = as.factor(boatType),
         LocID = recode(LocID,
                        "HA" = "Hull", "HP" = "Keel", "PJ" = "Rudder"),
-        locIDInt = as.integer(factor(LocID))
+        LocID = as.factor(LocID),
+        cens = ifelse(wetWeight < 1.5, 1, 0),
+        paintType = as.factor(paintType)
     )
+## Data for imputations/modelling
+impData <- data %>% select(-samLoc, -cens, -LocID)
+## Loop to create multiple imputations - give a loop as I want to start each
+## imputation off with a random draw from a U(0, 1.5) for the censored data just
+## to inject a little randomness into it.
+## Create 20 imputations
+set.seed(787, "L'Ecuyer")
+impList <- mclapply(1:20, function(i){
+    imp <- lvl2Imp(impData)
+    imp$lvl2
+})
 ## Save as rds for further use.
 if(!dir.exists("../data/")) dir.create("../data/")
 saveRDS(data, file = "../data/biofouling.rds")
+saveRDS(impList, file = "../data/imputations.rds")
 ################################################################################
 ################################################################################

@@ -1,4 +1,4 @@
-# Time-stamp: <2017-04-12 14:12:02 (slane)>
+# Time-stamp: <2017-04-13 15:44:09 (slane)>
 .PHONY: all models input-data output-data clean-data clean-manuscripts clobber
 
 all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf
@@ -7,7 +7,7 @@ all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf
 
 # models: stan/dynamic-governance-m0.rds
 
-input-data: data/biofouling.rds
+input-data: data/biofouling.rds data/imputations.rds
 
 # output-data: data/stanfit-KIWI-dynamic-governance-m0-10.rda
 
@@ -19,8 +19,8 @@ input-data: data/biofouling.rds
 
 ################################################################################
 # Make data for feeding into models and manuscript
-data/biofouling.rds: scripts/data-cleaning.R data-raw/samples.csv \
-	data-raw/vessel.csv
+data/imputations.rds data/biofouling.rds: scripts/data-cleaning.R \
+	data-raw/samples.csv data-raw/vessel.csv
 	cd $(<D); \
 	Rscript $(<F) --no-save --no-restore
 

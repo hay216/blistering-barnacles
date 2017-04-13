@@ -4,7 +4,7 @@
 ## Author: Steve Lane
 ## Date: Wednesday, 29 March 2017
 ## Synopsis: Functions to run the censored regression imputation models
-## Time-stamp: <2017-03-29 12:23:01 (slane)>
+## Time-stamp: <2017-04-13 15:07:45 (slane)>
 ################################################################################
 ################################################################################
 
@@ -17,15 +17,18 @@
 ## the median, performs one iteration of random forest imputation using mice,
 ## then passes back the imputed data.
 lvl2Imp <- function(data){
-    lvl2 <- data %>% group_by(days1S, days2S, midTripsS, paintTypeF) %>%
-        summarise(m = median(wwLog)) %>% ungroup()
-    miLvl2 <- mice(lvl2, m = 1, method = "rf", maxit = 1)
-    lvl2 <- complete(miLvl2) %>% mutate(boatIDInt = 1:n())
-    impData <- left_join(
-        data %>% select(-days1S, -days2S, -midTripsS, -paintTypeF),
-        lvl2 %>% select(-m)
-    )
-    list(impData = impData, lvl2 = lvl2)
+    data <- data %>%
+        mutate(wwImp = ifelse(wetWeight < 1.5, runif(n(), 0, 1.5), wetWeight))
+    lvl2 <- data %>%
+        group_by(boatID, days1, days2, midTrips, paintType, boatType,
+                 ApproxHullSA) %>%
+        summarise(m = median(wwImp)) %>% ungroup()
+    pred.mat <- matrix(1 - diag(ncol(lvl2)), ncol(lvl2))
+    pred.mat[1, ] <- pred.mat[, 1] <- 0
+    miLvl2 <- mice(lvl2, m = 1, method = "rf", predictorMatrix = pred.mat,
+                   maxit = 20, printFlag = FALSE)
+    lvl2 <- complete(miLvl2) %>% select(-m)
+    list(lvl2 = lvl2)
 }
 ################################################################################
 ################################################################################
