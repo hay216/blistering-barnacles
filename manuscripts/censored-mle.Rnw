@@ -1,4 +1,4 @@
-% Time-stamp: <2017-04-12 17:30:56 (slane)>
+% Time-stamp: <2017-04-13 16:50:21 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -76,7 +76,7 @@ ipak <- function(pkg){
     sapply(chk.git, require, character.only = TRUE)
 }
 ## Add github packages using gitname/reponame format
-packages <- c("dplyr", "tidyr", "ggplot2")
+packages <- c("dplyr", "tidyr", "ggplot2", "mice")
 ipak(packages)
 knitr::opts_chunk$set(cache = FALSE, error = FALSE, warning = FALSE,
                       message = FALSE, fig.align = "center", echo = FALSE,
@@ -134,6 +134,7 @@ Figure~\ref{fig:obs-weight} shows histograms of the observed wet weight of bioma
 <<obs-weight,fig.cap = paste("Measured wet weight of sampled biomass from the", nrow(vessels), "vessels. The left column shows the measured wet weight, whilst the right column shows the log-transformed wet weight. Samples that measured less than the limit of detection (1.5gm) have been removed.")>>=
 histData <- biofoul %>%
     filter(wetWeight >= 1.5) %>%
+    mutate(wwLog = log(wetWeight)) %>%
     select(LocID, `Weight (gm)` = wetWeight,
            `Weight (gm), log-scale` = wwLog) %>%
     gather("logged", "ww", 2:3)
@@ -152,5 +153,28 @@ See \href{https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations}{th
 Model 1: imputation model with log-normal errors
 
 Model 2: imputation model with log-cauchy errors (more robust for outliers)
+
+Describe the models here...
+
+\subsection{Missing data}
+\label{sec:missing-data}
+
+<<missingness>>=
+missVessels <- vessels %>% select(days1, midTrips, paintType)
+miss <- md.pattern(missVessels)
+ccData <- biofoul %>% na.omit()
+print(miss)
+
+@
+
+Turn the output into a proper table.
+
+There is missing data at the vessel-level. We can see that there are \Sexpr{rownames(miss)[1]} observations with complete boat-level data; \Sexpr{paste0(rownames(miss)[2:4], collapse = ",")} missing data on \texttt{days1}, \texttt{midTrips} and \texttt{paintType} respectively; and \Sexpr{paste0(rownames(miss)[5:6], collapse = ",")} missing data on both (\texttt{days1} and \texttt{midTrips}), and (\texttt{days1}, \texttt{paintType} and \texttt{midTrips}) respectively.
+
+A complete-case data analysis would only utilise \Sexpr{as.integer(rownames(miss)[1])/nrow(vessels)*100}\% of the vessel-level data. At the first level, the number of observations available for a complete-case analysis is \Sexpr{nrow(ccData)} (\Sexpr{nrow(ccData)/nrow(biofoul)*100}\%)\footnote{Needs tidying; taken directly from Rmd}.
+
+Due to the amount of missing data, we used multiple imputation to ``fill in'' the missing observations. Specifically, we used the R package \texttt{mice} (ref) to perform conditional imputation. All vessel-level variables were used in the imputation specification, and to account for any non-linearities, random forest imputation was used.
+
+As all missing data was at the vessel-level, we used the median wet weight of biomass as a predictor in the imputation models (ref Gelman ARM). To account for the censoring in the wet weight of biomass (observations below the 1.5gm limit of detection), we replaced the censored data by a random draw from a Uniform(0, 1.5) distribution. We justify this procedure in the following way: i) some level of variability is required as we don't know the true value of the censored observations; ii) Figure~\ref{fig:obs-weight} shows that weights below 1.5gm (\Sexpr{log(1.5)} on the log-scale) form a very small part of the range of observed values. This small variability will have limited impact in the imputation of the missing data due to the fact that we are summarising within-vessel wet weight of biomass measurements by the median for input into the imputation models.
 
 \end{document}
