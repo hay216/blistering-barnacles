@@ -4,7 +4,7 @@
 ## Author: Steve Lane
 ## Date: Wednesday, 29 March 2017
 ## Synopsis: Functions to run the censored regression imputation models
-## Time-stamp: <2017-04-13 15:07:45 (slane)>
+## Time-stamp: <2017-04-20 15:27:07 (slane)>
 ################################################################################
 ################################################################################
 
@@ -29,6 +29,85 @@ lvl2Imp <- function(data){
                    maxit = 20, printFlag = FALSE)
     lvl2 <- complete(miLvl2) %>% select(-m)
     list(lvl2 = lvl2)
+}
+################################################################################
+################################################################################
+
+################################################################################
+################################################################################
+## Begin Section: Create stan data function
+################################################################################
+################################################################################
+createStanData <- function(data){
+    ## Use model matrix to get indicators of what I need. These will be created
+    ## alphabetically/numerically, just need to be careful feeding them in to
+    ## stan.
+    mat <- model.matrix(~ days1 + days2 + midTrips + ApproxHullSA + LocID +
+                            paintType + boatType + days1:paintType +
+                            days1:boatType + days2:paintType + days2:boatType +
+                            midTrips:paintType + midTrips:boatType +
+                            ApproxHullSA:paintType + ApproxHullSA:boatType,
+                        data = data) %>% as.data.frame() %>%
+        mutate(cens = data$cens,
+               wetWeight = data$wetWeight,
+               boatID = data$boatID)
+    ## Can pass list with too many variables to stan, so just add all as it
+    ## makes it easier in the long run.
+    obsData <- mat %>% filter(cens == 0)
+    censData <- mat %>% filter(cens == 1)
+    stanData <- c(with(obsData,
+                       list(Y = wetWeight, N = nrow(obsData), days1 = days1,
+                            days2 = days2, midTrips = midTrips,
+                            hullSA = ApproxHullSA, numPaint = 3,
+                            paintType = cbind(paintType2, paintType3),
+                            numLoc = 3,
+                            locID = cbind(LocIDKeel, LocIDRudder),
+                            numType = 3,
+                            boatType = cbind(boatType2, boatType3),
+                            days1paint = cbind(`days1:paintType2`,
+                                               `days1:paintType3`),
+                            days1boat = cbind(`days1:boatType2`,
+                                              `days1:boatType3`),
+                            days2paint = cbind(`days2:paintType2`,
+                                               `days2:paintType3`),
+                            days2boat = cbind(`days2:boatType2`,
+                                              `days2:boatType3`),
+                            midTripspaint = cbind(`midTrips:paintType2`,
+                                                  `midTrips:paintType3`),
+                            midTripsboat = cbind(`midTrips:boatType2`,
+                                                 `midTrips:boatType3`),
+                            ApproxHullSApaint = cbind(`ApproxHullSA:paintType2`,
+                                                      `ApproxHullSA:paintType3`),
+                            ApproxHullSAboat = cbind(`ApproxHullSA:boatType2`,
+                                                     `ApproxHullSA:boatType3`),
+                            numBoat = max(boatID), boatID = boatID)),
+                  with(censData,
+                       list(nCens = nrow(censData), U = 1.5, days1Cens = days1,
+                            days2Cens = days2, midTripsCens = midTrips,
+                            hullSACens = ApproxHullSA,
+                            paintTypeCens = cbind(paintType2, paintType3),
+                            locIDCens = cbind(LocIDKeel, LocIDRudder),
+                            boatTypeCens = cbind(boatType2, boatType3),
+                            days1paintCens = cbind(`days1:paintType2`,
+                                                   `days1:paintType3`),
+                            days1boatCens = cbind(`days1:boatType2`,
+                                                  `days1:boatType3`),
+                            days2paintCens = cbind(`days2:paintType2`,
+                                                   `days2:paintType3`),
+                            days2boatCens = cbind(`days2:boatType2`,
+                                                  `days2:boatType3`),
+                            midTripspaintCens = cbind(`midTrips:paintType2`,
+                                                      `midTrips:paintType3`),
+                            midTripsboatCens = cbind(`midTrips:boatType2`,
+                                                     `midTrips:boatType3`),
+                            ApproxHullSApaintCens =
+                                cbind(`ApproxHullSA:paintType2`,
+                                      `ApproxHullSA:paintType3`),
+                            ApproxHullSAboatCens =
+                                cbind(`ApproxHullSA:boatType2`,
+                                      `ApproxHullSA:boatType3`),
+                            boatIDCens = boatID)))
+    stanData
 }
 ################################################################################
 ################################################################################

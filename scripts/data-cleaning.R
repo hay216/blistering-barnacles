@@ -5,7 +5,7 @@
 ## Date: Wednesday, 08 March 2017
 ## Synopsis: Cleans data for manuscript and model fitting, and performs
 ## imputation on the vessel level.
-## Time-stamp: <2017-04-20 14:42:12 (slane)>
+## Time-stamp: <2017-04-20 15:28:50 (slane)>
 ################################################################################
 ################################################################################
 ipak <- function(pkg){
@@ -82,8 +82,8 @@ impList <- mclapply(1:20, function(i){
         data %>% select(boatID, wetWeight, LocID, cens),
         imp$lvl2
     )
-    
-    list(imp$lvl2, fullData)
+    stanData <- createStanData(fullData)
+    list(lvl2 = imp$lvl2, fullData = fullData, stanData = stanData)
 })
 ## Save as rds for further use.
 if(!dir.exists("../data/")) dir.create("../data/")
