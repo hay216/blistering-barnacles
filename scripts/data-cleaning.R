@@ -5,7 +5,7 @@
 ## Date: Wednesday, 08 March 2017
 ## Synopsis: Cleans data for manuscript and model fitting, and performs
 ## imputation on the vessel level.
-## Time-stamp: <2017-04-13 15:46:16 (slane)>
+## Time-stamp: <2017-04-20 14:42:12 (slane)>
 ################################################################################
 ################################################################################
 ipak <- function(pkg){
@@ -59,8 +59,9 @@ data <- left_join(
                           "Fishing vessel (Lobster/scallop)" = "Fishing",
                           "Fishing vessel (Abalone mothership)" = "Fishing",
                           "Fishing vessel (Long line)" = "Fishing",
-                          "Ferry" = "Other",
-                          "Tug" = "Other"),
+                          "Motor cruiser" = "Motor cruiser/Other",
+                          "Ferry" = "Motor cruiser/Other",
+                          "Tug" = "Motor cruiser/Other"),
         boatType = as.factor(boatType),
         LocID = recode(LocID,
                        "HA" = "Hull", "HP" = "Keel", "PJ" = "Rudder"),
@@ -73,11 +74,16 @@ impData <- data %>% select(-samLoc, -cens, -LocID)
 ## Loop to create multiple imputations - give a loop as I want to start each
 ## imputation off with a random draw from a U(0, 1.5) for the censored data just
 ## to inject a little randomness into it.
-## Create 20 imputations
+## Create 20 imputations, join to full data, and also create stan data
 set.seed(787, "L'Ecuyer")
 impList <- mclapply(1:20, function(i){
     imp <- lvl2Imp(impData)
-    imp$lvl2
+    fullData <- left_join(
+        data %>% select(boatID, wetWeight, LocID, cens),
+        imp$lvl2
+    )
+    
+    list(imp$lvl2, fullData)
 })
 ## Save as rds for further use.
 if(!dir.exists("../data/")) dir.create("../data/")
