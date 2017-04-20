@@ -1,4 +1,4 @@
-% Time-stamp: <2017-04-13 16:50:21 (slane)>
+% Time-stamp: <2017-04-20 14:57:07 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -68,7 +68,8 @@ ipak <- function(pkg){
     if(!(length(new.pkg) == 0)){
         git.ind <- grep("/", new.pkg)
         if(length(git.ind) == 0){
-            install.packages(new.pkg, dependencies = TRUE)
+            install.packages(new.pkg, dependencies = TRUE,
+                             repos = "https://cran.csiro.au/")
         } else {
             devtools::install_github(new.pkg[git.ind])
         }
@@ -118,7 +119,7 @@ The data used in this paper came from a prospective survey in Australia conducte
 
 Samples were collected from both external and internal surfaces using plastic and metal putty knives. All samples were washed with 0.2$\mu$m filtered seawater, sieved and subsequently weighed using Sartorius BL3100 scales. Due to the unreliability of low wet weight measurements, samples that weighed less than 1.5gm were assigned a biomass of 0.5gm; that is, the lower limit of detection was 1.5gm.
 
-Most vessels were sampled in Hobart at the \Sexpr{names(locs)[1]} (\Sexpr{locs[1]}) and the \Sexpr{names(locs)[2]} (\Sexpr{locs[2]}). The remaining vessels were sampled in Melbourne at the \Sexpr{names(locs)[3]} (\Sexpr{locs[3]}), the \Sexpr{names(locs)[4]} (\Sexpr{locs[4]}), and the \Sexpr{names(locs)[5]} (\Sexpr{locs[5]}). Most of the sample vessels were yachts (\Sexpr{types[1]}), followed by fishing vessels (\Sexpr{types[2]}), motor cruisers (\Sexpr{types[3]}), and others (\Sexpr{types[4]}).
+Most vessels were sampled in Hobart at the \Sexpr{names(locs)[1]} (\Sexpr{locs[1]}) and the \Sexpr{names(locs)[2]} (\Sexpr{locs[2]}). The remaining vessels were sampled in Melbourne at the \Sexpr{names(locs)[3]} (\Sexpr{locs[3]}), the \Sexpr{names(locs)[4]} (\Sexpr{locs[4]}), and the \Sexpr{names(locs)[5]} (\Sexpr{locs[5]}). Most of the sample vessels were yachts (\Sexpr{types[1]}), followed by fishing vessels (\Sexpr{types[2]}), motor cruisers and others (\Sexpr{types[3]}).
 
 Samples were collected from as many as 64 different locations in and around the hull, propeller, rudder and anchor, internal spaces, fishing gear and deck of the vessels. Samples taken from the hull, fixed keel and rudder surface were consistently collected using 0.5m\up{2} quadrats, so these form the focus of our analysis. In all, \Sexpr{quads[1]} samples were collected from the hull, \Sexpr{quads[2]} from the rudder surface, and \Sexpr{quads[3]} from the fixed keel.
 
