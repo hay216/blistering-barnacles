@@ -1,11 +1,11 @@
-# Time-stamp: <2017-04-13 15:44:09 (slane)>
-.PHONY: all models input-data output-data clean-data clean-manuscripts clobber
+# Time-stamp: <2017-04-21 08:09:56 (slane)>
+.PHONY: all models input-data output-data clean-models clean-manuscripts clobber
 
 all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf
 
 .INTERMEDIATES: manuscripts/censored-mle.tex
 
-# models: stan/dynamic-governance-m0.rds
+models: stan/censored-mle-m0.rds
 
 input-data: data/biofouling.rds data/imputations.rds
 
@@ -13,9 +13,9 @@ input-data: data/biofouling.rds data/imputations.rds
 
 ################################################################################
 # Rules for making stan models
-# stan/dynamic-governance-m0.rds: R/compile-model.R
-# 	cd $(<D); \
-# 	Rscript $(<F) mname=dynamic-governance-m0
+%.rds: scripts/compile-model.R %.stan
+	cd $(<D); \
+	Rscript $(<F) mname=$(basename $(@F) .rds)
 
 ################################################################################
 # Make data for feeding into models and manuscript
@@ -47,7 +47,7 @@ data/imputations.rds data/biofouling.rds: scripts/data-cleaning.R \
 
 ################################################################################
 # Cleaning targets
-clean-data:
+clean-models:
 	cd stan/; \
 	rm -f *.rds
 
