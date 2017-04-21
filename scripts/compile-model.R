@@ -5,10 +5,10 @@ args <- commandArgs(trailingOnly = TRUE)
 ## Title: Compile model
 ## Author: Steve Lane
 ## Date: Friday, 21 April 2017
+## Time-stamp: <2017-04-21 09:42:24 (slane)>
 ## Synopsis: Script that compiles the stan model. Designed to be called
 ## from the Makefile, it requires the model name to be set on the command line,
 ## or prior to sourcing the script.
-## Time-stamp: <>
 ################################################################################
 ################################################################################
 if(length(args) != 1){
