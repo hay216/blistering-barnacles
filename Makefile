@@ -1,15 +1,17 @@
-# Time-stamp: <2017-04-21 12:05:21 (slane)>
+# Time-stamp: <2017-04-21 13:46:13 (slane)>
 .PHONY: all models input-data output-data clean-models clean-manuscripts clobber
 
 all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf
 
 .INTERMEDIATES: manuscripts/censored-mle.tex
 
-models: stan/censored-mle-m0.rds
+models: stan/censored-mle-m0.rds \
+	stan/censored-mle-m1.rds
 
 input-data: data/biofouling.rds data/imputations.rds
 
-output-data: data/censored-mle-m0-scaled.rds
+output-data: data/censored-mle-m0-scaled.rds \
+	data/censored-mle-m1-scaled.rds
 
 ################################################################################
 # Make data for feeding into models and manuscript
@@ -24,12 +26,21 @@ stan/censored-mle-m0.rds: scripts/compile-model.R stan/censored-mle-m0.stan
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds)
 
+stan/censored-mle-m1.rds: scripts/compile-model.R stan/censored-mle-m1.stan
+	cd $(<D); \
+	Rscript $(<F) mname=$(basename $(@F) .rds)
+
 ################################################################################
 # Rules to fit models with data
 data/censored-mle-m0-scaled.rds: scripts/fit-model.R \
 	stan/censored-mle-m0.rds data/imputations.rds
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=737
+
+data/censored-mle-m1-scaled.rds: scripts/fit-model.R \
+	stan/censored-mle-m1.rds data/imputations.rds
+	cd $(<D); \
+	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=666
 
 ################################################################################
 # Rules to make manuscripts
