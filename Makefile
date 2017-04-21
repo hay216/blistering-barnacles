@@ -1,4 +1,4 @@
-# Time-stamp: <2017-04-21 11:50:59 (slane)>
+# Time-stamp: <2017-04-21 12:05:21 (slane)>
 .PHONY: all models input-data output-data clean-models clean-manuscripts clobber
 
 all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf
@@ -29,7 +29,7 @@ stan/censored-mle-m0.rds: scripts/compile-model.R stan/censored-mle-m0.stan
 data/censored-mle-m0-scaled.rds: scripts/fit-model.R \
 	stan/censored-mle-m0.rds data/imputations.rds
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) -scaled.rds) myseed=737
+	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=737
 
 ################################################################################
 # Rules to make manuscripts
