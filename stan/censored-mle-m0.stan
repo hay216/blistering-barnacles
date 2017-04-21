@@ -6,7 +6,7 @@
 // Synopsis: Sampling statements to fit a regression with censored outcome data.
 // Includes boat-level intercept. Edited to include predictions. All predictors
 // entered.
-// Time-stamp: <2017-04-21 12:34:11 (slane)>
+// Time-stamp: <2017-04-21 13:35:12 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -92,6 +92,7 @@ model{
   betaDays1 ~ student_t(3, 0, 1);
   betaDays2 ~ student_t(3, 0, 1);
   betaMidTrips ~ student_t(3, 0, 1);
+  betaHullSA ~ student_t(3, 0, 1);
   /* Priors for categorical indicators */
   betaPaint ~ student_t(3, 0, 1);
   betaLoc ~ student_t(3, 0, 1);
