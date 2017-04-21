@@ -1,4 +1,4 @@
-# Time-stamp: <2017-04-21 08:09:56 (slane)>
+# Time-stamp: <2017-04-21 11:50:59 (slane)>
 .PHONY: all models input-data output-data clean-models clean-manuscripts clobber
 
 all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf
@@ -9,13 +9,7 @@ models: stan/censored-mle-m0.rds
 
 input-data: data/biofouling.rds data/imputations.rds
 
-# output-data: data/stanfit-KIWI-dynamic-governance-m0-10.rda
-
-################################################################################
-# Rules for making stan models
-%.rds: scripts/compile-model.R %.stan
-	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds)
+output-data: data/censored-mle-m0-scaled.rds
 
 ################################################################################
 # Make data for feeding into models and manuscript
@@ -25,11 +19,17 @@ data/imputations.rds data/biofouling.rds: scripts/data-cleaning.R \
 	Rscript $(<F) --no-save --no-restore
 
 ################################################################################
+# Rules for making stan models
+stan/censored-mle-m0.rds: scripts/compile-model.R stan/censored-mle-m0.stan
+	cd $(<D); \
+	Rscript $(<F) mname=$(basename $(@F) .rds)
+
+################################################################################
 # Rules to fit models with data
-# data/stanfit-KIWI-dynamic-governance-m0-10.rda: R/fit-model.R \
-# 	stan/dynamic-governance-m0.rds data/data-KIWI-10.rda
-# 	cd $(<D); \
-# 	Rscript $(<F) mname=dynamic-governance-m0 pathway=KIWI size=10 iter=2000
+data/censored-mle-m0-scaled.rds: scripts/fit-model.R \
+	stan/censored-mle-m0.rds data/imputations.rds
+	cd $(<D); \
+	Rscript $(<F) mname=$(basename $(@F) -scaled.rds) myseed=737
 
 ################################################################################
 # Rules to make manuscripts
