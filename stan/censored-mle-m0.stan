@@ -6,7 +6,7 @@
 // Synopsis: Sampling statements to fit a regression with censored outcome data.
 // Includes boat-level intercept. Edited to include predictions. All predictors
 // entered.
-// Time-stamp: <2017-04-20 15:33:43 (slane)>
+// Time-stamp: <2017-04-21 12:34:11 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -105,4 +105,20 @@ model{
   Y ~ lognormal(muHat, sigma);
   /* Censored log-likelihood */
   yCens ~ lognormal(muHatCens, sigma);
+}
+
+generated quantities{
+  /* Need the log likelihood for leave one out prediction errors */
+  vector[N + nCens] log_lik;
+  {
+    real linPred;
+    for(i in 1:N){
+      linPred = mu + betaDays1 * days1[i] + betaDays2 * days2[i] + betaMidTrips * midTrips[i] + betaHullSA * hullSA[i] + locID[i] * betaLoc + paintType[i] * betaPaint + boatType[i] * betaType + alphaBoat[boatID[i]];
+      log_lik[i] = lognormal_lpdf(Y[i] | linPred, sigma);
+    }
+    for(j in 1:nCens){
+      linPred = mu + betaDays1 * days1Cens[j] + betaDays2 * days2Cens[j] + betaMidTrips * midTripsCens[j] + betaHullSA * hullSACens[j] + locIDCens[j] * betaLoc + paintTypeCens[j] * betaPaint + boatTypeCens[j] * betaType + alphaBoat[boatIDCens[j]];
+      log_lik[N + j] = lognormal_lpdf(yCens[j] | linPred, sigma);
+    }
+  }
 }
