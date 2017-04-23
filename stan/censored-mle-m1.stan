@@ -1,12 +1,12 @@
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-// Title: Censored MLE, Model 1
+// Title: Censored MLE, Model 1, Group Level
 // Author: Steve Lane
 // Date: Wednesday, 08 March 2017
 // Synopsis: Sampling statements to fit a regression with censored outcome data.
-// Includes boat-level intercept. Edited to include predictions. Removed some
-// predictors which don't seem to do anything.
-// Time-stamp: <2017-04-21 13:39:29 (slane)>
+// Includes boat-level intercept, and observation level location ID.
+// All boat-level intercept predictors included.
+// Time-stamp: <2017-04-24 09:40:02 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -17,13 +17,27 @@ data{
   /* Number of (censored) observations */
   int<lower=1> nCens;
   /* Numeric/ordinal predictors */
+  real days1[N];
+  real days1Cens[nCens];
   real days2[N];
   real days2Cens[nCens];
+  real midTrips[N];
+  real midTripsCens[nCens];
+  real hullSA[N];
+  real hullSACens[nCens];
   /* Categorical predictors, entered as matrices of indicators */
   /* Location of measurement, hull as base case */
   int<lower=1> numLoc;
   matrix[N, numLoc - 1] locID;
   matrix[nCens, numLoc - 1] locIDCens;
+  /* Paint type, ablative as base case */
+  int<lower=1> numPaint;
+  matrix[N, numPaint - 1] paintType;
+  matrix[nCens, numPaint - 1] paintTypeCens;
+  /* Boat type, yacht as base case */
+  int<lower=1> numType;
+  matrix[N, numType - 1] boatType;
+  matrix[nCens, numType - 1] boatTypeCens;
   /* Boat random effect */
   int<lower=1> numBoat;
   int<lower=1,upper=numBoat> boatID[N];
@@ -39,9 +53,14 @@ parameters{
   /* Intercept */
   real mu;
   /* Betas for continuous */
+  real betaDays1;
   real betaDays2;
+  real betaMidTrips;
+  real betaHullSA;
   /* Betas for categorical indicators */
   vector[numLoc - 1] betaLoc;
+  vector[numPaint - 1] betaPaint;
+  vector[numType - 1] betaType;
   /* Alphas for modelled random effect */
   vector[numBoat] alphaBoat;
   /* Errors for categorical predictors */
@@ -54,28 +73,31 @@ parameters{
 
 transformed parameters{
   // Make it easier for some sampling statements (not necessary)
-    /* Regression for observed data */
+  /* Regression for observed data */
   vector[N] muHat;
   /* Regression for censored data */
   vector[nCens] muHatCens;
+  /* Regression for boat-level intercept */
+  vector[numBoat] alphaHat;
+  for(n in 1:numBoat){
+    alphaHat[n] = mu + betaDays1 * days1[n] + betaDays2 * days2[n] + betaMidTrips * midTrips[n] + betaHullSA * hullSA[n] + paintType[n] * betaPaint + boatType[n] * betaType;
+  }
   for(i in 1:N){
-    muHat[i] = mu + betaDays2 * days2[i] + locID[i] * betaLoc + alphaBoat[boatID[i]];
+    muHat[i] = locID[i] * betaLoc + alphaBoat[boatID[i]];
   }
   for(j in 1:nCens){
-    muHatCens[j] = mu + betaDays2 * days2Cens[j] + locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
+    muHatCens[j] = locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
   }
 }
 
 model{
   // Model sampling statements
-  /* Priors for regression parameters */
-  mu ~ normal(0, 5);
-  betaDays2 ~ student_t(3, 0, 1);
   /* Priors for categorical indicators */
   betaLoc ~ student_t(3, 0, 1);
   /* Priors for modelled random effect */
+  mu ~ normal(0, 5);
   sigma_alphaBoat ~ cauchy(0, 2.5);
-  alphaBoat ~ cauchy(0, sigma_alphaBoat);
+  alphaBoat ~ cauchy(mu, sigma_alphaBoat);
   /* Prior for observation (model) error */
   sigma ~ cauchy(0, 2.5);
   /* Observed log-likelihood */
@@ -90,11 +112,11 @@ generated quantities{
   {
     real linPred;
     for(i in 1:N){
-      linPred = mu + betaDays2 * days2[i] + locID[i] * betaLoc + alphaBoat[boatID[i]];
+      linPred = locID[i] * betaLoc + alphaBoat[boatID[i]];
       log_lik[i] = lognormal_lpdf(Y[i] | linPred, sigma);
     }
     for(j in 1:nCens){
-      linPred = mu + betaDays2 * days2Cens[j] + locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
+      linPred = locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
       log_lik[N + j] = lognormal_lpdf(yCens[j] | linPred, sigma);
     }
   }
