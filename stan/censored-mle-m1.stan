@@ -6,7 +6,7 @@
 // Synopsis: Sampling statements to fit a regression with censored outcome data.
 // Includes boat-level intercept, and observation level location ID.
 // All boat-level intercept predictors included.
-// Time-stamp: <2017-04-24 09:40:02 (slane)>
+// Time-stamp: <2017-04-24 09:52:50 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -16,15 +16,13 @@ data{
   int<lower=1> N;
   /* Number of (censored) observations */
   int<lower=1> nCens;
+  /* Number of boats/vessels */
+  int<lower=1> numBoat;
   /* Numeric/ordinal predictors */
-  real days1[N];
-  real days1Cens[nCens];
-  real days2[N];
-  real days2Cens[nCens];
-  real midTrips[N];
-  real midTripsCens[nCens];
-  real hullSA[N];
-  real hullSACens[nCens];
+  real days1[numBoat];
+  real days2[numBoat];
+  real midTrips[numBoat];
+  real hullSA[numBoat];
   /* Categorical predictors, entered as matrices of indicators */
   /* Location of measurement, hull as base case */
   int<lower=1> numLoc;
@@ -32,14 +30,11 @@ data{
   matrix[nCens, numLoc - 1] locIDCens;
   /* Paint type, ablative as base case */
   int<lower=1> numPaint;
-  matrix[N, numPaint - 1] paintType;
-  matrix[nCens, numPaint - 1] paintTypeCens;
+  matrix[numBoat, numPaint - 1] paintType;
   /* Boat type, yacht as base case */
   int<lower=1> numType;
-  matrix[N, numType - 1] boatType;
-  matrix[nCens, numType - 1] boatTypeCens;
+  matrix[numBoat, numType - 1] boatType;
   /* Boat random effect */
-  int<lower=1> numBoat;
   int<lower=1,upper=numBoat> boatID[N];
   int<lower=1,upper=numBoat> boatIDCens[nCens];
   /* Observed data */
@@ -96,8 +91,15 @@ model{
   betaLoc ~ student_t(3, 0, 1);
   /* Priors for modelled random effect */
   mu ~ normal(0, 5);
+  betaDays1 ~ student_t(3, 0, 1);
+  betaDays2 ~ student_t(3, 0, 1);
+  betaMidTrips ~ student_t(3, 0, 1);
+  betaHullSA ~ student_t(3, 0, 1);
+  /* Priors for categorical indicators */
+  betaPaint ~ student_t(3, 0, 1);
+  betaType ~ student_t(3, 0, 1);
   sigma_alphaBoat ~ cauchy(0, 2.5);
-  alphaBoat ~ cauchy(mu, sigma_alphaBoat);
+  alphaBoat ~ cauchy(alphaHat, sigma_alphaBoat);
   /* Prior for observation (model) error */
   sigma ~ cauchy(0, 2.5);
   /* Observed log-likelihood */
