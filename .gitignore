@@ -27,6 +27,8 @@
 *.run.xml
 manuscripts/cache/*
 manuscripts/auto/*
+manuscripts/model-interrogation_cache/*
+manuscripts/model-interrogation_files/*
 *.rds
 .txt
 .DS_Store

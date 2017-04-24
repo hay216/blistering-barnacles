@@ -1,0 +1,118 @@
+---
+title: "Model Interrogation"
+author: Stephen E. Lane
+output:
+  html_document:
+    theme: simplex
+    highlight: zenburn
+---
+
+<!-- Time-stamp: <2017-04-24 14:20:32 (slane)> -->
+
+```{r,knitr-setup,echo=FALSE,warning=FALSE,message=FALSE,cache=FALSE,results="hide"}
+ipak <- function(pkg){
+    ## Check for github packages (throw away github username)
+    chk.git <- gsub(".*/", "", pkg)    
+    new.pkg <- pkg[!(chk.git %in% installed.packages()[, "Package"])]
+    if(!(length(new.pkg) == 0)){
+        git.ind <- grep("/", new.pkg)
+        if(length(git.ind) == 0){
+            install.packages(new.pkg, dependencies = TRUE,
+	                     repos = "https://cran.csiro.au/")
+        } else {
+            devtools::install_github(new.pkg[git.ind])
+        }
+    }
+    sapply(chk.git, require, character.only = TRUE)
+}
+## Add github packages using gitname/reponame format
+packages <- c("dplyr","ggplot2","rstan")
+ipak(packages)
+knitr::opts_chunk$set(error = FALSE, warning = FALSE, cache = TRUE,
+                      message = FALSE, echo = FALSE)
+options(digits = 2, width = 100)
+
+```
+
+## Introduction
+
+In this document, I detail the model interrogation for the *blistering barnacles* (otherwise known as *biofouling*) project. For the introduction and set up of the problem, see the [manuscript](file:../manuscripts/censored-mle.pdf). This document expands upon the modelling description as given in that paper.
+
+## Models
+
+The basic model (which we denote M0) included the location of the measurement as a level one fixed effect, and a modelled intercept for the vessel ID:
+
+$$
+\begin{align}
+  Y_{i} & \sim \text{log-normal}(\mu_{i}, \sigma) \\
+  \mu_{i} & = \mu + \alpha_{j[i]} + \beta^{l1} \cdot \text{location1}_{i} + \beta^{l2} \cdot \text{location2}_{i} \\
+  \alpha_{j} & \sim \text{cauchy}(0, \sigma_{\alpha}) \\
+  \mu & \sim N(0, 5) \\
+  \beta^{l1},\beta^{l2} & \sim t_{3}(0, 1) \\
+  \sigma,\sigma_{\alpha} & \sim \text{cauchy}(0, 2.5)
+\end{align}
+$$
+
+where $\text{location1}_{i},\text{location2}_{i}$ are indicator variables for whether the observation was measured at the keel or the rudder; observations made at the hull are aliased with the intercept, $\mu$. Summary output from this model is given below.
+
+```{r}
+m0 <- readRDS("../data/censored-mle-m0-scaled.rds")
+print(m0, digits = 2, include = FALSE,
+      par = c("alphaBoat", "yCens", "muHat", "muHatCens", "log_lik",
+              "alphaHat"))
+
+```
+
+The next model fit (M1) included all vessel-level predictors as main effects in a regression on the vessel-level intercept:
+
+$$
+\begin{align}
+  \alpha_{j} & \sim \text{cauchy}(\alpha^{*}_{j}, \sigma_{\alpha}) \\
+  \alpha^{*}_{j} & = \beta^{d1} \cdot \text{days1}_{i} + \beta^{d2} \cdot  \text{days2}_{i} + \beta^{m} \cdot \text{midTrips}_{i} + \beta^{h} \cdot \text{hullSA}_{i} + \beta^{p1} \cdot \text{paintType1}_{i} + \beta^{p2} \cdot \text{paintType2}_{i} + \\
+  & \quad \beta^{t1} \cdot \text{vesselType1}_{i} + \beta^{t2} \cdot \text{vesselType2}_{i}
+\end{align}
+$$
+
+where $\text{days1}_{i},\text{days2}_{i}$ are the XXX. Summary output from this model is given below.
+
+```{r}
+m1 <- readRDS("../data/censored-mle-m1-scaled.rds")
+print(m1, digits = 2, include = FALSE,
+      par = c("alphaBoat", "yCens", "muHat", "muHatCens", "log_lik",
+              "alphaHat"))
+
+```
+
+## Vessel-level intercept interrogation
+
+In this section we look at the estimated vessel-level intercepts ($\alpha_{j}$) in relation to the vessel-level predictors. From the output above, it is hard to gauge the impart of a product term, but the size of the 50% of the vessel type coefficients suggest that they may be candidates.
+
+The figure below shows the 50% point estimate (and 80% credible intervals) of the vessel-level intercept against the ordinal predictors, coloured by the categorical predictor.
+
+```{r}
+a1 <- extract(m1, "alphaBoat")$alphaBoat
+a1Sum <- t(apply(a1, 2, quantile, probs = c(0.1, 0.5, 0.9)))
+a1Dat <- tibble(low = a1Sum[,1], mid = a1Sum[,2], high = a1Sum[,3],
+                boatID = 1:nrow(a1Sum))
+imps <- readRDS("../data/imputations.rds")
+set.seed(13)
+lvl2 <- imps[[sample(seq_along(imps), 1)]]$lvl2 %>%
+    mutate(
+        days1 = as.numeric(scale(days1)),
+        days2 = as.numeric(scale(days2)),
+        midTrips = as.numeric(scale(midTrips)),
+        ApproxHullSA = as.numeric(scale(ApproxHullSA))
+    )
+a1Dat <- left_join(a1Dat, lvl2)
+pl <- ggplot(a1Dat, aes(x = days1, y = mid, ymin = low, ymax = high,
+                        colour = boatType)) +
+    geom_pointrange(fatten = 1) +
+    geom_abline(slope = 0.27, intercept = 2.78, colour = "lightgreen")
+print(pl)
+```
+
+<p>
+  <br><br><br>
+  All views presented within are the author's only, and do not necessarily represent the views of CEBRA.
+  <br><br>
+</p>

@@ -1,7 +1,8 @@
-# Time-stamp: <2017-04-21 13:46:13 (slane)>
+# Time-stamp: <2017-04-24 12:13:04 (slane)>
 .PHONY: all models input-data output-data clean-models clean-manuscripts clobber
 
-all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf
+all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf \
+	manuscripts/model-interrogation.html
 
 .INTERMEDIATES: manuscripts/censored-mle.tex
 
@@ -44,7 +45,12 @@ data/censored-mle-m1-scaled.rds: scripts/fit-model.R \
 
 ################################################################################
 # Rules to make manuscripts
-%.html: %.Rmd data-raw/samples.csv
+manuscripts/censored-mle.html: manuscripts/censored-mle.Rmd \
+	data-raw/samples.csv
+	cd $(<D); \
+	Rscript -e "rmarkdown::render('$(<F)')" --no-save --no-restore
+
+manuscripts/model-interrogation.html: manuscripts/model-interrogation.Rmd
 	cd $(<D); \
 	Rscript -e "rmarkdown::render('$(<F)')" --no-save --no-restore
 
