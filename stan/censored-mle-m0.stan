@@ -6,7 +6,7 @@
 // Synopsis: Sampling statements to fit a regression with censored outcome data.
 // Includes boat-level intercept, and observation level location ID.
 // No boat-level predictors.
-// Time-stamp: <2017-04-24 09:30:58 (slane)>
+// Time-stamp: <2017-04-24 12:26:45 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -54,10 +54,10 @@ transformed parameters{
   /* Regression for censored data */
   vector[nCens] muHatCens;
   for(i in 1:N){
-    muHat[i] = locID[i] * betaLoc + alphaBoat[boatID[i]];
+    muHat[i] = mu + locID[i] * betaLoc + alphaBoat[boatID[i]];
   }
   for(j in 1:nCens){
-    muHatCens[j] = locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
+    muHatCens[j] = mu + locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
   }
 }
 
@@ -68,7 +68,7 @@ model{
   /* Priors for modelled random effect */
   mu ~ normal(0, 5);
   sigma_alphaBoat ~ cauchy(0, 2.5);
-  alphaBoat ~ cauchy(mu, sigma_alphaBoat);
+  alphaBoat ~ cauchy(0, sigma_alphaBoat);
   /* Prior for observation (model) error */
   sigma ~ cauchy(0, 2.5);
   /* Observed log-likelihood */
@@ -83,11 +83,11 @@ generated quantities{
   {
     real linPred;
     for(i in 1:N){
-      linPred = locID[i] * betaLoc + alphaBoat[boatID[i]];
+      linPred = mu + locID[i] * betaLoc + alphaBoat[boatID[i]];
       log_lik[i] = lognormal_lpdf(Y[i] | linPred, sigma);
     }
     for(j in 1:nCens){
-      linPred = locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
+      linPred = mu + locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
       log_lik[N + j] = lognormal_lpdf(yCens[j] | linPred, sigma);
     }
   }

@@ -6,7 +6,7 @@
 // Synopsis: Sampling statements to fit a regression with censored outcome data.
 // Includes boat-level intercept, and observation level location ID.
 // All boat-level intercept predictors included.
-// Time-stamp: <2017-04-24 09:52:50 (slane)>
+// Time-stamp: <2017-04-24 12:39:57 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -75,13 +75,13 @@ transformed parameters{
   /* Regression for boat-level intercept */
   vector[numBoat] alphaHat;
   for(n in 1:numBoat){
-    alphaHat[n] = mu + betaDays1 * days1[n] + betaDays2 * days2[n] + betaMidTrips * midTrips[n] + betaHullSA * hullSA[n] + paintType[n] * betaPaint + boatType[n] * betaType;
+    alphaHat[n] = betaDays1 * days1[n] + betaDays2 * days2[n] + betaMidTrips * midTrips[n] + betaHullSA * hullSA[n] + paintType[n] * betaPaint + boatType[n] * betaType;
   }
   for(i in 1:N){
-    muHat[i] = locID[i] * betaLoc + alphaBoat[boatID[i]];
+    muHat[i] = mu + locID[i] * betaLoc + alphaBoat[boatID[i]];
   }
   for(j in 1:nCens){
-    muHatCens[j] = locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
+    muHatCens[j] = mu + locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
   }
 }
 
@@ -114,11 +114,11 @@ generated quantities{
   {
     real linPred;
     for(i in 1:N){
-      linPred = locID[i] * betaLoc + alphaBoat[boatID[i]];
+      linPred = mu + locID[i] * betaLoc + alphaBoat[boatID[i]];
       log_lik[i] = lognormal_lpdf(Y[i] | linPred, sigma);
     }
     for(j in 1:nCens){
-      linPred = locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
+      linPred = mu + locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
       log_lik[N + j] = lognormal_lpdf(yCens[j] | linPred, sigma);
     }
   }
