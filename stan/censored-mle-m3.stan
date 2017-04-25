@@ -6,7 +6,7 @@
 // Synopsis: Sampling statements to fit a regression with censored outcome data.
 // Includes boat-level intercept, and observation level location ID.
 // Adds in some interactions terms.
-// Time-stamp: <2017-04-26 09:25:08 (slane)>
+// Time-stamp: <2017-04-26 09:59:18 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -34,13 +34,10 @@ data{
   int<lower=1> numType;
   matrix[numBoat, numType - 1] boatType;
   /* Days1:BoatType interaction */
-  int<lower=1> numType;
   matrix[numBoat, numType - 1] days1boat;
   /* MidTrips:BoatType interaction */
-  int<lower=1> numType;
   matrix[numBoat, numType - 1] midTripsboat;
   /* MidTrips:PaintType interaction */
-  int<lower=1> numPaint;
   matrix[numBoat, numPaint - 1] midTripspaint;
   /* Boat random effect */
   int<lower=1,upper=numBoat> boatID[N];
