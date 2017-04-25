@@ -1,4 +1,4 @@
-# Time-stamp: <2017-04-24 12:13:04 (slane)>
+# Time-stamp: <2017-04-26 09:28:52 (slane)>
 .PHONY: all models input-data output-data clean-models clean-manuscripts clobber
 
 all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf \
@@ -7,12 +7,16 @@ all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf \
 .INTERMEDIATES: manuscripts/censored-mle.tex
 
 models: stan/censored-mle-m0.rds \
-	stan/censored-mle-m1.rds
+	stan/censored-mle-m1.rds \
+	stan/censored-mle-m2.rds \
+	stan/censored-mle-m3.rds
 
 input-data: data/biofouling.rds data/imputations.rds
 
 output-data: data/censored-mle-m0-scaled.rds \
-	data/censored-mle-m1-scaled.rds
+	data/censored-mle-m1-scaled.rds \
+	data/censored-mle-m2-scaled.rds \
+	data/censored-mle-m3-scaled.rds
 
 ################################################################################
 # Make data for feeding into models and manuscript
@@ -31,6 +35,14 @@ stan/censored-mle-m1.rds: scripts/compile-model.R stan/censored-mle-m1.stan
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds)
 
+stan/censored-mle-m2.rds: scripts/compile-model.R stan/censored-mle-m2.stan
+	cd $(<D); \
+	Rscript $(<F) mname=$(basename $(@F) .rds)
+
+stan/censored-mle-m3.rds: scripts/compile-model.R stan/censored-mle-m3.stan
+	cd $(<D); \
+	Rscript $(<F) mname=$(basename $(@F) .rds)
+
 ################################################################################
 # Rules to fit models with data
 data/censored-mle-m0-scaled.rds: scripts/fit-model.R \
@@ -42,6 +54,16 @@ data/censored-mle-m1-scaled.rds: scripts/fit-model.R \
 	stan/censored-mle-m1.rds data/imputations.rds
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=666
+
+data/censored-mle-m2-scaled.rds: scripts/fit-model.R \
+	stan/censored-mle-m2.rds data/imputations.rds
+	cd $(<D); \
+	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=42
+
+data/censored-mle-m3-scaled.rds: scripts/fit-model.R \
+	stan/censored-mle-m3.rds data/imputations.rds
+	cd $(<D); \
+	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=13
 
 ################################################################################
 # Rules to make manuscripts
