@@ -7,7 +7,7 @@
 // Includes boat-level intercept, and observation level location ID.
 // No boat-level predictors.
 // Based off M0, but with cauchy distribution for outcome for added robustness.
-// Time-stamp: <2017-04-27 14:08:19 (slane)>
+// Time-stamp: <2017-04-27 14:18:11 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -107,7 +107,7 @@ generated quantities{
     }
     for(j in 1:nCens){
       linPred = mu + locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
-      log_lik[N + j] = logcauchy_c(yCens[j], linPred, sigma);
+      log_lik[N + j] = logcauchy_c(U, linPred, sigma);
     }
   }
 }
