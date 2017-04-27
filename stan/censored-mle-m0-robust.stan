@@ -7,35 +7,24 @@
 // Includes boat-level intercept, and observation level location ID.
 // No boat-level predictors.
 // Based off M0, but with cauchy distribution for outcome for added robustness.
-// Time-stamp: <2017-04-27 10:32:10 (slane)>
+// Time-stamp: <2017-04-27 11:48:55 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
 functions{
-  /* Log-cauchy pdf, returns sum of log-density */
-  real logcauchy_l(real y, real mu, real sigma){
+  /* Log-cauchy (log) pdf */
+  real logcauchy_p(real y, real mu, real sigma){
     real lpdf;
     lpdf = log(sigma) - log(pi()) - log(y) - log((log(y) - mu)^2 + sigma^2);
     return lpdf;
   }
-  /* Allows vectors to come in */
-  /* real logcauchy_lpdf(vector y, vector mu, real sigma){ */
-  /*   vector[num_elements(y)] lpdf; */
-  /*   vector[num_elements(y)] ly; */
-  /*   real log_sigma; */
-  /*   real log_pi; */
-  /*   real sigma2; */
-  /*   real lprob; */
-  /*   ly = log(y); */
-  /*   log_sigma = log(sigma); */
-  /*   log_pi = log(pi()); */
-  /*   sigma2 = sigma^2; */
-  /*   for(i in 1:num_elements(y)){ */
-  /*     lpdf[i] = log_sigma - log_pi - ly[i] - log((ly[i] - mu[i])^2 + sigma2); */
-  /*   } */
-  /*   lprob = sum(lpdf); */
-  /*   return lprob; */
-  /* } */
+
+  /* Log-cauchy (log) cdf */
+  real logcauchy_c(real y, real mu, real sigma){
+    real lcdf;
+    lcdf = log(atan((log(y) - mu) / sigma)) - log(pi()) - log(2);
+    return lcdf;
+  }
 }
 
 data{
@@ -103,7 +92,6 @@ model{
   for(i in 1:N){
     target += logcauchy_l(Y[i], muHat[i], sigma);
   }
-  /* Y ~ logcauchy(muHat, sigma); */
   /* Censored log-likelihood */
   for(j in 1:nCens){
     target += logcauchy_l(yCens[j], muHatCens[j], sigma);
