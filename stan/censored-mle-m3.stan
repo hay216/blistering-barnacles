@@ -6,7 +6,7 @@
 // Synopsis: Sampling statements to fit a regression with censored outcome data.
 // Includes boat-level intercept, and observation level location ID.
 // Adds in some interactions terms.
-// Time-stamp: <2017-04-26 09:59:18 (slane)>
+// Time-stamp: <2017-04-27 10:41:12 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -68,8 +68,6 @@ parameters{
   vector[numBoat] alphaBoat;
   /* Errors for categorical predictors */
   real<lower=0> sigma_alphaBoat;
-  /* Censored data */
-  vector<lower=0,upper=U>[nCens] yCens;
   /* Error */
   real<lower=0> sigma;
 }
@@ -117,7 +115,9 @@ model{
   /* Observed log-likelihood */
   Y ~ lognormal(muHat, sigma);
   /* Censored log-likelihood */
-  yCens ~ lognormal(muHatCens, sigma);
+  for(i in 1:nCens){
+    target += lognormal_lcdf(U | muHatCens[i], sigma);
+  }
 }
 
 generated quantities{
@@ -131,7 +131,7 @@ generated quantities{
     }
     for(j in 1:nCens){
       linPred = mu + locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
-      log_lik[N + j] = lognormal_lpdf(yCens[j] | linPred, sigma);
+      log_lik[N + j] = lognormal_lcdf(U | linPred, sigma);
     }
   }
 }
