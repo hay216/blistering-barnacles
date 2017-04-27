@@ -1,4 +1,4 @@
-# Time-stamp: <2017-04-27 14:30:25 (slane)>
+# Time-stamp: <2017-04-27 15:51:59 (slane)>
 .PHONY: all models input-data output-data clean-models clean-manuscripts clobber
 
 all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf \
@@ -44,6 +44,11 @@ stan/censored-mle-m0-robust.rds: scripts/compile-model.R \
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds)
 
+stan/censored-mle-m0-mixture.rds: scripts/compile-model.R \
+	stan/censored-mle-m0-mixture.stan
+	cd $(<D); \
+	Rscript $(<F) mname=$(basename $(@F) .rds)
+
 stan/censored-mle-m1.rds: scripts/compile-model.R stan/censored-mle-m1.stan
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds)
@@ -80,6 +85,11 @@ data/censored-mle-m0-scaled.rds: scripts/fit-model.R \
 
 data/censored-mle-m0-robust-scaled.rds: scripts/fit-model.R \
 	stan/censored-mle-m0-robust.rds data/imputations.rds
+	cd $(<D); \
+	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=737
+
+data/censored-mle-m0-mixture-scaled.rds: scripts/fit-model.R \
+	stan/censored-mle-m0-mixture.rds data/imputations.rds
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=737
 
