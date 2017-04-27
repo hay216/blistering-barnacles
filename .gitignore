@@ -25,6 +25,7 @@
 *.bcf
 *.rec
 *.run.xml
+*.zip
 manuscripts/cache/*
 manuscripts/auto/*
 manuscripts/model-interrogation_cache/*

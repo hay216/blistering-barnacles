@@ -1,0 +1,1482 @@
+"boatID","days1","days2","midTrips","boatType","boatCode","paintType","paintRating","wetWeight","LocID","Location","LocCode","samLab","wetWeight1","wetWeight2"
+"1",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",0,"IH","Internal spaces",3,"Anchor well",FALSE,TRUE
+"2",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",0,"DG","Deck",4,NA,FALSE,TRUE
+"3",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"4",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",0,"PM","Anchor",2,NA,FALSE,TRUE
+"5",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",0,"PN","Anchor",2,NA,FALSE,TRUE
+"6",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",0.5,"IA","Internal spaces",3,"Grey seawater",FALSE,TRUE
+"7",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",1.99,"HK","Wet Hull",1,"Paddle wheel",TRUE,FALSE
+"8",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",4,"HA","Wet Hull",1,"Hull 2 starboard",TRUE,FALSE
+"9",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",12.95,"HA","Wet Hull",1,"Hull 4 port",TRUE,FALSE
+"10",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",14.57,"HA","Wet Hull",1,"Hull 6 port",TRUE,FALSE
+"11",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",15.36,"HAB","Wet Hull",1,"Anode",TRUE,FALSE
+"12",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",28.74,"HA","Wet Hull",1,"Hull 3 starboard",TRUE,FALSE
+"13",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",32.31,"HA","Wet Hull",1,"Hull 1 starboard",TRUE,FALSE
+"14",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",34.2,"HA","Wet Hull",1,"Hull 5 port",TRUE,FALSE
+"15",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",40.3,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"16",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",55.21,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"17",1,164,1,NA,"Yacht",2,"Self-polishing","Excellent",186.75,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"18",2,8,305,8.5,"Yacht",2,"Ablative","Good",0,"DA","Deck",4,NA,FALSE,TRUE
+"19",2,8,305,8.5,"Yacht",2,"Ablative","Good",0,"DC","Deck",4,NA,FALSE,TRUE
+"20",2,8,305,8.5,"Yacht",2,"Ablative","Good",0,"DE","Deck",4,NA,FALSE,TRUE
+"21",2,8,305,8.5,"Yacht",2,"Ablative","Good",0,"HAB","Wet Hull",1,NA,FALSE,TRUE
+"22",2,8,305,8.5,"Yacht",2,"Ablative","Good",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"23",2,8,305,8.5,"Yacht",2,"Ablative","Good",0,"ID","Internal spaces",3,NA,FALSE,TRUE
+"24",2,8,305,8.5,"Yacht",2,"Ablative","Good",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"25",2,8,305,8.5,"Yacht",2,"Ablative","Good",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"26",2,8,305,8.5,"Yacht",2,"Ablative","Good",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"27",2,8,305,8.5,"Yacht",2,"Ablative","Good",0,"IW","Internal spaces",3,NA,FALSE,TRUE
+"28",2,8,305,8.5,"Yacht",2,"Ablative","Good",0,"PB","Propeller",2,NA,FALSE,TRUE
+"29",2,8,305,8.5,"Yacht",2,"Ablative","Good",0,"PM","Anchor",2,NA,FALSE,TRUE
+"30",2,8,305,8.5,"Yacht",2,"Ablative","Good",0,"PN","Anchor",2,NA,FALSE,TRUE
+"31",2,8,305,8.5,"Yacht",2,"Ablative","Good",0.5,"IA","Internal spaces",3,"Sink outlet water",FALSE,TRUE
+"32",2,8,305,8.5,"Yacht",2,"Ablative","Good",0.5,"IA","Internal spaces",3,"Toilet inlet water",FALSE,TRUE
+"33",2,8,305,8.5,"Yacht",2,"Ablative","Good",0.5,"IA","Internal spaces",3,"Toilet outlet water",FALSE,TRUE
+"34",2,8,305,8.5,"Yacht",2,"Ablative","Good",0.5,"IA","Internal spaces",3,"Vanity basin outlet water",FALSE,TRUE
+"35",2,8,305,8.5,"Yacht",2,"Ablative","Good",1.6,"IB","Internal spaces",3,"Hull inlet/outlet P3 (Sink outlet)",TRUE,FALSE
+"36",2,8,305,8.5,"Yacht",2,"Ablative","Good",3.15,"HD","Wet Hull",1,"Hull inlet/outlet P1 (Engine cooling)",TRUE,FALSE
+"37",2,8,305,8.5,"Yacht",2,"Ablative","Good",3.7,"IB","Internal spaces",3,"Hull inlet/outlet S2 (Toilet outlet)",TRUE,FALSE
+"38",2,8,305,8.5,"Yacht",2,"Ablative","Good",3.75,"IB","Internal spaces",3,"Hull inlet/outlet P2 (Bilge)",TRUE,FALSE
+"39",2,8,305,8.5,"Yacht",2,"Ablative","Good",5.1,"HP","Wet Hull",1,"Hull port fixed keel",TRUE,FALSE
+"40",2,8,305,8.5,"Yacht",2,"Ablative","Good",5.2,"IB","Internal spaces",3,"Hull inlet/outlet S1 (Vanity basin outlet)",TRUE,FALSE
+"41",2,8,305,8.5,"Yacht",2,"Ablative","Good",5.5,"HD","Wet Hull",1,"Hull inlet/outlet S5 (Engine cooling)",TRUE,FALSE
+"42",2,8,305,8.5,"Yacht",2,"Ablative","Good",8.7,"HA","Wet Hull",1,"Hull 3 starboard",TRUE,FALSE
+"43",2,8,305,8.5,"Yacht",2,"Ablative","Good",16.85,"HA","Wet Hull",1,"Hull 2 starboard",TRUE,FALSE
+"44",2,8,305,8.5,"Yacht",2,"Ablative","Good",17.6,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"45",2,8,305,8.5,"Yacht",2,"Ablative","Good",18.66,"HA","Wet Hull",1,"Hull 4 port",TRUE,FALSE
+"46",2,8,305,8.5,"Yacht",2,"Ablative","Good",25,"HP","Wet Hull",1,"Hull starboard fixed keel",TRUE,FALSE
+"47",2,8,305,8.5,"Yacht",2,"Ablative","Good",26.84,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"48",2,8,305,8.5,"Yacht",2,"Ablative","Good",30.1,"HA","Wet Hull",1,"Hull 6 port",TRUE,FALSE
+"49",2,8,305,8.5,"Yacht",2,"Ablative","Good",52.7,"HK","Wet Hull",1,"Paddle wheel",TRUE,FALSE
+"50",2,8,305,8.5,"Yacht",2,"Ablative","Good",83.92,"IB","Internal spaces",1,"Hull inlet/outlet P4 (Depth sounder)",TRUE,FALSE
+"51",2,8,305,8.5,"Yacht",2,"Ablative","Good",217.4,"PA","Propeller",2,"Propeller shaft",TRUE,FALSE
+"52",3,69,328,30.5,"Motor cruiser",17,NA,NA,0,"ID","Internal spaces",3,"Bilge intake, external opening S2 (water)",FALSE,TRUE
+"53",3,69,328,30.5,"Motor cruiser",17,NA,NA,0,"ID","Internal spaces",3,NA,FALSE,TRUE
+"54",3,69,328,30.5,"Motor cruiser",17,NA,NA,0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"55",3,69,328,30.5,"Motor cruiser",17,NA,NA,0,"IQ","Internal spaces",3,NA,FALSE,TRUE
+"56",3,69,328,30.5,"Motor cruiser",17,NA,NA,0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"57",3,69,328,30.5,"Motor cruiser",17,NA,NA,0,"IW","Internal spaces",3,NA,FALSE,TRUE
+"58",3,69,328,30.5,"Motor cruiser",17,NA,NA,0,"PA","Propeller",2,NA,FALSE,TRUE
+"59",3,69,328,30.5,"Motor cruiser",17,NA,NA,0,"PB","Propeller",2,NA,FALSE,TRUE
+"60",3,69,328,30.5,"Motor cruiser",17,NA,NA,0,"PM","Anchor",2,NA,FALSE,TRUE
+"61",3,69,328,30.5,"Motor cruiser",17,NA,NA,0,"PN","Anchor",2,NA,FALSE,TRUE
+"62",3,69,328,30.5,"Motor cruiser",17,NA,NA,0,"IA","Internal spaces",3,"Shower water port",FALSE,TRUE
+"63",3,69,328,30.5,"Motor cruiser",17,NA,NA,0.5,"IA","Internal spaces",3,"Toilet water port 1",FALSE,TRUE
+"64",3,69,328,30.5,"Motor cruiser",17,NA,NA,1.8,"IB","Internal spaces",3,"Shower external 2",TRUE,FALSE
+"65",3,69,328,30.5,"Motor cruiser",17,NA,NA,4.2,"IB","Internal spaces",3,"Bilge intake, external opening S2 (scrape)",TRUE,FALSE
+"66",3,69,328,30.5,"Motor cruiser",17,NA,NA,4.91,"IB","Internal spaces",3,"Toilet fouling port 1",TRUE,FALSE
+"67",3,69,328,30.5,"Motor cruiser",17,NA,NA,7.2,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"68",3,69,328,30.5,"Motor cruiser",17,NA,NA,9,"IB","Internal spaces",3,"IO Starboard 1",TRUE,FALSE
+"69",3,69,328,30.5,"Motor cruiser",17,NA,NA,9.19,"HH","Wet Hull",1,"Transducer mount starboard",TRUE,FALSE
+"70",3,69,328,30.5,"Motor cruiser",17,NA,NA,9.2,"PG","Propeller",2,"Stern tubes",TRUE,FALSE
+"71",3,69,328,30.5,"Motor cruiser",17,NA,NA,17.4,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"72",3,69,328,30.5,"Motor cruiser",17,NA,NA,37.8,"HP","Wet Hull",1,"Hull #5 port midship keel",TRUE,FALSE
+"73",3,69,328,30.5,"Motor cruiser",17,NA,NA,41.83,"HK","Wet Hull",1,"Paddle wheel starboard",TRUE,FALSE
+"74",3,69,328,30.5,"Motor cruiser",17,NA,NA,42.96,"HD","Wet Hull",1,"Engine cooling external port",TRUE,FALSE
+"75",3,69,328,30.5,"Motor cruiser",17,NA,NA,44.21,"HA","Wet Hull",1,"Hull #1 starboard stern",TRUE,FALSE
+"76",3,69,328,30.5,"Motor cruiser",17,NA,NA,45.46,"HH","Wet Hull",1,"Transducer mount port",TRUE,FALSE
+"77",3,69,328,30.5,"Motor cruiser",17,NA,NA,57.5,"HA","Wet Hull",1,"Hull #6 port stern",TRUE,FALSE
+"78",3,69,328,30.5,"Motor cruiser",17,NA,NA,60.4,"HP","Wet Hull",1,"Hull #2 starboard midship keel",TRUE,FALSE
+"79",3,69,328,30.5,"Motor cruiser",17,NA,NA,83.4,"HA","Wet Hull",1,"Hull #4 port bow",TRUE,FALSE
+"80",3,69,328,30.5,"Motor cruiser",17,NA,NA,101.2,"HX","Wet Hull",1,"Garboard plank - 1m section of flat bottom",TRUE,FALSE
+"81",3,69,328,30.5,"Motor cruiser",17,NA,NA,109.8,"HA","Wet Hull",1,"Hull #3 starboard bow",TRUE,FALSE
+"82",3,69,328,30.5,"Motor cruiser",17,NA,NA,116.3,"HAB","Wet Hull",1,"Anode port stern",TRUE,FALSE
+"83",4,NA,192,NA,"Motor cruiser",17,NA,NA,0,"DA","Deck",4,NA,FALSE,TRUE
+"84",4,NA,192,NA,"Motor cruiser",17,NA,NA,0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"85",4,NA,192,NA,"Motor cruiser",17,NA,NA,0,"II","Internal spaces",3,NA,FALSE,TRUE
+"86",4,NA,192,NA,"Motor cruiser",17,NA,NA,0,"PM","Anchor",2,NA,FALSE,TRUE
+"87",4,NA,192,NA,"Motor cruiser",17,NA,NA,0.5,"IB","Internal spaces",3,"Deckwash inlet external",FALSE,TRUE
+"88",4,NA,192,NA,"Motor cruiser",17,NA,NA,0.5,"HA","Wet Hull",1,"Hull port bow",FALSE,TRUE
+"89",4,NA,192,NA,"Motor cruiser",17,NA,NA,0.5,"HA","Wet Hull",1,"Hull port midships",FALSE,TRUE
+"90",4,NA,192,NA,"Motor cruiser",17,NA,NA,0.5,"HA","Wet Hull",1,"Hull port stern",FALSE,TRUE
+"91",4,NA,192,NA,"Motor cruiser",17,NA,NA,0.5,"HA","Wet Hull",1,"Hull starboard bow",FALSE,TRUE
+"92",4,NA,192,NA,"Motor cruiser",17,NA,NA,0.5,"HA","Wet Hull",1,"Hull starboard midships",FALSE,TRUE
+"93",4,NA,192,NA,"Motor cruiser",17,NA,NA,0.5,"HA","Wet Hull",1,"Hull starboard stern",FALSE,TRUE
+"94",4,NA,192,NA,"Motor cruiser",17,NA,NA,0.5,"HK","Wet Hull",1,"Paddle wheel external",FALSE,TRUE
+"95",4,NA,192,NA,"Motor cruiser",17,NA,NA,0.5,"IF","Internal spaces",3,"Port engine cooling water",FALSE,TRUE
+"96",4,NA,192,NA,"Motor cruiser",17,NA,NA,0.5,"IF","Internal spaces",3,"Starboard engine cooling water",FALSE,TRUE
+"97",4,NA,192,NA,"Motor cruiser",17,NA,NA,0.5,"IB","Internal spaces",3,"Toilet outlet external",FALSE,TRUE
+"98",4,NA,192,NA,"Motor cruiser",17,NA,NA,3,"HH","Wet Hull",1,"Depth sounder booth external",TRUE,FALSE
+"99",4,NA,192,NA,"Motor cruiser",17,NA,NA,3.8,"PB","Propeller",2,"Port propeller surface",TRUE,FALSE
+"100",4,NA,192,NA,"Motor cruiser",17,NA,NA,6,"HD","Wet Hull",1,"Starboard engine cooling water external",TRUE,FALSE
+"101",4,NA,192,NA,"Motor cruiser",17,NA,NA,7.8,"HAB","Wet Hull",1,"Anode external",TRUE,FALSE
+"102",4,NA,192,NA,"Motor cruiser",17,NA,NA,8.2,"PB","Propeller",2,"Starboard propeller surface",TRUE,FALSE
+"103",4,NA,192,NA,"Motor cruiser",17,NA,NA,9.85,"PA","Propeller",2,"Port propeller shaft",TRUE,FALSE
+"104",4,NA,192,NA,"Motor cruiser",17,NA,NA,13.6,"HD","Wet Hull",1,"Port engine cooling water external",TRUE,FALSE
+"105",4,NA,192,NA,"Motor cruiser",17,NA,NA,16.4,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"106",4,NA,192,NA,"Motor cruiser",17,NA,NA,24.12,"HC","Wet Hull",1,"Autopilot sensor",TRUE,FALSE
+"107",4,NA,192,NA,"Motor cruiser",17,NA,NA,25.57,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"108",4,NA,192,NA,"Motor cruiser",17,NA,NA,29.7,"PG","Propeller",2,"Starboard propeller sleeve",TRUE,FALSE
+"109",4,NA,192,NA,"Motor cruiser",17,NA,NA,34.5,"PA","Propeller",2,"Starboard propeller shaft",TRUE,FALSE
+"110",4,NA,192,NA,"Motor cruiser",17,NA,NA,45,"PG","Propeller",2,"Port propeller sleeve",TRUE,FALSE
+"111",4,NA,192,NA,"Motor cruiser",17,NA,NA,108,"IB","Internal spaces",3,"Toilet inlet external",TRUE,FALSE
+"112",5,148,222,55,"Yacht",2,"Ablative","Good",0,"PG","Propeller",2,NA,FALSE,TRUE
+"113",5,148,222,55,"Yacht",2,"Ablative","Good",0.5,"IB","Internal spaces",3,"Port #1 toilet outlet scraping",FALSE,TRUE
+"114",5,148,222,55,"Yacht",2,"Ablative","Good",0.5,"IA","Internal spaces",3,"Port #1 toilet outlet water",FALSE,TRUE
+"115",5,148,222,55,"Yacht",2,"Ablative","Good",0.5,"HD","Wet Hull",1,"Port #4 engine intake scraping",FALSE,TRUE
+"116",5,148,222,55,"Yacht",2,"Ablative","Good",0.5,"HA","Wet Hull",1,"Port quadrat #2",FALSE,TRUE
+"117",5,148,222,55,"Yacht",2,"Ablative","Good",0.5,"IB","Internal spaces",3,"Starboard #1 toilet inlet scraping",FALSE,TRUE
+"118",5,148,222,55,"Yacht",2,"Ablative","Good",0.5,"IA","Internal spaces",3,"Starboard #1 toilet inlet water",FALSE,TRUE
+"119",5,148,222,55,"Yacht",2,"Ablative","Good",0.5,"HK","Wet Hull",1,"Starboard #3 Paddle wheel",FALSE,TRUE
+"120",5,148,222,55,"Yacht",2,"Ablative","Good",0.5,"HA","Wet Hull",1,"Starboard quadrat #2",FALSE,TRUE
+"121",5,148,222,55,"Yacht",2,"Ablative","Good",2.53,"HA","Wet Hull",1,"Starboard quadrat #1",TRUE,FALSE
+"122",5,148,222,55,"Yacht",2,"Ablative","Good",3.61,"HA","Wet Hull",1,"Starboard quadrat #3",TRUE,FALSE
+"123",5,148,222,55,"Yacht",2,"Ablative","Good",6.25,"HA","Wet Hull",1,"Port quadrat #3",TRUE,FALSE
+"124",5,148,222,55,"Yacht",2,"Ablative","Good",11.5,"PA","Propeller",2,"Propeller shaft",TRUE,FALSE
+"125",5,148,222,55,"Yacht",2,"Ablative","Good",12.6,"HA","Wet Hull",1,"Port quadrat #1",TRUE,FALSE
+"126",5,148,222,55,"Yacht",2,"Ablative","Good",21.25,"PB","Propeller",2,"Propeller surface",TRUE,FALSE
+"127",5,148,222,55,"Yacht",2,"Ablative","Good",44.82,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"128",5,148,222,55,"Yacht",2,"Ablative","Good",81.34,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"129",6,3,78,47.5,"Yacht",2,"Ablative","Good",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"130",6,3,78,47.5,"Yacht",2,"Ablative","Good",0,"ID","Internal spaces",3,NA,FALSE,TRUE
+"131",6,3,78,47.5,"Yacht",2,"Ablative","Good",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"132",6,3,78,47.5,"Yacht",2,"Ablative","Good",0,"IT","Internal spaces",3,NA,FALSE,TRUE
+"133",6,3,78,47.5,"Yacht",2,"Ablative","Good",0,"IU","Internal spaces",3,NA,FALSE,TRUE
+"134",6,3,78,47.5,"Yacht",2,"Ablative","Good",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"135",6,3,78,47.5,"Yacht",2,"Ablative","Good",0,"IW","Internal spaces",3,NA,FALSE,TRUE
+"136",6,3,78,47.5,"Yacht",2,"Ablative","Good",0,"PA","Propeller",2,NA,FALSE,TRUE
+"137",6,3,78,47.5,"Yacht",2,"Ablative","Good",0,"PB","Propeller",2,NA,FALSE,TRUE
+"138",6,3,78,47.5,"Yacht",2,"Ablative","Good",0,"PE","Propeller",2,NA,FALSE,TRUE
+"139",6,3,78,47.5,"Yacht",2,"Ablative","Good",0,"PM","Anchor",2,NA,FALSE,TRUE
+"140",6,3,78,47.5,"Yacht",2,"Ablative","Good",0,"PN","Anchor",2,NA,FALSE,TRUE
+"141",6,3,78,47.5,"Yacht",2,"Ablative","Good",0.5,"IF","Internal spaces",3,"Engine cooling intake water",FALSE,TRUE
+"142",6,3,78,47.5,"Yacht",2,"Ablative","Good",0.5,"HP","Wet Hull",1,"Keel quadrat #2",FALSE,TRUE
+"143",6,3,78,47.5,"Yacht",2,"Ablative","Good",0.5,"HK","Wet Hull",1,"Paddle wheel external",FALSE,TRUE
+"144",6,3,78,47.5,"Yacht",2,"Ablative","Good",0.5,"HP","Wet Hull",1,"Port keel quadrat",FALSE,TRUE
+"145",6,3,78,47.5,"Yacht",2,"Ablative","Good",0.5,"HA","Wet Hull",1,"Port quadrat #1",FALSE,TRUE
+"146",6,3,78,47.5,"Yacht",2,"Ablative","Good",0.5,"HA","Wet Hull",1,"Port quadrat #2",FALSE,TRUE
+"147",6,3,78,47.5,"Yacht",2,"Ablative","Good",0.5,"HA","Wet Hull",1,"Port quadrat #3",FALSE,TRUE
+"148",6,3,78,47.5,"Yacht",2,"Ablative","Good",0.5,"HA","Wet Hull",1,"Starboard quadrat #1",FALSE,TRUE
+"149",6,3,78,47.5,"Yacht",2,"Ablative","Good",0.5,"HA","Wet Hull",1,"Starboard quadrat #2",FALSE,TRUE
+"150",6,3,78,47.5,"Yacht",2,"Ablative","Good",0.5,"HA","Wet Hull",1,"Starboard quadrat #3",FALSE,TRUE
+"151",6,3,78,47.5,"Yacht",2,"Ablative","Good",0.5,"IB","Internal spaces",3,"Toilet inlet scraping (internal fouling)",FALSE,TRUE
+"152",6,3,78,47.5,"Yacht",2,"Ablative","Good",0.5,"IA","Internal spaces",3,"Toilet inlet water",FALSE,TRUE
+"153",6,3,78,47.5,"Yacht",2,"Ablative","Good",0.5,"IB","Internal spaces",3,"Toilet outlet scraping (internal fouling)",FALSE,TRUE
+"154",6,3,78,47.5,"Yacht",2,"Ablative","Good",0.5,"IA","Internal spaces",3,"Toilet outlet water",FALSE,TRUE
+"155",6,3,78,47.5,"Yacht",2,"Ablative","Good",14.24,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"156",6,3,78,47.5,"Yacht",2,"Ablative","Good",50.81,"PJ","Rudder",2,"Rudder port side",TRUE,FALSE
+"157",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0,"HAB","Wet Hull",1,NA,FALSE,TRUE
+"158",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"159",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"160",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"161",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0,"PA","Propeller",2,NA,FALSE,TRUE
+"162",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0,"PB","Propeller",2,NA,FALSE,TRUE
+"163",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0,"PH","Rudder",2,NA,FALSE,TRUE
+"164",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0,"PM","Anchor",2,NA,FALSE,TRUE
+"165",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0,"PN","Anchor",2,NA,FALSE,TRUE
+"166",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"HH","Wet Hull",1,"Depth sounder (transducer) scrape",FALSE,TRUE
+"167",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"IB","Internal spaces",3,"Galley sink scrape",FALSE,TRUE
+"168",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"IA","Internal spaces",3,"Galley sink water",FALSE,TRUE
+"169",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"HP","Wet Hull",1,"Hull #1 starboard stern keel",FALSE,TRUE
+"170",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"HA","Wet Hull",1,"Hull #2 starboard midship",FALSE,TRUE
+"171",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"HA","Wet Hull",1,"Hull #3 starboard bow",FALSE,TRUE
+"172",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"HA","Wet Hull",1,"Hull #5 port midship",FALSE,TRUE
+"173",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"HP","Wet Hull",1,"Hull #6 port stern keel",FALSE,TRUE
+"174",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"HD","Wet Hull",1,"Main engine inlet scrape",FALSE,TRUE
+"175",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"HK","Wet Hull",1,"Paddle wheel scrape port",FALSE,TRUE
+"176",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"HK","Wet Hull",1,"Paddle wheel scrape starboard",FALSE,TRUE
+"177",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"PJ","Rudder",2,"Rudder quadrat port",FALSE,TRUE
+"178",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"IB","Internal spaces",3,"Sink outlet (starboard)",FALSE,TRUE
+"179",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"IB","Internal spaces",3,"Sink outlet scrape",FALSE,TRUE
+"180",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"IA","Internal spaces",3,"Sink outlet water",FALSE,TRUE
+"181",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"IB","Internal spaces",3,"Toilet outlet scrape",FALSE,TRUE
+"182",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",0.5,"IA","Internal spaces",3,"Toilet outlet water",FALSE,TRUE
+"183",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",3,"HA","Wet Hull",1,"Hull #4 port bow",TRUE,FALSE
+"184",7,127,174,65,"Motor cruiser",17,"Self-polishing","Poor",5,"PJ","Rudder",2,"Rudder quadrat starboard",TRUE,FALSE
+"185",8,4,249,11.5,"Yacht",2,NA,NA,0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"186",8,4,249,11.5,"Yacht",2,NA,NA,0,"II","Internal spaces",3,NA,FALSE,TRUE
+"187",8,4,249,11.5,"Yacht",2,NA,NA,0.5,"ID","Internal spaces",3,"Bilge water",FALSE,TRUE
+"188",8,4,249,11.5,"Yacht",2,NA,NA,0.5,"IA","Internal spaces",3,"Toilet inlet water",FALSE,TRUE
+"189",8,4,249,11.5,"Yacht",2,NA,NA,0.5,"IB","Internal spaces",3,"Toilet outlet scrape",FALSE,TRUE
+"190",8,4,249,11.5,"Yacht",2,NA,NA,0.5,"IA","Internal spaces",3,"Toilet outlet water",FALSE,TRUE
+"191",8,4,249,11.5,"Yacht",2,NA,NA,2.88,"IB","Internal spaces",3,"Toilet inlet scrape",TRUE,FALSE
+"192",8,4,249,11.5,"Yacht",2,NA,NA,8.04,"HK","Wet Hull",1,"Paddle wheel scrape",TRUE,FALSE
+"193",8,4,249,11.5,"Yacht",2,NA,NA,11.48,"HD","Wet Hull",1,"Engine intake (scrape)",TRUE,FALSE
+"194",8,4,249,11.5,"Yacht",2,NA,NA,12.05,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"195",8,4,249,11.5,"Yacht",2,NA,NA,13.89,"PA","Propeller",2,"Propeller Shaft",TRUE,FALSE
+"196",8,4,249,11.5,"Yacht",2,NA,NA,124.06,"PJ","Rudder",2,"Rudder Starboard",TRUE,FALSE
+"197",8,4,249,11.5,"Yacht",2,NA,NA,138.1,"HA","Wet Hull",1,"Hull Q3 Starboard bow",TRUE,FALSE
+"198",8,4,249,11.5,"Yacht",2,NA,NA,139.23,"HP","Wet Hull",1,"Hull Q1 Starboard stern keel",TRUE,FALSE
+"199",8,4,249,11.5,"Yacht",2,NA,NA,144.42,"HP","Wet Hull",1,"Hull Q6 Port keel",TRUE,FALSE
+"200",8,4,249,11.5,"Yacht",2,NA,NA,145.16,"HA","Wet Hull",1,"Hull Q5 Port midship",TRUE,FALSE
+"201",8,4,249,11.5,"Yacht",2,NA,NA,162.4,"HA","Wet Hull",1,"Hull Q2 Starboard midship",TRUE,FALSE
+"202",8,4,249,11.5,"Yacht",2,NA,NA,199.84,"HA","Wet Hull",1,"Hull Q4 Port bow",TRUE,FALSE
+"203",8,4,249,11.5,"Yacht",2,NA,NA,210.21,"PJ","Rudder",2,"Rudder Port",TRUE,FALSE
+"204",9,1,251,35,"Yacht",2,"Self-polishing",NA,0.5,"HC","Wet Hull",1,"Bung (Starboard #6)",FALSE,TRUE
+"205",9,1,251,35,"Yacht",2,"Self-polishing",NA,0.5,"IB","Internal spaces",3,"Cockpit outlet",FALSE,TRUE
+"206",9,1,251,35,"Yacht",2,"Self-polishing",NA,0.5,"IB","Internal spaces",3,"Sink intake (port #4)",FALSE,TRUE
+"207",9,1,251,35,"Yacht",2,"Self-polishing",NA,0.5,"IB","Internal spaces",3,"Sink outlet (port #2)",FALSE,TRUE
+"208",9,1,251,35,"Yacht",2,"Self-polishing",NA,0.5,"IA","Internal spaces",3,"Sink outlet water",FALSE,TRUE
+"209",9,1,251,35,"Yacht",2,"Self-polishing",NA,0.5,"IB","Internal spaces",3,"Toilet inlet starboard scrape",FALSE,TRUE
+"210",9,1,251,35,"Yacht",2,"Self-polishing",NA,0.5,"IA","Internal spaces",3,"Toilet inlet starboard water",FALSE,TRUE
+"211",9,1,251,35,"Yacht",2,"Self-polishing",NA,0.5,"IA","Internal spaces",3,"Toilet outlet starboard water",FALSE,TRUE
+"212",9,1,251,35,"Yacht",2,"Self-polishing",NA,1.94,"HK","Wet Hull",1,"Paddle wheel",TRUE,FALSE
+"213",9,1,251,35,"Yacht",2,"Self-polishing",NA,2,"IB","Internal spaces",3,"Toilet outlet starboard scape",TRUE,FALSE
+"214",9,1,251,35,"Yacht",2,"Self-polishing",NA,2.12,"HH","Wet Hull",1,"Depth sounder",TRUE,FALSE
+"215",9,1,251,35,"Yacht",2,"Self-polishing",NA,3.12,"IB","Internal spaces",3,"Self bailer port",TRUE,FALSE
+"216",9,1,251,35,"Yacht",2,"Self-polishing",NA,6.1,"HD","Wet Hull",1,"Engine intake starboard",TRUE,FALSE
+"217",9,1,251,35,"Yacht",2,"Self-polishing",NA,6.76,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"218",9,1,251,35,"Yacht",2,"Self-polishing",NA,11.2,"PA","Propeller",2,"Propeller shaft",TRUE,FALSE
+"219",9,1,251,35,"Yacht",2,"Self-polishing",NA,11.97,"HP","Wet Hull",1,"Hull 6 port keel",TRUE,FALSE
+"220",9,1,251,35,"Yacht",2,"Self-polishing",NA,13.9,"HP","Wet Hull",1,"Hull 1 starboard stern keel",TRUE,FALSE
+"221",9,1,251,35,"Yacht",2,"Self-polishing",NA,15.05,"HA","Wet Hull",1,"Hull 5 port midship",TRUE,FALSE
+"222",9,1,251,35,"Yacht",2,"Self-polishing",NA,15.6,"PJ","Rudder",2,"Rudder Starboard",TRUE,FALSE
+"223",9,1,251,35,"Yacht",2,"Self-polishing",NA,17.4,"HA","Wet Hull",1,"Hull 2 starboard midship",TRUE,FALSE
+"224",9,1,251,35,"Yacht",2,"Self-polishing",NA,26.8,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"225",9,1,251,35,"Yacht",2,"Self-polishing",NA,33.04,"HA","Wet Hull",1,"Hull 4 port bow",TRUE,FALSE
+"226",9,1,251,35,"Yacht",2,"Self-polishing",NA,58.5,"HA","Wet Hull",1,"Hull 3 starboard bow",TRUE,FALSE
+"227",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"228",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0,"HZ","Wet Hull",1,NA,FALSE,TRUE
+"229",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"230",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"231",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"232",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0,"IW","Internal spaces",3,NA,FALSE,TRUE
+"233",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0,"IX","Internal spaces",3,NA,FALSE,TRUE
+"234",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0,"IY","Internal spaces",3,NA,FALSE,TRUE
+"235",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0,"PA","Propeller",2,NA,FALSE,TRUE
+"236",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0,"PB","Propeller",2,NA,FALSE,TRUE
+"237",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0,"PC","Propeller",2,NA,FALSE,TRUE
+"238",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0,"PF","Propeller",2,NA,FALSE,TRUE
+"239",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0,"PG","Propeller",2,NA,FALSE,TRUE
+"240",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0,"PM","Anchor",2,NA,FALSE,TRUE
+"241",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0,"PN","Anchor",2,NA,FALSE,TRUE
+"242",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"HAB","Wet Hull",1,"Anode #1 starboard",FALSE,TRUE
+"243",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"HAB","Wet Hull",1,"Anode #3 port",FALSE,TRUE
+"244",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"HAB","Wet Hull",1,"Anode port side",FALSE,TRUE
+"245",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"ID","Internal spaces",3,"Bilge (closed) water",FALSE,TRUE
+"246",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"IF","Internal spaces",3,"Engine colling intake H2O (port)",FALSE,TRUE
+"247",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"IF","Internal spaces",3,"Engine cooling water intake (starboard) water",FALSE,TRUE
+"248",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"HA","Wet Hull",1,"Hull #1 starboard bow",FALSE,TRUE
+"249",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"HA","Wet Hull",1,"Hull #2 starboard midship",FALSE,TRUE
+"250",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"HP","Wet Hull",1,"Hull #3 starboard keel",FALSE,TRUE
+"251",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"HA","Wet Hull",1,"Hull #4 port bow",FALSE,TRUE
+"252",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"HA","Wet Hull",1,"Hull #5 port midship",FALSE,TRUE
+"253",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"HP","Wet Hull",1,"Hull #6 port keel stern",FALSE,TRUE
+"254",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"IB","Internal spaces",3,"Outlet #3 starboard",FALSE,TRUE
+"255",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"IB","Internal spaces",3,"Outlet #4 starboard",FALSE,TRUE
+"256",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"HD","Wet Hull",1,"Outlet #8 port (Engine cooling water intake scrape)",FALSE,TRUE
+"257",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"HK","Wet Hull",1,"Paddle wheel starboard",FALSE,TRUE
+"258",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"PJ","Rudder",2,"Rudder port",FALSE,TRUE
+"259",10,NA,353,NA,"Motor cruiser",17,"Hard","Very Poor",0.5,"PJ","Rudder",2,"Rudder starboard",FALSE,TRUE
+"260",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"261",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"262",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0,"IN","Internal spaces",3,NA,FALSE,TRUE
+"263",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0,"IP","Internal spaces",3,NA,FALSE,TRUE
+"264",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0,"IQ","Internal spaces",3,NA,FALSE,TRUE
+"265",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"HD","Wet Hull",1,"Circulating tank intake (Grate #8 starboard) water sample",FALSE,TRUE
+"266",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"HD","Wet Hull",1,"Circulating tank intake (Grid port #7)",FALSE,TRUE
+"267",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"IL","Internal spaces",3,"Circulating tank water sample (wet well)",FALSE,TRUE
+"268",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"HP","Wet Hull",1,"Hull #1 starboard stern keel",FALSE,TRUE
+"269",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"HA","Wet Hull",1,"Hull #2 starboard midship",FALSE,TRUE
+"270",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"HA","Wet Hull",1,"Hull #3 starboard bow",FALSE,TRUE
+"271",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"HA","Wet Hull",1,"Hull #5 port midship",FALSE,TRUE
+"272",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"HA","Wet Hull",1,"Hull #6 port stern",FALSE,TRUE
+"273",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"HAB","Wet Hull",1,"Port Anode #1",FALSE,TRUE
+"274",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"IB","Internal spaces",3,"Port side intake #5",FALSE,TRUE
+"275",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"PA","Propeller",2,"Propeller shaft port",FALSE,TRUE
+"276",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"PA","Propeller",2,"Propeller shaft starboard",FALSE,TRUE
+"277",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"PJ","Rudder",2,"Rudder port",FALSE,TRUE
+"278",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"PJ","Rudder",2,"Rudder starboard",FALSE,TRUE
+"279",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"PG","Propeller",2,"Stern tubes port",FALSE,TRUE
+"280",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"PG","Propeller",2,"Stern tubes starboard",FALSE,TRUE
+"281",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"IB","Internal spaces",3,"Toilet water intake (starboard #1)",FALSE,TRUE
+"282",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"IB","Internal spaces",3,"Toilet water intake (starboard #2)",FALSE,TRUE
+"283",11,34,20,12.5,"Fish",15,"Hard","Very Poor",0.5,"IB","Internal spaces",3,"Venturi for circulating tanks (#9 port)",FALSE,TRUE
+"284",11,34,20,12.5,"Fish",15,"Hard","Very Poor",3.04,"IB","Internal spaces",3,"Circulating tank intake (starboard #8)",TRUE,FALSE
+"285",11,34,20,12.5,"Fish",15,"Hard","Very Poor",5.3,"IB","Internal spaces",3,"Bilge system primer (starboard #3)",TRUE,FALSE
+"286",11,34,20,12.5,"Fish",15,"Hard","Very Poor",5.44,"IB","Internal spaces",3,"Intake for desalination (drinking water) (#10 port)",TRUE,FALSE
+"287",11,34,20,12.5,"Fish",15,"Hard","Very Poor",7.69,"IB","Internal spaces",3,"Bilge system primer (#4 port)",TRUE,FALSE
+"288",11,34,20,12.5,"Fish",15,"Hard","Very Poor",10,"HD","Wet Hull",1,"Engine cooling water intake (starboard #5)",TRUE,FALSE
+"289",11,34,20,12.5,"Fish",15,"Hard","Very Poor",15,"IB","Internal spaces",3,"Gen set intake (starboard #10)",TRUE,FALSE
+"290",11,34,20,12.5,"Fish",15,"Hard","Very Poor",16,"HA","Wet Hull",1,"Hull #4 port bow",TRUE,FALSE
+"291",11,34,20,12.5,"Fish",15,"Hard","Very Poor",57.77,"HA","Wet Hull",1,"Flat bottom hull",TRUE,FALSE
+"292",11,34,20,12.5,"Fish",15,"Hard","Very Poor",84.57,"HZ","Wet Hull",1,"Marlin Board",TRUE,FALSE
+"293",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"IB","Internal spaces",3,"#3 port Desal. water pickup",FALSE,TRUE
+"294",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"HC","Wet Hull",1,"#5 Starboard (small bump)",FALSE,TRUE
+"295",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"HH","Wet Hull",1,"#7 starboard (Depthsounder #2)",FALSE,TRUE
+"296",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"IB","Internal spaces",3,"#8 Starboard (Bow thruster)",FALSE,TRUE
+"297",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"IB","Internal spaces",3,"Bow thruster port",FALSE,TRUE
+"298",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"IA","Internal spaces",3,"Deckwash water pickup water",FALSE,TRUE
+"299",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"IA","Internal spaces",3,"Genset water pickup port water",FALSE,TRUE
+"300",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"HA","Wet Hull",1,"Hull 1 starboard stern",FALSE,TRUE
+"301",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"HP","Wet Hull",1,"Hull 2 starboard keel",FALSE,TRUE
+"302",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"HA","Wet Hull",1,"Hull 3 starboard bow",FALSE,TRUE
+"303",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"HP","Wet Hull",1,"Hull 5 port keel",FALSE,TRUE
+"304",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"HD","Wet Hull",1,"Main engine inlet (#5 port)",FALSE,TRUE
+"305",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"IF","Internal spaces",3,"Main engine intake port water",FALSE,TRUE
+"306",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"IB","Internal spaces",3,"Port #7 sink drain",FALSE,TRUE
+"307",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"IB","Internal spaces",3,"Port inlet/outlet #8",FALSE,TRUE
+"308",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"PJ","Rudder",2,"Rudder port",FALSE,TRUE
+"309",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"PJ","Rudder",2,"Rudder starboard",FALSE,TRUE
+"310",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"IB","Internal spaces",3,"Starboard #2 deckwash water pickup scrape",FALSE,TRUE
+"311",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"IB","Internal spaces",3,"Starboard #4 toilet outlet scrape",FALSE,TRUE
+"312",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"IB","Internal spaces",3,"Starboard inlet/outlet #6",FALSE,TRUE
+"313",12,42,79,15,"Yacht",2,"Ablative","Excellent",0.5,"PG","Propeller",2,"Stern tube",FALSE,TRUE
+"314",12,42,79,15,"Yacht",2,"Ablative","Excellent",3.2,"IB","Internal spaces",3,"Genset water pickup (#4 port)",TRUE,FALSE
+"315",12,42,79,15,"Yacht",2,"Ablative","Excellent",9.3,"PB","Propeller",2,"Propelller",TRUE,FALSE
+"316",12,42,79,15,"Yacht",2,"Ablative","Excellent",9.65,"HA","Wet Hull",1,"Hull 6 port stern",TRUE,FALSE
+"317",12,42,79,15,"Yacht",2,"Ablative","Excellent",11.64,"PA","Propeller",2,"Propeller shaft",TRUE,FALSE
+"318",12,42,79,15,"Yacht",2,"Ablative","Excellent",12.95,"HA","Wet Hull",1,"Hull 4 port bow",TRUE,FALSE
+"319",12,42,79,15,"Yacht",2,"Ablative","Excellent",27.85,"IB","Internal spaces",3,"Starboard #1 cockpit drain",TRUE,FALSE
+"320",12,42,79,15,"Yacht",2,"Ablative","Excellent",29.34,"HAF","Wet Hull",1,"Radio earth plate (starboard #3)",TRUE,FALSE
+"321",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",0,"IN","Internal spaces",3,NA,FALSE,TRUE
+"322",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",0,"PM","Anchor",2,NA,FALSE,TRUE
+"323",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",0,"PN","Anchor",2,NA,FALSE,TRUE
+"324",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",0.5,"IH","Internal spaces",3,"Anchor well (pumped 15 min) water",FALSE,TRUE
+"325",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",0.5,"IH","Internal spaces",3,"Anchor well (scoped jar) water",FALSE,TRUE
+"326",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",0.5,"HAB","Wet Hull",1,"Anode #3 port",FALSE,TRUE
+"327",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",0.5,"HAB","Wet Hull",1,"Anode #3 starboard",FALSE,TRUE
+"328",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",0.5,"ID","Internal spaces",3,"Bilge (closed) water (about 9 litres)",FALSE,TRUE
+"329",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",0.5,"HD","Wet Hull",1,"Circulation tank strainer #1 (#2 grate Starboard)",FALSE,TRUE
+"330",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",0.5,"HP","Wet Hull",1,"Hull 1 starboard stern keel",FALSE,TRUE
+"331",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",0.5,"HA","Wet Hull",1,"Hull 2 starboard midship",FALSE,TRUE
+"332",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",0.5,"HP","Wet Hull",1,"Hull 6 port keel stern",FALSE,TRUE
+"333",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",0.5,"IL","Internal spaces",3,"Live catch circulation tank water",FALSE,TRUE
+"334",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",0.5,"HH","Wet Hull",1,"Transducer (#7) Starboard",FALSE,TRUE
+"335",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",0.5,"IL","Internal spaces",3,"Wet well water",FALSE,TRUE
+"336",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",2.5,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"337",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",4.28,"HH","Wet Hull",1,"Transducer (#5) Starboard",TRUE,FALSE
+"338",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",4.3,"PH","Rudder",2,"Hull/Keel extension starboard",TRUE,FALSE
+"339",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",5.2,"IB","Internal spaces",3,"Port #8 hole (toilet outlet)",TRUE,FALSE
+"340",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",6.8,"HR","Wet Hull",1,"Port stabiliser",TRUE,FALSE
+"341",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",7,"PH","Rudder",2,"Hull/Keel extension port",TRUE,FALSE
+"342",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",9.22,"HA","Wet Hull",1,"Hull 5 Port Midship",TRUE,FALSE
+"343",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",9.7,"HF","Wet Hull",1,"Port cooling pipes",TRUE,FALSE
+"344",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",9.75,"IB","Internal spaces",3,"Circulation tank inlet (#1) Starboard",TRUE,FALSE
+"345",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",10.2,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"346",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",14.05,"PA","Propeller",2,"Propeller shaft",TRUE,FALSE
+"347",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",23.8,"HH","Wet Hull",1,"Port transducer (#2)",TRUE,FALSE
+"348",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",26.3,"HA","Wet Hull",1,"Hull 3 starboard bow",TRUE,FALSE
+"349",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",40.5,"HA","Wet Hull",1,"Hull 4 port bow",TRUE,FALSE
+"350",13,13,4,18.5,"Fish",15,"Self-polishing","Excellent",86.2,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"351",14,44,6,12.5,"Yacht",2,"Ablative","Good",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"352",14,44,6,12.5,"Yacht",2,"Ablative","Good",0,"HX","Wet Hull",1,NA,FALSE,TRUE
+"353",14,44,6,12.5,"Yacht",2,"Ablative","Good",0,"HY","Dry Hull",1,NA,FALSE,TRUE
+"354",14,44,6,12.5,"Yacht",2,"Ablative","Good",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"355",14,44,6,12.5,"Yacht",2,"Ablative","Good",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"356",14,44,6,12.5,"Yacht",2,"Ablative","Good",0,"PM","Anchor",2,NA,FALSE,TRUE
+"357",14,44,6,12.5,"Yacht",2,"Ablative","Good",0,"PN","Anchor",2,NA,FALSE,TRUE
+"358",14,44,6,12.5,"Yacht",2,"Ablative","Good",0.5,"ID","Internal spaces",3,"Bilge water",FALSE,TRUE
+"359",14,44,6,12.5,"Yacht",2,"Ablative","Good",0.5,"IF","Internal spaces",3,"Engine cooling water",FALSE,TRUE
+"360",14,44,6,12.5,"Yacht",2,"Ablative","Good",0.5,"HP","Wet Hull",1,"Hull 1 starboard stern keel",FALSE,TRUE
+"361",14,44,6,12.5,"Yacht",2,"Ablative","Good",0.5,"HA","Wet Hull",1,"Hull 2 starboard midship",FALSE,TRUE
+"362",14,44,6,12.5,"Yacht",2,"Ablative","Good",0.5,"HA","Wet Hull",1,"Hull 5 Port Midship",FALSE,TRUE
+"363",14,44,6,12.5,"Yacht",2,"Ablative","Good",0.5,"HA","Wet Hull",1,"Hull 6 port stern",FALSE,TRUE
+"364",14,44,6,12.5,"Yacht",2,"Ablative","Good",0.5,"IB","Internal spaces",3,"Port #2 outlet",FALSE,TRUE
+"365",14,44,6,12.5,"Yacht",2,"Ablative","Good",0.5,"IB","Internal spaces",3,"Port #3",FALSE,TRUE
+"366",14,44,6,12.5,"Yacht",2,"Ablative","Good",0.5,"IB","Internal spaces",3,"Port #4",FALSE,TRUE
+"367",14,44,6,12.5,"Yacht",2,"Ablative","Good",0.5,"IB","Internal spaces",3,"Port #7 sink drain",FALSE,TRUE
+"368",14,44,6,12.5,"Yacht",2,"Ablative","Good",0.5,"PA","Propeller",2,"Propeller shaft",FALSE,TRUE
+"369",14,44,6,12.5,"Yacht",2,"Ablative","Good",0.5,"HC","Wet Hull",1,"Starboard #1 plug (transducer)",FALSE,TRUE
+"370",14,44,6,12.5,"Yacht",2,"Ablative","Good",0.5,"HD","Wet Hull",1,"Starboard #2 engine cooling inlet",FALSE,TRUE
+"371",14,44,6,12.5,"Yacht",2,"Ablative","Good",4.62,"HAB","Wet Hull",1,"Starboard anode",TRUE,FALSE
+"372",14,44,6,12.5,"Yacht",2,"Ablative","Good",15.43,"HA","Wet Hull",1,"Hull 4 port bow",TRUE,FALSE
+"373",14,44,6,12.5,"Yacht",2,"Ablative","Good",16.11,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"374",14,44,6,12.5,"Yacht",2,"Ablative","Good",21.98,"HL","Wet Hull",1,"Keel block space",TRUE,FALSE
+"375",14,44,6,12.5,"Yacht",2,"Ablative","Good",33.58,"HA","Wet Hull",1,"Hull 3 starboard bow",TRUE,FALSE
+"376",14,44,6,12.5,"Yacht",2,"Ablative","Good",33.68,"PJ","Rudder",2,"Rudder top",TRUE,FALSE
+"377",14,44,6,12.5,"Yacht",2,"Ablative","Good",53.67,"PH","Rudder",2,"Keel extension",TRUE,FALSE
+"378",15,237,435,8,"Yacht",2,"Ablative","Good",0,"DA","Deck",4,NA,FALSE,TRUE
+"379",15,237,435,8,"Yacht",2,"Ablative","Good",0,"DD","Deck",4,NA,FALSE,TRUE
+"380",15,237,435,8,"Yacht",2,"Ablative","Good",0,"DH","Deck",4,NA,FALSE,TRUE
+"381",15,237,435,8,"Yacht",2,"Ablative","Good",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"382",15,237,435,8,"Yacht",2,"Ablative","Good",0,"HZ","Wet Hull",1,NA,FALSE,TRUE
+"383",15,237,435,8,"Yacht",2,"Ablative","Good",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"384",15,237,435,8,"Yacht",2,"Ablative","Good",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"385",15,237,435,8,"Yacht",2,"Ablative","Good",0,"PM","Anchor",2,NA,FALSE,TRUE
+"386",15,237,435,8,"Yacht",2,"Ablative","Good",0,"PN","Anchor",2,NA,FALSE,TRUE
+"387",15,237,435,8,"Yacht",2,"Ablative","Good",0.5,"ID","Internal spaces",3,"Bilge water sample",FALSE,TRUE
+"388",15,237,435,8,"Yacht",2,"Ablative","Good",0.5,"IF","Internal spaces",3,"Engine intake water",FALSE,TRUE
+"389",15,237,435,8,"Yacht",2,"Ablative","Good",0.5,"HAB","Wet Hull",1,"Starboard anode",FALSE,TRUE
+"390",15,237,435,8,"Yacht",2,"Ablative","Good",0.5,"HD","Wet Hull",1,"Water intake for engine (Starboard #3)",FALSE,TRUE
+"391",15,237,435,8,"Yacht",2,"Ablative","Good",4.5,"IB","Internal spaces",3,"Toilet outlet (Starboard #2)",TRUE,FALSE
+"392",15,237,435,8,"Yacht",2,"Ablative","Good",4.7,"HK","Wet Hull",1,"Impellor/log (starboard #1)",TRUE,FALSE
+"393",15,237,435,8,"Yacht",2,"Ablative","Good",15.02,"HK","Wet Hull",1,"Old log starboard",TRUE,FALSE
+"394",15,237,435,8,"Yacht",2,"Ablative","Good",38.9,"HP","Wet Hull",1,"Hull 5 port midship keel",TRUE,FALSE
+"395",15,237,435,8,"Yacht",2,"Ablative","Good",39,"HAB","Wet Hull",1,"Port anode broken",TRUE,FALSE
+"396",15,237,435,8,"Yacht",2,"Ablative","Good",46.4,"PA","Propeller",2,"Propeller shaft",TRUE,FALSE
+"397",15,237,435,8,"Yacht",2,"Ablative","Good",50.15,"PJ","Rudder",2,"Rudder Port",TRUE,FALSE
+"398",15,237,435,8,"Yacht",2,"Ablative","Good",53,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"399",15,237,435,8,"Yacht",2,"Ablative","Good",68.5,"HP","Wet Hull",1,"Hull 2 starboard midship keel",TRUE,FALSE
+"400",15,237,435,8,"Yacht",2,"Ablative","Good",73.1,"HH","Wet Hull",1,"Depth sounder and log Port",TRUE,FALSE
+"401",15,237,435,8,"Yacht",2,"Ablative","Good",155,"HA","Wet Hull",1,"Hull 4 port bow",TRUE,FALSE
+"402",15,237,435,8,"Yacht",2,"Ablative","Good",164.26,"HA","Wet Hull",1,"Hull 1 starboard stern",TRUE,FALSE
+"403",15,237,435,8,"Yacht",2,"Ablative","Good",195,"HA","Wet Hull",1,"Hull 6 port stern",TRUE,FALSE
+"404",15,237,435,8,"Yacht",2,"Ablative","Good",272.57,"HA","Wet Hull",1,"Hull 3 starboard bow",TRUE,FALSE
+"405",15,237,435,8,"Yacht",2,"Ablative","Good",740,"HX","Wet Hull",1,"Flat bottom hull",TRUE,FALSE
+"406",15,237,435,8,"Yacht",2,"Ablative","Good",990,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"407",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",0,"DA","Deck",4,NA,FALSE,TRUE
+"408",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",0,"PM","Anchor",2,NA,FALSE,TRUE
+"409",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",0,"PN","Anchor",2,NA,FALSE,TRUE
+"410",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",0.5,"IB","Internal spaces",3,"#1 Starboard outlet/inlet",FALSE,TRUE
+"411",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",0.5,"IH","Internal spaces",3,"Chain locker (Anchor well)",FALSE,TRUE
+"412",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",0.5,"HK","Wet Hull",1,"Paddle wheel (Starboard #2)",FALSE,TRUE
+"413",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",0.5,"HD","Wet Hull",1,"Port #2 strainer",FALSE,TRUE
+"414",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",5,"HC","Wet Hull",1,"Port #4 plug",TRUE,FALSE
+"415",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",7,"IB","Internal spaces",3,"Port #1 scrape",TRUE,FALSE
+"416",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",9.83,"HH","Wet Hull",1,"Transducer (starboard #3)",TRUE,FALSE
+"417",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",10.86,"HD","Wet Hull",1,"Port strainer #3",TRUE,FALSE
+"418",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",12,"ID","Internal spaces",3,"Bilge water",TRUE,FALSE
+"419",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",12.7,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"420",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",14.5,"PG","Propeller",2,"Prop sleeve/stern tube",TRUE,FALSE
+"421",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",37.67,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"422",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",54.4,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"423",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",55.2,"HA","Wet Hull",1,"Hull 2 starboard midship",TRUE,FALSE
+"424",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",70.39,"HA","Wet Hull",1,"Hull 5 port midship",TRUE,FALSE
+"425",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",75.76,"HA","Wet Hull",1,"Hull 6 port stern",TRUE,FALSE
+"426",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",83.62,"HA","Wet Hull",1,"Hull 4 port bow",TRUE,FALSE
+"427",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",128.23,"HP","Wet Hull",1,"Hull 1 starboard stern keel",TRUE,FALSE
+"428",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",134.95,"HA","Wet Hull",1,"Hull 3 starboard bow",TRUE,FALSE
+"429",16,6,282,3.5,"Motor cruiser",17,"Ablative","Good",197.9,"PH","Rudder",2,"Rudder extension (Keel extension)",TRUE,FALSE
+"430",17,4,352,155,"Fish",15,"Hard","Very Poor",0.5,"ID","Internal spaces",3,"Bilge water (bow)",FALSE,TRUE
+"431",17,4,352,155,"Fish",15,"Hard","Very Poor",0.5,"ID","Internal spaces",3,"Bilge water (stern)",FALSE,TRUE
+"432",17,4,352,155,"Fish",15,"Hard","Very Poor",0.5,"IA","Internal spaces",3,"Deck hose inlet starboard (water)",FALSE,TRUE
+"433",17,4,352,155,"Fish",15,"Hard","Very Poor",0.5,"IA","Internal spaces",3,"Deck hose outlet starboard (water)",FALSE,TRUE
+"434",17,4,352,155,"Fish",15,"Hard","Very Poor",0.5,"IF","Internal spaces",3,"Engine outlet water sample",FALSE,TRUE
+"435",17,4,352,155,"Fish",15,"Hard","Very Poor",1.7,"IL","Internal spaces",3,"Wet well water sample",TRUE,FALSE
+"436",17,4,352,155,"Fish",15,"Hard","Very Poor",4.65,"HAB","Wet Hull",1,"Anode 2 (port)",TRUE,FALSE
+"437",17,4,352,155,"Fish",15,"Hard","Very Poor",9.3,"HC","Wet Hull",1,"Plug starboard scrape",TRUE,FALSE
+"438",17,4,352,155,"Fish",15,"Hard","Very Poor",10.2,"HC","Wet Hull",1,"Plug port scrape",TRUE,FALSE
+"439",17,4,352,155,"Fish",15,"Hard","Very Poor",11.1,"HK","Wet Hull",1,"Paddle wheel logger (starboard)",TRUE,FALSE
+"440",17,4,352,155,"Fish",15,"Hard","Very Poor",11.3,"PA","Propeller",2,"Propeller shaft",TRUE,FALSE
+"441",17,4,352,155,"Fish",15,"Hard","Very Poor",11.5,"IB","Internal spaces",1,"Stabiliser hole (port)",TRUE,FALSE
+"442",17,4,352,155,"Fish",15,"Hard","Very Poor",11.54,"HD","Wet Hull",1,"Deck hose inlet scrape starboard (grate 6)",TRUE,FALSE
+"443",17,4,352,155,"Fish",15,"Hard","Very Poor",12.4,"HD","Wet Hull",1,"Engine cooling water inlet scrape (port)",TRUE,FALSE
+"444",17,4,352,155,"Fish",15,"Hard","Very Poor",12.6,"IB","Internal spaces",3,"Wet well starboard 3B scraping",TRUE,FALSE
+"445",17,4,352,155,"Fish",15,"Hard","Very Poor",12.7,"IB","Internal spaces",3,"Wet well starboard 3A scraping",TRUE,FALSE
+"446",17,4,352,155,"Fish",15,"Hard","Very Poor",12.8,"IB","Internal spaces",3,"Wet well starboard 3C scraping",TRUE,FALSE
+"447",17,4,352,155,"Fish",15,"Hard","Very Poor",13.5,"IB","Internal spaces",3,"Wet well port 3C scraping",TRUE,FALSE
+"448",17,4,352,155,"Fish",15,"Hard","Very Poor",15.74,"HAB","Wet Hull",1,"Anode #1 (port B)",TRUE,FALSE
+"449",17,4,352,155,"Fish",15,"Hard","Very Poor",18.7,"HAB","Wet Hull",1,"Anode 1 (port A)",TRUE,FALSE
+"450",17,4,352,155,"Fish",15,"Hard","Very Poor",19.95,"IB","Internal spaces",3,"Wet well port 3A scraping",TRUE,FALSE
+"451",17,4,352,155,"Fish",15,"Hard","Very Poor",25.2,"IB","Internal spaces",3,"Wet well port 3B scraping",TRUE,FALSE
+"452",17,4,352,155,"Fish",15,"Hard","Very Poor",33.53,"PJ","Rudder",2,"Rudder (port)",TRUE,FALSE
+"453",17,4,352,155,"Fish",15,"Hard","Very Poor",45.05,"PJ","Rudder",2,"Rudder (starboard)",TRUE,FALSE
+"454",17,4,352,155,"Fish",15,"Hard","Very Poor",68.84,"HA","Wet Hull",1,"Hull 2 starboard mid-ship",TRUE,FALSE
+"455",17,4,352,155,"Fish",15,"Hard","Very Poor",72.6,"IB","Internal spaces",1,"Stabiliser hole (starboard)",TRUE,FALSE
+"456",17,4,352,155,"Fish",15,"Hard","Very Poor",73.5,"HA","Wet Hull",1,"Hull 1 starboard stern",TRUE,FALSE
+"457",17,4,352,155,"Fish",15,"Hard","Very Poor",81.4,"HA","Wet Hull",1,"Hull 3 starboard bow",TRUE,FALSE
+"458",17,4,352,155,"Fish",15,"Hard","Very Poor",92.4,"HA","Wet Hull",1,"Hull 5 port midship",TRUE,FALSE
+"459",17,4,352,155,"Fish",15,"Hard","Very Poor",108.6,"HA","Wet Hull",1,"Hull 6 port bow",TRUE,FALSE
+"460",17,4,352,155,"Fish",15,"Hard","Very Poor",129.38,"HA","Wet Hull",1,"Hull 4 port stern",TRUE,FALSE
+"461",17,4,352,155,"Fish",15,"Hard","Very Poor",132.5,"HX","Wet Hull",1,"Flat bottom bow end",TRUE,FALSE
+"462",17,4,352,155,"Fish",15,"Hard","Very Poor",175.4,"HX","Wet Hull",1,"Flat bottom stern end",TRUE,FALSE
+"463",17,4,352,155,"Fish",15,"Hard","Very Poor",212,"IB","Internal spaces",3,"Toilet outlet scrape",TRUE,FALSE
+"464",17,4,352,155,"Fish",15,"Hard","Very Poor",321.5,"HR","Wet Hull",1,"Stabiliser starboard (flat surface)",TRUE,FALSE
+"465",17,4,352,155,"Fish",15,"Hard","Very Poor",322.9,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"466",17,4,352,155,"Fish",15,"Hard","Very Poor",380.4,"HR","Wet Hull",1,"Stabiliser port (flat surface)",TRUE,FALSE
+"467",17,4,352,155,"Fish",15,"Hard","Very Poor",1097,"HX","Wet Hull",1,"Flat bottom mid-ship",TRUE,FALSE
+"468",18,6,353,10,"Fish",15,"Self-polishing","Good",0,"DA","Deck",4,NA,FALSE,TRUE
+"469",18,6,353,10,"Fish",15,"Self-polishing","Good",0,"DC","Deck",4,NA,FALSE,TRUE
+"470",18,6,353,10,"Fish",15,"Self-polishing","Good",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"471",18,6,353,10,"Fish",15,"Self-polishing","Good",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"472",18,6,353,10,"Fish",15,"Self-polishing","Good",0,"IP","Internal spaces",3,NA,FALSE,TRUE
+"473",18,6,353,10,"Fish",15,"Self-polishing","Good",0,"IQ","Internal spaces",3,NA,FALSE,TRUE
+"474",18,6,353,10,"Fish",15,"Self-polishing","Good",0,"PM","Anchor",2,NA,FALSE,TRUE
+"475",18,6,353,10,"Fish",15,"Self-polishing","Good",0,"PN","Anchor",2,NA,FALSE,TRUE
+"476",18,6,353,10,"Fish",15,"Self-polishing","Good",0.5,"HAA","Wet Hull",1,"Anode internal",FALSE,TRUE
+"477",18,6,353,10,"Fish",15,"Self-polishing","Good",0.5,"ID","Internal spaces",3,"Bilge water sample",FALSE,TRUE
+"478",18,6,353,10,"Fish",15,"Self-polishing","Good",0.5,"HD","Wet Hull",1,"Engine cooling intake scrape starboard",FALSE,TRUE
+"479",18,6,353,10,"Fish",15,"Self-polishing","Good",7.4,"HAB","Wet Hull",1,"Anode external",TRUE,FALSE
+"480",18,6,353,10,"Fish",15,"Self-polishing","Good",10.28,"IB","Internal spaces",3,"Wet well hole #3 starboard",TRUE,FALSE
+"481",18,6,353,10,"Fish",15,"Self-polishing","Good",11.4,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"482",18,6,353,10,"Fish",15,"Self-polishing","Good",12.05,"HAF","Wet Hull",1,"Earthing station port",TRUE,FALSE
+"483",18,6,353,10,"Fish",15,"Self-polishing","Good",12.7,"IB","Internal spaces",3,"Wet well hole #1 starboard",TRUE,FALSE
+"484",18,6,353,10,"Fish",15,"Self-polishing","Good",13.9,"IB","Internal spaces",3,"Wet well hole #2 starboard",TRUE,FALSE
+"485",18,6,353,10,"Fish",15,"Self-polishing","Good",15.1,"HA","Wet Hull",1,"Hull #2 starboard mid-ship",TRUE,FALSE
+"486",18,6,353,10,"Fish",15,"Self-polishing","Good",15.3,"HA","Wet Hull",1,"Hull #5 port mid-ships",TRUE,FALSE
+"487",18,6,353,10,"Fish",15,"Self-polishing","Good",15.3,"HF","Wet Hull",1,"Keel cooling pipe #1 external port",TRUE,FALSE
+"488",18,6,353,10,"Fish",15,"Self-polishing","Good",15.8,"PB","Propeller",2,"Propeller blade",TRUE,FALSE
+"489",18,6,353,10,"Fish",15,"Self-polishing","Good",19.8,"HF","Wet Hull",1,"Keel cooling pipe #2 external port",TRUE,FALSE
+"490",18,6,353,10,"Fish",15,"Self-polishing","Good",22.8,"HA","Wet Hull",1,"Hull #6 port stern",TRUE,FALSE
+"491",18,6,353,10,"Fish",15,"Self-polishing","Good",24.6,"PH","Rudder",2,"Keel extension",TRUE,FALSE
+"492",18,6,353,10,"Fish",15,"Self-polishing","Good",25.42,"HA","Wet Hull",1,"Hull #4 port bow",TRUE,FALSE
+"493",18,6,353,10,"Fish",15,"Self-polishing","Good",28.8,"HA","Wet Hull",1,"Hull #1 starboard stern",TRUE,FALSE
+"494",18,6,353,10,"Fish",15,"Self-polishing","Good",33.9,"HA","Wet Hull",1,"Hull #3 starboard bow",TRUE,FALSE
+"495",18,6,353,10,"Fish",15,"Self-polishing","Good",49.3,"HX","Wet Hull",1,"Garboard plank - 1m section of flat bottom",TRUE,FALSE
+"496",18,6,353,10,"Fish",15,"Self-polishing","Good",92.1,"PG","Propeller",2,"Propeller shaft scrape",TRUE,FALSE
+"497",18,6,353,10,"Fish",15,"Self-polishing","Good",130.9,"HH","Wet Hull",1,"Transducer (starboard) and box",TRUE,FALSE
+"498",18,6,353,10,"Fish",15,"Self-polishing","Good",185.7,"HH","Wet Hull",1,"Transducer (port) and box",TRUE,FALSE
+"499",19,7,271,15,"Fish",15,"Ablative","Good",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"500",19,7,271,15,"Fish",15,"Ablative","Good",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"501",19,7,271,15,"Fish",15,"Ablative","Good",0,"IP","Internal spaces",3,NA,FALSE,TRUE
+"502",19,7,271,15,"Fish",15,"Ablative","Good",0,"IQ","Internal spaces",3,NA,FALSE,TRUE
+"503",19,7,271,15,"Fish",15,"Ablative","Good",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"504",19,7,271,15,"Fish",15,"Ablative","Good",0,"IW","Internal spaces",3,NA,FALSE,TRUE
+"505",19,7,271,15,"Fish",15,"Ablative","Good",0,"PA","Propeller",2,NA,FALSE,TRUE
+"506",19,7,271,15,"Fish",15,"Ablative","Good",0,"PB","Propeller",2,NA,FALSE,TRUE
+"507",19,7,271,15,"Fish",15,"Ablative","Good",0,"PM","Anchor",2,NA,FALSE,TRUE
+"508",19,7,271,15,"Fish",15,"Ablative","Good",0,"PN","Anchor",2,NA,FALSE,TRUE
+"509",19,7,271,15,"Fish",15,"Ablative","Good",0.5,"IH","Internal spaces",3,"Anchor locker water sample",FALSE,TRUE
+"510",19,7,271,15,"Fish",15,"Ablative","Good",0.5,"HAA","Wet Hull",1,"Anode behind starboard",FALSE,TRUE
+"511",19,7,271,15,"Fish",15,"Ablative","Good",0.5,"HAB","Wet Hull",1,"Anode external port",FALSE,TRUE
+"512",19,7,271,15,"Fish",15,"Ablative","Good",0.5,"HAB","Wet Hull",1,"Anode external starboard",FALSE,TRUE
+"513",19,7,271,15,"Fish",15,"Ablative","Good",0.5,"HAA","Wet Hull",1,"Anode internal port bow",FALSE,TRUE
+"514",19,7,271,15,"Fish",15,"Ablative","Good",0.5,"IB","Internal spaces",3,"Gen set intake (starboard)",FALSE,TRUE
+"515",19,7,271,15,"Fish",15,"Ablative","Good",0.5,"HP","Wet Hull",1,"Hull #1 starboard stern keel",FALSE,TRUE
+"516",19,7,271,15,"Fish",15,"Ablative","Good",0.5,"HA","Wet Hull",1,"Hull #2 starboard mid-ship",FALSE,TRUE
+"517",19,7,271,15,"Fish",15,"Ablative","Good",0.5,"PG","Propeller",2,"Stern gland scrape",FALSE,TRUE
+"518",19,7,271,15,"Fish",15,"Ablative","Good",7.51,"PH","Rudder",2,"Keel extension",TRUE,FALSE
+"519",19,7,271,15,"Fish",15,"Ablative","Good",8,"HA","Wet Hull",1,"Hull #5 port mid-ships",TRUE,FALSE
+"520",19,7,271,15,"Fish",15,"Ablative","Good",8,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"521",19,7,271,15,"Fish",15,"Ablative","Good",8.6,"IN","Internal spaces",3,"Wet well internal starboard",TRUE,FALSE
+"522",19,7,271,15,"Fish",15,"Ablative","Good",10.1,"HF","Wet Hull",1,"Keel cooling pipe refrigerator",TRUE,FALSE
+"523",19,7,271,15,"Fish",15,"Ablative","Good",11.82,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"524",19,7,271,15,"Fish",15,"Ablative","Good",13,"HA","Wet Hull",1,"Hull #6 port stern",TRUE,FALSE
+"525",19,7,271,15,"Fish",15,"Ablative","Good",13.6,"HH","Wet Hull",1,"Transducer plus mount starboard",TRUE,FALSE
+"526",19,7,271,15,"Fish",15,"Ablative","Good",17.07,"IB","Internal spaces",3,"Wet well hole #3 port",TRUE,FALSE
+"527",19,7,271,15,"Fish",15,"Ablative","Good",17.5,"IB","Internal spaces",3,"Wet well hole #2 port",TRUE,FALSE
+"528",19,7,271,15,"Fish",15,"Ablative","Good",18.35,"IB","Internal spaces",3,"Wet well hole #3 starboard",TRUE,FALSE
+"529",19,7,271,15,"Fish",15,"Ablative","Good",20.05,"HH","Wet Hull",1,"Transducer plus mount port",TRUE,FALSE
+"530",19,7,271,15,"Fish",15,"Ablative","Good",20.5,"IN","Internal spaces",3,"Wet well internal port",TRUE,FALSE
+"531",19,7,271,15,"Fish",15,"Ablative","Good",22.07,"HF","Wet Hull",1,"Keel cooling pipe engine",TRUE,FALSE
+"532",19,7,271,15,"Fish",15,"Ablative","Good",24,"IB","Internal spaces",3,"Wet well hole #3 starboard",TRUE,FALSE
+"533",19,7,271,15,"Fish",15,"Ablative","Good",24.4,"IB","Internal spaces",3,"Wet well hole #1 port",TRUE,FALSE
+"534",19,7,271,15,"Fish",15,"Ablative","Good",27.6,"IB","Internal spaces",3,"Wet well hole #2 starboard",TRUE,FALSE
+"535",19,7,271,15,"Fish",15,"Ablative","Good",29.2,"HA","Wet Hull",1,"Hull #3 starboard bow",TRUE,FALSE
+"536",19,7,271,15,"Fish",15,"Ablative","Good",38.18,"HA","Wet Hull",1,"Hull #4 port bow",TRUE,FALSE
+"537",19,7,271,15,"Fish",15,"Ablative","Good",39.3,"HX","Wet Hull",1,"Flat bottom scrape",TRUE,FALSE
+"538",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0,"DA","Deck",4,NA,FALSE,TRUE
+"539",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0,"DG","Deck",4,NA,FALSE,TRUE
+"540",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"541",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0,"IT","Internal spaces",3,NA,FALSE,TRUE
+"542",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0,"IU","Internal spaces",3,NA,FALSE,TRUE
+"543",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"544",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0,"IW","Internal spaces",3,NA,FALSE,TRUE
+"545",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0,"PA","Propeller",2,NA,FALSE,TRUE
+"546",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0,"PB","Propeller",2,NA,FALSE,TRUE
+"547",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0,"PM","Anchor",2,NA,FALSE,TRUE
+"548",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0,"PN","Anchor",2,NA,FALSE,TRUE
+"549",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0.5,"HH","Wet Hull",1,"Depth sounder",FALSE,TRUE
+"550",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0.5,"HP","Wet Hull",1,"Hull 2 starboard keel",FALSE,TRUE
+"551",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0.5,"HA","Wet Hull",1,"Hull 3 starboard bow",FALSE,TRUE
+"552",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0.5,"HA","Wet Hull",1,"Hull 4 port stern",FALSE,TRUE
+"553",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0.5,"HP","Wet Hull",1,"Hull 5 port keel",FALSE,TRUE
+"554",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0.5,"HA","Wet Hull",1,"Hull 6 port bow",FALSE,TRUE
+"555",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0.5,"PE","Propeller",2,"Outboard sail drive leg",FALSE,TRUE
+"556",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0.5,"HD","Wet Hull",1,"Outboard sail drive leg water outlet scraping",FALSE,TRUE
+"557",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0.5,"HK","Wet Hull",1,"Paddle wheel",FALSE,TRUE
+"558",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0.5,"PJ","Rudder",2,"Rudder port",FALSE,TRUE
+"559",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0.5,"PJ","Rudder",2,"Rudder starboard",FALSE,TRUE
+"560",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0.5,"IB","Internal spaces",3,"Toilet inlet scrape port",FALSE,TRUE
+"561",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0.5,"IB","Internal spaces",3,"Toilet outlet scrape starboard",FALSE,TRUE
+"562",20,11,41,NA,"Yacht",2,"Hard","Very Poor",0.5,"IB","Internal spaces",3,"Toilet water inlet",FALSE,TRUE
+"563",20,11,41,NA,"Yacht",2,"Hard","Very Poor",8,"HA","Wet Hull",1,"Hull 1 starboard stern",TRUE,FALSE
+"564",21,425,107,27.5,"Yacht",2,"Ablative","Good",0,"HY","Dry Hull",1,NA,FALSE,TRUE
+"565",21,425,107,27.5,"Yacht",2,"Ablative","Good",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"566",21,425,107,27.5,"Yacht",2,"Ablative","Good",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"567",21,425,107,27.5,"Yacht",2,"Ablative","Good",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"568",21,425,107,27.5,"Yacht",2,"Ablative","Good",0,"IW","Internal spaces",3,NA,FALSE,TRUE
+"569",21,425,107,27.5,"Yacht",2,"Ablative","Good",0,"PM","Anchor",2,NA,FALSE,TRUE
+"570",21,425,107,27.5,"Yacht",2,"Ablative","Good",0,"PN","Anchor",2,NA,FALSE,TRUE
+"571",21,425,107,27.5,"Yacht",2,"Ablative","Good",0.5,"IF","Internal spaces",3,"Engine cooling intake H2O",FALSE,TRUE
+"572",21,425,107,27.5,"Yacht",2,"Ablative","Good",5.6,"HAB","Wet Hull",1,"Port Anode stern",TRUE,FALSE
+"573",21,425,107,27.5,"Yacht",2,"Ablative","Good",7.5,"HAB","Wet Hull",1,"Port Anode bow",TRUE,FALSE
+"574",21,425,107,27.5,"Yacht",2,"Ablative","Good",8.1,"HH","Wet Hull",1,"Depth sounder housing port",TRUE,FALSE
+"575",21,425,107,27.5,"Yacht",2,"Ablative","Good",8.6,"HAB","Wet Hull",1,"Anode starboard bow",TRUE,FALSE
+"576",21,425,107,27.5,"Yacht",2,"Ablative","Good",9.6,"HP","Wet Hull",1,"Hull 2 port mid-ship keel",TRUE,FALSE
+"577",21,425,107,27.5,"Yacht",2,"Ablative","Good",11.4,"PG","Propeller",2,"Stern tube external",TRUE,FALSE
+"578",21,425,107,27.5,"Yacht",2,"Ablative","Good",16.4,"HA","Wet Hull",1,"Hull 6 starboard bow scrape",TRUE,FALSE
+"579",21,425,107,27.5,"Yacht",2,"Ablative","Good",18.85,"HP","Wet Hull",1,"Hull 5 starboard midship keel scrape",TRUE,FALSE
+"580",21,425,107,27.5,"Yacht",2,"Ablative","Good",19.4,"HA","Wet Hull",1,"Port bow scrape #3",TRUE,FALSE
+"581",21,425,107,27.5,"Yacht",2,"Ablative","Good",27.7,"PH","Rudder",2,"Skeg quadrat port",TRUE,FALSE
+"582",21,425,107,27.5,"Yacht",2,"Ablative","Good",34.4,"HA","Wet Hull",1,"Port stern scraping #1",TRUE,FALSE
+"583",21,425,107,27.5,"Yacht",2,"Ablative","Good",35.2,"HD","Wet Hull",1,"Engine cooling water intake strainer",TRUE,FALSE
+"584",21,425,107,27.5,"Yacht",2,"Ablative","Good",35.6,"HAB","Wet Hull",1,"Anode stern starboard",TRUE,FALSE
+"585",21,425,107,27.5,"Yacht",2,"Ablative","Good",45.1,"PH","Rudder",2,"Skeg quadrat starboard",TRUE,FALSE
+"586",21,425,107,27.5,"Yacht",2,"Ablative","Good",45.6,"HA","Wet Hull",1,"Hull 4 starboard stern scrape",TRUE,FALSE
+"587",21,425,107,27.5,"Yacht",2,"Ablative","Good",110.16,"PA","Propeller",2,"Propeller shaft",TRUE,FALSE
+"588",21,425,107,27.5,"Yacht",2,"Ablative","Good",283,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"589",21,425,107,27.5,"Yacht",2,"Ablative","Good",488.28,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"590",21,425,107,27.5,"Yacht",2,"Ablative","Good",515.31,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"591",22,5,719,300,"Fish",15,NA,NA,0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"592",22,5,719,300,"Fish",15,NA,NA,0.5,"IL","Internal spaces",3,"Ballast tank water",FALSE,TRUE
+"593",22,5,719,300,"Fish",15,NA,NA,0.5,"ID","Internal spaces",3,"Bilge water",FALSE,TRUE
+"594",22,5,719,300,"Fish",15,NA,NA,0.5,"IL","Internal spaces",3,"Wet well water",FALSE,TRUE
+"595",22,5,719,300,"Fish",15,NA,NA,8.3,"IB","Internal spaces",3,"Port water inlet (deck hose)",TRUE,FALSE
+"596",22,5,719,300,"Fish",15,NA,NA,9.6,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"597",22,5,719,300,"Fish",15,NA,NA,9.8,"HA","Wet Hull",1,"Hull #6 stern port",TRUE,FALSE
+"598",22,5,719,300,"Fish",15,NA,NA,31.7,"HA","Wet Hull",1,"Hull #5 port midship",TRUE,FALSE
+"599",22,5,719,300,"Fish",15,NA,NA,48,"HA","Wet Hull",1,"Hull #2 starboard mid-ship",TRUE,FALSE
+"600",22,5,719,300,"Fish",15,NA,NA,52.1,"HAB","Wet Hull",1,"Zinc anode port midship",TRUE,FALSE
+"601",22,5,719,300,"Fish",15,NA,NA,55.3,"HA","Wet Hull",1,"Hull #4 port bow",TRUE,FALSE
+"602",22,5,719,300,"Fish",15,NA,NA,80.3,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"603",22,5,719,300,"Fish",15,NA,NA,98.8,"HAB","Wet Hull",1,"Zinc anode port",TRUE,FALSE
+"604",22,5,719,300,"Fish",15,NA,NA,178.7,"HD","Wet Hull",1,"Strainer port (engine cooling)",TRUE,FALSE
+"605",22,5,719,300,"Fish",15,NA,NA,194.8,"HA","Wet Hull",1,"Hull #3 starboard bow",TRUE,FALSE
+"606",22,5,719,300,"Fish",15,NA,NA,201.8,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"607",22,5,719,300,"Fish",15,NA,NA,203,"HH","Wet Hull",1,"Sonar well starboard",TRUE,FALSE
+"608",22,5,719,300,"Fish",15,NA,NA,236,"IB","Internal spaces",3,"Wet well inside starboard",TRUE,FALSE
+"609",22,5,719,300,"Fish",15,NA,NA,262.5,"IB","Internal spaces",3,"Wet well inside port",TRUE,FALSE
+"610",22,5,719,300,"Fish",15,NA,NA,290,"PH","Rudder",2,"Rudder extension (Keel extension)",TRUE,FALSE
+"611",22,5,719,300,"Fish",15,NA,NA,313.9,"PG","Propeller",2,"Stern tube external",TRUE,FALSE
+"612",22,5,719,300,"Fish",15,NA,NA,535,"HH","Wet Hull",1,"Transducer starboard",TRUE,FALSE
+"613",22,5,719,300,"Fish",15,NA,NA,556.7,"HA","Wet Hull",1,"Hull #1 starboard stern",TRUE,FALSE
+"614",22,5,719,300,"Fish",15,NA,NA,715,"HC","Wet Hull",1,"Copper plate port",TRUE,FALSE
+"615",22,5,719,300,"Fish",15,NA,NA,1183.2,"HH","Wet Hull",1,"Transducer + mount port",TRUE,FALSE
+"616",22,5,719,300,"Fish",15,NA,NA,4341,"HX","Wet Hull",1,"Flat bottom 1m scrape",TRUE,FALSE
+"617",23,0,915,260,"Tug",16,"Self-polishing","Good",0,"DD","Deck",4,NA,FALSE,TRUE
+"618",23,0,915,260,"Tug",16,"Self-polishing","Good",0,"DE","Deck",4,NA,FALSE,TRUE
+"619",23,0,915,260,"Tug",16,"Self-polishing","Good",0,"DF","Deck",4,NA,FALSE,TRUE
+"620",23,0,915,260,"Tug",16,"Self-polishing","Good",0,"DI","Deck",4,NA,FALSE,TRUE
+"621",23,0,915,260,"Tug",16,"Self-polishing","Good",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"622",23,0,915,260,"Tug",16,"Self-polishing","Good",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"623",23,0,915,260,"Tug",16,"Self-polishing","Good",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"624",23,0,915,260,"Tug",16,"Self-polishing","Good",0,"PM","Anchor",2,NA,FALSE,TRUE
+"625",23,0,915,260,"Tug",16,"Self-polishing","Good",0,"PN","Anchor",2,NA,FALSE,TRUE
+"626",23,0,915,260,"Tug",16,"Self-polishing","Good",0.5,"IF","Internal spaces",3,"Engine cooling water port",FALSE,TRUE
+"627",23,0,915,260,"Tug",16,"Self-polishing","Good",0.5,"IF","Internal spaces",3,"Engine cooling water starboard",FALSE,TRUE
+"628",23,0,915,260,"Tug",16,"Self-polishing","Good",4.6,"HAB","Wet Hull",1,"Anode starboard stern",TRUE,FALSE
+"629",23,0,915,260,"Tug",16,"Self-polishing","Good",5,"HP","Wet Hull",1,"Hull #1 keel starboard",TRUE,FALSE
+"630",23,0,915,260,"Tug",16,"Self-polishing","Good",6,"HP","Wet Hull",1,"Hull #6 port stern keel",TRUE,FALSE
+"631",23,0,915,260,"Tug",16,"Self-polishing","Good",12.1,"HA","Wet Hull",1,"Hull #2 starboard mid-ship",TRUE,FALSE
+"632",23,0,915,260,"Tug",16,"Self-polishing","Good",16.4,"HS","Wet Hull",1,"Stabiliser port bottom 1m scrape",TRUE,FALSE
+"633",23,0,915,260,"Tug",16,"Self-polishing","Good",17.7,"HR","Wet Hull",1,"Stabiliser starboard top 1m scrape",TRUE,FALSE
+"634",23,0,915,260,"Tug",16,"Self-polishing","Good",21.7,"PS","Propeller",2,"Thruster cowling leading edge port",TRUE,FALSE
+"635",23,0,915,260,"Tug",16,"Self-polishing","Good",23.75,"HA","Wet Hull",1,"Hull #6 stern port",TRUE,FALSE
+"636",23,0,915,260,"Tug",16,"Self-polishing","Good",28,"HC","Wet Hull",1,"Starboard docking plug",TRUE,FALSE
+"637",23,0,915,260,"Tug",16,"Self-polishing","Good",32.5,"HR","Wet Hull",1,"Stabiliser port top 1m scrape",TRUE,FALSE
+"638",23,0,915,260,"Tug",16,"Self-polishing","Good",47.22,"HAB","Wet Hull",1,"Anode #1 mid-ship",TRUE,FALSE
+"639",23,0,915,260,"Tug",16,"Self-polishing","Good",48.3,"HA","Wet Hull",1,"Hull #3 starboard bow",TRUE,FALSE
+"640",23,0,915,260,"Tug",16,"Self-polishing","Good",48.5,"HAB","Wet Hull",1,"Anode #2 port bow",TRUE,FALSE
+"641",23,0,915,260,"Tug",16,"Self-polishing","Good",48.6,"HAB","Wet Hull",1,"Anode starboard bow",TRUE,FALSE
+"642",23,0,915,260,"Tug",16,"Self-polishing","Good",48.7,"HS","Wet Hull",1,"Stabiliser starboard bottom 1m scrape",TRUE,FALSE
+"643",23,0,915,260,"Tug",16,"Self-polishing","Good",50.4,"HA","Wet Hull",1,"Hull #5 port midship",TRUE,FALSE
+"644",23,0,915,260,"Tug",16,"Self-polishing","Good",90.4,"HD","Wet Hull",1,"Engine inlet grate port",TRUE,FALSE
+"645",23,0,915,260,"Tug",16,"Self-polishing","Good",112,"PS","Propeller",2,"Thruster cowling leading edge starboard",TRUE,FALSE
+"646",23,0,915,260,"Tug",16,"Self-polishing","Good",114.42,"HD","Wet Hull",1,"Engine inlet grate starboard",TRUE,FALSE
+"647",23,0,915,260,"Tug",16,"Self-polishing","Good",140,"HX","Wet Hull",1,"Flat bottom 1m scrape",TRUE,FALSE
+"648",23,0,915,260,"Tug",16,"Self-polishing","Good",335.3,"PA","Propeller",2,"Starboard propeller",TRUE,FALSE
+"649",23,0,915,260,"Tug",16,"Self-polishing","Good",536,"PA","Propeller",2,"Port propeller",TRUE,FALSE
+"650",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"651",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"652",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",0,"PM","Anchor",2,NA,FALSE,TRUE
+"653",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",0,"PN","Anchor",2,NA,FALSE,TRUE
+"654",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",0.5,"ID","Internal spaces",3,"Bilge water",FALSE,TRUE
+"655",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",0.5,"HD","Wet Hull",1,"Engine cooling water inlet scrape",FALSE,TRUE
+"656",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",0.5,"IA","Internal spaces",3,"Sink outlet water",FALSE,TRUE
+"657",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",0.5,"IA","Internal spaces",3,"Toilet outlet water",FALSE,TRUE
+"658",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",8.5,"HC","Wet Hull",1,"Starboard plug scrape",TRUE,FALSE
+"659",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",75.4,"HAB","Wet Hull",1,"Anode port",TRUE,FALSE
+"660",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",295.5,"PG","Propeller",2,"Propeller sleeve",TRUE,FALSE
+"661",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",1180,"HP","Wet Hull",1,"Hull 1 starboard stern keel",TRUE,FALSE
+"662",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",1490,"HA","Wet Hull",1,"Hull 6 port stern",TRUE,FALSE
+"663",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",2080,"HA","Wet Hull",1,"Hull 5 port midships",TRUE,FALSE
+"664",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",2970,"HA","Wet Hull",1,"Hull 4 port bow",TRUE,FALSE
+"665",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",3080,"HA","Wet Hull",1,"Hull 2 starboard midships",TRUE,FALSE
+"666",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",4930,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"667",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",5120,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"668",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",8100,"HA","Wet Hull",1,"Hull 3 starboard bow",TRUE,FALSE
+"669",24,183,443,12.5,"Yacht",2,"Ablative","Excellent",9466,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"670",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"671",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0,"IW","Internal spaces",3,NA,FALSE,TRUE
+"672",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0,"PA","Propeller",2,NA,FALSE,TRUE
+"673",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0,"PB","Propeller",2,NA,FALSE,TRUE
+"674",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0,"PG","Propeller",2,NA,FALSE,TRUE
+"675",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0,"PM","Anchor",2,NA,FALSE,TRUE
+"676",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0,"PN","Anchor",2,NA,FALSE,TRUE
+"677",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0,"PO","Anchor",2,NA,FALSE,TRUE
+"678",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0.5,"HAB","Wet Hull",1,"Anode mid-ship port",FALSE,TRUE
+"679",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0.5,"HAB","Wet Hull",1,"Anode mid-ship starboard",FALSE,TRUE
+"680",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0.5,"ID","Internal spaces",3,"Engine room bilge water",FALSE,TRUE
+"681",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0.5,"HX","Wet Hull",1,"Garboard plank - 1m section of flat bottom",FALSE,TRUE
+"682",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0.5,"HP","Wet Hull",1,"Hull #1 starboard stern keel",FALSE,TRUE
+"683",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0.5,"HA","Wet Hull",1,"Hull #2 starboard mid-ship",FALSE,TRUE
+"684",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0.5,"HA","Wet Hull",1,"Hull #5 port mid-ships",FALSE,TRUE
+"685",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0.5,"HF","Wet Hull",1,"Keel cooling pipe starboard",FALSE,TRUE
+"686",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0.5,"HS","Wet Hull",1,"Stabiliser port bottom 1m scrape",FALSE,TRUE
+"687",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0.5,"HS","Wet Hull",1,"Stabiliser starboard bottom 1m scrape",FALSE,TRUE
+"688",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0.5,"HH","Wet Hull",1,"Transducer starboard",FALSE,TRUE
+"689",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0.5,"IB","Internal spaces",3,"Water inlet #1 port scrape",FALSE,TRUE
+"690",25,7,374,160,"Fish",15,"Self-polishing","Excellent",0.5,"IB","Internal spaces",3,"Water inlet #1 starboard scrape",FALSE,TRUE
+"691",25,7,374,160,"Fish",15,"Self-polishing","Excellent",12.6,"PH","Rudder",2,"Keel extension",TRUE,FALSE
+"692",25,7,374,160,"Fish",15,"Self-polishing","Excellent",14.1,"HP","Wet Hull",1,"Hull #4 port stern keel",TRUE,FALSE
+"693",25,7,374,160,"Fish",15,"Self-polishing","Excellent",15.4,"HA","Wet Hull",1,"Hull #3 starboard bow",TRUE,FALSE
+"694",25,7,374,160,"Fish",15,"Self-polishing","Excellent",17.72,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"695",25,7,374,160,"Fish",15,"Self-polishing","Excellent",19.7,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"696",25,7,374,160,"Fish",15,"Self-polishing","Excellent",36.2,"HA","Wet Hull",1,"Hull #6 port bow",TRUE,FALSE
+"697",25,7,374,160,"Fish",15,"Self-polishing","Excellent",46.8,"HR","Wet Hull",1,"Stabiliser starboard top 1m scrape",TRUE,FALSE
+"698",25,7,374,160,"Fish",15,"Self-polishing","Excellent",62.4,"HR","Wet Hull",1,"Stabiliser port top 1m scrape",TRUE,FALSE
+"699",26,51,104,10,"Yacht",2,"Self-polishing",NA,0,"DA","Deck",4,NA,FALSE,TRUE
+"700",26,51,104,10,"Yacht",2,"Self-polishing",NA,0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"701",26,51,104,10,"Yacht",2,"Self-polishing",NA,0,"II","Internal spaces",3,NA,FALSE,TRUE
+"702",26,51,104,10,"Yacht",2,"Self-polishing",NA,0,"PM","Anchor",2,NA,FALSE,TRUE
+"703",26,51,104,10,"Yacht",2,"Self-polishing",NA,0,"PN","Anchor",2,NA,FALSE,TRUE
+"704",26,51,104,10,"Yacht",2,"Self-polishing",NA,0.5,"ID","Internal spaces",3,"Bilge water",FALSE,TRUE
+"705",26,51,104,10,"Yacht",2,"Self-polishing",NA,0.5,"IB","Internal spaces",3,"Hand basin outlet scrape",FALSE,TRUE
+"706",26,51,104,10,"Yacht",2,"Self-polishing",NA,0.5,"IA","Internal spaces",3,"Head inlet water sample",FALSE,TRUE
+"707",26,51,104,10,"Yacht",2,"Self-polishing",NA,0.5,"IA","Internal spaces",3,"Sink outlet water",FALSE,TRUE
+"708",26,51,104,10,"Yacht",2,"Self-polishing",NA,0.5,"IB","Internal spaces",3,"Sink seawater rinse inlet",FALSE,TRUE
+"709",26,51,104,10,"Yacht",2,"Self-polishing",NA,15.1,"HH","Wet Hull",1,"Depth sounder",TRUE,FALSE
+"710",26,51,104,10,"Yacht",2,"Self-polishing",NA,15.8,"IB","Internal spaces",3,"Head outlet scrape",TRUE,FALSE
+"711",26,51,104,10,"Yacht",2,"Self-polishing",NA,24.7,"HK","Wet Hull",1,"Paddle wheel",TRUE,FALSE
+"712",26,51,104,10,"Yacht",2,"Self-polishing",NA,25.1,"HP","Wet Hull",1,"Hull #6 stern keel",TRUE,FALSE
+"713",26,51,104,10,"Yacht",2,"Self-polishing",NA,25.3,"HA","Wet Hull",1,"Hull #5 port mid-ships",TRUE,FALSE
+"714",26,51,104,10,"Yacht",2,"Self-polishing",NA,26.8,"HA","Wet Hull",1,"Hull #3 stern starboard",TRUE,FALSE
+"715",26,51,104,10,"Yacht",2,"Self-polishing",NA,31.6,"IB","Internal spaces",3,"Head inlet scrape",TRUE,FALSE
+"716",26,51,104,10,"Yacht",2,"Self-polishing",NA,32.8,"HA","Wet Hull",1,"Hull #2 starboard mid-ship",TRUE,FALSE
+"717",26,51,104,10,"Yacht",2,"Self-polishing",NA,37.1,"HD","Wet Hull",1,"Engine cooling water intake strainer",TRUE,FALSE
+"718",26,51,104,10,"Yacht",2,"Self-polishing",NA,38.2,"HA","Wet Hull",1,"Hull #1 starboard bow",TRUE,FALSE
+"719",26,51,104,10,"Yacht",2,"Self-polishing",NA,39.7,"HAF","Wet Hull",1,"Radio earth plate scrape",TRUE,FALSE
+"720",26,51,104,10,"Yacht",2,"Self-polishing",NA,41.7,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"721",26,51,104,10,"Yacht",2,"Self-polishing",NA,51.9,"PG","Propeller",2,"Stern gland scrape",TRUE,FALSE
+"722",26,51,104,10,"Yacht",2,"Self-polishing",NA,53,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"723",26,51,104,10,"Yacht",2,"Self-polishing",NA,53.2,"HA","Wet Hull",1,"Hull #4 port bow",TRUE,FALSE
+"724",26,51,104,10,"Yacht",2,"Self-polishing",NA,64.6,"HX","Wet Hull",1,"Garboard plank - 1m section of flat bottom",TRUE,FALSE
+"725",26,51,104,10,"Yacht",2,"Self-polishing",NA,96.2,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"726",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"DA","Deck",4,NA,FALSE,TRUE
+"727",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"DD","Deck",4,NA,FALSE,TRUE
+"728",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"DE","Deck",4,NA,FALSE,TRUE
+"729",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"FN","Fishing gear",4,NA,FALSE,TRUE
+"730",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"FO","Fishing gear",4,NA,FALSE,TRUE
+"731",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"FT","Fishing gear",4,NA,FALSE,TRUE
+"732",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"FU","Fishing gear",4,NA,FALSE,TRUE
+"733",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"FV","Fishing gear",4,NA,FALSE,TRUE
+"734",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"HAB","Wet Hull",1,NA,FALSE,TRUE
+"735",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"HAB","Wet Hull",1,NA,FALSE,TRUE
+"736",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"ID","Internal spaces",3,NA,FALSE,TRUE
+"737",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"IF","Internal spaces",3,NA,FALSE,TRUE
+"738",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"739",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"740",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"IT","Internal spaces",3,NA,FALSE,TRUE
+"741",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"IU","Internal spaces",3,NA,FALSE,TRUE
+"742",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"743",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"IW","Internal spaces",3,NA,FALSE,TRUE
+"744",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"IX","Internal spaces",3,NA,FALSE,TRUE
+"745",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"IY","Internal spaces",3,NA,FALSE,TRUE
+"746",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"PM","Anchor",2,NA,FALSE,TRUE
+"747",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0,"PN","Anchor",2,NA,FALSE,TRUE
+"748",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0.5,"HA","Wet Hull",1,"Hull #2 starboard mid-ship",FALSE,TRUE
+"749",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",0.5,"IA","Internal spaces",3,"Sink water sample",FALSE,TRUE
+"750",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",1.62,"HD","Wet Hull",1,"Deck hose strainer",TRUE,FALSE
+"751",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",2.3,"HS","Wet Hull",1,"Stabiliser bottom 1m scrape",TRUE,FALSE
+"752",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",2.5,"HP","Wet Hull",1,"Hull #3 starboard stern keel",TRUE,FALSE
+"753",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",3,"HS","Wet Hull",1,"Stabiliser bottom 1m scrape",TRUE,FALSE
+"754",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",3.44,"HK","Wet Hull",1,"Paddle wheel",TRUE,FALSE
+"755",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",3.61,"HA","Wet Hull",1,"Hull #4 bow port",TRUE,FALSE
+"756",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",5.5,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"757",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",5.6,"IB","Internal spaces",3,"Wet well hole #1 port",TRUE,FALSE
+"758",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",5.8,"IB","Internal spaces",3,"Wet well hole #2 port",TRUE,FALSE
+"759",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",6.9,"PG","Propeller",2,"Stern gland scrape",TRUE,FALSE
+"760",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",7.53,"HA","Wet Hull",1,"Hull #5 midship port",TRUE,FALSE
+"761",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",7.85,"IB","Internal spaces",3,"Water inlet scrape (cooling water for shaft)",TRUE,FALSE
+"762",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",8.07,"HA","Wet Hull",1,"Hull #1 starboard bow",TRUE,FALSE
+"763",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",9.87,"HA","Wet Hull",1,"Hull #6 stern port",TRUE,FALSE
+"764",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",10.3,"HR","Wet Hull",1,"Stabiliser top 1m scrape",TRUE,FALSE
+"765",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",12.1,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"766",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",22.08,"PH","Rudder",2,"Keel extension",TRUE,FALSE
+"767",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",27.6,"HR","Wet Hull",1,"Stabiliser top 1m scrape",TRUE,FALSE
+"768",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",28.2,"PT","Rudder",2,"Rudder pintel",TRUE,FALSE
+"769",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",28.22,"HF","Wet Hull",1,"Keel cooling pipe port",TRUE,FALSE
+"770",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",31.86,"IB","Internal spaces",3,"Wet well hole #1 starboard",TRUE,FALSE
+"771",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",42.82,"IB","Internal spaces",3,"Wet well hole #2 starboard",TRUE,FALSE
+"772",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",43.1,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"773",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",47.3,"HH","Wet Hull",1,"Transducer starboard",TRUE,FALSE
+"774",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",82.15,"HX","Wet Hull",1,"Garboard plank - 1m section of flat bottom",TRUE,FALSE
+"775",27,26,262,12.5,"Fish",15,"Self-polishing","Excellent",90.3,"HF","Wet Hull",1,"Keel cooling pipe starboard",TRUE,FALSE
+"776",28,39,208,15,"Fish",15,"Hard","Very Poor",0,"FAC","Fishing gear",4,NA,FALSE,TRUE
+"777",28,39,208,15,"Fish",15,"Hard","Very Poor",0,"FU","Fishing gear",4,NA,FALSE,TRUE
+"778",28,39,208,15,"Fish",15,"Hard","Very Poor",0,"HAB","Wet Hull",1,NA,FALSE,TRUE
+"779",28,39,208,15,"Fish",15,"Hard","Very Poor",0,"HAB","Wet Hull",1,NA,FALSE,TRUE
+"780",28,39,208,15,"Fish",15,"Hard","Very Poor",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"781",28,39,208,15,"Fish",15,"Hard","Very Poor",0,"IN","Internal spaces",3,NA,FALSE,TRUE
+"782",28,39,208,15,"Fish",15,"Hard","Very Poor",0,"PB","Propeller",2,NA,FALSE,TRUE
+"783",28,39,208,15,"Fish",15,"Hard","Very Poor",0,"PG","Propeller",2,NA,FALSE,TRUE
+"784",28,39,208,15,"Fish",15,"Hard","Very Poor",0,"PM","Anchor",2,NA,FALSE,TRUE
+"785",28,39,208,15,"Fish",15,"Hard","Very Poor",0,"PN","Anchor",2,NA,FALSE,TRUE
+"786",28,39,208,15,"Fish",15,"Hard","Very Poor",0.5,"HK","Wet Hull",1,"Paddle wheel",FALSE,TRUE
+"787",28,39,208,15,"Fish",15,"Hard","Very Poor",0.5,"HS","Wet Hull",1,"Port stabiliser 1m scrape bottom",FALSE,TRUE
+"788",28,39,208,15,"Fish",15,"Hard","Very Poor",0.5,"PJ","Rudder",2,"Rudder starboard",FALSE,TRUE
+"789",28,39,208,15,"Fish",15,"Hard","Very Poor",0.5,"IB","Internal spaces",3,"Wet well hole #3 starboard",FALSE,TRUE
+"790",28,39,208,15,"Fish",15,"Hard","Very Poor",1.16,"HF","Wet Hull",1,"Keel cooling pipe 1m scrape topside",TRUE,FALSE
+"791",28,39,208,15,"Fish",15,"Hard","Very Poor",1.3,"HF","Wet Hull",1,"Keel cooling pipe 1m scrape topside",TRUE,FALSE
+"792",28,39,208,15,"Fish",15,"Hard","Very Poor",1.6,"HA","Wet Hull",1,"Hull 5 port midship",TRUE,FALSE
+"793",28,39,208,15,"Fish",15,"Hard","Very Poor",1.6,"HH","Wet Hull",1,"Sounder booth",TRUE,FALSE
+"794",28,39,208,15,"Fish",15,"Hard","Very Poor",1.8,"HA","Wet Hull",1,"Hull 2 starboard midship",TRUE,FALSE
+"795",28,39,208,15,"Fish",15,"Hard","Very Poor",2.04,"IB","Internal spaces",3,"Wet well hole #3 port",TRUE,FALSE
+"796",28,39,208,15,"Fish",15,"Hard","Very Poor",2.5,"HA","Wet Hull",1,"Hull 4 port bow",TRUE,FALSE
+"797",28,39,208,15,"Fish",15,"Hard","Very Poor",3.1,"HP","Wet Hull",1,"Hull 1 starboard stern keel",TRUE,FALSE
+"798",28,39,208,15,"Fish",15,"Hard","Very Poor",20.4,"HP","Wet Hull",1,"Hull 6 port stern keel",TRUE,FALSE
+"799",28,39,208,15,"Fish",15,"Hard","Very Poor",20.4,"HR","Wet Hull",1,"Stabiliser top 1m scrape",TRUE,FALSE
+"800",28,39,208,15,"Fish",15,"Hard","Very Poor",21.2,"HA","Wet Hull",1,"Quadrat above stabiliser",TRUE,FALSE
+"801",28,39,208,15,"Fish",15,"Hard","Very Poor",22.1,"HA","Wet Hull",1,"Hull 3 starboard bow",TRUE,FALSE
+"802",28,39,208,15,"Fish",15,"Hard","Very Poor",38.6,"HR","Wet Hull",1,"Stabiliser top 1m scrape",TRUE,FALSE
+"803",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"804",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"805",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",0.5,"HAB","Wet Hull",1,"Anode starboard midship",FALSE,TRUE
+"806",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",0.5,"ID","Internal spaces",3,"Bilge water",FALSE,TRUE
+"807",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",0.5,"IA","Internal spaces",3,"Tap water",FALSE,TRUE
+"808",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",1.6,"HA","Wet Hull",1,"Hull 4 port bow",TRUE,FALSE
+"809",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",3.2,"HH","Wet Hull",1,"Transducer port",TRUE,FALSE
+"810",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",4.2,"HA","Wet Hull",1,"Hull 5 port midship",TRUE,FALSE
+"811",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",4.3,"HD","Wet Hull",1,"Engine inlet strainer",TRUE,FALSE
+"812",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",7.2,"HF","Wet Hull",1,"Keel cooling pipe",TRUE,FALSE
+"813",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",8,"HK","Wet Hull",1,"Paddle wheel",TRUE,FALSE
+"814",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",8.6,"HAB","Wet Hull",1,"Anode port stern",TRUE,FALSE
+"815",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",9.3,"HP","Wet Hull",1,"Hull 6 port stern keel",TRUE,FALSE
+"816",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",10.7,"PG","Propeller",2,"Stern tube",TRUE,FALSE
+"817",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",23.6,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"818",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",25.6,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"819",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",26.8,"HA","Wet Hull",1,"Hull 2 starboard midship",TRUE,FALSE
+"820",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",27.6,"HA","Wet Hull",1,"Hull 1 starboard stern",TRUE,FALSE
+"821",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",29,"HAB","Wet Hull",1,"Anode starboard stern",TRUE,FALSE
+"822",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",33,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"823",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",50,"PH","Rudder",2,"Keel extension",TRUE,FALSE
+"824",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",66.7,"HX","Wet Hull",1,"Garboard plank - 1m section of flat bottom",TRUE,FALSE
+"825",29,4,371,265,"Yacht",2,"Self-polishing","Excellent",125,"HP","Wet Hull",1,"Hull 3 starboard bow keel",TRUE,FALSE
+"826",30,10,270,7,"Yacht",2,"Ablative","Good",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"827",30,10,270,7,"Yacht",2,"Ablative","Good",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"828",30,10,270,7,"Yacht",2,"Ablative","Good",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"829",30,10,270,7,"Yacht",2,"Ablative","Good",0,"IW","Internal spaces",3,NA,FALSE,TRUE
+"830",30,10,270,7,"Yacht",2,"Ablative","Good",0.5,"ID","Internal spaces",3,"Bilge water",FALSE,TRUE
+"831",30,10,270,7,"Yacht",2,"Ablative","Good",0.5,"IB","Internal spaces",3,"Cockpit outlet",FALSE,TRUE
+"832",30,10,270,7,"Yacht",2,"Ablative","Good",0.5,"IF","Internal spaces",3,"Engine cooling water",FALSE,TRUE
+"833",30,10,270,7,"Yacht",2,"Ablative","Good",0.5,"HD","Wet Hull",1,"Engine intake starboard",FALSE,TRUE
+"834",30,10,270,7,"Yacht",2,"Ablative","Good",0.5,"IA","Internal spaces",3,"Hand basin outlet H2O",FALSE,TRUE
+"835",30,10,270,7,"Yacht",2,"Ablative","Good",0.5,"IA","Internal spaces",3,"Sink outlet water",FALSE,TRUE
+"836",30,10,270,7,"Yacht",2,"Ablative","Good",0.5,"IA","Internal spaces",3,"Toilet inlet water",FALSE,TRUE
+"837",30,10,270,7,"Yacht",2,"Ablative","Good",7.5,"HA","Wet Hull",1,"Hull 3 starboard stern",TRUE,FALSE
+"838",30,10,270,7,"Yacht",2,"Ablative","Good",9.61,"HA","Wet Hull",1,"Hull 5 port",TRUE,FALSE
+"839",30,10,270,7,"Yacht",2,"Ablative","Good",9.9,"HP","Wet Hull",1,"Hull 2 starboard keel",TRUE,FALSE
+"840",30,10,270,7,"Yacht",2,"Ablative","Good",16.1,"PA","Propeller",2,"Propeller shaft",TRUE,FALSE
+"841",30,10,270,7,"Yacht",2,"Ablative","Good",16.6,"HA","Wet Hull",1,"Hull 1 starboard bow",TRUE,FALSE
+"842",30,10,270,7,"Yacht",2,"Ablative","Good",18.9,"HA","Wet Hull",1,"Hull 6 port bow",TRUE,FALSE
+"843",30,10,270,7,"Yacht",2,"Ablative","Good",19.6,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"844",30,10,270,7,"Yacht",2,"Ablative","Good",22.6,"HC","Wet Hull",1,"Sight plate",TRUE,FALSE
+"845",30,10,270,7,"Yacht",2,"Ablative","Good",28,"HA","Wet Hull",1,"Hull 4 port stern",TRUE,FALSE
+"846",30,10,270,7,"Yacht",2,"Ablative","Good",28.7,"HH","Wet Hull",1,"Echosounder",TRUE,FALSE
+"847",30,10,270,7,"Yacht",2,"Ablative","Good",34.2,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"848",30,10,270,7,"Yacht",2,"Ablative","Good",39.72,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"849",30,10,270,7,"Yacht",2,"Ablative","Good",47.5,"HAF","Wet Hull",1,"Earth plate grate port",TRUE,FALSE
+"850",30,10,270,7,"Yacht",2,"Ablative","Good",92.2,"HAF","Wet Hull",1,"Earth plate grate starboard",TRUE,FALSE
+"851",30,10,270,7,"Yacht",2,"Ablative","Good",256.2,"HX","Wet Hull",1,"Garboard plank - 1m section of flat bottom",TRUE,FALSE
+"852",31,10,365,NA,"Ferry",22,"Self-polishing","Good",0.5,"ID","Internal spaces",3,"Bilge water",FALSE,TRUE
+"853",31,10,365,NA,"Ferry",22,"Self-polishing","Good",0.5,"HA","Wet Hull",1,"Hull 1 starboard stern",FALSE,TRUE
+"854",31,10,365,NA,"Ferry",22,"Self-polishing","Good",0.5,"IA","Internal spaces",3,"Sullage water sample",FALSE,TRUE
+"855",31,10,365,NA,"Ferry",22,"Self-polishing","Good",0.5,"HAB","Wet Hull",1,"Zinc block starboard",FALSE,TRUE
+"856",31,10,365,NA,"Ferry",22,"Self-polishing","Good",2.9,"HD","Wet Hull",1,"Grate 2, engine cooling water, starboard midship scrape",TRUE,FALSE
+"857",31,10,365,NA,"Ferry",22,"Self-polishing","Good",4,"IB","Internal spaces",3,"Port, bilge outlet, midship scrape",TRUE,FALSE
+"858",31,10,365,NA,"Ferry",22,"Self-polishing","Good",6,"HAB","Wet Hull",1,"Zinc block port bow",TRUE,FALSE
+"859",31,10,365,NA,"Ferry",22,"Self-polishing","Good",7.2,"HK","Wet Hull",1,"Paddle wheel and mount, starboard",TRUE,FALSE
+"860",31,10,365,NA,"Ferry",22,"Self-polishing","Good",7.5,"HD","Wet Hull",1,"Grate, engine cooling water, starboard stern scrape",TRUE,FALSE
+"861",31,10,365,NA,"Ferry",22,"Self-polishing","Good",18.9,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"862",31,10,365,NA,"Ferry",22,"Self-polishing","Good",27.9,"HA","Wet Hull",1,"Hull 5 port midship",TRUE,FALSE
+"863",31,10,365,NA,"Ferry",22,"Self-polishing","Good",30.5,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"864",31,10,365,NA,"Ferry",22,"Self-polishing","Good",37.3,"PH","Rudder",2,"Keel extension",TRUE,FALSE
+"865",31,10,365,NA,"Ferry",22,"Self-polishing","Good",41.9,"HF","Wet Hull",1,"Keel cooling pipes (starboard 1m scrape)",TRUE,FALSE
+"866",31,10,365,NA,"Ferry",22,"Self-polishing","Good",48.3,"HA","Wet Hull",1,"Hull 3 starboard bow ",TRUE,FALSE
+"867",31,10,365,NA,"Ferry",22,"Self-polishing","Good",54.1,"HA","Wet Hull",1,"Hull 6 port stern",TRUE,FALSE
+"868",31,10,365,NA,"Ferry",22,"Self-polishing","Good",63,"HA","Wet Hull",1,"Hull 4 port bow",TRUE,FALSE
+"869",31,10,365,NA,"Ferry",22,"Self-polishing","Good",74.5,"PG","Propeller",2,"Stern tube",TRUE,FALSE
+"870",31,10,365,NA,"Ferry",22,"Self-polishing","Good",86,"HA","Wet Hull",1,"Hull 2 starboard midship",TRUE,FALSE
+"871",31,10,365,NA,"Ferry",22,"Self-polishing","Good",173,"HX","Wet Hull",1,"Garboard plank - 1m scrape",TRUE,FALSE
+"872",31,10,365,NA,"Ferry",22,"Self-polishing","Good",563.2,"HAH","Wet Hull",1,"Boot top starboard stern, 0.5m scrape",TRUE,FALSE
+"873",31,10,365,NA,"Ferry",22,"Self-polishing","Good",771,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"874",32,35,170,40,"Motor cruiser",17,"Ablative",NA,0,"PA","Propeller",2,NA,FALSE,TRUE
+"875",32,35,170,40,"Motor cruiser",17,"Ablative",NA,0,"PB","Propeller",2,NA,FALSE,TRUE
+"876",32,35,170,40,"Motor cruiser",17,"Ablative",NA,0,"PC","Propeller",2,NA,FALSE,TRUE
+"877",32,35,170,40,"Motor cruiser",17,"Ablative",NA,0,"PJ","Rudder",2,NA,FALSE,TRUE
+"878",32,35,170,40,"Motor cruiser",17,"Ablative",NA,0.5,"ID","Internal spaces",3,"Bilge water",FALSE,TRUE
+"879",32,35,170,40,"Motor cruiser",17,"Ablative",NA,0.5,"IA","Internal spaces",3,"Deck hose intake",FALSE,TRUE
+"880",32,35,170,40,"Motor cruiser",17,"Ablative",NA,0.5,"HD","Wet Hull",1,"Engine cooling water grate, port scrape",FALSE,TRUE
+"881",32,35,170,40,"Motor cruiser",17,"Ablative",NA,0.5,"IF","Internal spaces",3,"Engine cooling water port (water sample)",FALSE,TRUE
+"882",32,35,170,40,"Motor cruiser",17,"Ablative",NA,0.5,"IF","Internal spaces",3,"Engine cooling water starboard (water sample)",FALSE,TRUE
+"883",32,35,170,40,"Motor cruiser",17,"Ablative",NA,0.5,"HK","Wet Hull",1,"Paddle wheel port",FALSE,TRUE
+"884",32,35,170,40,"Motor cruiser",17,"Ablative",NA,0.5,"HK","Wet Hull",1,"Paddle wheel starboard scrape",FALSE,TRUE
+"885",32,35,170,40,"Motor cruiser",17,"Ablative",NA,0.5,"IP","Internal spaces",3,"Rudder control room water",FALSE,TRUE
+"886",32,35,170,40,"Motor cruiser",17,"Ablative",NA,0.5,"IB","Internal spaces",3,"Toilet inlet starboard scrape",FALSE,TRUE
+"887",32,35,170,40,"Motor cruiser",17,"Ablative",NA,0.5,"HH","Wet Hull",1,"Transducer starboard",FALSE,TRUE
+"888",32,35,170,40,"Motor cruiser",17,"Ablative",NA,0.9,"HA","Wet Hull",1,"Hull #3 starboard bow",TRUE,FALSE
+"889",32,35,170,40,"Motor cruiser",17,"Ablative",NA,1,"HAF","Wet Hull",1,"Earth plate starboard",TRUE,FALSE
+"890",32,35,170,40,"Motor cruiser",17,"Ablative",NA,1.2,"HD","Wet Hull",1,"Deckhose inlet, starboard midship scrape",TRUE,FALSE
+"891",32,35,170,40,"Motor cruiser",17,"Ablative",NA,1.2,"HH","Wet Hull",1,"Transducer port",TRUE,FALSE
+"892",32,35,170,40,"Motor cruiser",17,"Ablative",NA,3,"HA","Wet Hull",1,"Hull #2 starboard midship ",TRUE,FALSE
+"893",32,35,170,40,"Motor cruiser",17,"Ablative",NA,3.2,"PG","Propeller",2,"Stern gland port",TRUE,FALSE
+"894",32,35,170,40,"Motor cruiser",17,"Ablative",NA,3.7,"HA","Wet Hull",1,"Hull 1 starboard stern",TRUE,FALSE
+"895",32,35,170,40,"Motor cruiser",17,"Ablative",NA,4.2,"HD","Wet Hull",1,"Engine cooling water grate, starboard scrape",TRUE,FALSE
+"896",32,35,170,40,"Motor cruiser",17,"Ablative",NA,4.3,"HA","Wet Hull",1,"Hull #6 port stern",TRUE,FALSE
+"897",32,35,170,40,"Motor cruiser",17,"Ablative",NA,5.8,"HA","Wet Hull",1,"Hull #5 port midship",TRUE,FALSE
+"898",32,35,170,40,"Motor cruiser",17,"Ablative",NA,6.8,"HAH","Wet Hull",1,"Boot top transom, 1m scrape",TRUE,FALSE
+"899",32,35,170,40,"Motor cruiser",17,"Ablative",NA,7.9,"HA","Wet Hull",1,"Hull #4 port bow",TRUE,FALSE
+"900",32,35,170,40,"Motor cruiser",17,"Ablative",NA,9.8,"HAH","Wet Hull",1,"Boot top starboard stern, 1m scrape",TRUE,FALSE
+"901",32,35,170,40,"Motor cruiser",17,"Ablative",NA,10.2,"PG","Propeller",2,"Stern gland starboard",TRUE,FALSE
+"902",32,35,170,40,"Motor cruiser",17,"Ablative",NA,14,"IB","Internal spaces",3,"Toilet outlet scrape, port",TRUE,FALSE
+"903",32,35,170,40,"Motor cruiser",17,"Ablative",NA,24.9,"HAH","Wet Hull",1,"Boot top port stern, 1m scrape",TRUE,FALSE
+"904",32,35,170,40,"Motor cruiser",17,"Ablative",NA,33.7,"HS","Wet Hull",1,"Trim tab starboard",TRUE,FALSE
+"905",32,35,170,40,"Motor cruiser",17,"Ablative",NA,47.9,"HR","Wet Hull",1,"Trim tab ram port",TRUE,FALSE
+"906",32,35,170,40,"Motor cruiser",17,"Ablative",NA,49.3,"HS","Wet Hull",1,"Trim tab port",TRUE,FALSE
+"907",32,35,170,40,"Motor cruiser",17,"Ablative",NA,65.8,"HR","Wet Hull",1,"Trim tab ram starboard",TRUE,FALSE
+"908",32,35,170,40,"Motor cruiser",17,"Ablative",NA,85.1,"HAB","Wet Hull",1,"Transom, zinc anode",TRUE,FALSE
+"909",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"DA","Deck",4,NA,FALSE,TRUE
+"910",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"DE","Deck",4,NA,FALSE,TRUE
+"911",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"DG","Deck",4,NA,FALSE,TRUE
+"912",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"HAB","Wet Hull",1,NA,FALSE,TRUE
+"913",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"914",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"915",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"HP","Wet Hull",1,NA,FALSE,TRUE
+"916",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"HZ","Wet Hull",1,NA,FALSE,TRUE
+"917",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"918",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"919",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"IQ","Internal spaces",3,NA,FALSE,TRUE
+"920",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"921",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"IW","Internal spaces",3,NA,FALSE,TRUE
+"922",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"PA","Propeller",2,NA,FALSE,TRUE
+"923",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"PE","Propeller",2,NA,FALSE,TRUE
+"924",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"PG","Propeller",2,NA,FALSE,TRUE
+"925",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"PM","Anchor",2,NA,FALSE,TRUE
+"926",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0,"PN","Anchor",2,NA,FALSE,TRUE
+"927",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"ID","Internal spaces",3,"Bilge water",FALSE,TRUE
+"928",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"HA","Wet Hull",1,"Hull #1 starboard bow",FALSE,TRUE
+"929",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"HA","Wet Hull",1,"Hull #2 starboard midship ",FALSE,TRUE
+"930",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"HA","Wet Hull",1,"Hull #3 starboard stern  ",FALSE,TRUE
+"931",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"HA","Wet Hull",1,"Hull #4 port bow",FALSE,TRUE
+"932",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"HA","Wet Hull",1,"Hull #5 port midship",FALSE,TRUE
+"933",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"HA","Wet Hull",1,"Hull #6 port stern",FALSE,TRUE
+"934",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"HK","Wet Hull",1,"Paddle wheel port",FALSE,TRUE
+"935",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"HD","Wet Hull",1,"Port bow outlet",FALSE,TRUE
+"936",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"IF","Internal spaces",3,"Port engine cooling water",FALSE,TRUE
+"937",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"HD","Wet Hull",1,"Port grate engine cooling",FALSE,TRUE
+"938",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"PB","Propeller",2,"Propeller port",FALSE,TRUE
+"939",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"PB","Propeller",2,"Propeller starboard",FALSE,TRUE
+"940",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"IP","Internal spaces",3,"Rudder control room water sample",FALSE,TRUE
+"941",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"PJ","Rudder",2,"Rudder port",FALSE,TRUE
+"942",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"PJ","Rudder",2,"Rudder starboard",FALSE,TRUE
+"943",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"HD","Wet Hull",1,"Starboard grate engine cool",FALSE,TRUE
+"944",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"HD","Wet Hull",1,"Starboard strainer (refrigerator inlet)",FALSE,TRUE
+"945",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"HH","Wet Hull",1,"Starboard transducer",FALSE,TRUE
+"946",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",4.3,"HAH","Wet Hull",1,"Transom 1m scrape",TRUE,FALSE
+"947",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",8,"HAH","Wet Hull",1,"Boot top 1m scrape, starboard stern",TRUE,FALSE
+"948",33,2,107,13.5,"Motor cruiser",17,"Ablative","Excellent",9.5,"HAH","Wet Hull",1,"Port boot top, 1m scrape",TRUE,FALSE
+"949",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",0,"HAB","Wet Hull",1,NA,FALSE,TRUE
+"950",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"951",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",0,"HZ","Wet Hull",1,NA,FALSE,TRUE
+"952",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",0,"PM","Anchor",2,NA,FALSE,TRUE
+"953",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",0,"PN","Anchor",2,NA,FALSE,TRUE
+"954",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",0,"HAA","Wet Hull",1,"NA (internal)",FALSE,TRUE
+"955",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",0.5,"ID","Internal spaces",3,"Bilge water sample",FALSE,TRUE
+"956",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",0.5,"HA","Wet Hull",1,"Hull #5 port midship",FALSE,TRUE
+"957",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",0.5,"HA","Wet Hull",1,"Hull 3 starboard stern",FALSE,TRUE
+"958",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",0.5,"HA","Wet Hull",1,"Hull 4 port bow",FALSE,TRUE
+"959",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",0.5,"HA","Wet Hull",1,"Hull 6 port stern",FALSE,TRUE
+"960",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",0.5,"IF","Internal spaces",3,"Port engine cooling water ",FALSE,TRUE
+"961",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",0.5,"HD","Wet Hull",1,"Starboard bow grate (inlet?)",FALSE,TRUE
+"962",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",0.5,"HD","Wet Hull",1,"Starboard bow outlet scrape",FALSE,TRUE
+"963",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",0.5,"IF","Internal spaces",3,"Starboard engine cooling water",FALSE,TRUE
+"964",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",0.5,"HD","Wet Hull",1,"Starboard midship water inlet scrape",FALSE,TRUE
+"965",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",1.6,"PB","Propeller",2,"Propeller surface starboard",TRUE,FALSE
+"966",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",3.2,"PA","Propeller",2,"Propeller shaft starboard",TRUE,FALSE
+"967",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",4,"HAH","Wet Hull",1,"Port, boot top 1m scrape",TRUE,FALSE
+"968",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",4.02,"HAF","Wet Hull",1,"Port earth plate",TRUE,FALSE
+"969",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",4.3,"HD","Wet Hull",1,"Port engine cooling grate",TRUE,FALSE
+"970",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",4.76,"HD","Wet Hull",1,"Starboard engine cooling grate",TRUE,FALSE
+"971",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",4.8,"HA","Wet Hull",1,"Hull #2 starboard midship ",TRUE,FALSE
+"972",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",5,"IB","Internal spaces",3,"Starboard toilet outlet",TRUE,FALSE
+"973",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",6.3,"PG","Propeller",2,"Starboard stern gland - external",TRUE,FALSE
+"974",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",10,"PJ","Rudder",2,"Rudder surface, port and starboard",TRUE,FALSE
+"975",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",12,"HA","Wet Hull",1,"Hull 1 starboard bow",TRUE,FALSE
+"976",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",44.1,"HR","Wet Hull",1,"Port trim tab top surface",TRUE,FALSE
+"977",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",58,"HAH","Wet Hull",1,"Starboard 1m boot top scrape",TRUE,FALSE
+"978",34,NA,198,52,"Motor cruiser",17,"Hard","Very Poor",73.1,"HA","Wet Hull",1,"Transom quadrat",TRUE,FALSE
+"979",35,31,366,32,"Yacht",2,"Ablative","Excellent",0,"DA","Deck",4,NA,FALSE,TRUE
+"980",35,31,366,32,"Yacht",2,"Ablative","Excellent",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"981",35,31,366,32,"Yacht",2,"Ablative","Excellent",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"982",35,31,366,32,"Yacht",2,"Ablative","Excellent",0,"PM","Anchor",2,NA,FALSE,TRUE
+"983",35,31,366,32,"Yacht",2,"Ablative","Excellent",0,"PN","Anchor",2,NA,FALSE,TRUE
+"984",35,31,366,32,"Yacht",2,"Ablative","Excellent",0.5,"IB","Internal spaces",3,"Port toilet inlet",FALSE,TRUE
+"985",35,31,366,32,"Yacht",2,"Ablative","Excellent",4.9,"HK","Wet Hull",1,"Paddle wheel (starboard)",TRUE,FALSE
+"986",35,31,366,32,"Yacht",2,"Ablative","Excellent",5.3,"PE","Propeller",2,"Sail drive legs",TRUE,FALSE
+"987",35,31,366,32,"Yacht",2,"Ablative","Excellent",7,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"988",35,31,366,32,"Yacht",2,"Ablative","Excellent",9.2,"HA","Wet Hull",1,"Hull quad starboard stern",TRUE,FALSE
+"989",35,31,366,32,"Yacht",2,"Ablative","Excellent",9.9,"IB","Internal spaces",3,"Port toilet outlet",TRUE,FALSE
+"990",35,31,366,32,"Yacht",2,"Ablative","Excellent",16.1,"HA","Wet Hull",1,"Port stern hull quad",TRUE,FALSE
+"991",35,31,366,32,"Yacht",2,"Ablative","Excellent",20.3,"PA","Propeller",2,"Propeller shaft",TRUE,FALSE
+"992",35,31,366,32,"Yacht",2,"Ablative","Excellent",21,"HD","Wet Hull",1,"Engine cooling grate (port)",TRUE,FALSE
+"993",35,31,366,32,"Yacht",2,"Ablative","Excellent",21.25,"HH","Wet Hull",1,"Depth sounder (port)",TRUE,FALSE
+"994",35,31,366,32,"Yacht",2,"Ablative","Excellent",22.3,"HP","Wet Hull",1,"Starboard keel mid quad",TRUE,FALSE
+"995",35,31,366,32,"Yacht",2,"Ablative","Excellent",22.8,"PU","Rudder",2,"Rudder cavity",TRUE,FALSE
+"996",35,31,366,32,"Yacht",2,"Ablative","Excellent",25.6,"HP","Wet Hull",1,"Port keel mid quad",TRUE,FALSE
+"997",35,31,366,32,"Yacht",2,"Ablative","Excellent",31.9,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"998",35,31,366,32,"Yacht",2,"Ablative","Excellent",33.4,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"999",35,31,366,32,"Yacht",2,"Ablative","Excellent",42,"HAH","Wet Hull",1,"Boot top starboard 1m scrape",TRUE,FALSE
+"1000",35,31,366,32,"Yacht",2,"Ablative","Excellent",50.4,"HAH","Wet Hull",1,"Port boot top, 1m scrape",TRUE,FALSE
+"1001",35,31,366,32,"Yacht",2,"Ablative","Excellent",50.4,"HAF","Wet Hull",1,"Starboard earth plate",TRUE,FALSE
+"1002",35,31,366,32,"Yacht",2,"Ablative","Excellent",52,"HA","Wet Hull",1,"Quad starboard bow",TRUE,FALSE
+"1003",35,31,366,32,"Yacht",2,"Ablative","Excellent",58.2,"HA","Wet Hull",1,"Port bow quadrat",TRUE,FALSE
+"1004",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",0,"DA","Deck",4,NA,FALSE,TRUE
+"1005",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",0,"HAB","Wet Hull",1,NA,FALSE,TRUE
+"1006",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"1007",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",0,"HZ","Wet Hull",1,NA,FALSE,TRUE
+"1008",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"1009",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"1010",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",0,"PM","Anchor",2,NA,FALSE,TRUE
+"1011",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",0,"PN","Anchor",2,NA,FALSE,TRUE
+"1012",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"ID","Internal spaces",3,"Bilge water",FALSE,TRUE
+"1013",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",0.5,"IF","Internal spaces",3,"Engine inlet water (starboard)",FALSE,TRUE
+"1014",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",10.5,"HD","Wet Hull",1,"Engine cooling filter internal ",TRUE,FALSE
+"1015",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",22.3,"HA","Wet Hull",1,"Hull starboard quad mid",TRUE,FALSE
+"1016",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",26.7,"HA","Wet Hull",1,"Bow quad port",TRUE,FALSE
+"1017",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",28.9,"HAH","Wet Hull",1,"Boot top starboard 1m scrape",TRUE,FALSE
+"1018",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",36,"HP","Wet Hull",1,"Quadrat keel port",TRUE,FALSE
+"1019",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",37.2,"HA","Wet Hull",1,"Hull port stern quad",TRUE,FALSE
+"1020",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",38.9,"HP","Wet Hull",1,"Keel quad starboard",TRUE,FALSE
+"1021",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",55.8,"HD","Wet Hull",1,"Engine cooling inlet scrape (starboard)",TRUE,FALSE
+"1022",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",57.6,"IW","Internal spaces",3,"Cockpit sediment",TRUE,FALSE
+"1023",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",61.7,"HAH","Wet Hull",1,"Boot top port 1m scrape",TRUE,FALSE
+"1024",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",70.8,"HAH","Wet Hull",1,"Transom 1m scrape",TRUE,FALSE
+"1025",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",87.2,"HA","Wet Hull",1,"Bow quad starboard",TRUE,FALSE
+"1026",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",215,"HH","Wet Hull",1,"Echo sounder / transponder, port",TRUE,FALSE
+"1027",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",232.3,"PG","Propeller",2,"Stern gland external",TRUE,FALSE
+"1028",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",464.5,"PH","Rudder",2,"Keel extension",TRUE,FALSE
+"1029",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",515,"HX","Wet Hull",1,"Garboard plank - 1m scrape",TRUE,FALSE
+"1030",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",730,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"1031",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",1973,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"1032",36,136,351,32.5,"Motor cruiser",17,"Ablative","Excellent",2019,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"1033",37,3,31,NA,"Racing Yacht",2,"Hard","Good",0,"HY","Dry Hull",1,NA,FALSE,TRUE
+"1034",37,3,31,NA,"Racing Yacht",2,"Hard","Good",0,"PE","Propeller",2,NA,FALSE,TRUE
+"1035",37,3,31,NA,"Racing Yacht",2,"Hard","Good",0.5,"HA","Wet Hull",1,"Hull 1 starboard bow",FALSE,TRUE
+"1036",37,3,31,NA,"Racing Yacht",2,"Hard","Good",0.5,"HP","Wet Hull",1,"Hull 2 starboard midship keel",FALSE,TRUE
+"1037",37,3,31,NA,"Racing Yacht",2,"Hard","Good",0.5,"HA","Wet Hull",1,"Hull 3 starboard stern",FALSE,TRUE
+"1038",37,3,31,NA,"Racing Yacht",2,"Hard","Good",0.5,"HP","Wet Hull",1,"Hull 5 port midship keel",FALSE,TRUE
+"1039",37,3,31,NA,"Racing Yacht",2,"Hard","Good",0.5,"HA","Wet Hull",1,"Hull quad port bow",FALSE,TRUE
+"1040",37,3,31,NA,"Racing Yacht",2,"Hard","Good",0.5,"HA","Wet Hull",1,"Hull quad port mid ",FALSE,TRUE
+"1041",37,3,31,NA,"Racing Yacht",2,"Hard","Good",0.5,"HK","Wet Hull",1,"Paddle wheel",FALSE,TRUE
+"1042",37,3,31,NA,"Racing Yacht",2,"Hard","Good",0.5,"PB","Propeller",2,"Propeller",FALSE,TRUE
+"1043",37,3,31,NA,"Racing Yacht",2,"Hard","Good",0.5,"PA","Propeller",2,"Propeller shaft",FALSE,TRUE
+"1044",37,3,31,NA,"Racing Yacht",2,"Hard","Good",0.5,"PJ","Rudder",2,"Rudder port",FALSE,TRUE
+"1045",37,3,31,NA,"Racing Yacht",2,"Hard","Good",0.5,"PJ","Rudder",2,"Rudder starboard",FALSE,TRUE
+"1046",37,3,31,NA,"Racing Yacht",2,"Hard","Good",0.5,"IB","Internal spaces",3,"Water inlet/outlet port",FALSE,TRUE
+"1047",37,3,31,NA,"Racing Yacht",2,"Hard","Good",0.5,"IB","Internal spaces",3,"Water inlet/outlet starboard",FALSE,TRUE
+"1048",38,0,352,0.5,"Yacht",2,"Ablative","Poor",0,"DA","Deck",4,NA,FALSE,TRUE
+"1049",38,0,352,0.5,"Yacht",2,"Ablative","Poor",0,"HY","Dry Hull",1,NA,FALSE,TRUE
+"1050",38,0,352,0.5,"Yacht",2,"Ablative","Poor",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"1051",38,0,352,0.5,"Yacht",2,"Ablative","Poor",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"1052",38,0,352,0.5,"Yacht",2,"Ablative","Poor",0,"IT","Internal spaces",3,NA,FALSE,TRUE
+"1053",38,0,352,0.5,"Yacht",2,"Ablative","Poor",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"1054",38,0,352,0.5,"Yacht",2,"Ablative","Poor",0,"IW","Internal spaces",3,NA,FALSE,TRUE
+"1055",38,0,352,0.5,"Yacht",2,"Ablative","Poor",0,"PM","Anchor",2,NA,FALSE,TRUE
+"1056",38,0,352,0.5,"Yacht",2,"Ablative","Poor",0,"PN","Anchor",2,NA,FALSE,TRUE
+"1057",38,0,352,0.5,"Yacht",2,"Ablative","Poor",3.5,"IA","Internal spaces",3,"Hollow rudder - water sample",TRUE,FALSE
+"1058",38,0,352,0.5,"Yacht",2,"Ablative","Poor",106.9,"HP","Wet Hull",1,"Quad #5 port mid keel",TRUE,FALSE
+"1059",38,0,352,0.5,"Yacht",2,"Ablative","Poor",113.6,"HP","Wet Hull",1,"Quad mid hull starboard (keel)",TRUE,FALSE
+"1060",38,0,352,0.5,"Yacht",2,"Ablative","Poor",176.4,"HAH","Wet Hull",1,"Boot top starboard 1m scrape",TRUE,FALSE
+"1061",38,0,352,0.5,"Yacht",2,"Ablative","Poor",182.9,"HAH","Wet Hull",1,"Port boot top, 1m scrape",TRUE,FALSE
+"1062",38,0,352,0.5,"Yacht",2,"Ablative","Poor",255.9,"HA","Wet Hull",1,"Hull quad bow starboard",TRUE,FALSE
+"1063",38,0,352,0.5,"Yacht",2,"Ablative","Poor",334,"HA","Wet Hull",1,"Hull #6 port stern",TRUE,FALSE
+"1064",38,0,352,0.5,"Yacht",2,"Ablative","Poor",473,"HA","Wet Hull",1,"Hull quad stern starboard",TRUE,FALSE
+"1065",38,0,352,0.5,"Yacht",2,"Ablative","Poor",539,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"1066",38,0,352,0.5,"Yacht",2,"Ablative","Poor",613.2,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"1067",38,0,352,0.5,"Yacht",2,"Ablative","Poor",682.7,"HA","Wet Hull",1,"Quad #4 port bow",TRUE,FALSE
+"1068",38,0,352,0.5,"Yacht",2,"Ablative","Poor",844.6,"PE","Propeller",2,"Outboard leg well (1/2 front and starboard side)",TRUE,FALSE
+"1069",39,184,153,26,"Yacht",2,"Hard","Good",0,"DA","Deck",4,NA,FALSE,TRUE
+"1070",39,184,153,26,"Yacht",2,"Hard","Good",0,"HAB","Wet Hull",1,NA,FALSE,TRUE
+"1071",39,184,153,26,"Yacht",2,"Hard","Good",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"1072",39,184,153,26,"Yacht",2,"Hard","Good",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"1073",39,184,153,26,"Yacht",2,"Hard","Good",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"1074",39,184,153,26,"Yacht",2,"Hard","Good",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"1075",39,184,153,26,"Yacht",2,"Hard","Good",0,"PM","Anchor",2,NA,FALSE,TRUE
+"1076",39,184,153,26,"Yacht",2,"Hard","Good",0,"PN","Anchor",2,NA,FALSE,TRUE
+"1077",39,184,153,26,"Yacht",2,"Hard","Good",0.5,"HP","Wet Hull",1,"Hull 3 starboard stern keel",FALSE,TRUE
+"1078",39,184,153,26,"Yacht",2,"Hard","Good",0.5,"PB","Propeller",2,"Propeller",FALSE,TRUE
+"1079",39,184,153,26,"Yacht",2,"Hard","Good",3.7,"HP","Wet Hull",1,"Hull #6 port stern keel",TRUE,FALSE
+"1080",39,184,153,26,"Yacht",2,"Hard","Good",3.7,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"1081",39,184,153,26,"Yacht",2,"Hard","Good",4,"HA","Wet Hull",1,"Quad starboard mid hull #2",TRUE,FALSE
+"1082",39,184,153,26,"Yacht",2,"Hard","Good",5.4,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"1083",39,184,153,26,"Yacht",2,"Hard","Good",5.5,"HD","Wet Hull",1,"Water inlet/outlet port bow",TRUE,FALSE
+"1084",39,184,153,26,"Yacht",2,"Hard","Good",7.7,"HA","Wet Hull",1,"Hull #1 starboard bow",TRUE,FALSE
+"1085",39,184,153,26,"Yacht",2,"Hard","Good",7.8,"HAH","Wet Hull",1,"Starboard boot top 1m scrape",TRUE,FALSE
+"1086",39,184,153,26,"Yacht",2,"Hard","Good",8.65,"PG","Propeller",2,"Stern gland",TRUE,FALSE
+"1087",39,184,153,26,"Yacht",2,"Hard","Good",8.9,"HK","Wet Hull",1,"Starboard speed log",TRUE,FALSE
+"1088",39,184,153,26,"Yacht",2,"Hard","Good",10.4,"HD","Wet Hull",1,"Water grate starboard mid",TRUE,FALSE
+"1089",39,184,153,26,"Yacht",2,"Hard","Good",13.9,"HD","Wet Hull",1,"Water inlet/outlet port mid",TRUE,FALSE
+"1090",39,184,153,26,"Yacht",2,"Hard","Good",16.1,"HA","Wet Hull",1,"Hull 4 port bow",TRUE,FALSE
+"1091",39,184,153,26,"Yacht",2,"Hard","Good",20.6,"PH","Rudder",2,"Keel extension",TRUE,FALSE
+"1092",39,184,153,26,"Yacht",2,"Hard","Good",23.2,"HA","Wet Hull",1,"Hull 5 port mid",TRUE,FALSE
+"1093",39,184,153,26,"Yacht",2,"Hard","Good",33.5,"HAF","Wet Hull",1,"Radio earth plate scrape starboard",TRUE,FALSE
+"1094",39,184,153,26,"Yacht",2,"Hard","Good",35.6,"HD","Wet Hull",1,"Water inlet/outlet starboard mid",TRUE,FALSE
+"1095",40,124,18,7.5,"Yacht",2,"Ablative","Good",0,"DA","Deck",4,NA,FALSE,TRUE
+"1096",40,124,18,7.5,"Yacht",2,"Ablative","Good",0,"DD","Deck",4,NA,FALSE,TRUE
+"1097",40,124,18,7.5,"Yacht",2,"Ablative","Good",0,"DG","Deck",4,NA,FALSE,TRUE
+"1098",40,124,18,7.5,"Yacht",2,"Ablative","Good",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"1099",40,124,18,7.5,"Yacht",2,"Ablative","Good",0,"ID","Internal spaces",3,NA,FALSE,TRUE
+"1100",40,124,18,7.5,"Yacht",2,"Ablative","Good",0,"IF","Internal spaces",3,NA,FALSE,TRUE
+"1101",40,124,18,7.5,"Yacht",2,"Ablative","Good",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"1102",40,124,18,7.5,"Yacht",2,"Ablative","Good",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"1103",40,124,18,7.5,"Yacht",2,"Ablative","Good",0,"IP","Internal spaces",3,NA,FALSE,TRUE
+"1104",40,124,18,7.5,"Yacht",2,"Ablative","Good",0,"IQ","Internal spaces",3,NA,FALSE,TRUE
+"1105",40,124,18,7.5,"Yacht",2,"Ablative","Good",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"1106",40,124,18,7.5,"Yacht",2,"Ablative","Good",0,"IW","Internal spaces",3,NA,FALSE,TRUE
+"1107",40,124,18,7.5,"Yacht",2,"Ablative","Good",0,"PM","Anchor",2,NA,FALSE,TRUE
+"1108",40,124,18,7.5,"Yacht",2,"Ablative","Good",0,"PN","Anchor",2,NA,FALSE,TRUE
+"1109",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"IB","Internal spaces",3,"Basin inlet scrape",FALSE,TRUE
+"1110",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"IB","Internal spaces",3,"Head inlet starboard",FALSE,TRUE
+"1111",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"IA","Internal spaces",3,"Head inlet water  ",FALSE,TRUE
+"1112",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"IB","Internal spaces",3,"Head inlet, port",FALSE,TRUE
+"1113",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"IB","Internal spaces",3,"Head outlet starboard",FALSE,TRUE
+"1114",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"HP","Wet Hull",1,"Hull starboard keel",FALSE,TRUE
+"1115",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"HP","Wet Hull",1,"Keel quad port stern",FALSE,TRUE
+"1116",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"IB","Internal spaces",3,"Motot inlet water scrape (port)",FALSE,TRUE
+"1117",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"HK","Wet Hull",1,"Paddle wheel (port)",FALSE,TRUE
+"1118",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"IB","Internal spaces",3,"Port head outlet",FALSE,TRUE
+"1119",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"PB","Propeller",2,"Propeller",FALSE,TRUE
+"1120",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"HAF","Wet Hull",1,"Radio earth plate port",FALSE,TRUE
+"1121",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"PJ","Rudder",2,"Rudder port",FALSE,TRUE
+"1122",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"PJ","Rudder",2,"Rudder starboard",FALSE,TRUE
+"1123",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"HAH","Wet Hull",1,"Starboard boot top 1m scrape",FALSE,TRUE
+"1124",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"HAF","Wet Hull",1,"Starboard radio earth plate",FALSE,TRUE
+"1125",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"HD","Wet Hull",1,"Water intake scrape (for desalinator) (Starboard)",FALSE,TRUE
+"1126",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"HAB","Wet Hull",1,"Zinc anode port",FALSE,TRUE
+"1127",40,124,18,7.5,"Yacht",2,"Ablative","Good",0.5,"HAB","Wet Hull",1,"Zinc anode starboard",FALSE,TRUE
+"1128",40,124,18,7.5,"Yacht",2,"Ablative","Good",1.94,"IB","Internal spaces",3,"Water intake scrape (for galley) (Starboard)",TRUE,FALSE
+"1129",40,124,18,7.5,"Yacht",2,"Ablative","Good",2.09,"PH","Rudder",2,"Keel extension",TRUE,FALSE
+"1130",40,124,18,7.5,"Yacht",2,"Ablative","Good",3.5,"IB","Internal spaces",3,"Cockpit drain port",TRUE,FALSE
+"1131",40,124,18,7.5,"Yacht",2,"Ablative","Good",4,"HAH","Wet Hull",1,"Boot top 1m (port)",TRUE,FALSE
+"1132",40,124,18,7.5,"Yacht",2,"Ablative","Good",4.3,"IB","Internal spaces",3,"Starboard cockpit drain",TRUE,FALSE
+"1133",40,124,18,7.5,"Yacht",2,"Ablative","Good",5.98,"HA","Wet Hull",1,"Port bow quad, hull",TRUE,FALSE
+"1134",40,124,18,7.5,"Yacht",2,"Ablative","Good",7.28,"HA","Wet Hull",1,"Port quad midship",TRUE,FALSE
+"1135",40,124,18,7.5,"Yacht",2,"Ablative","Good",11.1,"HA","Wet Hull",1,"Starboard hull 4 bow",TRUE,FALSE
+"1136",40,124,18,7.5,"Yacht",2,"Ablative","Good",11.3,"HA","Wet Hull",1,"Starboard hull stern",TRUE,FALSE
+"1137",40,124,18,7.5,"Yacht",2,"Ablative","Good",11.83,"HA","Wet Hull",1,"Starboard hull midship",TRUE,FALSE
+"1138",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"1139",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"1140",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",0,"HY","Dry Hull",1,NA,FALSE,TRUE
+"1141",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",0,"PM","Anchor",2,NA,FALSE,TRUE
+"1142",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",0,"PN","Anchor",2,NA,FALSE,TRUE
+"1143",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",16.8,"HC","Wet Hull",1,"Skin fitting port",TRUE,FALSE
+"1144",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",34.6,"HH","Wet Hull",1,"Starboard transducer",TRUE,FALSE
+"1145",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",69,"HP","Wet Hull",1,"Hull 2 starboard mid keel",TRUE,FALSE
+"1146",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",75.6,"HA","Wet Hull",1,"Port bow hull",TRUE,FALSE
+"1147",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",75.7,"HD","Wet Hull",1,"Starboard engine cooling inlet",TRUE,FALSE
+"1148",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",77.5,"HP","Wet Hull",1,"Port mid keel quad",TRUE,FALSE
+"1149",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",79.6,"HAH","Wet Hull",1,"Port boot top ",TRUE,FALSE
+"1150",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",80.9,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"1151",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",86.5,"PA","Propeller",2,"Propeller shaft",TRUE,FALSE
+"1152",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",119.1,"HA","Wet Hull",1,"Port stern hull quad",TRUE,FALSE
+"1153",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",130.6,"HA","Wet Hull",1,"Starboard hull bow",TRUE,FALSE
+"1154",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",178.5,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"1155",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",195,"HA","Wet Hull",1,"Hull 3 starboard stern",TRUE,FALSE
+"1156",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",200.7,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"1157",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",222.2,"PH","Rudder",2,"Keel extension port",TRUE,FALSE
+"1158",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",230.8,"HAH","Wet Hull",1,"Transom boot top (50cm scrape)",TRUE,FALSE
+"1159",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",366,"PH","Rudder",2,"Keel extension starboard",TRUE,FALSE
+"1160",41,428,428,0.5,"Yacht",2,"Self-polishing","Good",499.1,"HAH","Wet Hull",1,"Boot top stern starboard",TRUE,FALSE
+"1161",42,7,56,16,"Yacht",2,"Hard","Good",0,"DA","Deck",4,NA,FALSE,TRUE
+"1162",42,7,56,16,"Yacht",2,"Hard","Good",0,"DE","Deck",4,NA,FALSE,TRUE
+"1163",42,7,56,16,"Yacht",2,"Hard","Good",0,"DG","Deck",4,NA,FALSE,TRUE
+"1164",42,7,56,16,"Yacht",2,"Hard","Good",0,"DI","Deck",4,NA,FALSE,TRUE
+"1165",42,7,56,16,"Yacht",2,"Hard","Good",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"1166",42,7,56,16,"Yacht",2,"Hard","Good",0,"HZ","Wet Hull",1,NA,FALSE,TRUE
+"1167",42,7,56,16,"Yacht",2,"Hard","Good",0.5,"ID","Internal spaces",3,"Bilge water",FALSE,TRUE
+"1168",42,7,56,16,"Yacht",2,"Hard","Good",0.5,"HD","Wet Hull",1,"Engine inlet grate port",FALSE,TRUE
+"1169",42,7,56,16,"Yacht",2,"Hard","Good",0.5,"IB","Internal spaces",3,"Head outlet starboard",FALSE,TRUE
+"1170",42,7,56,16,"Yacht",2,"Hard","Good",0.5,"HK","Wet Hull",1,"Paddle wheel starboard",FALSE,TRUE
+"1171",42,7,56,16,"Yacht",2,"Hard","Good",0.5,"IA","Internal spaces",3,"Sink outlet water sample (port)",FALSE,TRUE
+"1172",42,7,56,16,"Yacht",2,"Hard","Good",1.5,"HH","Wet Hull",1,"Transducer port",TRUE,FALSE
+"1173",42,7,56,16,"Yacht",2,"Hard","Good",3.51,"IB","Internal spaces",3,"Sink drain port",TRUE,FALSE
+"1174",42,7,56,16,"Yacht",2,"Hard","Good",6.2,"HP","Wet Hull",1,"Hull 2 starboard mid keel",TRUE,FALSE
+"1175",42,7,56,16,"Yacht",2,"Hard","Good",6.9,"HAH","Wet Hull",1,"Starboard boot top 1m scrape",TRUE,FALSE
+"1176",42,7,56,16,"Yacht",2,"Hard","Good",7.2,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"1177",42,7,56,16,"Yacht",2,"Hard","Good",7.5,"HD","Wet Hull",1,"Engine cooling inlet grate, starboard",TRUE,FALSE
+"1178",42,7,56,16,"Yacht",2,"Hard","Good",7.9,"HA","Wet Hull",1,"Hull 1 starboard bow",TRUE,FALSE
+"1179",42,7,56,16,"Yacht",2,"Hard","Good",12.1,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"1180",42,7,56,16,"Yacht",2,"Hard","Good",15.85,"PH","Rudder",2,"Skeg / keel extension",TRUE,FALSE
+"1181",42,7,56,16,"Yacht",2,"Hard","Good",16.1,"HP","Wet Hull",1,"Hull 5 port midship keel",TRUE,FALSE
+"1182",42,7,56,16,"Yacht",2,"Hard","Good",17,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"1183",42,7,56,16,"Yacht",2,"Hard","Good",17.7,"HA","Wet Hull",1,"Hull 4 port bow",TRUE,FALSE
+"1184",42,7,56,16,"Yacht",2,"Hard","Good",20.5,"HAH","Wet Hull",1,"Boot top 1m scrape port bow",TRUE,FALSE
+"1185",42,7,56,16,"Yacht",2,"Hard","Good",24.26,"HA","Wet Hull",1,"Hull 3 starboard stern",TRUE,FALSE
+"1186",42,7,56,16,"Yacht",2,"Hard","Good",26.47,"HA","Wet Hull",1,"Hull 6 port stern",TRUE,FALSE
+"1187",42,7,56,16,"Yacht",2,"Hard","Good",128.2,"HAF","Wet Hull",1,"Bottom of wing keel, quadrat",TRUE,FALSE
+"1188",43,123,283,7,"Yacht",2,"Ablative","Very Poor",0,"DA","Deck",4,NA,FALSE,TRUE
+"1189",43,123,283,7,"Yacht",2,"Ablative","Very Poor",0,"DC","Deck",4,NA,FALSE,TRUE
+"1190",43,123,283,7,"Yacht",2,"Ablative","Very Poor",0,"DF","Deck",4,NA,FALSE,TRUE
+"1191",43,123,283,7,"Yacht",2,"Ablative","Very Poor",0,"DG","Deck",4,NA,FALSE,TRUE
+"1192",43,123,283,7,"Yacht",2,"Ablative","Very Poor",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"1193",43,123,283,7,"Yacht",2,"Ablative","Very Poor",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"1194",43,123,283,7,"Yacht",2,"Ablative","Very Poor",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"1195",43,123,283,7,"Yacht",2,"Ablative","Very Poor",0.5,"IA","Internal spaces",3,"Head inlet starboard water",FALSE,TRUE
+"1196",43,123,283,7,"Yacht",2,"Ablative","Very Poor",0.5,"IB","Internal spaces",3,"Port sink outlet",FALSE,TRUE
+"1197",43,123,283,7,"Yacht",2,"Ablative","Very Poor",0.5,"IB","Internal spaces",3,"Starboard head inlet",FALSE,TRUE
+"1198",43,123,283,7,"Yacht",2,"Ablative","Very Poor",2.3,"HD","Wet Hull",1,"Starboard engine cooling inlet",TRUE,FALSE
+"1199",43,123,283,7,"Yacht",2,"Ablative","Very Poor",4.8,"IB","Internal spaces",3,"Starboard head outlet",TRUE,FALSE
+"1200",43,123,283,7,"Yacht",2,"Ablative","Very Poor",5.5,"HH","Wet Hull",1,"Port sounder",TRUE,FALSE
+"1201",43,123,283,7,"Yacht",2,"Ablative","Very Poor",12.8,"HAB","Wet Hull",1,"Stern anode",TRUE,FALSE
+"1202",43,123,283,7,"Yacht",2,"Ablative","Very Poor",18.8,"HK","Wet Hull",1,"Port log meter (paddlewheel)",TRUE,FALSE
+"1203",43,123,283,7,"Yacht",2,"Ablative","Very Poor",26.99,"HAH","Wet Hull",1,"Port boot top ",TRUE,FALSE
+"1204",43,123,283,7,"Yacht",2,"Ablative","Very Poor",46.1,"HA","Wet Hull",1,"Starboard midship  ",TRUE,FALSE
+"1205",43,123,283,7,"Yacht",2,"Ablative","Very Poor",48.3,"PG","Propeller",2,"Stern gland cover",TRUE,FALSE
+"1206",43,123,283,7,"Yacht",2,"Ablative","Very Poor",50.2,"HA","Wet Hull",1,"Port midship",TRUE,FALSE
+"1207",43,123,283,7,"Yacht",2,"Ablative","Very Poor",53.4,"HA","Wet Hull",1,"Hull 6 port bow",TRUE,FALSE
+"1208",43,123,283,7,"Yacht",2,"Ablative","Very Poor",54.2,"HAH","Wet Hull",1,"Starboard boot top 1m scrape",TRUE,FALSE
+"1209",43,123,283,7,"Yacht",2,"Ablative","Very Poor",55.61,"HP","Wet Hull",1,"Port stern keel",TRUE,FALSE
+"1210",43,123,283,7,"Yacht",2,"Ablative","Very Poor",57.8,"HP","Wet Hull",1,"Starboard stern keel",TRUE,FALSE
+"1211",43,123,283,7,"Yacht",2,"Ablative","Very Poor",69.43,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"1212",43,123,283,7,"Yacht",2,"Ablative","Very Poor",96.7,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"1213",43,123,283,7,"Yacht",2,"Ablative","Very Poor",127.5,"HA","Wet Hull",1,"Hull 1 starboard bow",TRUE,FALSE
+"1214",43,123,283,7,"Yacht",2,"Ablative","Very Poor",151.23,"PH","Rudder",2,"Keel extension",TRUE,FALSE
+"1215",43,123,283,7,"Yacht",2,"Ablative","Very Poor",216.82,"HX","Wet Hull",1,"Flat bottom 50cm scrape (stern)",TRUE,FALSE
+"1216",43,123,283,7,"Yacht",2,"Ablative","Very Poor",450.5,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"1217",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0,"DA","Deck",4,NA,FALSE,TRUE
+"1218",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0,"HAB","Wet Hull",1,NA,FALSE,TRUE
+"1219",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0,"HC","Wet Hull",1,NA,FALSE,TRUE
+"1220",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0,"ID","Internal spaces",3,NA,FALSE,TRUE
+"1221",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"1222",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0,"IP","Internal spaces",3,NA,FALSE,TRUE
+"1223",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"1224",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0,"PA","Propeller",2,NA,FALSE,TRUE
+"1225",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0,"PB","Propeller",2,NA,FALSE,TRUE
+"1226",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0,"PF","Propeller",2,NA,FALSE,TRUE
+"1227",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0,"PG","Propeller",2,NA,FALSE,TRUE
+"1228",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0,"PJ","Rudder",2,NA,FALSE,TRUE
+"1229",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0,"PM","Anchor",2,NA,FALSE,TRUE
+"1230",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0,"PN","Anchor",2,NA,FALSE,TRUE
+"1231",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0,"HAA","Wet Hull",1,"NA (internal)",FALSE,TRUE
+"1232",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0.5,"HAH","Wet Hull",1,"Boot top starboard 1m scrape",FALSE,TRUE
+"1233",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0.5,"HX","Wet Hull",1,"Garboard plank (stern), 1m scrape",FALSE,TRUE
+"1234",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0.5,"HA","Wet Hull",1,"Hull #2 starboard midship ",FALSE,TRUE
+"1235",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0.5,"HA","Wet Hull",1,"Hull #6 port stern",FALSE,TRUE
+"1236",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0.5,"HA","Wet Hull",1,"Hull 3 starboard stern",FALSE,TRUE
+"1237",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0.5,"HA","Wet Hull",1,"Port bow hull #4",FALSE,TRUE
+"1238",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0.5,"HA","Wet Hull",1,"Port mid hull #5",FALSE,TRUE
+"1239",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0.5,"HK","Wet Hull",1,"Port paddle wheel",FALSE,TRUE
+"1240",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0.5,"HH","Wet Hull",1,"Sounder (transducer) starboard",FALSE,TRUE
+"1241",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",0.5,"IB","Internal spaces",1,"Starboard wet well holes scrape (x3)",FALSE,TRUE
+"1242",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",3.7,"HF","Wet Hull",1,"Starboard keel cooling pipes",TRUE,FALSE
+"1243",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",4,"IB","Internal spaces",1,"Port wet well holes scrape (x3)",TRUE,FALSE
+"1244",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",4.2,"HA","Wet Hull",1,"Hull 1 starboard bow",TRUE,FALSE
+"1245",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",4.7,"HX","Wet Hull",1,"Flat bottom bow 1m scrape",TRUE,FALSE
+"1246",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",10,"HAH","Wet Hull",1,"Boot top port 1m scrape",TRUE,FALSE
+"1247",44,81,172,13.5,"Fish",15,"Self-polishing","Excellent",41.2,"HH","Wet Hull",1,"Sounder (transducer) port",TRUE,FALSE
+"1248",45,0,14,55,"Yacht",2,"Self-polishing","Poor",0,"DA","Deck",4,NA,FALSE,TRUE
+"1249",45,0,14,55,"Yacht",2,"Self-polishing","Poor",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"1250",45,0,14,55,"Yacht",2,"Self-polishing","Poor",0,"HY","Dry Hull",1,NA,FALSE,TRUE
+"1251",45,0,14,55,"Yacht",2,"Self-polishing","Poor",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"1252",45,0,14,55,"Yacht",2,"Self-polishing","Poor",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"1253",45,0,14,55,"Yacht",2,"Self-polishing","Poor",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"1254",45,0,14,55,"Yacht",2,"Self-polishing","Poor",0,"IW","Internal spaces",3,NA,FALSE,TRUE
+"1255",45,0,14,55,"Yacht",2,"Self-polishing","Poor",0,"PM","Anchor",2,NA,FALSE,TRUE
+"1256",45,0,14,55,"Yacht",2,"Self-polishing","Poor",0,"PN","Anchor",2,NA,FALSE,TRUE
+"1257",45,0,14,55,"Yacht",2,"Self-polishing","Poor",0,"PO","Anchor",2,NA,FALSE,TRUE
+"1258",45,0,14,55,"Yacht",2,"Self-polishing","Poor",0,"PP","Anchor",2,NA,FALSE,TRUE
+"1259",45,0,14,55,"Yacht",2,"Self-polishing","Poor",0.5,"IA","Internal spaces",3,"Basin outlet water",FALSE,TRUE
+"1260",45,0,14,55,"Yacht",2,"Self-polishing","Poor",0.5,"IB","Internal spaces",3,"Head inlet",FALSE,TRUE
+"1261",45,0,14,55,"Yacht",2,"Self-polishing","Poor",0.5,"IB","Internal spaces",3,"Head outlet  ",FALSE,TRUE
+"1262",45,0,14,55,"Yacht",2,"Self-polishing","Poor",0.5,"IB","Internal spaces",3,"Sink inlet ",FALSE,TRUE
+"1263",45,0,14,55,"Yacht",2,"Self-polishing","Poor",1.8,"IB","Internal spaces",3,"Wash basin outlet",TRUE,FALSE
+"1264",45,0,14,55,"Yacht",2,"Self-polishing","Poor",2.1,"PE","Propeller",2,"Sail drive legs",TRUE,FALSE
+"1265",45,0,14,55,"Yacht",2,"Self-polishing","Poor",2.4,"HP","Wet Hull",1,"Hull 2 starboard mid keel",TRUE,FALSE
+"1266",45,0,14,55,"Yacht",2,"Self-polishing","Poor",5.55,"IB","Internal spaces",1,"Speed log hole (Speed log removed)",TRUE,FALSE
+"1267",45,0,14,55,"Yacht",2,"Self-polishing","Poor",9.5,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"1268",45,0,14,55,"Yacht",2,"Self-polishing","Poor",10.6,"HAH","Wet Hull",1,"Boot top starboard midship 1m scrape",TRUE,FALSE
+"1269",45,0,14,55,"Yacht",2,"Self-polishing","Poor",10.7,"HA","Wet Hull",1,"Hull 3 starboard stern",TRUE,FALSE
+"1270",45,0,14,55,"Yacht",2,"Self-polishing","Poor",13.98,"HP","Wet Hull",1,"Hull 5 port keel mid",TRUE,FALSE
+"1271",45,0,14,55,"Yacht",2,"Self-polishing","Poor",14,"HAH","Wet Hull",1,"Boot top port 1m scrape",TRUE,FALSE
+"1272",45,0,14,55,"Yacht",2,"Self-polishing","Poor",22.9,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"1273",45,0,14,55,"Yacht",2,"Self-polishing","Poor",25.63,"HA","Wet Hull",1,"Hull 6 port stern",TRUE,FALSE
+"1274",45,0,14,55,"Yacht",2,"Self-polishing","Poor",31.72,"HA","Wet Hull",1,"Hull 1 starboard bow",TRUE,FALSE
+"1275",45,0,14,55,"Yacht",2,"Self-polishing","Poor",45.4,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"1276",45,0,14,55,"Yacht",2,"Self-polishing","Poor",48.7,"HA","Wet Hull",1,"Hull 4 port bow",TRUE,FALSE
+"1277",46,1,319,25,"Motor cruiser",17,"Ablative","Good",0,"DA","Deck",4,NA,FALSE,TRUE
+"1278",46,1,319,25,"Motor cruiser",17,"Ablative","Good",0,"DC","Deck",4,NA,FALSE,TRUE
+"1279",46,1,319,25,"Motor cruiser",17,"Ablative","Good",0,"DG","Deck",4,NA,FALSE,TRUE
+"1280",46,1,319,25,"Motor cruiser",17,"Ablative","Good",0,"DI","Deck",4,NA,FALSE,TRUE
+"1281",46,1,319,25,"Motor cruiser",17,"Ablative","Good",0,"HAB","Wet Hull",1,NA,FALSE,TRUE
+"1282",46,1,319,25,"Motor cruiser",17,"Ablative","Good",0,"HD","Wet Hull",1,NA,FALSE,TRUE
+"1283",46,1,319,25,"Motor cruiser",17,"Ablative","Good",0,"PM","Anchor",2,NA,FALSE,TRUE
+"1284",46,1,319,25,"Motor cruiser",17,"Ablative","Good",0,"PN","Anchor",2,NA,FALSE,TRUE
+"1285",46,1,319,25,"Motor cruiser",17,"Ablative","Good",0,"HAA","Wet Hull",1,"NA (internal)",FALSE,TRUE
+"1286",46,1,319,25,"Motor cruiser",17,"Ablative","Good",0.5,"ID","Internal spaces",3,"Bilge port water",FALSE,TRUE
+"1287",46,1,319,25,"Motor cruiser",17,"Ablative","Good",0.5,"ID","Internal spaces",3,"Bilge water starboard",FALSE,TRUE
+"1288",46,1,319,25,"Motor cruiser",17,"Ablative","Good",0.5,"HD","Wet Hull",1,"Generator cooling water intake grid",FALSE,TRUE
+"1289",46,1,319,25,"Motor cruiser",17,"Ablative","Good",0.5,"HK","Wet Hull",1,"Paddlewheel port",FALSE,TRUE
+"1290",46,1,319,25,"Motor cruiser",17,"Ablative","Good",0.5,"HAF","Wet Hull",1,"Radio earth plate scrape",FALSE,TRUE
+"1291",46,1,319,25,"Motor cruiser",17,"Ablative","Good",1.5,"IB","Internal spaces",1,"Sullage (toilet) outlet scraping",TRUE,FALSE
+"1292",46,1,319,25,"Motor cruiser",17,"Ablative","Good",1.9,"HD","Wet Hull",1,"Starboard engine cooling intake grid",TRUE,FALSE
+"1293",46,1,319,25,"Motor cruiser",17,"Ablative","Good",2.2,"HD","Wet Hull",1,"Port engine cooling inlet grid",TRUE,FALSE
+"1294",46,1,319,25,"Motor cruiser",17,"Ablative","Good",3.1,"HA","Wet Hull",1,"Hull quadrat #3 starboard mid inside",TRUE,FALSE
+"1295",46,1,319,25,"Motor cruiser",17,"Ablative","Good",4.7,"HA","Wet Hull",1,"Hull #2 starboard stern outside",TRUE,FALSE
+"1296",46,1,319,25,"Motor cruiser",17,"Ablative","Good",6.4,"HA","Wet Hull",1,"Hull #5 port mid inside",TRUE,FALSE
+"1297",46,1,319,25,"Motor cruiser",17,"Ablative","Good",7.7,"HAH","Wet Hull",1,"Boot top port 1m scrape",TRUE,FALSE
+"1298",46,1,319,25,"Motor cruiser",17,"Ablative","Good",7.7,"HAH","Wet Hull",1,"Boot top scrape (1m) starboard",TRUE,FALSE
+"1299",46,1,319,25,"Motor cruiser",17,"Ablative","Good",12.7,"HA","Wet Hull",1,"Hull #4 port bow outer",TRUE,FALSE
+"1300",46,1,319,25,"Motor cruiser",17,"Ablative","Good",12.8,"PB","Propeller",2,"Propeller port",TRUE,FALSE
+"1301",46,1,319,25,"Motor cruiser",17,"Ablative","Good",13.1,"HA","Wet Hull",1,"Hull #6 port stern outside",TRUE,FALSE
+"1302",46,1,319,25,"Motor cruiser",17,"Ablative","Good",17,"PB","Propeller",2,"Propeller starboard",TRUE,FALSE
+"1303",46,1,319,25,"Motor cruiser",17,"Ablative","Good",26.7,"HA","Wet Hull",1,"Hull #1 starboard bow outside",TRUE,FALSE
+"1304",46,1,319,25,"Motor cruiser",17,"Ablative","Good",63.4,"PS","Propeller",2,"Propeller cowling port",TRUE,FALSE
+"1305",46,1,319,25,"Motor cruiser",17,"Ablative","Good",73.7,"PV","Propeller",2,"Port keel extension (engine mount)",TRUE,FALSE
+"1306",46,1,319,25,"Motor cruiser",17,"Ablative","Good",82.5,"PS","Propeller",2,"Propeller cowling starboard  ",TRUE,FALSE
+"1307",46,1,319,25,"Motor cruiser",17,"Ablative","Good",135.9,"PV","Propeller",2,"Starboard keel extension (engine mount) ",TRUE,FALSE
+"1308",47,14,14,0.5,"Yacht",2,NA,NA,0,"ID","Internal spaces",3,NA,FALSE,TRUE
+"1309",47,14,14,0.5,"Yacht",2,NA,NA,0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"1310",47,14,14,0.5,"Yacht",2,NA,NA,0,"II","Internal spaces",3,NA,FALSE,TRUE
+"1311",47,14,14,0.5,"Yacht",2,NA,NA,0,"PM","Anchor",2,NA,FALSE,TRUE
+"1312",47,14,14,0.5,"Yacht",2,NA,NA,0,"PN","Anchor",2,NA,FALSE,TRUE
+"1313",47,14,14,0.5,"Yacht",2,NA,NA,0.5,"PJ","Rudder",2,"Rudder port",FALSE,TRUE
+"1314",47,14,14,0.5,"Yacht",2,NA,NA,0.5,"HAH","Wet Hull",1,"Starboard boot top  ",FALSE,TRUE
+"1315",47,14,14,0.5,"Yacht",2,NA,NA,0.5,"IB","Internal spaces",3,"Toilet inlet scrape starboard",FALSE,TRUE
+"1316",47,14,14,0.5,"Yacht",2,NA,NA,1.6,"HAH","Wet Hull",1,"Boot top scrape port",TRUE,FALSE
+"1317",47,14,14,0.5,"Yacht",2,NA,NA,1.9,"HD","Wet Hull",1,"Engine cooling inlet grid starboard",TRUE,FALSE
+"1318",47,14,14,0.5,"Yacht",2,NA,NA,2.4,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"1319",47,14,14,0.5,"Yacht",2,NA,NA,3.1,"PA","Propeller",2,"Propeller shaft",TRUE,FALSE
+"1320",47,14,14,0.5,"Yacht",2,NA,NA,3.2,"HA","Wet Hull",1,"Hull #4 port bow",TRUE,FALSE
+"1321",47,14,14,0.5,"Yacht",2,NA,NA,3.3,"HA","Wet Hull",1,"Hull 6 port stern",TRUE,FALSE
+"1322",47,14,14,0.5,"Yacht",2,NA,NA,4.4,"HD","Wet Hull",1,"Engine cooling inlet grid port",TRUE,FALSE
+"1323",47,14,14,0.5,"Yacht",2,NA,NA,6,"HA","Wet Hull",1,"Hull #5 port mid",TRUE,FALSE
+"1324",47,14,14,0.5,"Yacht",2,NA,NA,14.1,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"1325",47,14,14,0.5,"Yacht",2,NA,NA,20.5,"HA","Wet Hull",1,"Hull midship starboard",TRUE,FALSE
+"1326",47,14,14,0.5,"Yacht",2,NA,NA,29.6,"HA","Wet Hull",1,"Quadrat hull starboard bow",TRUE,FALSE
+"1327",47,14,14,0.5,"Yacht",2,NA,NA,36.2,"HA","Wet Hull",1,"Hull starboard stern",TRUE,FALSE
+"1328",47,14,14,0.5,"Yacht",2,NA,NA,47.1,"HAF","Wet Hull",1,"Bottom of keel",TRUE,FALSE
+"1329",47,14,14,0.5,"Yacht",2,NA,NA,100.6,"HL","Wet Hull",1,"Block space starboard",TRUE,FALSE
+"1330",47,14,14,0.5,"Yacht",2,NA,NA,134.5,"HL","Wet Hull",1,"Block space port",TRUE,FALSE
+"1331",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",1.7,"IB","Internal spaces",3,"Head inlet",TRUE,FALSE
+"1332",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",2.8,"IB","Internal spaces",3,"Sink outlet",TRUE,FALSE
+"1333",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",3.7,"IB","Internal spaces",3,"Galley drain #1",TRUE,FALSE
+"1334",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",4.2,"HC","Wet Hull",1,"Depth sounder plate",TRUE,FALSE
+"1335",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",5.9,"IB","Internal spaces",3,"Head outlet",TRUE,FALSE
+"1336",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",8.4,"IB","Internal spaces",3,"Galley drain #2 (stern)",TRUE,FALSE
+"1337",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",9.1,"HAH","Wet Hull",1,"Boot top starboard scrape 1m stern",TRUE,FALSE
+"1338",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",10.2,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"1339",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",14.9,"HP","Wet Hull",1,"Hull 2 starboard midship keel",TRUE,FALSE
+"1340",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",19.2,"PE","Propeller",2,"Sail drive leg ",TRUE,FALSE
+"1341",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",22.3,"HAH","Wet Hull",1,"Boot top 1m scrape port  ",TRUE,FALSE
+"1342",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",23,"HP","Wet Hull",1,"Port Hull 4 keel",TRUE,FALSE
+"1343",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",29.4,"HA","Wet Hull",1,"Hull 3 starboard stern",TRUE,FALSE
+"1344",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",31.5,"HA","Wet Hull",1,"Hull 5 port stern",TRUE,FALSE
+"1345",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",31.8,"HA","Wet Hull",1,"Hull 6 port bow",TRUE,FALSE
+"1346",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",32.2,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"1347",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",38.7,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"1348",48,33,442,13.5,"Yacht",2,"Self-polishing","Good",40.5,"HA","Wet Hull",1,"Hull 1 starboard bow",TRUE,FALSE
+"1349",49,2,473,30,"Yacht",2,"Ablative","Excellent",0,"DA","Deck",4,NA,FALSE,TRUE
+"1350",49,2,473,30,"Yacht",2,"Ablative","Excellent",0,"DE","Deck",4,NA,FALSE,TRUE
+"1351",49,2,473,30,"Yacht",2,"Ablative","Excellent",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"1352",49,2,473,30,"Yacht",2,"Ablative","Excellent",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"1353",49,2,473,30,"Yacht",2,"Ablative","Excellent",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"1354",49,2,473,30,"Yacht",2,"Ablative","Excellent",0,"IW","Internal spaces",3,NA,FALSE,TRUE
+"1355",49,2,473,30,"Yacht",2,"Ablative","Excellent",0.5,"IA","Internal spaces",1,"Rudder water",FALSE,TRUE
+"1356",49,2,473,30,"Yacht",2,"Ablative","Excellent",2.2,"IB","Internal spaces",3,"Head inlet",TRUE,FALSE
+"1357",49,2,473,30,"Yacht",2,"Ablative","Excellent",2.6,"IB","Internal spaces",3,"Head outlet",TRUE,FALSE
+"1358",49,2,473,30,"Yacht",2,"Ablative","Excellent",6.3,"HD","Wet Hull",1,"Engine water inlet starboard",TRUE,FALSE
+"1359",49,2,473,30,"Yacht",2,"Ablative","Excellent",17.8,"HAH","Wet Hull",1,"Starboard boot top 1m scrape midship",TRUE,FALSE
+"1360",49,2,473,30,"Yacht",2,"Ablative","Excellent",18.5,"HAA","Wet Hull",1,"Anode port stern",TRUE,FALSE
+"1361",49,2,473,30,"Yacht",2,"Ablative","Excellent",40.24,"HAH","Wet Hull",1,"Boot top port 1m",TRUE,FALSE
+"1362",49,2,473,30,"Yacht",2,"Ablative","Excellent",47.1,"HP","Wet Hull",1,"Hull #5 keel port",TRUE,FALSE
+"1363",49,2,473,30,"Yacht",2,"Ablative","Excellent",60,"HP","Wet Hull",1,"Hull #2 keel starboard midship",TRUE,FALSE
+"1364",49,2,473,30,"Yacht",2,"Ablative","Excellent",62.8,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"1365",49,2,473,30,"Yacht",2,"Ablative","Excellent",63.2,"HA","Wet Hull",1,"Hull 1 starboard bow",TRUE,FALSE
+"1366",49,2,473,30,"Yacht",2,"Ablative","Excellent",79.2,"HA","Wet Hull",1,"Hull #3 starboard stern  ",TRUE,FALSE
+"1367",49,2,473,30,"Yacht",2,"Ablative","Excellent",80,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"1368",49,2,473,30,"Yacht",2,"Ablative","Excellent",80.5,"HA","Wet Hull",1,"Hull #6 bow port",TRUE,FALSE
+"1369",49,2,473,30,"Yacht",2,"Ablative","Excellent",82.6,"HA","Wet Hull",1,"Hull #4 port stern",TRUE,FALSE
+"1370",49,2,473,30,"Yacht",2,"Ablative","Excellent",85.7,"HK","Wet Hull",1,"Paddlewheel starboard",TRUE,FALSE
+"1371",49,2,473,30,"Yacht",2,"Ablative","Excellent",102.3,"HL","Wet Hull",1,"Block space",TRUE,FALSE
+"1372",49,2,473,30,"Yacht",2,"Ablative","Excellent",537.4,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"1373",50,4,47,145,"Yacht",2,"Hard","Good",0,"DA","Deck",4,NA,FALSE,TRUE
+"1374",50,4,47,145,"Yacht",2,"Hard","Good",0,"DE","Deck",4,NA,FALSE,TRUE
+"1375",50,4,47,145,"Yacht",2,"Hard","Good",0,"HAB","Wet Hull",1,NA,FALSE,TRUE
+"1376",50,4,47,145,"Yacht",2,"Hard","Good",0,"HAC","Dry Hull",1,NA,FALSE,TRUE
+"1377",50,4,47,145,"Yacht",2,"Hard","Good",0,"HC","Wet Hull",1,NA,FALSE,TRUE
+"1378",50,4,47,145,"Yacht",2,"Hard","Good",0,"HK","Wet Hull",1,NA,FALSE,TRUE
+"1379",50,4,47,145,"Yacht",2,"Hard","Good",0,"HY","Dry Hull",1,NA,FALSE,TRUE
+"1380",50,4,47,145,"Yacht",2,"Hard","Good",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"1381",50,4,47,145,"Yacht",2,"Hard","Good",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"1382",50,4,47,145,"Yacht",2,"Hard","Good",0,"PA","Propeller",2,NA,FALSE,TRUE
+"1383",50,4,47,145,"Yacht",2,"Hard","Good",0,"PB","Propeller",2,NA,FALSE,TRUE
+"1384",50,4,47,145,"Yacht",2,"Hard","Good",0,"PE","Propeller",2,NA,FALSE,TRUE
+"1385",50,4,47,145,"Yacht",2,"Hard","Good",0,"PM","Anchor",2,NA,FALSE,TRUE
+"1386",50,4,47,145,"Yacht",2,"Hard","Good",0,"PN","Anchor",2,NA,FALSE,TRUE
+"1387",50,4,47,145,"Yacht",2,"Hard","Good",0.5,"HAH","Wet Hull",1,"Boot top scrape (1m) port",FALSE,TRUE
+"1388",50,4,47,145,"Yacht",2,"Hard","Good",0.5,"HAH","Wet Hull",1,"Boot top starboard 1m scrape stern",FALSE,TRUE
+"1389",50,4,47,145,"Yacht",2,"Hard","Good",0.5,"HD","Wet Hull",1,"Engine cooling inlet scrape  ",FALSE,TRUE
+"1390",50,4,47,145,"Yacht",2,"Hard","Good",0.5,"IB","Internal spaces",3,"Head inlet port",FALSE,TRUE
+"1391",50,4,47,145,"Yacht",2,"Hard","Good",0.5,"IB","Internal spaces",3,"Head outlet (water inlet/outlet) port",FALSE,TRUE
+"1392",50,4,47,145,"Yacht",2,"Hard","Good",0.5,"PG","Propeller",2,"Stern gland (external)",FALSE,TRUE
+"1393",50,4,47,145,"Yacht",2,"Hard","Good",1.6,"HA","Wet Hull",1,"Hull 1 starboard bow",TRUE,FALSE
+"1394",50,4,47,145,"Yacht",2,"Hard","Good",1.6,"IB","Internal spaces",3,"Sink outlet starboard",TRUE,FALSE
+"1395",50,4,47,145,"Yacht",2,"Hard","Good",2.3,"IB","Internal spaces",3,"Sink outlet port",TRUE,FALSE
+"1396",50,4,47,145,"Yacht",2,"Hard","Good",3,"HA","Wet Hull",1,"Hull 4 bow port",TRUE,FALSE
+"1397",50,4,47,145,"Yacht",2,"Hard","Good",6.1,"HA","Wet Hull",1,"Hull 6 stern port",TRUE,FALSE
+"1398",50,4,47,145,"Yacht",2,"Hard","Good",7.8,"HP","Wet Hull",1,"Hull 2 mid keel starboard",TRUE,FALSE
+"1399",50,4,47,145,"Yacht",2,"Hard","Good",10.8,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"1400",50,4,47,145,"Yacht",2,"Hard","Good",11.5,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"1401",50,4,47,145,"Yacht",2,"Hard","Good",12.9,"HP","Wet Hull",1,"Hull 5 midship port keel",TRUE,FALSE
+"1402",50,4,47,145,"Yacht",2,"Hard","Good",17,"HA","Wet Hull",1,"Hull 3 starboard stern",TRUE,FALSE
+"1403",51,335,1082,1.5,"Yacht",2,"Ablative",NA,0,"DA","Deck",4,NA,FALSE,TRUE
+"1404",51,335,1082,1.5,"Yacht",2,"Ablative",NA,0,"DD","Deck",4,NA,FALSE,TRUE
+"1405",51,335,1082,1.5,"Yacht",2,"Ablative",NA,0,"DG","Deck",4,NA,FALSE,TRUE
+"1406",51,335,1082,1.5,"Yacht",2,"Ablative",NA,0,"PM","Anchor",2,NA,FALSE,TRUE
+"1407",51,335,1082,1.5,"Yacht",2,"Ablative",NA,0,"PN","Anchor",2,NA,FALSE,TRUE
+"1408",51,335,1082,1.5,"Yacht",2,"Ablative",NA,0.5,"ID","Internal spaces",3,"Bilge water ",FALSE,TRUE
+"1409",51,335,1082,1.5,"Yacht",2,"Ablative",NA,51.3,"HP","Wet Hull",1,"Hull 2 starboard mid keel",TRUE,FALSE
+"1410",51,335,1082,1.5,"Yacht",2,"Ablative",NA,105.3,"HA","Wet Hull",1,"Hull 1 starboard bow",TRUE,FALSE
+"1411",51,335,1082,1.5,"Yacht",2,"Ablative",NA,112.3,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"1412",51,335,1082,1.5,"Yacht",2,"Ablative",NA,138.2,"HA","Wet Hull",1,"Hull 6 port stern",TRUE,FALSE
+"1413",51,335,1082,1.5,"Yacht",2,"Ablative",NA,146.1,"HAH","Wet Hull",1,"Boot top 1m scrape starboard",TRUE,FALSE
+"1414",51,335,1082,1.5,"Yacht",2,"Ablative",NA,150.9,"HAH","Wet Hull",1,"Boot top 1m scrape port",TRUE,FALSE
+"1415",51,335,1082,1.5,"Yacht",2,"Ablative",NA,164.9,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"1416",51,335,1082,1.5,"Yacht",2,"Ablative",NA,203.8,"HA","Wet Hull",1,"Hull 4 port bow",TRUE,FALSE
+"1417",51,335,1082,1.5,"Yacht",2,"Ablative",NA,234.6,"HA","Wet Hull",1,"Hull 3 starboard stern",TRUE,FALSE
+"1418",51,335,1082,1.5,"Yacht",2,"Ablative",NA,624.4,"HP","Wet Hull",1,"Hull 5 mid port",TRUE,FALSE
+"1419",52,8,291,47.5,"Yacht",2,"Ablative","Good",0.5,"ID","Internal spaces",3,"Bilge water sample",FALSE,TRUE
+"1420",52,8,291,47.5,"Yacht",2,"Ablative","Good",0.5,"HAH","Wet Hull",1,"Boot top scrape port",FALSE,TRUE
+"1421",52,8,291,47.5,"Yacht",2,"Ablative","Good",1.4,"IB","Internal spaces",3,"Head inlet scrape",TRUE,FALSE
+"1422",52,8,291,47.5,"Yacht",2,"Ablative","Good",1.5,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"1423",52,8,291,47.5,"Yacht",2,"Ablative","Good",2,"HK","Wet Hull",1,"Paddle wheel",TRUE,FALSE
+"1424",52,8,291,47.5,"Yacht",2,"Ablative","Good",2.1,"IB","Internal spaces",3,"Cockpit drain starboard stern",TRUE,FALSE
+"1425",52,8,291,47.5,"Yacht",2,"Ablative","Good",2.5,"IB","Internal spaces",3,"Head outlet",TRUE,FALSE
+"1426",52,8,291,47.5,"Yacht",2,"Ablative","Good",2.5,"HP","Wet Hull",1,"Hull 5 keel port",TRUE,FALSE
+"1427",52,8,291,47.5,"Yacht",2,"Ablative","Good",3.7,"IB","Internal spaces",3,"Cockpit drain port stern",TRUE,FALSE
+"1428",52,8,291,47.5,"Yacht",2,"Ablative","Good",4.2,"HA","Wet Hull",1,"Hull 6 bow port",TRUE,FALSE
+"1429",52,8,291,47.5,"Yacht",2,"Ablative","Good",4.5,"HA","Wet Hull",1,"Hull 4 stern port",TRUE,FALSE
+"1430",52,8,291,47.5,"Yacht",2,"Ablative","Good",4.5,"PE","Propeller",2,"Sail drive leg",TRUE,FALSE
+"1431",52,8,291,47.5,"Yacht",2,"Ablative","Good",4.8,"HC","Wet Hull",1,"Sounder plate (lanolin)",TRUE,FALSE
+"1432",52,8,291,47.5,"Yacht",2,"Ablative","Good",10.1,"HA","Wet Hull",1,"Hull 1 starboad bow",TRUE,FALSE
+"1433",52,8,291,47.5,"Yacht",2,"Ablative","Good",11.9,"HP","Wet Hull",1,"Hull 2 starboard midship keel",TRUE,FALSE
+"1434",52,8,291,47.5,"Yacht",2,"Ablative","Good",12.3,"HAH","Wet Hull",1,"Boot top starboard scrape  ",TRUE,FALSE
+"1435",52,8,291,47.5,"Yacht",2,"Ablative","Good",12.4,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"1436",52,8,291,47.5,"Yacht",2,"Ablative","Good",13.8,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"1437",52,8,291,47.5,"Yacht",2,"Ablative","Good",21.9,"HAF","Wet Hull",1,"Bottom of keel (entire)",TRUE,FALSE
+"1438",52,8,291,47.5,"Yacht",2,"Ablative","Good",27.8,"HA","Wet Hull",1,"Hull 3 starboard stern",TRUE,FALSE
+"1439",53,235,14,21.5,"Yacht",2,"Hard","Good",0,"ID","Internal spaces",3,NA,FALSE,TRUE
+"1440",53,235,14,21.5,"Yacht",2,"Hard","Good",0,"ID","Internal spaces",3,NA,FALSE,TRUE
+"1441",53,235,14,21.5,"Yacht",2,"Hard","Good",0,"IH","Internal spaces",3,NA,FALSE,TRUE
+"1442",53,235,14,21.5,"Yacht",2,"Hard","Good",0,"II","Internal spaces",3,NA,FALSE,TRUE
+"1443",53,235,14,21.5,"Yacht",2,"Hard","Good",0,"IV","Internal spaces",3,NA,FALSE,TRUE
+"1444",53,235,14,21.5,"Yacht",2,"Hard","Good",0.5,"IA","Internal spaces",3,"Head sink water sample",FALSE,TRUE
+"1445",53,235,14,21.5,"Yacht",2,"Hard","Good",0.5,"HA","Wet Hull",1,"Hull 4 port bow",FALSE,TRUE
+"1446",53,235,14,21.5,"Yacht",2,"Hard","Good",1.4,"IB","Internal spaces",3,"Port toilet sink outlet",TRUE,FALSE
+"1447",53,235,14,21.5,"Yacht",2,"Hard","Good",1.6,"HC","Wet Hull",1,"Depth sounder skin fitting starboard",TRUE,FALSE
+"1448",53,235,14,21.5,"Yacht",2,"Hard","Good",1.6,"IB","Internal spaces",3,"Port head inlet",TRUE,FALSE
+"1449",53,235,14,21.5,"Yacht",2,"Hard","Good",2,"IA","Internal spaces",3,"Galley sink drain water",TRUE,FALSE
+"1450",53,235,14,21.5,"Yacht",2,"Hard","Good",3.8,"IB","Internal spaces",3,"Galley sink outlet starboard",TRUE,FALSE
+"1451",53,235,14,21.5,"Yacht",2,"Hard","Good",4.9,"PE","Propeller",2,"Sail drive leg",TRUE,FALSE
+"1452",53,235,14,21.5,"Yacht",2,"Hard","Good",6.1,"HP","Wet Hull",1,"Hull 2 keel starboard midship",TRUE,FALSE
+"1453",53,235,14,21.5,"Yacht",2,"Hard","Good",6.9,"HP","Wet Hull",1,"Hull port keel ",TRUE,FALSE
+"1454",53,235,14,21.5,"Yacht",2,"Hard","Good",9.2,"HA","Wet Hull",1,"Hull 5 port midship",TRUE,FALSE
+"1455",53,235,14,21.5,"Yacht",2,"Hard","Good",19.1,"HAF","Wet Hull",1,"Bottom of keel",TRUE,FALSE
+"1456",53,235,14,21.5,"Yacht",2,"Hard","Good",19.2,"HA","Wet Hull",1,"Hull 6 port stern",TRUE,FALSE
+"1457",53,235,14,21.5,"Yacht",2,"Hard","Good",20.9,"HA","Wet Hull",1,"Hull 1 starboard bow",TRUE,FALSE
+"1458",53,235,14,21.5,"Yacht",2,"Hard","Good",23,"HAH","Wet Hull",1,"Boot top port 1m scrape",TRUE,FALSE
+"1459",53,235,14,21.5,"Yacht",2,"Hard","Good",24,"HAH","Wet Hull",1,"Starboard boot top 1m scrape stern",TRUE,FALSE
+"1460",53,235,14,21.5,"Yacht",2,"Hard","Good",30.3,"PB","Propeller",2,"Propeller",TRUE,FALSE
+"1461",53,235,14,21.5,"Yacht",2,"Hard","Good",36.4,"HA","Wet Hull",1,"Hull 3 starboard stern",TRUE,FALSE
+"1462",53,235,14,21.5,"Yacht",2,"Hard","Good",85.4,"PJ","Rudder",2,"Rudder port",TRUE,FALSE
+"1463",53,235,14,21.5,"Yacht",2,"Hard","Good",145.1,"PJ","Rudder",2,"Rudder starboard",TRUE,FALSE
+"1464",54,2,141,NA,"Yacht",2,"Hard","Very Poor",0,"PB","Propeller",2,NA,FALSE,TRUE
+"1465",54,2,141,NA,"Yacht",2,"Hard","Very Poor",0,"PM","Anchor",2,NA,FALSE,TRUE
+"1466",54,2,141,NA,"Yacht",2,"Hard","Very Poor",0,"PN","Anchor",2,NA,FALSE,TRUE
+"1467",54,2,141,NA,"Yacht",2,"Hard","Very Poor",0.5,"HAH","Wet Hull",1,"Boot top starboard scrape",FALSE,TRUE
+"1468",54,2,141,NA,"Yacht",2,"Hard","Very Poor",0.5,"IB","Internal spaces",3,"Head outlet",FALSE,TRUE
+"1469",54,2,141,NA,"Yacht",2,"Hard","Very Poor",1.8,"HD","Wet Hull",1,"Bilge/ballast outlet scrape",TRUE,FALSE
+"1470",54,2,141,NA,"Yacht",2,"Hard","Very Poor",2.2,"IB","Internal spaces",3,"Head inlet",TRUE,FALSE
+"1471",54,2,141,NA,"Yacht",2,"Hard","Very Poor",2.3,"PE","Propeller",2,"Sail drive leg",TRUE,FALSE
+"1472",54,2,141,NA,"Yacht",2,"Hard","Very Poor",2.8,"HP","Wet Hull",1,"Hull keel port",TRUE,FALSE
+"1473",54,2,141,NA,"Yacht",2,"Hard","Very Poor",3,"HA","Wet Hull",1,"Hull 6 stern port",TRUE,FALSE
+"1474",54,2,141,NA,"Yacht",2,"Hard","Very Poor",3.2,"IB","Internal spaces",3,"Sink outlet",TRUE,FALSE
+"1475",54,2,141,NA,"Yacht",2,"Hard","Very Poor",3.6,"HA","Wet Hull",1,"Hull 4 bow port",TRUE,FALSE
+"1476",54,2,141,NA,"Yacht",2,"Hard","Very Poor",4.4,"PJ","Rudder",2,"Rudder port inside",TRUE,FALSE
+"1477",54,2,141,NA,"Yacht",2,"Hard","Very Poor",11.6,"HA","Wet Hull",1,"Hull 1 starboard bow",TRUE,FALSE
+"1478",54,2,141,NA,"Yacht",2,"Hard","Very Poor",12,"HP","Wet Hull",1,"Hull 2 starboard keel",TRUE,FALSE
+"1479",54,2,141,NA,"Yacht",2,"Hard","Very Poor",14.2,"PJ","Rudder",2,"Rudder starboard inside",TRUE,FALSE
+"1480",54,2,141,NA,"Yacht",2,"Hard","Very Poor",18.7,"HH","Wet Hull",1,"Sounder  ",TRUE,FALSE
+"1481",54,2,141,NA,"Yacht",2,"Hard","Very Poor",120.6,"HA","Wet Hull",1,"Hull 3 starboard stern",TRUE,FALSE

@@ -1,0 +1,55 @@
+samLoc,samCode,boatID,boatType,Slow/Fast,Length,Draft,Width,Displacement,WLlength,distBP,ApproxHullSA,HullSA,hullMat,#_quadrat,quadrat_size_(m2)
+Royal Hobart Yacht Club,1,1,Yacht,Slow,12.2,1.83,3.66,15,NA,10.7,45,41.27,Steel,6,0.1
+Royal Hobart Yacht Club,1,2,Yacht,Slow,10.1,1.57,3.43,7,9.1,NA,32,NA,Huon Pine,6,0.1
+Royal Hobart Yacht Club,1,3,Motor cruiser,Slow,11.7,1.52,3.75,12,10.9,NA,36,NA,Huon Pine,6,0.1
+Royal Hobart Yacht Club,1,4,Motor cruiser,Slow,10.7,1.5,4.23,10,10.1,NA,32,NA,Fibreglass,6,0.1
+Royal Hobart Yacht Club,1,5,Yacht,Slow,7.6,1.67,3.2,2,NA,NA,25,NA,Fibreglass,6,0.1
+Royal Hobart Yacht Club,1,6,Yacht,Slow,11.6,1.98,3,6.5,10.7,NA,46,NA,Fibreglass,6,0.1
+Royal Hobart Yacht Club,1,7,Motor cruiser,Slow,11.9,1.42,3.66,12,NA,11.5,34,35.99,Huon Pine,6,0.1
+Royal Hobart Yacht Club,1,8,Yacht,Slow,8.8,1,2.59,2,7.9,NA,18,NA,Huon Pine,6,0.1
+Royal Hobart Yacht Club,1,9,Yacht,Slow,9.1,1.22,3.05,6,7.92,NA,22,NA,Celery Top Pine,6,0.1
+Domain Slipyard,2,10,Motor cruiser,Slow,17.5,1.8,5.9,50,NA,NA,63,NA,Fibreglass,6,0.1
+Domain Slipyard,2,11,Fishing vessel (Abalone mothership),Slow,19.81,1.4,6.1,NA,NA,NA,55,NA,Aluminium,6,0.1
+Royal Hobart Yacht Club,1,12,Yacht,Slow,14.5,2,4.5,18,12.8,NA,58,NA,GRP,6,0.1
+Domain Slipyard,2,13,Fishing vessel (Lobster/scallop),Slow,18.3,2,5.9,72,NA,NA,73,NA,Steel,6,0.1
+Royal Hobart Yacht Club,1,14,Yacht,Slow,11.58,1.73,3.66,NA,9.14,NA,40,NA,Fibreglass,6,0.1
+Royal Hobart Yacht Club,1,15,Yacht,Slow,11.4,1.75,3.45,11,9,NA,40,NA,Ferrous Cement,6,0.1
+Domain Slipyard,2,16,Motor cruiser,Slow,15.8,1.8,4.42,30,NA,NA,57,NA,Cauri (NZ Huon Pine),6,0.1
+Domain Slipyard,2,17,Fishing vessel (Lobster/scallop),Slow,13.72,2.29,4.33,25.3,12,NA,63,NA,Celery Top Pine,6,0.1
+Domain Slipyard,2,18,Fishing vessel (Lobster/scallop),Slow,19.2,2.43,4.42,37,17.98,NA,93,NA,Huon Pine,6,0.1
+Domain Slipyard,2,19,Fishing vessel (Lobster/scallop),Slow,13.71,1.82,4.26,29,NA,NA,50,NA,Steel,6,0.1
+Royal Hobart Yacht Club,1,20,Yacht,Slow,9.2,2.13,3.3,25,7.92,9.2,39,44.74,GRP,6,0.1
+Royal Hobart Yacht Club,1,21,Yacht,Slow,12.2,1.78,3.65,12,11.1,NA,43,NA,Steel,6,0.1
+Domain Slipyard,2,22,Fishing vessel (Lobster/scallop),Slow,15.7,7.6,5.6,55,15.7,NA,239,NA,Spotted Gum,6,0.1
+Domain Slipyard,2,23,Tug,Slow,25.51,2.74,9,223.6,NA,NA,140,NA,Steel,6,0.1
+Royal Hobart Yacht Club,1,24,Yacht,Slow,9,1.5,2.72,NA,NA,NA,27,NA,Fibreglass,6,0.1
+Domain Slipyard,2,25,Fishing vessel (Long line),Slow,16.5,2.6,6.1,65,NA,NA,86,NA,Steel,6,0.1
+Royal Hobart Yacht Club,1,26,Yacht,Slow,8.5,1.21,2.84,NA,NA,NA,21,NA,Celery Top Pine,6,0.1
+Domain Slipyard,2,27,Fishing vessel (Lobster/scallop),Slow,10.97,1.52,4.57,26,10.36,4.51,33,28.31,Steel,6,0.1
+Domain Slipyard,2,28,Fishing vessel (Lobster/scallop),Slow,15.24,2.13,4.88,38,NA,NA,65,NA,Steel,7,0.1
+Domain Slipyard,2,29,Yacht,Slow,16.7,2.6,5.5,60,15,NA,87,NA,Timber,6,0.1
+Domain Slipyard,2,30,Yacht,Slow,12.8,1.82,3.66,10,NA,NA,47,NA,Fibreglass,6,0.1
+Domain Slipyard,2,31,Ferry,Slow,18,1.5,5,40,17,18,54,71.87,Timber,6,0.1
+Royal Hobart Yacht Club,1,32,Motor cruiser,Slow,11.58,1,3.96,13,11.58,NA,23,NA,Fibreglass,6,0.1
+SaNAringham Yacht Club,3,33,Motor cruiser,Slow,10.97,1.97,3.09,10.5,10.363,NA,43,NA,Fibreglass Reinforced Plastic (FRP),6,0.1
+SaNAringham Yacht Club,3,34,Motor cruiser,Slow,15.24,1.37,4.87,NA,13.71,NA,42,NA,Fibreglass,7,0.1
+Royal Yacht Club of Victoria,4,35,Yacht,Fast,10.97,1.94,2.89,6,9.75,10.97,20,19.69,GP Resin (possibly with a foam core),6,0.1
+Hobsons Bay Yacht Club ,5,36,Motor cruiser,Slow,9.73,0.91,3.04,6.8,8.53,NA,18,NA,Timber,6,0.1
+SaNAringham Yacht Club,3,37,Yacht,Fast,13.71,3.35,4.57,7,12.19,NA,45,NA,Foam SaNAwich Fibreglass,6,0.1
+Hobsons Bay Yacht Club ,5,38,Yacht,Slow,7.31,1.11,2.43,1.75,6.09,NA,16,NA,GRP,6,0.1
+Royal Yacht Club of Victoria,4,39,Yacht,Slow,12.19,1.67,3.35,14,10.67,NA,41,NA,GRP Fibreglass,6,0.1
+SaNAringham Yacht Club,3,40,Yacht,Slow,11.582,1.82,3.8,8.5,9.75,9.75,42,34.71,GRP,7,0.1
+SaNAringham Yacht Club,3,41,Yacht,Slow,8.53,1.67,2.28,NA,NA,NA,28,NA,Plywood with cast iron keel,6,0.1
+SaNAringham Yacht Club,3,42,Yacht,Slow,10.97,1.67,4.26,6.5,9.75,9.75,37,31.47,GRP,7,0.1
+Royal Hobart Yacht Club,1,43,Yacht,Slow,9.14,1.59,3.05,6,8.84,9.14,29,28.38,Huon Pine,6,0.1
+Domain Slipyard,2,44,Fishing vessel (Lobster/scallop),Slow,15.84,1.97,1.79,35,15,NA,62,NA,Huon Pine,6,0.1
+SaNAringham Yacht Club,3,45,Yacht,Slow,9.45,1.58,2.85,2.48,7.65,NA,30,NA,Fibreglass,6,0.1
+SaNAringham Yacht Club,3,46,Motor cruiser,Slow,12.5,1,4.42,12,11.58,NA,25,NA,Fibreglass,6,0.1
+SaNAringham Yacht Club,3,47,Yacht,Slow,9.754,1.3,3.43,4,9.449,NA,25,NA,Fibreglass,6,0.1
+SaNAringham Yacht Club,3,48,Yacht,Slow,13.106,2.3,3.96,10,NA,NA,60,NA,Fibreglass,6,0.1
+Hobsons Bay Yacht Club ,5,49,Yacht,Slow,7.62,1.295,2.44,2.6,6.706,NA,20,NA,GRP,6,0.1
+SaNAringham Yacht Club,3,50,Yacht,Slow,11.278,1.96,3.49,7,9.49,NA,44,NA,Fibreglass,6,0.1
+Hobsons Bay Yacht Club ,5,51,Yacht,Slow,8.306,1.321,1.91,NA,7.01,NA,22,NA,Timber,6,0.1
+SaNAringham Yacht Club,3,52,Yacht,Slow,7.315,1.448,2.59,1.96,NA,NA,21,NA,Fibreglass,6,0.1
+SaNAringham Yacht Club,3,53,Yacht,Slow,10.668,2.1,2.8,4.8,9.144,NA,45,NA,Fibreglass,7,0.1
+SaNAringham Yacht Club,3,54,Yacht,Fast,18.288,3.5,5,10,17.068,NA,64,NA,Composite,6,0.1
