@@ -1,14 +1,42 @@
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-// Title: Censored MLE, Model 0, Group Level
+// Title: Censored MLE, Model 0, Group Level, Robust
 // Author: Steve Lane
 // Date: Wednesday, 08 March 2017
 // Synopsis: Sampling statements to fit a regression with censored outcome data.
 // Includes boat-level intercept, and observation level location ID.
 // No boat-level predictors.
-// Time-stamp: <2017-04-27 10:38:54 (slane)>
+// Based off M0, but with cauchy distribution for outcome for added robustness.
+// Time-stamp: <2017-04-27 10:32:10 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+
+functions{
+  /* Log-cauchy pdf, returns sum of log-density */
+  real logcauchy_l(real y, real mu, real sigma){
+    real lpdf;
+    lpdf = log(sigma) - log(pi()) - log(y) - log((log(y) - mu)^2 + sigma^2);
+    return lpdf;
+  }
+  /* Allows vectors to come in */
+  /* real logcauchy_lpdf(vector y, vector mu, real sigma){ */
+  /*   vector[num_elements(y)] lpdf; */
+  /*   vector[num_elements(y)] ly; */
+  /*   real log_sigma; */
+  /*   real log_pi; */
+  /*   real sigma2; */
+  /*   real lprob; */
+  /*   ly = log(y); */
+  /*   log_sigma = log(sigma); */
+  /*   log_pi = log(pi()); */
+  /*   sigma2 = sigma^2; */
+  /*   for(i in 1:num_elements(y)){ */
+  /*     lpdf[i] = log_sigma - log_pi - ly[i] - log((ly[i] - mu[i])^2 + sigma2); */
+  /*   } */
+  /*   lprob = sum(lpdf); */
+  /*   return lprob; */
+  /* } */
+}
 
 data{
   // Data to be supplied to sampler
@@ -41,6 +69,8 @@ parameters{
   vector[numBoat] alphaBoat;
   /* Errors for categorical predictors */
   real<lower=0> sigma_alphaBoat;
+  /* Censored data */
+  vector<lower=0,upper=U>[nCens] yCens;
   /* Error */
   real<lower=0> sigma;
 }
@@ -70,11 +100,15 @@ model{
   /* Prior for observation (model) error */
   sigma ~ cauchy(0, 2.5);
   /* Observed log-likelihood */
-  Y ~ lognormal(muHat, sigma);
-  /* Censored log-likelihood */
-  for(i in 1:nCens){
-    target += lognormal_lcdf(U | muHatCens[i], sigma);
+  for(i in 1:N){
+    target += logcauchy_l(Y[i], muHat[i], sigma);
   }
+  /* Y ~ logcauchy(muHat, sigma); */
+  /* Censored log-likelihood */
+  for(j in 1:nCens){
+    target += logcauchy_l(yCens[j], muHatCens[j], sigma);
+  }
+  /* yCens ~ logcauchy(muHatCens, sigma); */
 }
 
 generated quantities{
@@ -84,11 +118,11 @@ generated quantities{
     real linPred;
     for(i in 1:N){
       linPred = mu + locID[i] * betaLoc + alphaBoat[boatID[i]];
-      log_lik[i] = lognormal_lpdf(Y[i] | linPred, sigma);
+      log_lik[i] = logcauchy_l(Y[i], linPred, sigma);
     }
     for(j in 1:nCens){
       linPred = mu + locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
-      log_lik[N + j] = lognormal_lcdf(U | linPred, sigma);
+      log_lik[N + j] = logcauchy_l(yCens[j], linPred, sigma);
     }
   }
 }

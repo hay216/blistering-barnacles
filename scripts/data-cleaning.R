@@ -5,7 +5,7 @@
 ## Date: Wednesday, 08 March 2017
 ## Synopsis: Cleans data for manuscript and model fitting, and performs
 ## imputation on the vessel level.
-## Time-stamp: <2017-04-20 17:07:52 (slane)>
+## Time-stamp: <2017-04-24 10:04:25 (slane)>
 ################################################################################
 ################################################################################
 ipak <- function(pkg){
@@ -15,7 +15,8 @@ ipak <- function(pkg){
     if(!(length(new.pkg) == 0)){
         git.ind <- grep("/", new.pkg)
         if(length(git.ind) == 0){
-            install.packages(new.pkg, dependencies = TRUE)
+            install.packages(new.pkg, dependencies = TRUE,
+                             repos = "https://cran.csiro.au/")
         } else {
             devtools::install_github(new.pkg[git.ind])
         }
@@ -71,6 +72,8 @@ data <- left_join(
     )
 ## Data for imputations/modelling
 impData <- data %>% select(-samLoc, -cens, -LocID)
+## Level 1 data
+lvl1Data <- data %>% select(boatID, wetWeight, LocID, cens)
 ## Loop to create multiple imputations - give a loop as I want to start each
 ## imputation off with a random draw from a U(0, 1.5) for the censored data just
 ## to inject a little randomness into it.
@@ -78,12 +81,8 @@ impData <- data %>% select(-samLoc, -cens, -LocID)
 set.seed(787, "L'Ecuyer")
 impList <- mclapply(1:20, function(i){
     imp <- lvl2Imp(impData)
-    fullData <- left_join(
-        data %>% select(boatID, wetWeight, LocID, cens),
-        imp$lvl2
-    )
-    stanData <- createStanData(fullData)
-    list(lvl2 = imp$lvl2, fullData = fullData, stanData = stanData$stanData,
+    stanData <- createStanData(lvl1Data, imp$lvl2)
+    list(lvl2 = imp$lvl2, stanData = stanData$stanData,
          stanDataSc = stanData$stanDataSc)
 })
 ## Save as rds for further use.
