@@ -1,4 +1,4 @@
-# Time-stamp: <2017-04-27 15:51:59 (slane)>
+# Time-stamp: <2017-04-28 11:19:01 (slane)>
 .PHONY: all models input-data output-data clean-models clean-manuscripts clobber
 
 all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf \
@@ -9,22 +9,18 @@ all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf \
 models: stan/censored-mle-m0.rds \
 	stan/censored-mle-m0-robust.rds \
 	stan/censored-mle-m1.rds \
-	stan/censored-mle-m1-robust.rds \
 	stan/censored-mle-m2.rds \
-	stan/censored-mle-m2-robust.rds \
 	stan/censored-mle-m3.rds \
-	stan/censored-mle-m3-robust.rds
+	stan/censored-mle-m4.rds
 
 input-data: data/biofouling.rds data/imputations.rds
 
-output-data: data/censored-mle-m0-scaled.rds \
-	data/censored-mle-m0-robust-scaled.rds \
-	data/censored-mle-m1-scaled.rds \
-	data/censored-mle-m1-robust-scaled.rds \
-	data/censored-mle-m2-scaled.rds \
-	data/censored-mle-m2-robust-scaled.rds \
-	data/censored-mle-m3-scaled.rds \
-	data/censored-mle-m3-robust-scaled.rds
+output-data: data/censored-mle-m0.rds \
+	data/censored-mle-m0-robust.rds \
+	data/censored-mle-m1.rds \
+	data/censored-mle-m2.rds \
+	data/censored-mle-m3.rds \
+	data/censored-mle-m4.rds
 
 ################################################################################
 # Make data for feeding into models and manuscript
@@ -44,17 +40,7 @@ stan/censored-mle-m0-robust.rds: scripts/compile-model.R \
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds)
 
-stan/censored-mle-m0-mixture.rds: scripts/compile-model.R \
-	stan/censored-mle-m0-mixture.stan
-	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds)
-
 stan/censored-mle-m1.rds: scripts/compile-model.R stan/censored-mle-m1.stan
-	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds)
-
-stan/censored-mle-m1-robust.rds: scripts/compile-model.R \
-	stan/censored-mle-m1-robust.stan
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds)
 
@@ -62,66 +48,45 @@ stan/censored-mle-m2.rds: scripts/compile-model.R stan/censored-mle-m2.stan
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds)
 
-stan/censored-mle-m2-robust.rds: scripts/compile-model.R \
-	stan/censored-mle-m2-robust.stan
-	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds)
-
 stan/censored-mle-m3.rds: scripts/compile-model.R stan/censored-mle-m3.stan
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds)
 
-stan/censored-mle-m3-robust.rds: scripts/compile-model.R \
-	stan/censored-mle-m3-robust.stan
+stan/censored-mle-m4.rds: scripts/compile-model.R stan/censored-mle-m4.stan
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds)
 
 ################################################################################
 # Rules to fit models with data
-data/censored-mle-m0-scaled.rds: scripts/fit-model.R \
+data/censored-mle-m0.rds: scripts/fit-model.R \
 	stan/censored-mle-m0.rds data/imputations.rds
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=737
 
-data/censored-mle-m0-robust-scaled.rds: scripts/fit-model.R \
+data/censored-mle-m0-robust.rds: scripts/fit-model.R \
 	stan/censored-mle-m0-robust.rds data/imputations.rds
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=737
 
-data/censored-mle-m0-mixture-scaled.rds: scripts/fit-model.R \
-	stan/censored-mle-m0-mixture.rds data/imputations.rds
-	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=737
-
-data/censored-mle-m1-scaled.rds: scripts/fit-model.R \
+data/censored-mle-m1.rds: scripts/fit-model.R \
 	stan/censored-mle-m1.rds data/imputations.rds
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=666
 
-data/censored-mle-m1-robust-scaled.rds: scripts/fit-model.R \
-	stan/censored-mle-m1-robust.rds data/imputations.rds
-	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=737
-
-data/censored-mle-m2-scaled.rds: scripts/fit-model.R \
+data/censored-mle-m2.rds: scripts/fit-model.R \
 	stan/censored-mle-m2.rds data/imputations.rds
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=42
 
-data/censored-mle-m2-robust-scaled.rds: scripts/fit-model.R \
-	stan/censored-mle-m2-robust.rds data/imputations.rds
-	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=737
-
-data/censored-mle-m3-scaled.rds: scripts/fit-model.R \
+data/censored-mle-m3.rds: scripts/fit-model.R \
 	stan/censored-mle-m3.rds data/imputations.rds
 	cd $(<D); \
 	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=13
 
-data/censored-mle-m3-robust-scaled.rds: scripts/fit-model.R \
-	stan/censored-mle-m3-robust.rds data/imputations.rds
+data/censored-mle-m4.rds: scripts/fit-model.R \
+	stan/censored-mle-m4.rds data/imputations.rds
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=737
+	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=987
 
 ################################################################################
 # Rules to make manuscripts
