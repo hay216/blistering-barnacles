@@ -32,5 +32,5 @@ RUN git clone https://github.com/SteveLane/blistering-barnacles.git \
 # Set working directory
 WORKDIR /home/blistering-barnacles
 
-# Here be /bin/bash if I want?
+# Here be /bin/bash if I want? 
 CMD ["/bin/bash"]
