@@ -1,4 +1,4 @@
-# Time-stamp: <2017-04-28 11:19:01 (slane)>
+# Time-stamp: <2017-04-28 16:28:31 (slane)>
 .PHONY: all models input-data output-data clean-models clean-manuscripts clobber
 
 all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf \
@@ -95,7 +95,9 @@ manuscripts/censored-mle.html: manuscripts/censored-mle.Rmd \
 	cd $(<D); \
 	Rscript -e "rmarkdown::render('$(<F)')" --no-save --no-restore
 
-manuscripts/model-interrogation.html: manuscripts/model-interrogation.Rmd
+manuscripts/model-interrogation.html: manuscripts/model-interrogation.Rmd \
+	data/censored-mle-m0.rds data/censored-mle-m1.rds \
+	data/censored-mle-m3.rds data/censored-mle-m4.rds
 	cd $(<D); \
 	Rscript -e "rmarkdown::render('$(<F)')" --no-save --no-restore
 
