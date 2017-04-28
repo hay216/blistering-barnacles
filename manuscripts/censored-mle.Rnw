@@ -1,4 +1,4 @@
-% Time-stamp: <2017-04-20 14:57:07 (slane)>
+% Time-stamp: <2017-04-27 15:28:07 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -147,7 +147,7 @@ print(pl)
 
 @ 
 
-Figure~\ref{fig:obs-weight} suggests that the log-transform of the wet weight of biomass is approximately normal, but it is also apparent there are outliers in all locations, and especially within the hull and rudder. For this reason, we will compare two models for the distribution of the wet weight of biomass: the log-normal and the log-$t$. We use the log-normal for the reason that if $W \sim \text{LN}(\mu, \sigma^{2})$, then $\log(W) \sim \text{N}(\mu, \sigma^{2})$ (i.e. the usual normal regression model). The presence of outliers suggests that a distribution with wider tails may provide a better fit to the data, hence our choice of the log-$t$ distribution.
+Figure~\ref{fig:obs-weight} suggests that the log-transform of the wet weight of biomass is approximately normal, but it is also apparent there are outliers in all locations, and especially within the hull and rudder. For this reason, we will compare two models for the distribution of the wet weight of biomass: the log-normal and the log-cauchy. We use the log-normal for the reason that if $W \sim \text{LN}(\mu, \sigma^{2})$, then $\log(W) \sim \text{N}(\mu, \sigma^{2})$ (i.e. the usual normal regression model). The presence of outliers suggests that a distribution with wider tails may provide a better fit to the data, hence our choice of the log-cauchy distribution.
 
 See \href{https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations}{this link} for choice of priors. Also, the \texttt{alt} version of stan code shows how to log transform in the model statement.
 
