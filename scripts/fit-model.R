@@ -5,21 +5,20 @@ args <- commandArgs(trailingOnly = TRUE)
 ## Title: Fit model
 ## Author: Steve Lane
 ## Date: Friday, 21 April 2017
-## Time-stamp: <2017-04-21 12:07:51 (slane)>
+## Time-stamp: <2017-04-28 11:17:44 (slane)>
 ## Synopsis: Script that drives the censored regression model. Designed to be
 ## called from the Makefile, it requires the model name, a seed for rng, and
 ## number of iterations to be set on the command line, or prior to sourcing the
 ## script.
 ################################################################################
 ################################################################################
-if(!(length(args) %in% 2:4)){
-    stop("Four arguments must be supplied: model name, myseed, scaled and iter.\n scaled (use scaled inputs) is optional and defaults to TRUE.\n iter (for HMC) is optional, and defaults to 4000.\nRscript fit-model.R mname=model-name myseed=my-seed scaled=1 iter=num-iter",
+if(!(length(args) %in% 2:3)){
+    stop("Three arguments must be supplied: model name, myseed, and iter.\niter (for HMC) is optional, and defaults to 4000.\nRscript fit-model.R mname=model-name myseed=my-seed iter=num-iter",
          call. = FALSE)
 } else {
     if(length(args) == 2){
         ## Default if option not specified
         iter <- 4000
-        scaled <- 1
     }
     hasOpt <- grepl("=", args)
     argLocal <- strsplit(args[hasOpt], "=")
@@ -58,27 +57,16 @@ rstan_options(auto_write = TRUE)
 ## Want cores to be one, we're only running one chain, then combining. Each
 ## imputation will be sent out via mclapply.
 options(mc.cores = parallel::detectCores()/2)
-## Strip scaled off the name in case it's there.
-mname <- gsub("-scaled", "", mname)
 model <- stan_model(paste0("../stan/", mname, ".stan"))
 ## Load data
 impList <- readRDS("../data/imputations.rds")
 set.seed(myseed)
-if(scaled == 1){
-    out <- mclapply(impList, function(dat){
-        locMod <- sampling(model, data = dat$stanDataSc, iter = iter,
-                           chains = 1, cores = 1)
-        locMod
-    })
-    outname <- paste0("../data/", mname, "-scaled.rds")
-} else {
-    out <- mclapply(impList, function(dat){
-        locMod <- sampling(model, data = dat$stanData, iter = iter,
-                           chains = 1, cores = 1)
-        locMod
-    })
-    outname <- paste0("../data/", mname, ".rds")
-}
+out <- mclapply(impList, function(dat){
+    locMod <- sampling(model, data = dat$stanData, iter = iter,
+                       chains = 1, cores = 1)
+    locMod
+})
+outname <- paste0("../data/", mname, ".rds")
 output <- sflist2stanfit(out)
 saveRDS(output, file = outname)
 ################################################################################
