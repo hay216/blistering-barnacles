@@ -5,28 +5,13 @@
 ## Date: Wednesday, 08 March 2017
 ## Synopsis: Cleans data for manuscript and model fitting, and performs
 ## imputation on the vessel level.
-## Time-stamp: <2017-04-28 11:15:15 (slane)>
+## Time-stamp: <2017-04-28 16:21:48 (slane)>
 ################################################################################
 ################################################################################
-ipak <- function(pkg){
-    ## Check for github packages (throw away github username)
-    chk.git <- gsub(".*/", "", pkg)    
-    new.pkg <- pkg[!(chk.git %in% installed.packages()[, "Package"])]
-    if(!(length(new.pkg) == 0)){
-        git.ind <- grep("/", new.pkg)
-        if(length(git.ind) == 0){
-            install.packages(new.pkg, dependencies = TRUE,
-                             repos = "https://cran.csiro.au/")
-        } else {
-            devtools::install_github(new.pkg[git.ind])
-        }
-    }
-    sapply(chk.git, require, character.only = TRUE)
-}
 ## Add github packages using gitname/reponame format
+source("../scripts/imputation-functions.R")
 packages <- c("dplyr", "mice", "parallel")
 ipak(packages)
-source("../scripts/imputation-functions.R")
 samplesdata <- read.csv("../data-raw/samples.csv")
 ## Bring in vessel data as well.
 vessels <- read.csv("../data-raw/vessel.csv")

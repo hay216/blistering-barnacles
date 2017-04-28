@@ -5,7 +5,7 @@ args <- commandArgs(trailingOnly = TRUE)
 ## Title: Compile model
 ## Author: Steve Lane
 ## Date: Friday, 21 April 2017
-## Time-stamp: <2017-04-21 09:42:24 (slane)>
+## Time-stamp: <2017-04-28 16:25:03 (slane)>
 ## Synopsis: Script that compiles the stan model. Designed to be called
 ## from the Makefile, it requires the model name to be set on the command line,
 ## or prior to sourcing the script.
@@ -27,22 +27,8 @@ if(length(args) != 1){
         }
     }
 }
-ipak <- function(pkg){
-    ## Check for github packages (throw away github username)
-    chk.git <- gsub(".*/", "", pkg)    
-    new.pkg <- pkg[!(chk.git %in% installed.packages()[, "Package"])]
-    if(!(length(new.pkg) == 0)){
-        git.ind <- grep("/", new.pkg)
-        if(length(git.ind) == 0){
-            install.packages(new.pkg, dependencies = TRUE,
-                             repos = "https://cran.csiro.au")
-        } else {
-            devtools::install_github(new.pkg[git.ind])
-        }
-    }
-    sapply(chk.git, require, character.only = TRUE)
-}
 ## Add github packages using gitname/reponame format
+source("../scripts/imputation-functions.R")
 packages <- "rstan"
 ipak(packages)
 ## Compile stan model

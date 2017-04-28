@@ -1,4 +1,4 @@
-<!-- Time-stamp: <2017-04-13 09:55:49 (slane)> -->
+<!-- Time-stamp: <2017-04-28 16:23:32 (slane)> -->
 
 ---
 title: "Censored MLE Investigation"
@@ -18,21 +18,8 @@ So, the idea for this project is to test the effect of certain variables on the 
 Complicating the analysis is that the scales used for measuring the wet weight have a limit of detection of 1.5gm. That is, any measurements under 1.5gm are unreliable and are thus censored. So, to take this into account, we need to have a model that adjusts for the probability of censoring; that is, the model adjusts for the probability that a measurement will be less than 1.5gm.
 
 ```{r,setup,echo=FALSE,warning=FALSE,message=FALSE,results="hide"}
-ipak <- function(pkg){
-    ## Check for github packages (throw away github username)
-    chk.git <- gsub(".*/", "", pkg)    
-    new.pkg <- pkg[!(chk.git %in% installed.packages()[, "Package"])]
-    if(!(length(new.pkg) == 0)){
-        git.ind <- grep("/", new.pkg)
-        if(length(git.ind) == 0){
-            install.packages(new.pkg, dependencies = TRUE)
-        } else {
-            devtools::install_github(new.pkg[git.ind])
-        }
-    }
-    sapply(chk.git, require, character.only = TRUE)
-}
 ## Add github packages using gitname/reponame format
+source("../scripts/imputation-functions.R")
 packages <- c("dplyr", "tidyr", "ggplot2", "mice")
 ipak(packages)
 samplesdata <- read.csv("../data-raw/samples.csv")

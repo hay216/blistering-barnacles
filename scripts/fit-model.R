@@ -5,7 +5,7 @@ args <- commandArgs(trailingOnly = TRUE)
 ## Title: Fit model
 ## Author: Steve Lane
 ## Date: Friday, 21 April 2017
-## Time-stamp: <2017-04-28 11:17:44 (slane)>
+## Time-stamp: <2017-04-28 16:22:42 (slane)>
 ## Synopsis: Script that drives the censored regression model. Designed to be
 ## called from the Makefile, it requires the model name, a seed for rng, and
 ## number of iterations to be set on the command line, or prior to sourcing the
@@ -33,22 +33,8 @@ if(!(length(args) %in% 2:3)){
         }
     }
 }
-ipak <- function(pkg){
-    ## Check for github packages (throw away github username)
-    chk.git <- gsub(".*/", "", pkg)    
-    new.pkg <- pkg[!(chk.git %in% installed.packages()[, "Package"])]
-    if(!(length(new.pkg) == 0)){
-        git.ind <- grep("/", new.pkg)
-        if(length(git.ind) == 0){
-            install.packages(new.pkg, dependencies = TRUE,
-                             repos = "https://cran.csiro.au")
-        } else {
-            devtools::install_github(new.pkg[git.ind])
-        }
-    }
-    sapply(chk.git, require, character.only = TRUE)
-}
 ## Add github packages using gitname/reponame format
+source("../scripts/imputation-functions.R")
 packages <- c("rstan", "parallel")
 ipak(packages)
 ## Load stan model (it should already be compiled from the compile-model.R

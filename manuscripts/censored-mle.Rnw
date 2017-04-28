@@ -1,4 +1,4 @@
-% Time-stamp: <2017-04-27 15:28:07 (slane)>
+% Time-stamp: <2017-04-28 16:23:46 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -61,22 +61,8 @@
 \title{Risk factors for fouling biomass: Evidence from small vessels in Australia}
 
 <<knitr-setup,echo=FALSE,warning=FALSE,message=FALSE,cache=FALSE,results="hide">>=
-ipak <- function(pkg){
-    ## Check for github packages (throw away github username)
-    chk.git <- gsub(".*/", "", pkg)    
-    new.pkg <- pkg[!(chk.git %in% installed.packages()[, "Package"])]
-    if(!(length(new.pkg) == 0)){
-        git.ind <- grep("/", new.pkg)
-        if(length(git.ind) == 0){
-            install.packages(new.pkg, dependencies = TRUE,
-                             repos = "https://cran.csiro.au/")
-        } else {
-            devtools::install_github(new.pkg[git.ind])
-        }
-    }
-    sapply(chk.git, require, character.only = TRUE)
-}
 ## Add github packages using gitname/reponame format
+source("../scripts/imputation-functions.R")
 packages <- c("dplyr", "tidyr", "ggplot2", "mice")
 ipak(packages)
 knitr::opts_chunk$set(cache = FALSE, error = FALSE, warning = FALSE,
