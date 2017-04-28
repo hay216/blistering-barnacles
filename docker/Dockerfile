@@ -2,11 +2,13 @@ FROM rocker/verse:3.3.3
 LABEL maintainer="Steve Lane"
 LABEL email="lane.s@unimelb.edu.au"
 
-## Update and install latexmk and bibtex-extra
+## Update and install extra packages
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     latexmk \
     texlive-bibtex-extra \
+    git \
+    clang \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/
 
