@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+args <- commandArgs(trailingOnly = TRUE)
 ################################################################################
 ################################################################################
 ## Title: Data cleaning and imputation
@@ -5,9 +7,30 @@
 ## Date: Wednesday, 08 March 2017
 ## Synopsis: Cleans data for manuscript and model fitting, and performs
 ## imputation on the vessel level.
-## Time-stamp: <2017-04-28 16:21:48 (slane)>
+## Time-stamp: <2017-05-02 11:41:53 (slane)>
 ################################################################################
 ################################################################################
+if(!(length(args) %in% 0:1)){
+    stop("One argument can be supplied: numMI.\nnumMI, the number of multiply imputed datasets is optional, and defaults to 50.\nRscript data-cleaning.R numMI=numMI",
+         call. = FALSE)
+} else {
+    if(length(args) == 0){
+        ## Default if option not specified
+        numMI <- 50
+    }
+    hasOpt <- grepl("=", args)
+    argLocal <- strsplit(args[hasOpt], "=")
+    for(i in seq_along(argLocal)){
+        value <- NA
+        tryCatch(value <- as.double(argLocal[[i]][2]), warning = function(e){})
+        if(!is.na(value)){
+            ## Assume int/double
+            assign(argLocal[[i]][1], value, inherits = TRUE)
+        } else {
+            assign(argLocal[[i]][1], argLocal[[i]][2], inherits = TRUE)
+        }
+    }
+}
 ## Add github packages using gitname/reponame format
 source("../scripts/imputation-functions.R")
 packages <- c("dplyr", "mice", "parallel")
@@ -62,9 +85,9 @@ lvl1Data <- data %>% select(boatID, wetWeight, LocID, cens)
 ## Loop to create multiple imputations - give a loop as I want to start each
 ## imputation off with a random draw from a U(0, 1.5) for the censored data just
 ## to inject a little randomness into it.
-## Create 20 imputations, join to full data, and also create stan data
+## Create numMI imputations, join to full data, and also create stan data
 set.seed(787, "L'Ecuyer")
-impList <- mclapply(1:20, function(i){
+impList <- mclapply(1:numMI, function(i){
     imp <- lvl2Imp(impData)
     stanData <- createStanData(lvl1Data, imp)
     list(lvl2 = imp, stanData = stanData)
