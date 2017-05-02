@@ -1,4 +1,4 @@
-# Time-stamp: <2017-04-28 16:28:31 (slane)>
+# Time-stamp: <2017-05-02 12:11:42 (slane)>
 .PHONY: all models input-data output-data clean-models clean-manuscripts clobber
 
 all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf \
@@ -22,12 +22,17 @@ output-data: data/censored-mle-m0.rds \
 	data/censored-mle-m3.rds \
 	data/censored-mle-m4.rds
 
+# Defaults for number of multiply imputed datasets and HMC iterations if not
+# passed via cmdline.
+NUMMI?=50
+MCITER?=2000
+
 ################################################################################
 # Make data for feeding into models and manuscript
 data/imputations.rds data/biofouling.rds: scripts/data-cleaning.R \
 	data-raw/samples.csv data-raw/vessel.csv
 	cd $(<D); \
-	Rscript $(<F) --no-save --no-restore
+	Rscript $(<F) --no-save --no-restore numMI=$(NUMMI)
 
 ################################################################################
 # Rules for making stan models
@@ -61,32 +66,32 @@ stan/censored-mle-m4.rds: scripts/compile-model.R stan/censored-mle-m4.stan
 data/censored-mle-m0.rds: scripts/fit-model.R \
 	stan/censored-mle-m0.rds data/imputations.rds
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=737
+	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=737 iter=$(MCITER)
 
 data/censored-mle-m0-robust.rds: scripts/fit-model.R \
 	stan/censored-mle-m0-robust.rds data/imputations.rds
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=737
+	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=737 iter=$(MCITER)
 
 data/censored-mle-m1.rds: scripts/fit-model.R \
 	stan/censored-mle-m1.rds data/imputations.rds
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=666
+	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=666 iter=$(MCITER)
 
 data/censored-mle-m2.rds: scripts/fit-model.R \
 	stan/censored-mle-m2.rds data/imputations.rds
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=42
+	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=42 iter=$(MCITER)
 
 data/censored-mle-m3.rds: scripts/fit-model.R \
 	stan/censored-mle-m3.rds data/imputations.rds
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=13
+	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=13 iter=$(MCITER)
 
 data/censored-mle-m4.rds: scripts/fit-model.R \
 	stan/censored-mle-m4.rds data/imputations.rds
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=987
+	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=987 iter=$(MCITER)
 
 ################################################################################
 # Rules to make manuscripts
