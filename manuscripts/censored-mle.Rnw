@@ -1,9 +1,8 @@
-% Time-stamp: <2017-05-02 15:27:35 (slane)>
+% Time-stamp: <2017-05-02 20:12:46 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{newpxtext,newpxmath}
-% \usepackage[scaled=0.85]{DejaVuSansMono}
+\usepackage{palatino}
 \usepackage[table, usenames, dvipsnames]{xcolor}
 \usepackage{amsfonts}
 \usepackage{amsmath}
