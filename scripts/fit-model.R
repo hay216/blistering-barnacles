@@ -5,7 +5,7 @@ args <- commandArgs(trailingOnly = TRUE)
 ## Title: Fit model
 ## Author: Steve Lane
 ## Date: Friday, 21 April 2017
-## Time-stamp: <2017-04-28 16:22:42 (slane)>
+## Time-stamp: <2017-05-02 11:45:45 (slane)>
 ## Synopsis: Script that drives the censored regression model. Designed to be
 ## called from the Makefile, it requires the model name, a seed for rng, and
 ## number of iterations to be set on the command line, or prior to sourcing the
@@ -13,12 +13,12 @@ args <- commandArgs(trailingOnly = TRUE)
 ################################################################################
 ################################################################################
 if(!(length(args) %in% 2:3)){
-    stop("Three arguments must be supplied: model name, myseed, and iter.\niter (for HMC) is optional, and defaults to 4000.\nRscript fit-model.R mname=model-name myseed=my-seed iter=num-iter",
+    stop("Three arguments must be supplied: model name, myseed, and iter.\niter (for HMC) is optional, and defaults to 2000.\nRscript fit-model.R mname=model-name myseed=my-seed iter=num-iter",
          call. = FALSE)
 } else {
     if(length(args) == 2){
         ## Default if option not specified
-        iter <- 4000
+        iter <- 2000
     }
     hasOpt <- grepl("=", args)
     argLocal <- strsplit(args[hasOpt], "=")
