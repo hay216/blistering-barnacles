@@ -1,4 +1,4 @@
-# Time-stamp: <2017-05-02 12:11:42 (slane)>
+# Time-stamp: <2017-05-02 12:21:59 (slane)>
 .PHONY: all models input-data output-data clean-models clean-manuscripts clobber
 
 all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf \
@@ -32,83 +32,89 @@ MCITER?=2000
 data/imputations.rds data/biofouling.rds: scripts/data-cleaning.R \
 	data-raw/samples.csv data-raw/vessel.csv
 	cd $(<D); \
-	Rscript $(<F) --no-save --no-restore numMI=$(NUMMI)
+	Rscript --no-save --no-restore $(<F) numMI=$(NUMMI)
 
 ################################################################################
 # Rules for making stan models
 stan/censored-mle-m0.rds: scripts/compile-model.R stan/censored-mle-m0.stan
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds)
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds)
 
 stan/censored-mle-m0-robust.rds: scripts/compile-model.R \
 	stan/censored-mle-m0-robust.stan
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds)
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds)
 
 stan/censored-mle-m1.rds: scripts/compile-model.R stan/censored-mle-m1.stan
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds)
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds)
 
 stan/censored-mle-m2.rds: scripts/compile-model.R stan/censored-mle-m2.stan
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds)
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds)
 
 stan/censored-mle-m3.rds: scripts/compile-model.R stan/censored-mle-m3.stan
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds)
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds)
 
 stan/censored-mle-m4.rds: scripts/compile-model.R stan/censored-mle-m4.stan
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds)
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds)
 
 ################################################################################
 # Rules to fit models with data
 data/censored-mle-m0.rds: scripts/fit-model.R \
 	stan/censored-mle-m0.rds data/imputations.rds
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=737 iter=$(MCITER)
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds) \
+		myseed=737 iter=$(MCITER)
 
 data/censored-mle-m0-robust.rds: scripts/fit-model.R \
 	stan/censored-mle-m0-robust.rds data/imputations.rds
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=737 iter=$(MCITER)
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds) \
+		myseed=737 iter=$(MCITER)
 
 data/censored-mle-m1.rds: scripts/fit-model.R \
 	stan/censored-mle-m1.rds data/imputations.rds
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=666 iter=$(MCITER)
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds) \
+		myseed=666 iter=$(MCITER)
 
 data/censored-mle-m2.rds: scripts/fit-model.R \
 	stan/censored-mle-m2.rds data/imputations.rds
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=42 iter=$(MCITER)
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds) \
+		myseed=42 iter=$(MCITER)
 
 data/censored-mle-m3.rds: scripts/fit-model.R \
 	stan/censored-mle-m3.rds data/imputations.rds
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=13 iter=$(MCITER)
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds) \
+		myseed=13 iter=$(MCITER)
 
 data/censored-mle-m4.rds: scripts/fit-model.R \
 	stan/censored-mle-m4.rds data/imputations.rds
 	cd $(<D); \
-	Rscript $(<F) mname=$(basename $(@F) .rds) myseed=987 iter=$(MCITER)
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds) \
+		myseed=987 iter=$(MCITER)
 
 ################################################################################
 # Rules to make manuscripts
 manuscripts/censored-mle.html: manuscripts/censored-mle.Rmd \
 	data-raw/samples.csv
 	cd $(<D); \
-	Rscript -e "rmarkdown::render('$(<F)')" --no-save --no-restore
+	Rscript --no-save --no-restore -e "rmarkdown::render('$(<F)')"
 
 manuscripts/model-interrogation.html: manuscripts/model-interrogation.Rmd \
 	data/censored-mle-m0.rds data/censored-mle-m1.rds \
 	data/censored-mle-m3.rds data/censored-mle-m4.rds
 	cd $(<D); \
-	Rscript -e "rmarkdown::render('$(<F)')" --no-save --no-restore
+	Rscript --no-save --no-restore -e "rmarkdown::render('$(<F)')"
 
 %.tex: %.Rnw data/biofouling.rds
 	cd $(<D); \
-	Rscript -e "knitr::knit('$(<F)')" --no-save --no-restore
+	Rscript --no-save --no-restore -e "knitr::knit('$(<F)')"
 
 %.pdf: %.tex
 	cd $(<D); \
