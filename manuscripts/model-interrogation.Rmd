@@ -7,7 +7,7 @@ output:
     highlight: zenburn
 ---
 
-<!-- Time-stamp: <2017-05-01 08:12:52 (slane)> -->
+<!-- Time-stamp: <2017-05-02 11:34:52 (slane)> -->
 
 ```{r,knitr-setup,echo=FALSE,warning=FALSE,message=FALSE,cache=FALSE,results="hide"}
 ## Add github packages using gitname/reponame format
@@ -46,7 +46,8 @@ m0 <- readRDS("../data/censored-mle-m0.rds")
 m0ll <- extract_log_lik(m0)
 m0loo <- loo(m0ll)
 print(m0, digits = 2, include = FALSE,
-      par = c("alphaBoat", "muHat", "muHatCens", "log_lik", "alphaHat"))
+      par = c("alphaBoat", "muHat", "muHatCens", "log_lik", "alphaHat",
+              "y_ppc", "y_lower"))
 
 ```
 
@@ -67,7 +68,8 @@ m1 <- readRDS("../data/censored-mle-m1.rds")
 m1ll <- extract_log_lik(m1)
 m1loo <- loo(m1ll)
 print(m1, digits = 2, include = FALSE,
-      par = c("alphaBoat", "muHat", "muHatCens", "log_lik", "alphaHat"))
+      par = c("alphaBoat", "muHat", "muHatCens", "log_lik", "alphaHat",
+              "y_ppc", "y_lower"))
 
 ```
 
@@ -129,7 +131,8 @@ m2ll <- extract_log_lik(m2)
 m2loo <- loo(m2ll)
 m2comp <- compare(m1loo, m2loo)
 print(m2, digits = 2, include = FALSE,
-      par = c("alphaBoat", "muHat", "muHatCens", "log_lik", "alphaHat"))
+      par = c("alphaBoat", "muHat", "muHatCens", "log_lik", "alphaHat",
+              "y_ppc", "y_lower"))
 
 ```
 
@@ -142,7 +145,8 @@ m3 <- readRDS("../data/censored-mle-m3.rds")
 m3ll <- extract_log_lik(m3)
 m3loo <- loo(m3ll)
 print(m3, digits = 2, include = FALSE,
-      par = c("alphaBoat", "muHat", "muHatCens", "log_lik", "alphaHat"))
+      par = c("alphaBoat", "muHat", "muHatCens", "log_lik", "alphaHat",
+              "y_ppc", "y_lower"))
 
 ```
 
@@ -209,7 +213,7 @@ print(pl)
 
 ## Restricted model form
 
-I think the appropriate place to go now is to eliminate terms that don't appear to add any predictive ability to the model. We'll keep the `days1:boatType` interaction (and its components), but remove other predictors. The final model M4, will thus have a vessel-level regression form:
+I think the appropriate place to go now is to eliminate terms that don't appear to add any predictive ability to the model. We'll keep the `days1:boatType` interaction (and its components), but remove other predictors. Model M4, will thus have a vessel-level regression form:
 
 $$
 \begin{align}
@@ -220,12 +224,15 @@ $$
 
 where $\text{days1vesselType1}_{i},\text{days1vesselType2}_{i}$ are the interaction terms.
 
+The output below provides a summary of the estimates from M4, with the figure showing the marginal effects of the `days1:boatType` interaction, and the `days2` marginal effect (adjusted for vessel type in the plot).
+
 ```{r}
 m4 <- readRDS("../data/censored-mle-m4.rds")
 m4ll <- extract_log_lik(m4)
 m4loo <- loo(m4ll)
 print(m4, digits = 2, include = FALSE,
-      par = c("alphaBoat", "muHat", "muHatCens", "log_lik", "alphaHat"))
+      par = c("alphaBoat", "muHat", "muHatCens", "log_lik", "alphaHat",
+              "y_ppc", "y_lower"))
 
 ```
 
@@ -246,16 +253,34 @@ slopeDaysType <- c(median(slopes$betaDays1),
 parsType <- tibble(intercept = intType, slope = slopeDaysType,
                    boatType = factor(levels(a4Dat$boatType)),
                    type = rep("days1", 3))
-pl <- ggplot(a4Dat, aes(x = value, y = mid, ymin = low, ymax = high,
-                        colour = boatType)) +
+pl <- ggplot(a4Dat %>% filter(type == "days1"),
+             aes(x = value, y = mid, ymin = low, ymax = high,
+                 colour = boatType)) +
     geom_pointrange(fatten = 1) +
     geom_abline(aes(slope = slope, intercept = intercept, colour = boatType),
                 data = parsType) +    
     theme_bw() +
     theme(legend.position = "bottom")
+pl2 <- ggplot(a4Dat %>% filter(type == "days2"),
+              aes(x = value, y = mid, ymin = low, ymax = high,
+                  colour = boatType)) +
+    geom_pointrange(fatten = 1) +
+    geom_abline(aes(slope = median(slopes$betaDays2), intercept = intercept,
+                    colour = boatType), data = parsType) +
+    theme_bw() +
+    theme(legend.position = "bottom")
+
 print(pl)
 
 ```
+
+```{r}
+biofouling <- readRDS("../data/biofouling.rds")
+nC <- sum(biofouling$boatID %in% which(a4Sum[,2] < -5))
+
+```
+
+As in all model output previously, there are some large (negative) effects estimated for the vessel-level intercepts of three vessels. These vessels had a total of `r nC` wet weight biomass measurements taken, all of them under the limit of detection. The model appears to be doing a good job at estimating this in the vessel-level intercepts.
 
 <p>
   <br><br><br>

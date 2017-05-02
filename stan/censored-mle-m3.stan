@@ -6,7 +6,7 @@
 // Synopsis: Sampling statements to fit a regression with censored outcome data.
 // Includes boat-level intercept, and observation level location ID.
 // Adds in some interactions terms.
-// Time-stamp: <2017-04-27 10:41:12 (slane)>
+// Time-stamp: <2017-05-02 10:46:43 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -46,6 +46,17 @@ data{
   real<lower=1.5> Y[N];
   /* Truncated data (brute force, all equal */
   real<upper=min(Y)> U;
+}
+
+transformed data{
+  /* For posterior predictive checks */
+  /* Maximum observed value */
+  real y_max;
+  /* Proportion of measurements below the limit of detection */
+  real p_lod;
+  y_max = max(Y);
+  p_lod = nCens;
+  p_lod = p_lod / (N + nCens);
 }
 
 parameters{
@@ -123,15 +134,27 @@ model{
 generated quantities{
   /* Need the log likelihood for leave one out prediction errors */
   vector[N + nCens] log_lik;
-  {
-    real linPred;
-    for(i in 1:N){
-      linPred = mu + locID[i] * betaLoc + alphaBoat[boatID[i]];
-      log_lik[i] = lognormal_lpdf(Y[i] | linPred, sigma);
-    }
-    for(j in 1:nCens){
-      linPred = mu + locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
-      log_lik[N + j] = lognormal_lcdf(U | linPred, sigma);
-    }
+  /* Replications for posterior predictive checks */
+  vector[N + nCens] y_ppc;
+  vector[N + nCens] y_lower;
+  /* posterior predictive maximum */
+  real<lower=0> ymax_ppc;
+  int<lower=0,upper=1> p_ymax;
+  /* posterior predictive proportion below limit of detection */
+  real<lower=0> plod_ppc;
+  int<lower=0,upper=1> p_plod;
+  for(i in 1:N){
+    log_lik[i] = lognormal_lpdf(Y[i] | muHat[i], sigma);
+    y_ppc[i] = lognormal_rng(muHat[i], sigma);
+    y_lower[i] = (y_ppc[i] < U);
   }
+  for(j in 1:nCens){
+    log_lik[N + j] = lognormal_lcdf(U | muHatCens[j], sigma);
+    y_ppc[N + j] = lognormal_rng(muHatCens[j], sigma);
+    y_lower[N + j] = (y_ppc[N + j] < U);
+  }
+  ymax_ppc = max(y_ppc);
+  p_ymax = (ymax_ppc >= y_max);
+  plod_ppc = sum(y_lower) / (nCens + N);
+  p_plod = (plod_ppc >= p_lod);
 }
