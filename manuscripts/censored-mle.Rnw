@@ -1,9 +1,10 @@
-% Time-stamp: <2017-04-28 16:23:46 (slane)>
+% Time-stamp: <2017-05-01 13:54:29 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{newpxtext,newpxmath}
-\usepackage[scaled=0.85]{DejaVuSansMono}
+% \usepackage{newpxtext,newpxmath}
+% \usepackage[scaled=0.85]{DejaVuSansMono}
+\usepackage{tgpagella}
 \usepackage[table, usenames, dvipsnames]{xcolor}
 \usepackage{amsfonts}
 \usepackage{amsmath}
