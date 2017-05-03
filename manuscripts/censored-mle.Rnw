@@ -1,4 +1,4 @@
-% Time-stamp: <2017-05-03 13:42:09 (slane)>
+% Time-stamp: <2017-05-03 16:59:38 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -65,6 +65,7 @@
 source("../scripts/imputation-functions.R")
 packages <- c("dplyr", "tidyr", "ggplot2", "mice")
 ipak(packages)
+theme_set(theme_bw())
 knitr::opts_chunk$set(cache = FALSE, error = FALSE, warning = FALSE,
                       message = FALSE, fig.align = "center", echo = FALSE,
                       out.width = "0.8\\textwidth", fig.pos = "!hbp")
@@ -132,7 +133,9 @@ histData <- biofoul %>%
 pl <- ggplot(histData, aes(x = ww)) + geom_histogram(bins = 11) +
     facet_grid(LocID ~ logged, scales = "free_x") +
     xlab("") +
-    ylab("Count")
+    ylab("Count") +
+    theme(panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank())
 print(pl)
 
 @ 
@@ -188,7 +191,9 @@ Because of the amount of missing data, we used multiple imputation to impute the
 
 As all missing data was at the vessel-level, we used the median wet weight of biomass as a predictor in the imputation models \cite{Gelman2007-lc}. To account for the censoring in the wet weight of biomass (observations below the 1.5gm limit of detection), we replaced the censored data by a random draw from a Uniform(0, 1.5) distribution. We justify this procedure in the following way: i) some level of variability is required as we don't know the true value of the censored observations; ii) Figure~\ref{fig:obs-weight} shows that weights below 1.5gm (\Sexpr{log(1.5)} on the log-scale) form a very small part of the range of observed values. This small variability will have limited impact in the imputation of the missing data due to the fact that we are summarising within-vessel wet weight of biomass measurements by the median for input into the imputation models.
 
-All analyses were performed using R version 3.3.3 \cite{R_Core_Team2017-zb}; the multilevel models were fit using the RStan interface to stan \cite{Stan_Development_Team2016-xb}, and multiple imputation was performed use the R package mice \cite{Van_Buuren2011-ne}.
+To perform inference, we use the advice of \cite{Zhou2010-pc} and mix the draws from the posterior distributions from the analysis of each completed dataset. \citet{Zhou2010-pc} recommend a large number of imputations be used; we generated 50 imputed datasets. For each dataset, 1000 samples were drawn from the posterior after a burn-in of 1000. Convergence was monitored by inspecting the mixed chains across the 50 multiple imputations, and by assessing the Gelman-Rubin statistic \cite{Gelman1992-zo}.
+
+All analyses were performed using R version 3.4.0 \cite{R_Core_Team2017-zb}; the multilevel models were fit using the RStan interface to stan \cite{Stan_Development_Team2016-xb}, and multiple imputation was performed use the R package mice \cite{Van_Buuren2011-ne}.
 
 \section{Results}
 \label{sec:results}
@@ -196,12 +201,62 @@ All analyses were performed using R version 3.3.3 \cite{R_Core_Team2017-zb}; the
 \subsection{Multiple imputation}
 \label{sec:multiple-imputation}
 
-Figure XXX displays the observed and imputed vessel-level data for both the number of days since the vessel was last used, and the median number of trips by the vessel. Figure YYY displays the observed and imputed vessel-level type of paint.
+Figure~\ref{fig:imp-cont} displays the observed and imputed vessel-level data for both the number of days since the vessel was last used, and the median number of trips by the vessel\footnote{Note that all numeric predictors were scaled to have mean 0, standard deviation 1, prior to modelling.}. Figure~\ref{fig:imp-cat} displays the observed and imputed vessel-level type of paint. Both Figures~\ref{fig:imp-cont} and \ref{fig:imp-cat} show that the distribution of imputed data is broadly consistent with the distribution of the observed data.
 
-<<imp-cont>>=
+<<imp-cont,fig.cap="Comparison of observed and imputed data for the number of days since the vessel was last used, and the median number of trips by the vessel. The leftmost boxplot in each figure is the observed distribution, all others include the imputed values.",fig.subcap=c("Number of days since the vessel was last used.", "Median number of trips by the vessel."),out.width="45%">>=
 imps <- readRDS("../data/imputations.rds")
+lvl2Imp <- lapply(imps, function(x) x$lvl2) %>% bind_rows() %>%
+    mutate(nummi = rep(seq_along(imps), each = nrow(vessels)))
+vessImps <- vessels %>%
+    mutate(
+        days1 = as.numeric(scale(days1)),
+        days2 = as.numeric(scale(days2)),
+        midTrips = as.numeric(scale(midTrips)),
+        ApproxHullSA = as.numeric(scale(ApproxHullSA)),
+        nummi = 0
+    )
+vessImps <- bind_rows(vessImps, lvl2Imp)
+plDays1 <- ggplot(vessImps, aes(x = factor(nummi), y = days1)) +
+    geom_boxplot() +
+    xlab("Imputation number") +
+    ylab("") +
+    theme(axis.text.x = element_blank(),
+          axis.ticks.x = element_blank(),
+          panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank())
+print(plDays1)
+plMidTrips <- ggplot(vessImps, aes(x = factor(nummi), y = midTrips)) +
+    geom_boxplot() +
+    xlab("Imputation number") +
+    ylab("") +
+    theme(axis.text.x = element_blank(),
+          axis.ticks.x = element_blank(),
+          panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank())
+print(plMidTrips)
+           
+@
 
-@ 
+<<imp-cat,fig.cap="Comparison of observed and imputed data for anti-fouling paint type. A random selection from the imputed datasets are shown. The top-left panel (labelled 0) shows the observed distribution.",out.width="45%">>=
+set.seed(76)
+impSelect <- sample(seq_along(imps), 15)
+plPaint <- ggplot(vessImps %>% filter(nummi %in% c(0, impSelect),
+                                      !is.na(paintType)),
+                  aes(x = paintType)) +
+    geom_bar() +
+    facet_wrap(~ factor(nummi)) +
+    xlab("Anti-fouling paint type") +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+print(plPaint)
+
+@
+
+\subsection{Regression results}
+\label{sec:regression-results}
+
+Table XXX compares the models by their leave-one-out information criterion (looic, analogous to AIC, see \cite{Vehtari2016-dp}). Blah blah.
+
+Figure YYY compares estimates of the measurement-level and vessel-level regression coefficients for each of the models.
 
 \printbibliography
 
