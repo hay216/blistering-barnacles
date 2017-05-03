@@ -1,4 +1,4 @@
-# Time-stamp: <2017-05-02 20:21:31 (slane)>
+# Time-stamp: <2017-05-03 11:19:55 (slane)>
 .PHONY: all models input-data output-data clean-models clean-manuscripts clobber
 
 all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf \
@@ -113,7 +113,7 @@ manuscripts/model-interrogation.html: manuscripts/model-interrogation.Rmd \
 	cd $(<D); \
 	Rscript --no-save --no-restore -e "rmarkdown::render('$(<F)')"
 
-%.tex: %.Rnw data/biofouling.rds
+%.tex: %.Rnw data/biofouling.rds data/imputations.rds
 	cd $(<D); \
 	Rscript --no-save --no-restore -e "knitr::knit('$(<F)')"
 
