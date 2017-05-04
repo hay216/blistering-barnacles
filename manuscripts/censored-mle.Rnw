@@ -1,4 +1,4 @@
-% Time-stamp: <2017-05-03 16:59:38 (slane)>
+% Time-stamp: <2017-05-04 13:56:41 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -55,8 +55,10 @@
 \DeclareGraphicsExtensions{.pdf,.PDF,.png,.PNG}
 
 \author[1]{Stephen E.\ Lane}
+\author[2]{Keith R.\ Hayes}
 \author[1]{Andrew P.\ Robinson}
 \affil[1]{CEBRA, The University of Melbourne}
+\affil[2]{CSIRO}
 \date{\today}
 \title{Risk factors for fouling biomass: Evidence from small vessels in Australia}
 
@@ -254,9 +256,28 @@ print(plPaint)
 \subsection{Regression results}
 \label{sec:regression-results}
 
-Table XXX compares the models by their leave-one-out information criterion (looic, analogous to AIC, see \cite{Vehtari2016-dp}). Blah blah.
+\subsubsection{Exploration of candidate interaction terms}
+\label{sec:expl-cand-inter}
 
-Figure YYY compares estimates of the measurement-level and vessel-level regression coefficients for each of the models.
+Figure XXX displays the median and 80\% intervals of the estimated vessel-level intercepts, with respect to the four ordinal predictors: the number of days since the vessel was last used; the number of days since the vessel was last cleaned; the median number of trips undertaken by the vessel; and the vessel's hull surface area. Figure XXXa shows the vessel-level intercepts coloured by vessel type, whilst Figure XXXb shows the vessel-level intercepts coloured by anti-fouling paint type. Shown in each panel are the estimated (median) regression lines from M1.
+
+Figures XXXa and XXXb are suggestive of interactions between the number of days since the vessel was last cleaned and the vessel type, the median number of trips undertaken by the vessel and the vessel type, and the median number of trips taken by the vessel and the anti-fouling paint type. There does not appear to be any relationship between the vessel's hull surface area and the vessel-level intercepts. These observations led to the development of M2 (removing the hull surface area predictor) and M3 (including the possible interaction terms).
+
+\subsubsection{Reduction to final model form}
+\label{sec:reduct-final-model}
+
+Figure YYY displays the median and 80\% intervals of the estimated vessel-level intercepts, with respect to the two ordinal predictors remaining in M3: the number of days since the vessel was last used and the median number of trips undertaken by the vessel. Figures YYYa and YYYb show the vessel-level intercepts coloured by vessel type and Figure YYYc shows the vessel-level intercepts coloured by anti-fouling paint type. Shown in each panel are the estimated (median) regression lines from M3.
+
+Figure YYYa is suggestive of an interaction between the number of days since the vessel was last cleaned and the vessel type, however Figures YYYb and YYYc do not show any evidence of interactions between the median number of trips undertaken by the vessel and the vessel type or the anti-fouling paint type. These observations led to the development of M4 as the most likely model.
+
+Figure ZZZ shows the regression estimates from M4, in relation to the estimated vessel-level intercepts. Figure ZZZa shows the number of days since the vessel was last used and the vessel-type estimated interaction, and Figure ZZZb shows the estimated effect of the number of days since the vessel was last cleaned (adjusted by vessel-type).
+
+Finally, Figure QQQ compares estimates of the measurement-level and vessel-level regression coefficients for each of the models considered.
+
+\subsubsection{Predictive model comparison}
+\label{sec:pred-model-comp}
+
+Table XXX compares the models by their leave-one-out information criterion (looic, analogous to AIC, see \cite{Vehtari2016-dp}). MXXX is the best-performing model based on looic, but not significantly so.
 
 \printbibliography
 
