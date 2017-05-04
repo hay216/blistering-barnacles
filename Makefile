@@ -1,5 +1,6 @@
-# Time-stamp: <2017-05-03 11:19:55 (slane)>
-.PHONY: all models input-data output-data clean-models clean-manuscripts clobber
+# Time-stamp: <2017-05-04 17:32:21 (slane)>
+.PHONY: all models input-data output-data clean-models clean-manuscripts clobber \
+	PROC-DATA processed-data
 
 all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf \
 	manuscripts/model-interrogation.html
@@ -21,6 +22,11 @@ output-data: data/censored-mle-m0.rds \
 	data/censored-mle-m2.rds \
 	data/censored-mle-m3.rds \
 	data/censored-mle-m4.rds
+
+PROC-DATA = graphics/plM1boat.pdf \
+	graphics/plM1paint.pdf
+
+processed-data: $(PROC-DATA)
 
 # Defaults for number of multiply imputed datasets and HMC iterations if not
 # passed via cmdline.
@@ -98,6 +104,12 @@ data/censored-mle-m4.rds: scripts/fit-model.R \
 	cd $(<D); \
 	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds) \
 		myseed=987 iter=$(MCITER)
+
+################################################################################
+# Rules to process data (add dependencies later).
+$(PROC-DATA): scripts/post-process.R
+	cd $(<D); \
+	Rscript --no-save --no-restore $(<F)
 
 ################################################################################
 # Rules to make manuscripts
