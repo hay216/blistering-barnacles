@@ -1,4 +1,4 @@
-% Time-stamp: <2017-05-04 20:51:55 (slane)>
+% Time-stamp: <2017-05-05 15:21:00 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -25,7 +25,7 @@
 \usepackage[bottom]{footmisc} %ensure footnotes aren't glued to bottom of body text
 \usepackage{authblk}
 \usepackage{setspace}
-\usepackage{subfig}
+\usepackage[caption=false]{subfig}
 
 % Define colours
 \definecolor{mylinkcolour}{HTML}{FC8D62}
@@ -125,22 +125,12 @@ For more details on the data collected during the survey, see CSIRO report ref X
 
 Figure~\ref{fig:obs-weight} shows histograms of the observed wet weight of biomass from the samples. Samples that were below the limit of detection (1.5gm, of which there were \Sexpr{sum(biofoul[['wetWeight']] < 1.5)}) are not shown in this figure. The left column shows the measured wet weight, whilst the right column shows the log-transformed wet weight; the rows correspond to the sampled locations on each vessel (hull, keel and rudder).
 
-<<obs-weight,fig.cap = paste("Measured wet weight of sampled biomass from the", nrow(vessels), "vessels. The left column shows the measured wet weight, whilst the right column shows the log-transformed wet weight. Samples that measured less than the limit of detection (1.5gm) have been removed.")>>=
-histData <- biofoul %>%
-    filter(wetWeight >= 1.5) %>%
-    mutate(wwLog = log(wetWeight)) %>%
-    select(LocID, `Weight (gm)` = wetWeight,
-           `Weight (gm), log-scale` = wwLog) %>%
-    gather("logged", "ww", 2:3)
-pl <- ggplot(histData, aes(x = ww)) + geom_histogram(bins = 11) +
-    facet_grid(LocID ~ logged, scales = "free_x") +
-    xlab("") +
-    ylab("Count") +
-    theme(panel.grid.major.x = element_blank(),
-          panel.grid.minor.x = element_blank())
-print(pl)
-
-@ 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\linewidth]{../graphics/obs-hist.pdf}
+  \caption{Measured wet weight of sampled biomass from the \Sexpr{nrow(vessels)} vessels. The left column shows the measured wet weight, whilst the right column shows the log-transformed wet weight. Samples that measured less than the limit of detection (1.5gm) have been removed.}
+  \label{fig:obs-weight}
+\end{figure}
 
 Figure~\ref{fig:obs-weight} suggests that the log-transform of the wet weight of biomass is approximately normal, and that there is likely to be a location effect. We will thus use the log-normal for the distribution of the wet weight of biomass. We use the log-normal for the reason that if $W \sim \text{LN}(\mu, \sigma^{2})$, then $\log(W) \sim \text{N}(\mu, \sigma^{2})$ (i.e. the usual normal regression model).
 
@@ -205,53 +195,20 @@ All analyses were performed using R version 3.4.0 \cite{R_Core_Team2017-zb}; the
 
 Figure~\ref{fig:imp-cont} displays the observed and imputed vessel-level data for both the number of days since the vessel was last used, and the median number of trips by the vessel\footnote{Note that all numeric predictors were scaled to have mean 0, standard deviation 1, prior to modelling.}. Figure~\ref{fig:imp-cat} displays the observed and imputed vessel-level type of paint. Both Figures~\ref{fig:imp-cont} and \ref{fig:imp-cat} show that the distribution of imputed data is broadly consistent with the distribution of the observed data.
 
-<<imp-cont,fig.cap="Comparison of observed and imputed data for the number of days since the vessel was last used, and the median number of trips by the vessel. The leftmost boxplot in each figure is the observed distribution, all others include the imputed values.",fig.subcap=c("Number of days since the vessel was last used.", "Median number of trips by the vessel."),out.width="45%">>=
-imps <- readRDS("../data/imputations.rds")
-lvl2Imp <- lapply(imps, function(x) x$lvl2) %>% bind_rows() %>%
-    mutate(nummi = rep(seq_along(imps), each = nrow(vessels)))
-vessImps <- vessels %>%
-    mutate(
-        days1 = as.numeric(scale(days1)),
-        days2 = as.numeric(scale(days2)),
-        midTrips = as.numeric(scale(midTrips)),
-        ApproxHullSA = as.numeric(scale(ApproxHullSA)),
-        nummi = 0
-    )
-vessImps <- bind_rows(vessImps, lvl2Imp)
-plDays1 <- ggplot(vessImps, aes(x = factor(nummi), y = days1)) +
-    geom_boxplot() +
-    xlab("Imputation number") +
-    ylab("") +
-    theme(axis.text.x = element_blank(),
-          axis.ticks.x = element_blank(),
-          panel.grid.major.x = element_blank(),
-          panel.grid.minor.x = element_blank())
-print(plDays1)
-plMidTrips <- ggplot(vessImps, aes(x = factor(nummi), y = midTrips)) +
-    geom_boxplot() +
-    xlab("Imputation number") +
-    ylab("") +
-    theme(axis.text.x = element_blank(),
-          axis.ticks.x = element_blank(),
-          panel.grid.major.x = element_blank(),
-          panel.grid.minor.x = element_blank())
-print(plMidTrips)
-           
-@
+\begin{figure}
+  \centering
+  \subfloat[Number of days since the vessel was last used.\label{fig:imp-cont-a}]{\includegraphics[width=0.7\linewidth]{../graphics/imp-days1.pdf}} \\
+  \subfloat[Median number of trips by the vessel.\label{fig:imp-cont-b}]{\includegraphics[width=0.7\linewidth]{../graphics/imp-trips.pdf}}
+  \caption{Comparison of observed and imputed data for the number of days since the vessel was last used, and the median number of trips by the vessel. The leftmost boxplot in each figure is the observed distribution, all others include the imputed values.}
+  \label{fig:imp-cont}
+\end{figure}
 
-<<imp-cat,fig.cap="Comparison of observed and imputed data for anti-fouling paint type. A random selection from the imputed datasets are shown. The top-left panel (labelled 0) shows the observed distribution.",out.width="45%">>=
-set.seed(76)
-impSelect <- sample(seq_along(imps), 15)
-plPaint <- ggplot(vessImps %>% filter(nummi %in% c(0, impSelect),
-                                      !is.na(paintType)),
-                  aes(x = paintType)) +
-    geom_bar() +
-    facet_wrap(~ factor(nummi)) +
-    xlab("Anti-fouling paint type") +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1))
-print(plPaint)
-
-@
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\linewidth]{../graphics/imp-paint.pdf}
+  \caption{Comparison of observed and imputed data for anti-fouling paint type. A random selection from the imputed datasets are shown. The top-left panel (labelled 0) shows the observed distribution.}
+  \label{fig:imp-cat}
+\end{figure}
 
 \subsection{Regression results}
 \label{sec:regression-results}
@@ -271,8 +228,8 @@ Figure~\ref{fig:m1-reg} displays the median and 80\% intervals of the estimated 
 
 \begin{figure}
   \centering
-  \subfloat[Vessel-level intercepts coloured by vessel type.\label{fig:m1-reg-a}]{\includegraphics[width=0.45\linewidth]{../graphics/plM1boat.pdf}}
-  \subfloat[Vessel-level intercepts coloured by anti-fouling paint type.\label{fig:m1-reg-b}]{\includegraphics[width=0.45\linewidth]{../graphics/plM1paint.pdf}}
+  \subfloat[Vessel-level intercepts coloured by vessel type.\label{fig:m1-reg-a}]{\includegraphics[width=0.7\linewidth]{../graphics/plM1boat.pdf}} \\
+  \subfloat[Vessel-level intercepts coloured by anti-fouling paint type.\label{fig:m1-reg-b}]{\includegraphics[width=0.7\linewidth]{../graphics/plM1paint.pdf}}
   \caption{Estimated vessel-level intercepts from \ref{eq:M1}, plotted against the four ordinal predictors. Regression lines for each predictor are overlaid.}
   \label{fig:m1-reg}
 \end{figure}
@@ -284,22 +241,21 @@ Figures~\ref{fig:m1-reg-a} and \ref{fig:m1-reg-b} are suggestive of interactions
 
 Figure~\ref{fig:m3-reg} displays the median and 80\% intervals of the estimated vessel-level intercepts, with respect to the two ordinal predictors remaining in M3: the number of days since the vessel was last used and the median number of trips undertaken by the vessel. Figure~\ref{fig:m3-reg-a} shows the vessel-level intercepts coloured by vessel type and Figure~\ref{fig:m3-reg-b} shows the vessel-level intercepts coloured by anti-fouling paint type. Shown in each panel are the estimated (median) regression lines from \ref{eq:M3}.
 
-Figure~\ref{fig:m3-reg-a} is suggestive of an interaction between the number of days since the vessel was last used and the vessel type, however an interaction between the median number of trips undertaken by the vessel and the vessel type or the anti-fouling paint (Figure~\ref{fig:m3-reg-b}) type do not appear likely. These observations led to the development of \ref{eq:M4} as the most likely model.\footnote{Fix these figures so they appear the same.}
+Figure~\ref{fig:m3-reg-a} is suggestive of an interaction between the number of days since the vessel was last used and the vessel type, however an interaction between the median number of trips undertaken by the vessel and the vessel type or the anti-fouling paint (Figure~\ref{fig:m3-reg-b}) type do not appear likely. These observations led to the development of \ref{eq:M4} as the most likely model.
 
 \begin{figure}
   \centering
-  \subfloat[Vessel-level intercepts coloured by vessel type.\label{fig:m3-reg-a}]{\includegraphics[width=0.45\linewidth]{../graphics/plM3boat.pdf}}
+  \subfloat[Vessel-level intercepts coloured by vessel type.\label{fig:m3-reg-a}]{\includegraphics[width=0.9\linewidth]{../graphics/plM3boat.pdf}} \\
   \subfloat[Vessel-level intercepts coloured by anti-fouling paint type.\label{fig:m3-reg-b}]{\includegraphics[width=0.45\linewidth]{../graphics/plM3paint.pdf}}
   \caption{Estimated vessel-level intercepts from \ref{eq:M3}, plotted against the two ordinal predictors with interactions being assessed. Regression lines for each estimated interaction are overlaid.}
   \label{fig:m3-reg}
 \end{figure}
 
-Figure~\ref{fig:m4-reg} shows the regression estimates from \ref{eq:M4}, in relation to the estimated vessel-level intercepts. Figure~\ref{fig:m4-reg-a} shows the number of days since the vessel was last used and the vessel-type estimated interaction, and Figure~\ref{fig:m4-reg-b} shows the estimated effect of the number of days since the vessel was last cleaned (adjusted by vessel-type).
+Figure~\ref{fig:m4-reg} shows the regression estimates from \ref{eq:M4}, in relation to the estimated vessel-level intercepts. The left panel of Figure~\ref{fig:m4-reg} shows the number of days since the vessel was last used and the vessel-type estimated interaction, and the right panel shows the estimated effect of the number of days since the vessel was last cleaned (adjusted by vessel-type).
 
 \begin{figure}
   \centering
-  \subfloat[Vessel-level intercepts coloured by vessel type.\label{fig:m4-reg-a}]{\includegraphics[width=0.45\linewidth]{../graphics/plM4type.pdf}}
-  \subfloat[Vessel-level intercepts coloured by vessel type.\label{fig:m4-reg-b}]{\includegraphics[width=0.45\linewidth]{../graphics/plM4days2.pdf}}
+  \includegraphics[width=0.9\linewidth]{../graphics/plM4type.pdf}
   \caption{Estimated vessel-level intercepts from \ref{eq:M4}, plotted against the two ordinal predictors. Regression lines for each estimated regression are overlaid.}
   \label{fig:m4-reg}
 \end{figure}
