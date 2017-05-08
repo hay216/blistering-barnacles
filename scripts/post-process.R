@@ -4,12 +4,13 @@
 ## Author: Steve Lane
 ## Date: Thursday, 04 May 2017
 ## Synopsis: Post process the output from the regression models
-## Time-stamp: <2017-05-05 14:23:13 (slane)>
+## Time-stamp: <2017-05-08 12:11:46 (slane)>
 ################################################################################
 ################################################################################
 ## Add github packages using gitname/reponame format
 source("../scripts/imputation-functions.R")
-packages <- c("tidyr", "dplyr", "rstan", "loo", "ggplot2", "RColorBrewer")
+packages <- c("tidyr", "dplyr", "tibble", "rstan", "loo", "ggplot2",
+              "RColorBrewer")
 ipak(packages)
 ## This is set for readable text when included at half page width.
 theme_set(theme_bw())
@@ -264,20 +265,105 @@ ggsave("../graphics/plM4type.pdf", plM4type, height = 3.5)
 ## Begin Section: Regression coefficients
 ################################################################################
 ################################################################################
+## Start off with m0
+qnts <- c("low5" = 0.05, "low25" = 0.25, "med" = 0.5, "high75" = 0.75,
+          "high95" = 0.95)
+coef0 <- extract(m0, pars = c("mu", "betaLoc", "sigma_alphaBoat", "sigma"))
+m0Summary <- lapply(coef0, sumMC, qnts = qnts) %>% summRename %>%
+    mutate(model = "M0")
+coef1 <- extract(m1, pars = c("mu", "betaLoc", "betaDays1", "betaDays2",
+                              "betaMidTrips", "betaHullSA", "betaPaint",
+                              "betaType", "sigma_alphaBoat", "sigma"))
+m1Summary <- lapply(coef1, sumMC, qnts = qnts) %>% summRename %>%
+    mutate(model = "M1")
+coef2 <- extract(m2, pars = c("mu", "betaLoc", "betaDays1", "betaDays2",
+                              "betaMidTrips", "betaPaint",
+                              "betaType", "sigma_alphaBoat", "sigma"))
+m2Summary <- lapply(coef2, sumMC, qnts = qnts) %>% summRename %>%
+    mutate(model = "M2")
+coef3 <- extract(m3, pars = c("mu", "betaLoc", "betaDays1", "betaDays2",
+                              "betaMidTrips", "betaPaint",
+                              "betaType", "betaDaysType", "betaTripsType",
+                              "betaTripsPaint", "sigma_alphaBoat", "sigma"))
+m3Summary <- lapply(coef3, sumMC, qnts = qnts) %>% summRename %>%
+    mutate(model = "M3")
+coef4 <- extract(m4, pars = c("mu", "betaLoc", "betaDays1", "betaDays2",
+                              "betaType", "betaDaysType", "sigma_alphaBoat",
+                              "sigma"))
+m4Summary <- lapply(coef4, sumMC, qnts = qnts) %>% summRename %>%
+    mutate(model = "M4")
+allSummary <- bind_rows(m0Summary, m1Summary, m2Summary, m3Summary, m4Summary)
+ords <- unique(m3Summary$coef)
+inds <- which(ords == "betaMidTrips")
+ords <- c(ords[1:inds], "betaHullSA", ords[(inds+1):length(ords)])
+allSummary <- allSummary %>%
+    mutate(coef = factor(coef, levels = rev(ords)))
+labs <- c("mu" = expression(mu),
+          "betaLoc1" = expression(beta^{l1}),
+          "betaLoc2" = expression(beta^{l2}),
+          "betaDays1" = expression(beta^{d1}),
+          "betaDays2" = expression(beta^{d2}),
+          "betaMidTrips" = expression(beta^{m}),
+          "betaHullSA" = expression(beta^{h}),
+          "betaPaint1" = expression(beta^{p1}),
+          "betaPaint2" = expression(beta^{p2}),
+          "betaType1" = expression(beta^{t1}),
+          "betaType2" = expression(beta^{t2}),
+          "betaDaysType1" = expression(beta^{dt1}),
+          "betaDaysType2" = expression(beta^{dt2}),
+          "betaTripsType1" = expression(beta^{mt1}),
+          "betaTripsType2" = expression(beta^{mt2}),
+          "betaTripsPaint1" = expression(beta^{mp1}),
+          "betaTripsPaint2" = expression(beta^{mp2}),
+          "sigma_alphaBoat" = expression(sigma[alpha]),
+          "sigma" = expression(sigma))
+plSummary <- ggplot(allSummary, aes(x = coef, y = med, ymin = low5,
+                                    ymax = high95, colour = model)) +
+    geom_pointrange(aes(ymin = low25, ymax = high75),
+                    position = position_dodge(width = 1.0), fatten = 0.75,
+                    size = 1, show.legend = FALSE) +
+    geom_pointrange(position = position_dodge(width = 1.0), fatten = 0.5) +
+    coord_flip() +
+    xlab("Variable") +
+    ylab("Value") +
+    scale_x_discrete(labels = labs) +
+    scale_colour_brewer(palette = "Dark2", name = "Model") +
+    theme(legend.position = "bottom")
+ggsave("../graphics/plSummary.pdf", plSummary, width = 3.5)
+################################################################################
+################################################################################
 
-## ## Something like the following:
-## plotData <- coefs %>%
-##         filter(lvl == lookupData$lvl[i]) %>%
-##         mutate(label = factor(label, levels = ords)) %>%
-##         group_by(model) %>%
-##         arrange(label) %>%
-##         filter(est < 10, est > -10, lower > -10)
-##     plComp <- ggplot(
-##         plotData, aes(x = label, y = est, ymin = lower, ymax = upper, colour =
-##                           model)
-##     ) +
-##         geom_pointrange(position = position_dodge(width = 0.75)) +
-##         geom_hline(yintercept = 0, linetype = 2) +
-##         coord_flip() +
-##         ylab("log(Coefficient)") +
-##         xlab("Variable")
+################################################################################
+################################################################################
+## Begin Section: Create data for looic table.
+################################################################################
+################################################################################
+m0ll <- extract_log_lik(m0)
+m0loo <- loo(m0ll)
+m1ll <- extract_log_lik(m1)
+m1loo <- loo(m1ll)
+m2ll <- extract_log_lik(m2)
+m2loo <- loo(m2ll)
+m3ll <- extract_log_lik(m3)
+m3loo <- loo(m3ll)
+m4ll <- extract_log_lik(m4)
+m4loo <- loo(m4ll)
+looTab <- compare(m0loo, m1loo, m2loo, m3loo, m4loo)
+rownames(looTab) <- c("M4", "M2", "M3", "M1", "M0")
+## Model 7 has the lowest looic/elpd, but not more so than model 5:
+diffs <- rbind(
+    rep(NA, 2),
+    compare(m2loo, m4loo),
+    compare(m3loo, m4loo),
+    compare(m1loo, m4loo),
+    compare(m0loo, m4loo)
+)
+looTab <- cbind(looTab, diffs)
+## Put differences on LOOIC scale (LOOIC = -2*ELPD)
+looTab[,7] <- 2*looTab[,7]
+looTab[,8] <- sqrt(2)*looTab[,8]
+colnames(looTab) <- c("LOOIC", "se(LOOIC)", "ELPD", "se(ELPD)", "Eff. P",
+                      "se(Eff. P)", "$\\Delta$LOOIC", "se($\\Delta$LOOIC)")
+saveRDS(looTab, "../data/looic.rds")
+################################################################################
+################################################################################
