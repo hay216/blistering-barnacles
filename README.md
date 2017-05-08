@@ -54,4 +54,12 @@ root@6f5865b66643:/home/blistering-barnacles# make
 root@6f5865b66643:/home/blistering-barnacles# make NUMMI=2 MCITER=200
 ```
 
+--- **alternatively** ---
+
+the graphics required to compile the manuscript are included as part of the repository. To compile the manuscript, use 
+
+```
+root@6f5865b66643:/home/blistering-barnacles# make paper
+```
+
 Let me know if you have any problems by filing an [issue](https://github.com/SteveLane/blistering-barnacles/issues).
