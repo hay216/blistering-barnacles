@@ -1,4 +1,4 @@
-# Time-stamp: <2017-05-08 13:58:30 (slane)>
+# Time-stamp: <2017-05-08 14:03:14 (slane)>
 .PHONY: all models input-data output-data clean-models clean-manuscripts clobber \
 	PROC-DATA processed-data paper
 
@@ -143,7 +143,7 @@ manuscripts/model-interrogation.html: manuscripts/model-interrogation.Rmd \
 	latexmk -pdf $(<F)
 
 # phony rule to make paper from included figures
-paper: manuscripts/censored-mle.Rnw
+paper: manuscripts/censored-mle.Rnw data/biofouling.rds
 	cd $(<D); \
 	Rscript --no-save --no-restore -e "knitr::knit('$(<F)')"; \
 	latexmk -pdf $(<F:Rnw=tex)
