@@ -1,4 +1,4 @@
-% Time-stamp: <2017-05-05 15:21:00 (slane)>
+% Time-stamp: <2017-05-08 12:13:48 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -65,7 +65,7 @@
 <<knitr-setup,echo=FALSE,warning=FALSE,message=FALSE,cache=FALSE,results="hide">>=
 ## Add github packages using gitname/reponame format
 source("../scripts/imputation-functions.R")
-packages <- c("dplyr", "tidyr", "ggplot2", "mice", "rstan", "loo")
+packages <- c("dplyr", "tidyr", "ggplot2", "mice", "rstan", "loo", "Hmisc")
 ipak(packages)
 theme_set(theme_bw())
 knitr::opts_chunk$set(cache = FALSE, error = FALSE, warning = FALSE,
@@ -260,12 +260,35 @@ Figure~\ref{fig:m4-reg} shows the regression estimates from \ref{eq:M4}, in rela
   \label{fig:m4-reg}
 \end{figure}
 
-Finally, Figure QQQ compares estimates of the measurement-level and vessel-level regression coefficients for each of the models considered.
+Finally, Figure~\ref{fig:coefs} compares estimates of the measurement-level and vessel-level regression coefficients for each of the models considered.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.45\linewidth]{../graphics/plSummary.pdf}
+  \caption{Estimated coefficients from \ref{eq:M0}--\ref{eq:M4}. Coefficients from each model (where applicable) are shown grouped within coefficient on the y-axis. The median is shown as a point estimate, with 50\% and 90\% intervals.}
+  \label{fig:coefs}
+\end{figure}
 
 \subsubsection{Predictive model comparison}
 \label{sec:pred-model-comp}
 
-Table XXX compares the models by their leave-one-out information criterion (looic, analogous to AIC, see \cite{Vehtari2016-dp}). MXXX is the best-performing model based on looic, but not significantly so.
+Table~\ref{tab:looic} compares the models by their leave-one-out information criterion (LOOIC, analogous to AIC, see \cite{Vehtari2016-dp}). \ref{eq:M4} is the best-performing model based on LOOIC, but not significantly so.
+
+<<looic,results="asis",center=TRUE>>=
+looTab <- readRDS("../data/looic.rds")
+latex(looTab[, -c(3:4)],
+      dig = 3,
+      file = "",
+      rowlabel = "Model",
+      rowlabel.just = "l",
+      booktabs = TRUE,
+      col.just = rep("r", 6),
+      where = "!h",
+      caption =
+          "LOOIC-based comparison of models \\ref{eq:M0}--\\ref{eq:M4}. The model with the smallest LOOIC (\\ref{eq:M4}) is shown first, with subsequent rows ordered by increasing LOOIC (smaller LOOIC values are preferred). $\\Delta$LOOIC shows the difference in LOOIC between all models and \\ref{eq:M4}; se($\\Delta$LOOIC) shows the estimated standard error of the difference. Eff. P gives the estimated effective number of parameters; se(Eff. P) shows its standard error.",
+      label="tab:looic")
+
+@ 
 
 \printbibliography
 
