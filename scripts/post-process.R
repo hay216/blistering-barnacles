@@ -4,7 +4,7 @@
 ## Author: Steve Lane
 ## Date: Thursday, 04 May 2017
 ## Synopsis: Post process the output from the regression models
-## Time-stamp: <2017-05-08 12:11:46 (slane)>
+## Time-stamp: <2017-05-08 13:23:05 (slane)>
 ################################################################################
 ################################################################################
 ## Add github packages using gitname/reponame format
@@ -82,8 +82,13 @@ plMidTrips <- ggplot(vessImps, aes(x = factor(nummi), y = midTrips)) +
           panel.grid.major.x = element_blank(),
           panel.grid.minor.x = element_blank())
 ggsave("../graphics/imp-trips.pdf", plMidTrips, width = 4.9, height = 4.9)
+## Adjust based on length of imps
 set.seed(76)
-impSelect <- sample(seq_along(imps), 15)
+if(length(imps) < 15){
+    impSelect <- seq_along(imps)
+} else {
+    impSelect <- sample(seq_along(imps), 15)
+}
 plPaint <- ggplot(vessImps %>% filter(nummi %in% c(0, impSelect),
                                       !is.na(paintType)),
                   aes(x = paintType)) +
