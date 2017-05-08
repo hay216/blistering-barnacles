@@ -1,4 +1,4 @@
-% Time-stamp: <2017-05-08 12:13:48 (slane)>
+% Time-stamp: <2017-05-08 14:02:38 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -213,14 +213,6 @@ Figure~\ref{fig:imp-cont} displays the observed and imputed vessel-level data fo
 \subsection{Regression results}
 \label{sec:regression-results}
 
-<<read-regress>>=
-## m0 <- readRDS("../data/censored-mle-m0.rds")
-## m1 <- readRDS("../data/censored-mle-m1.rds")
-## m2 <- readRDS("../data/censored-mle-m2.rds")
-## m3 <- readRDS("../data/censored-mle-m3.rds")
-## m4 <- readRDS("../data/censored-mle-m4.rds")
-
-@ 
 \subsubsection{Exploration of candidate interaction terms}
 \label{sec:expl-cand-inter}
 
