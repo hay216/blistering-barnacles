@@ -1,4 +1,4 @@
-# Time-stamp: <2017-05-04 17:32:21 (slane)>
+# Time-stamp: <2017-05-08 12:20:48 (slane)>
 .PHONY: all models input-data output-data clean-models clean-manuscripts clobber \
 	PROC-DATA processed-data
 
@@ -23,8 +23,17 @@ output-data: data/censored-mle-m0.rds \
 	data/censored-mle-m3.rds \
 	data/censored-mle-m4.rds
 
-PROC-DATA = graphics/plM1boat.pdf \
-	graphics/plM1paint.pdf
+PROC-DATA = graphics/obs-hist.pdf \
+	graphics/imp-days1.pdf \
+	graphics/imp-trips.pdf \
+	graphics/imp-paint.pdf \
+	graphics/plM1boat.pdf \
+	graphics/plM1paint.pdf \
+	graphics/plM3boat.pdf \
+	graphics/plM3paint.pdf \
+	graphics/plM4Type.pdf \
+	graphics/plSummary.pdf \
+	data/looic.rds
 
 processed-data: $(PROC-DATA)
 
@@ -125,7 +134,7 @@ manuscripts/model-interrogation.html: manuscripts/model-interrogation.Rmd \
 	cd $(<D); \
 	Rscript --no-save --no-restore -e "rmarkdown::render('$(<F)')"
 
-%.tex: %.Rnw data/biofouling.rds data/imputations.rds
+%.tex: %.Rnw data/biofouling.rds data/imputations.rds $(PROC-DATA)
 	cd $(<D); \
 	Rscript --no-save --no-restore -e "knitr::knit('$(<F)')"
 
