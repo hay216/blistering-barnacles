@@ -1,9 +1,11 @@
-# Time-stamp: <2017-05-08 12:20:48 (slane)>
+# Time-stamp: <2017-05-08 12:39:15 (slane)>
 .PHONY: all models input-data output-data clean-models clean-manuscripts clobber \
 	PROC-DATA processed-data
 
-all: manuscripts/censored-mle.html manuscripts/censored-mle.pdf \
-	manuscripts/model-interrogation.html
+all: manuscripts/censored-mle.html \
+	processed-data \
+	manuscripts/model-interrogation.html \
+	manuscripts/censored-mle.pdf
 
 .INTERMEDIATES: manuscripts/censored-mle.tex
 
@@ -116,7 +118,7 @@ data/censored-mle-m4.rds: scripts/fit-model.R \
 
 ################################################################################
 # Rules to process data (add dependencies later).
-$(PROC-DATA): scripts/post-process.R
+$(PROC-DATA): scripts/post-process.R output-data
 	cd $(<D); \
 	Rscript --no-save --no-restore $(<F)
 
@@ -128,9 +130,7 @@ manuscripts/censored-mle.html: manuscripts/censored-mle.Rmd \
 	Rscript --no-save --no-restore -e "rmarkdown::render('$(<F)')"
 
 manuscripts/model-interrogation.html: manuscripts/model-interrogation.Rmd \
-	data/censored-mle-m0.rds data/censored-mle-m1.rds \
-	data/censored-mle-m2.rds data/censored-mle-m3.rds \
-	data/censored-mle-m4.rds
+	output-data
 	cd $(<D); \
 	Rscript --no-save --no-restore -e "rmarkdown::render('$(<F)')"
 
