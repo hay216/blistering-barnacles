@@ -56,7 +56,7 @@ root@6f5865b66643:/home/blistering-barnacles# make NUMMI=2 MCITER=200
 
 --- **alternatively** ---
 
-the graphics required to compile the manuscript are included as part of the repository. To compile the manuscript, use 
+the graphics required to compile the manuscript are included as part of the repository. To compile the manuscript only (without running the models), use 
 
 ```
 root@6f5865b66643:/home/blistering-barnacles# make paper
