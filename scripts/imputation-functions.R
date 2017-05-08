@@ -4,7 +4,7 @@
 ## Author: Steve Lane
 ## Date: Wednesday, 29 March 2017
 ## Synopsis: Functions to run the censored regression imputation models
-## Time-stamp: <2017-04-28 16:21:49 (slane)>
+## Time-stamp: <2017-05-08 08:16:32 (slane)>
 ################################################################################
 ################################################################################
 
@@ -119,6 +119,40 @@ createStanData <- function(lvl1, lvl2){
     ## Do a scaled version as well (centre and divide by sd)
     ## I've pre-scaled now, so removed what was here (see previous commits).
     return(stanData)
+}
+################################################################################
+################################################################################
+
+################################################################################
+################################################################################
+## Begin Section: Function to create coefficient summary data
+################################################################################
+################################################################################
+sumMC <- function(draws, qnts){
+    if(is.na(ncol(draws))){
+        summ <- quantile(draws, qnts, names = FALSE)
+        summ <- tibble::as_tibble(t(summ))
+        names(summ) <- names(qnts)
+    } else {
+        summ <- apply(draws, 2, quantile, probs = qnts, names = FALSE)
+        summ <- tibble::as_tibble(t(summ))
+        names(summ) <- names(qnts)
+    }
+    summ
+}
+summRename <- function(summList){
+    summ <- lapply(names(summList), function(nm){
+        dat <- summList[[nm]]
+        nr <- nrow(dat)
+        if(nr > 1){
+            dat <- dat %>%
+                mutate(coef = paste0(nm, seq_len(nr)))
+        } else {
+            dat <- dat %>%
+                mutate(coef = nm)
+        }
+    })
+    bind_rows(summ)
 }
 ################################################################################
 ################################################################################
