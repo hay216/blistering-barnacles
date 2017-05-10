@@ -1,4 +1,4 @@
-# Time-stamp: <2017-05-11 09:28:04 (slane)>
+# Time-stamp: <2017-05-11 09:31:04 (slane)>
 .PHONY: all models robust-models input-data output-data robust-output-data \
 	ROBUST-PROC-DATA PROC-DATA robust-processed-data processed-data \
 	paper supplement \
@@ -184,7 +184,7 @@ data/censored-mle-m4-robust.rds: scripts/fit-model.R \
 
 ################################################################################
 # Rules to process data (add dependencies later).
-$(ROBUST-PROC-DATA): scripts/post-process-robust.R output-data
+$(ROBUST-PROC-DATA): scripts/post-process-robust.R robust-output-data
 	cd $(<D); \
 	Rscript --no-save --no-restore $(<F)
 
