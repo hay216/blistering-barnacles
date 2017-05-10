@@ -1,6 +1,8 @@
-# Time-stamp: <2017-05-10 12:30:31 (slane)>
-.PHONY: all models input-data output-data clean-models clean-manuscripts clobber \
-	PROC-DATA processed-data paper
+# Time-stamp: <2017-05-11 09:28:04 (slane)>
+.PHONY: all models robust-models input-data output-data robust-output-data \
+	ROBUST-PROC-DATA PROC-DATA robust-processed-data processed-data \
+	paper supplement \
+	clean-models clean-manuscripts clobber
 
 all: manuscripts/censored-mle.html \
 	processed-data \
@@ -10,40 +12,52 @@ all: manuscripts/censored-mle.html \
 .INTERMEDIATES: manuscripts/censored-mle.tex
 
 models: stan/censored-mle-m0.rds \
-	stan/censored-mle-m0-robust.rds \
 	stan/censored-mle-m1.rds \
-	stan/censored-mle-m1-robust.rds \
 	stan/censored-mle-m2.rds \
-	stan/censored-mle-m2-robust.rds \
 	stan/censored-mle-m3.rds \
+	stan/censored-mle-m4.rds
+
+robust-models: stan/censored-mle-m0-robust.rds \
+	stan/censored-mle-m1-robust.rds \
+	stan/censored-mle-m2-robust.rds \
 	stan/censored-mle-m3-robust.rds \
-	stan/censored-mle-m4.rds \
 	stan/censored-mle-m4-robust.rds
 
 input-data: data/biofouling.rds data/imputations.rds
 
 output-data: data/censored-mle-m0.rds \
-	data/censored-mle-m0-robust.rds \
 	data/censored-mle-m1.rds \
-	data/censored-mle-m1-robust.rds \
 	data/censored-mle-m2.rds \
-	data/censored-mle-m2-robust.rds \
 	data/censored-mle-m3.rds \
+	data/censored-mle-m4.rds
+
+robust-output-data: data/censored-mle-m0-robust.rds \
+	data/censored-mle-m1-robust.rds \
+	data/censored-mle-m2-robust.rds \
 	data/censored-mle-m3-robust.rds \
-	data/censored-mle-m4.rds \
 	data/censored-mle-m4-robust.rds
 
-PROC-DATA = graphics/obs-hist.pdf \
+ROBUST-PROC-DATA = graphics/obs-hist.pdf \
 	graphics/imp-days1.pdf \
 	graphics/imp-trips.pdf \
 	graphics/imp-paint.pdf \
-	graphics/plM1boat.pdf \
+	graphics/plM1boat-robust.pdf \
+	graphics/plM1paint-robust.pdf \
+	graphics/plM3boat-robust.pdf \
+	graphics/plM3paint-robust.pdf \
+	graphics/plM4Type-robust.pdf \
+	graphics/plSummary-robust.pdf \
+	data/looic-robust.rds
+
+PROC-DATA = graphics/plM1boat.pdf \
 	graphics/plM1paint.pdf \
 	graphics/plM3boat.pdf \
 	graphics/plM3paint.pdf \
 	graphics/plM4Type.pdf \
 	graphics/plSummary.pdf \
 	data/looic.rds
+
+robust-processed-data: $(ROBUST-PROC-DATA)
 
 processed-data: $(PROC-DATA)
 
@@ -170,6 +184,10 @@ data/censored-mle-m4-robust.rds: scripts/fit-model.R \
 
 ################################################################################
 # Rules to process data (add dependencies later).
+$(ROBUST-PROC-DATA): scripts/post-process-robust.R output-data
+	cd $(<D); \
+	Rscript --no-save --no-restore $(<F)
+
 $(PROC-DATA): scripts/post-process.R output-data
 	cd $(<D); \
 	Rscript --no-save --no-restore $(<F)
@@ -182,11 +200,17 @@ manuscripts/censored-mle.html: manuscripts/censored-mle.Rmd \
 	Rscript --no-save --no-restore -e "rmarkdown::render('$(<F)')"
 
 manuscripts/model-interrogation.html: manuscripts/model-interrogation.Rmd \
-	output-data
+	robust-output-data
 	cd $(<D); \
 	Rscript --no-save --no-restore -e "rmarkdown::render('$(<F)')"
 
-%.tex: %.Rnw data/biofouling.rds data/imputations.rds $(PROC-DATA)
+manuscripts/censored-mle.tex: manuscripts/censored-mle.Rnw \
+	data/biofouling.rds data/imputations.rds $(ROBUST-PROC-DATA)
+	cd $(<D); \
+	Rscript --no-save --no-restore -e "knitr::knit('$(<F)')"
+
+manuscripts/censored-mle-supplement.tex: manuscripts/censored-mle-supplement.Rnw \
+	data/biofouling.rds data/imputations.rds $(PROC-DATA)
 	cd $(<D); \
 	Rscript --no-save --no-restore -e "knitr::knit('$(<F)')"
 
@@ -196,6 +220,11 @@ manuscripts/model-interrogation.html: manuscripts/model-interrogation.Rmd \
 
 # phony rule to make paper from included figures
 paper: manuscripts/censored-mle.Rnw data/biofouling.rds
+	cd $(<D); \
+	Rscript --no-save --no-restore -e "knitr::knit('$(<F)')"; \
+	latexmk -pdf $(<F:Rnw=tex)
+
+supplement: manuscripts/censored-mle-supplement.Rnw data/biofouling.rds
 	cd $(<D); \
 	Rscript --no-save --no-restore -e "knitr::knit('$(<F)')"; \
 	latexmk -pdf $(<F:Rnw=tex)

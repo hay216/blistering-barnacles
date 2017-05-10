@@ -4,7 +4,7 @@
 ## Author: Steve Lane
 ## Date: Thursday, 04 May 2017
 ## Synopsis: Post process the output from the regression models
-## Time-stamp: <2017-05-08 13:23:05 (slane)>
+## Time-stamp: <2017-05-11 09:16:54 (slane)>
 ################################################################################
 ################################################################################
 ## Add github packages using gitname/reponame format
@@ -22,82 +22,6 @@ m4 <- readRDS("../data/censored-mle-m4.rds")
 imps <- readRDS("../data/imputations.rds")
 biofoul <- readRDS("../data/biofouling.rds")
 vessels <- biofoul %>% distinct(boatID, .keep_all = TRUE)
-################################################################################
-################################################################################
-
-################################################################################
-################################################################################
-## Begin Section: Observed weight figures
-################################################################################
-################################################################################
-histData <- biofoul %>%
-    filter(wetWeight >= 1.5) %>%
-    mutate(wwLog = log(wetWeight)) %>%
-    select(LocID, `Weight (gm)` = wetWeight,
-           `Weight (gm), log-scale` = wwLog) %>%
-    gather("logged", "ww", 2:3)
-plHist <- ggplot(histData, aes(x = ww)) + geom_histogram(bins = 11) +
-    facet_grid(LocID ~ logged, scales = "free_x") +
-    xlab("") +
-    ylab("Count") +
-    theme(panel.grid.major.x = element_blank(),
-          panel.grid.minor.x = element_blank())
-ggsave("../graphics/obs-hist.pdf", plHist)
-################################################################################
-################################################################################
-
-################################################################################
-################################################################################
-## Begin Section: Imputation figures
-################################################################################
-################################################################################
-lvl2Imp <- lapply(imps, function(x) x$lvl2) %>% bind_rows() %>%
-    mutate(nummi = rep(seq_along(imps), each = nrow(vessels)))
-vessImps <- vessels %>%
-    mutate(
-        days1 = as.numeric(scale(days1)),
-        days2 = as.numeric(scale(days2)),
-        midTrips = as.numeric(scale(midTrips)),
-        ApproxHullSA = as.numeric(scale(ApproxHullSA)),
-        nummi = 0
-    )
-vessImps <- bind_rows(vessImps, lvl2Imp)
-plDays1 <- ggplot(vessImps, aes(x = factor(nummi), y = days1)) +
-    geom_boxplot(outlier.size = 0.5) +
-    xlab("Imputation number") +
-    ylab("") +
-    theme_bw(base_size = 7.7) +
-    theme(axis.text.x = element_blank(),
-          axis.ticks.x = element_blank(),
-          panel.grid.major.x = element_blank(),
-          panel.grid.minor.x = element_blank())
-ggsave("../graphics/imp-days1.pdf", plDays1, width = 4.9, height = 4.9)
-plMidTrips <- ggplot(vessImps, aes(x = factor(nummi), y = midTrips)) +
-    geom_boxplot(outlier.size = 0.5) +
-    xlab("Imputation number") +
-    ylab("") +
-    theme_bw(base_size = 7.7) +
-    theme(axis.text.x = element_blank(),
-          axis.ticks.x = element_blank(),
-          panel.grid.major.x = element_blank(),
-          panel.grid.minor.x = element_blank())
-ggsave("../graphics/imp-trips.pdf", plMidTrips, width = 4.9, height = 4.9)
-## Adjust based on length of imps
-set.seed(76)
-if(length(imps) < 15){
-    impSelect <- seq_along(imps)
-} else {
-    impSelect <- sample(seq_along(imps), 15)
-}
-plPaint <- ggplot(vessImps %>% filter(nummi %in% c(0, impSelect),
-                                      !is.na(paintType)),
-                  aes(x = paintType)) +
-    geom_bar() +
-    facet_wrap(~ factor(nummi)) +
-    xlab("Anti-fouling paint type") +
-    theme_bw(base_size = 7.7) +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1))
-ggsave("../graphics/imp-paint.pdf", plPaint, width = 4.9, height = 4.9)
 ################################################################################
 ################################################################################
 

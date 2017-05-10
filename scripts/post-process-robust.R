@@ -4,7 +4,7 @@
 ## Author: Steve Lane
 ## Date: Thursday, 04 May 2017
 ## Synopsis: Post process the output from the regression models
-## Time-stamp: <2017-05-11 09:06:28 (slane)>
+## Time-stamp: <2017-05-11 09:14:57 (slane)>
 ################################################################################
 ################################################################################
 ## Add github packages using gitname/reponame format
@@ -42,7 +42,7 @@ plHist <- ggplot(histData, aes(x = ww)) + geom_histogram(bins = 11) +
     ylab("Count") +
     theme(panel.grid.major.x = element_blank(),
           panel.grid.minor.x = element_blank())
-ggsave("../graphics/obs-hist-robust.pdf", plHist)
+ggsave("../graphics/obs-hist.pdf", plHist)
 ################################################################################
 ################################################################################
 
@@ -71,7 +71,7 @@ plDays1 <- ggplot(vessImps, aes(x = factor(nummi), y = days1)) +
           axis.ticks.x = element_blank(),
           panel.grid.major.x = element_blank(),
           panel.grid.minor.x = element_blank())
-ggsave("../graphics/imp-days1-robust.pdf", plDays1, width = 4.9, height = 4.9)
+ggsave("../graphics/imp-days1.pdf", plDays1, width = 4.9, height = 4.9)
 plMidTrips <- ggplot(vessImps, aes(x = factor(nummi), y = midTrips)) +
     geom_boxplot(outlier.size = 0.5) +
     xlab("Imputation number") +
@@ -81,7 +81,7 @@ plMidTrips <- ggplot(vessImps, aes(x = factor(nummi), y = midTrips)) +
           axis.ticks.x = element_blank(),
           panel.grid.major.x = element_blank(),
           panel.grid.minor.x = element_blank())
-ggsave("../graphics/imp-trips-robust.pdf", plMidTrips, width = 4.9, height = 4.9)
+ggsave("../graphics/imp-trips.pdf", plMidTrips, width = 4.9, height = 4.9)
 ## Adjust based on length of imps
 set.seed(76)
 if(length(imps) < 15){
@@ -97,7 +97,7 @@ plPaint <- ggplot(vessImps %>% filter(nummi %in% c(0, impSelect),
     xlab("Anti-fouling paint type") +
     theme_bw(base_size = 7.7) +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))
-ggsave("../graphics/imp-paint-robust.pdf", plPaint, width = 4.9, height = 4.9)
+ggsave("../graphics/imp-paint.pdf", plPaint, width = 4.9, height = 4.9)
 ################################################################################
 ################################################################################
 

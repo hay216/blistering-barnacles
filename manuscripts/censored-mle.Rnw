@@ -1,4 +1,4 @@
-% Time-stamp: <2017-05-10 17:37:26 (slane)>
+% Time-stamp: <2017-05-11 09:10:52 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -252,8 +252,8 @@ Figure~\ref{fig:m1-reg} displays the median and 80\% intervals of the estimated 
 
 \begin{figure}
   \centering
-  \subfloat[Vessel-level intercepts coloured by vessel type.\label{fig:m1-reg-a}]{\includegraphics[width=0.7\linewidth]{../graphics/plM1boat.pdf}} \\
-  \subfloat[Vessel-level intercepts coloured by anti-fouling paint type.\label{fig:m1-reg-b}]{\includegraphics[width=0.7\linewidth]{../graphics/plM1paint.pdf}}
+  \subfloat[Vessel-level intercepts coloured by vessel type.\label{fig:m1-reg-a}]{\includegraphics[width=0.7\linewidth]{../graphics/plM1boat-robust.pdf}} \\
+  \subfloat[Vessel-level intercepts coloured by anti-fouling paint type.\label{fig:m1-reg-b}]{\includegraphics[width=0.7\linewidth]{../graphics/plM1paint-robust.pdf}}
   \caption{Estimated vessel-level intercepts from \ref{eq:M1}, plotted against the four ordinal predictors. Regression lines for each predictor are overlaid.}
   \label{fig:m1-reg}
 \end{figure}
@@ -269,8 +269,8 @@ Figure~\ref{fig:m3-reg-a} is suggestive of an interaction between the number of 
 
 \begin{figure}
   \centering
-  \subfloat[Vessel-level intercepts coloured by vessel type.\label{fig:m3-reg-a}]{\includegraphics[width=0.9\linewidth]{../graphics/plM3boat.pdf}} \\
-  \subfloat[Vessel-level intercepts coloured by anti-fouling paint type.\label{fig:m3-reg-b}]{\includegraphics[width=0.45\linewidth]{../graphics/plM3paint.pdf}}
+  \subfloat[Vessel-level intercepts coloured by vessel type.\label{fig:m3-reg-a}]{\includegraphics[width=0.9\linewidth]{../graphics/plM3boat-robust.pdf}} \\
+  \subfloat[Vessel-level intercepts coloured by anti-fouling paint type.\label{fig:m3-reg-b}]{\includegraphics[width=0.45\linewidth]{../graphics/plM3paint-robust.pdf}}
   \caption{Estimated vessel-level intercepts from \ref{eq:M3}, plotted against the two ordinal predictors with interactions being assessed. Regression lines for each estimated interaction are overlaid.}
   \label{fig:m3-reg}
 \end{figure}
@@ -279,7 +279,7 @@ Figure~\ref{fig:m4-reg} shows the regression estimates from \ref{eq:M4}, in rela
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.9\linewidth]{../graphics/plM4type.pdf}
+  \includegraphics[width=0.9\linewidth]{../graphics/plM4type-robust.pdf}
   \caption{Estimated vessel-level intercepts from \ref{eq:M4}, plotted against the two ordinal predictors. Regression lines for each estimated regression are overlaid.}
   \label{fig:m4-reg}
 \end{figure}
@@ -288,7 +288,7 @@ Finally, Figure~\ref{fig:coefs} compares estimates of the measurement-level and 
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.45\linewidth]{../graphics/plSummary.pdf}
+  \includegraphics[width=0.45\linewidth]{../graphics/plSummary-robust.pdf}
   \caption{Estimated coefficients from \ref{eq:M0}--\ref{eq:M4}. Coefficients from each model (where applicable) are shown grouped within coefficient on the y-axis. The median is shown as a point estimate, with 50\% and 90\% intervals.}
   \label{fig:coefs}
 \end{figure}
@@ -299,7 +299,7 @@ Finally, Figure~\ref{fig:coefs} compares estimates of the measurement-level and 
 Table~\ref{tab:looic} compares the models by their leave-one-out information criterion (LOOIC, analogous to AIC, see \cite{Vehtari2016-dp}). \ref{eq:M4} is the best-performing model based on LOOIC, but not significantly so.
 
 <<looic,results="asis",center=TRUE>>=
-looTab <- readRDS("../data/looic.rds")
+looTab <- readRDS("../data/looic-robust.rds")
 latex(looTab[, -c(3:4)],
       dig = 3,
       file = "",
