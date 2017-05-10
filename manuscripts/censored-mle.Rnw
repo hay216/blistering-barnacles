@@ -1,4 +1,4 @@
-% Time-stamp: <2017-05-10 17:34:21 (slane)>
+% Time-stamp: <2017-05-10 17:37:26 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -166,9 +166,9 @@ The starting model specification for analysis included the location of the measu
   \alpha_{j} & \sim \text{cauchy}(0, \sigma_{\alpha}) \label{eq:M0}\tag{M0} \\
   \mu & \sim N(0, 5) \nonumber \\
   \beta^{l1},\beta^{l2} & \sim t_{3}(0, 1) \nonumber \\
-  \sigma,\sigma_{\alpha} & \sim \text{cauchy}(0, 2.5) \nonumber
+  \sigma,\sigma_{\alpha} & \sim \text{half-cauchy}(0, 2.5) \nonumber
 \end{align}
-where $\mu_{i}$ is the regression at the observation level; $\mu,\beta^{l}$ are parameters to be modelled; and $\text{location1}_{i},\text{location2}_{i}$ are indicator variables for whether the observation was measured at the keel or the rudder (as compared to the hull, which is subsumed by the intercept). $\alpha_{j[i]}$ is the vessel-level intercept, $j=1,\ldots,\Sexpr{nrow(vessels)}$\footnote{The notation $\alpha_{j[i]}$ denotes the vessel-level intercept for the $i\up{th}$ observation.}, which is modelled as a cauchy distribution with location 0, and scale $\sigma_{\alpha}$. The intercept is given a $N(0, 5)$ prior; regression parameters $t_{3}(0, 1)$ priors; and scale parameters given $\text{cauchy}(0, 2.5)$ priors.
+where $\mu_{i}$ is the regression at the observation level; $\mu,\beta^{l}$ are parameters to be modelled; and $\text{location1}_{i},\text{location2}_{i}$ are indicator variables for whether the observation was measured at the keel or the rudder (as compared to the hull, which is subsumed by the intercept). $\alpha_{j[i]}$ is the vessel-level intercept, $j=1,\ldots,\Sexpr{nrow(vessels)}$\footnote{The notation $\alpha_{j[i]}$ denotes the vessel-level intercept for the $i\up{th}$ observation.}, which is modelled as a cauchy distribution with location 0, and scale $\sigma_{\alpha}$. The intercept is given a $N(0, 5)$ prior; regression parameters $t_{3}(0, 1)$ priors; and scale parameters given $\text{half-cauchy}(0, 2.5)$ priors.
 
 We investigated a further four regression specifications for the vessel-level intercepts, consisting of the various vessel-level characteristics and interaction terms:
 \begin{align}
