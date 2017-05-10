@@ -7,7 +7,7 @@
 // Includes boat-level intercept, and observation level location ID.
 // Removed hull surface area.
 // Based off M2, but with t distribution for outcome for added robustness.
-// Time-stamp: <2017-05-10 12:22:07 (slane)>
+// Time-stamp: <2017-05-10 13:59:26 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -109,6 +109,8 @@ model{
   alphaBoat ~ cauchy(alphaHat, sigma_alphaBoat);
   /* Prior for observation (model) error */
   sigma ~ cauchy(0, 2.5);
+  /* Prior for df */
+  nu ~ gamma(2, 0.1);
   /* Observed log-likelihood */
   for(i in 1:N){
     target += student_t_lpdf(logY[i] | nu, muHat[i], sigma);

@@ -7,7 +7,7 @@
 // Includes boat-level intercept, and observation level location ID.
 // Restricted model form.
 // Based off M4, but with t distribution for outcome for added robustness.
-// Time-stamp: <2017-05-10 12:27:10 (slane)>
+// Time-stamp: <2017-05-10 13:59:51 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -108,6 +108,8 @@ model{
   alphaBoat ~ cauchy(alphaHat, sigma_alphaBoat);
   /* Prior for observation (model) error */
   sigma ~ cauchy(0, 2.5);
+  /* Prior for df */
+  nu ~ gamma(2, 0.1);
   /* Observed log-likelihood */
   for(i in 1:N){
     target += student_t_lpdf(logY[i] | nu, muHat[i], sigma);

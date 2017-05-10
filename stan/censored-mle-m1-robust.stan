@@ -6,8 +6,8 @@
 // Synopsis: Sampling statements to fit a regression with censored outcome data.
 // Includes boat-level intercept, and observation level location ID.
 // All boat-level intercept predictors included.
-// Based off M0, but with t distribution for outcome for added robustness.
-// Time-stamp: <2017-05-10 12:19:11 (slane)>
+// Based off M1, but with t distribution for outcome for added robustness.
+// Time-stamp: <2017-05-10 14:00:07 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -112,6 +112,8 @@ model{
   alphaBoat ~ cauchy(alphaHat, sigma_alphaBoat);
   /* Prior for observation (model) error */
   sigma ~ cauchy(0, 2.5);
+  /* Prior for df */
+  nu ~ gamma(2, 0.1);
   /* Observed log-likelihood */
   for(i in 1:N){
     target += student_t_lpdf(logY[i] | nu, muHat[i], sigma);
