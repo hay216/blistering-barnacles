@@ -1,0 +1,178 @@
+% Time-stamp: <2017-05-11 09:25:43 (slane)>
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{palatino}
+\usepackage[table, usenames, dvipsnames]{xcolor}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[margin=25mm]{geometry}
+\usepackage{threeparttable}
+\usepackage{parskip}
+\usepackage{lineno}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{units}
+\usepackage{graphicx}
+\usepackage[margin=15pt,font=small,labelfont=bf]{caption}
+\usepackage[backend=biber,style=numeric,natbib=true,url=false,doi=true]{biblatex}
+\addbibresource{biofouling.bib}
+\usepackage{pdflscape}
+\usepackage{verbatim}
+\usepackage{longtable}
+\usepackage{appendix}
+\usepackage{multirow}
+\usepackage[bottom]{footmisc} %ensure footnotes aren't glued to bottom of body text
+\usepackage{authblk}
+\usepackage{setspace}
+\usepackage[caption=false]{subfig}
+
+% Define colours
+\definecolor{mylinkcolour}{HTML}{FC8D62}
+\definecolor{myurlcolour}{HTML}{8DA0CB}
+\definecolor{mycitecolour}{HTML}{66C2A5}
+
+\newcommand{\ua}[1]{\underaccent{\tilde}{#1}}
+\newcommand{\argmin}[1]{\underset{#1}{\operatorname{arg\,min}}\;}
+\newcommand{\argmax}[1]{\underset{#1}{\operatorname{arg\,max}}\;}
+\newcommand{\up}[1]{\ensuremath{^\textrm{\scriptsize#1}}}
+\newcommand{\bs}[1]{\ensuremath{\boldsymbol{#1}}} % Command to bold
+% greek for vectors
+\newcommand{\dd}{\, \mathrm{d}} % Roman d in integrals
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\usepackage{hyperref}
+\hypersetup{
+  linkcolor = mylinkcolour,
+  urlcolor = myurlcolour,
+  citecolor = mycitecolour,
+  colorlinks = true,
+  bookmarksnumbered = true,
+  pdfauthor = {Stephen E Lane},
+  pdftitle = {Risk factors for fouling biomass}
+}
+
+\DeclareGraphicsExtensions{.pdf,.PDF,.png,.PNG}
+
+\author[1]{Stephen E.\ Lane}
+\author[2]{Keith R.\ Hayes}
+\author[1]{Andrew P.\ Robinson}
+\affil[1]{CEBRA, The University of Melbourne}
+\affil[2]{CSIRO}
+\date{\today}
+\title{Risk factors for fouling biomass: Evidence from small vessels in Australia\\
+{\small{Supplemental results}}}
+
+<<knitr-setup,echo=FALSE,warning=FALSE,message=FALSE,cache=FALSE,results="hide">>=
+## Add github packages using gitname/reponame format
+source("../scripts/imputation-functions.R")
+packages <- c("dplyr", "tidyr", "ggplot2", "mice", "rstan", "loo", "Hmisc")
+ipak(packages)
+theme_set(theme_bw())
+knitr::opts_chunk$set(cache = FALSE, error = FALSE, warning = FALSE,
+                      message = FALSE, fig.align = "center", echo = FALSE,
+                      out.width = "0.8\\textwidth", fig.pos = "!hbp")
+knitr::opts_knit$set(out.format = "latex")
+knitr::knit_theme$set("acid")
+options(digits = 1)
+
+@ 
+
+
+\begin{document}
+
+\maketitle
+
+\onehalfspacing
+
+\linenumbers
+\modulolinenumbers[5]
+
+\section{Introduction}
+\label{sec:introduction}
+
+This document provides supplemental results to the main text, \textit{Risk factors for fouling biomass: Evidence from small vessels in Australia}. In particular, results for the models using the normal outcome distribution are presented.
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Outcome model}
+\label{sec:outcome-model}
+
+The outcome model that used the $t$-distribution \eqref{eq:O2} clearly outperformed that which used the normal distribution \eqref{eq:O1}. The difference in the leave-one-out information criterion (LOOIC) was XXX (sd YYY).
+
+We are also interested in whether the models produce predictions consistent with the observed data. An obvious choice of posterior predictive check is thus the proportion of posterior predictions that lie below the limit of detection. Figure XXX compares the distribution of the posterior predictive check between each of the outcome models. The observed proportion of samples below the limit of detection (X\%) is shown as a vertical line in each panel. Neither model does a stellar job in generating data consistent with the observed measurements (at least for this posterior predictive check), but \ref{eq:O2} clearly outperforms \ref{eq:O1}. For this reason, the following results pertain to models fit with the $t$ distribution as the outcome model \eqref{eq:O2}.
+
+\subsection{Regression results}
+\label{sec:regression-results}
+
+\subsubsection{Exploration of candidate interaction terms}
+\label{sec:expl-cand-inter}
+
+Figure~\ref{fig:m1-reg} displays the median and 80\% intervals of the estimated vessel-level intercepts, with respect to the four ordinal predictors: the number of days since the vessel was last used; the number of days since the vessel was last cleaned; the median number of trips undertaken by the vessel; and the vessel's hull surface area. Figure~\ref{fig:m1-reg-a} shows the vessel-level intercepts coloured by vessel type, whilst Figure~\ref{fig:m1-reg-b} shows the vessel-level intercepts coloured by anti-fouling paint type. Shown in each panel are the estimated (median) regression lines from \ref{eq:M1}. In each of the figures, we have used a randomly selected imputed dataset for display.
+
+\begin{figure}
+  \centering
+  \subfloat[Vessel-level intercepts coloured by vessel type.\label{fig:m1-reg-a}]{\includegraphics[width=0.7\linewidth]{../graphics/plM1boat.pdf}} \\
+  \subfloat[Vessel-level intercepts coloured by anti-fouling paint type.\label{fig:m1-reg-b}]{\includegraphics[width=0.7\linewidth]{../graphics/plM1paint.pdf}}
+  \caption{Estimated vessel-level intercepts from \ref{eq:M1}, plotted against the four ordinal predictors. Regression lines for each predictor are overlaid.}
+  \label{fig:m1-reg}
+\end{figure}
+
+Figures~\ref{fig:m1-reg-a} and \ref{fig:m1-reg-b} are suggestive of interactions between the number of days since the vessel was last cleaned and the vessel type, the median number of trips undertaken by the vessel and the vessel type, and the median number of trips taken by the vessel and the anti-fouling paint type. There does not appear to be any relationship between the vessel's hull surface area and the vessel-level intercepts. These observations led to the development of \ref{eq:M2} (removing the hull surface area predictor) and \ref{eq:M3} (including the possible interaction terms).
+
+\subsubsection{Reduction to final model form}
+\label{sec:reduct-final-model}
+
+Figure~\ref{fig:m3-reg} displays the median and 80\% intervals of the estimated vessel-level intercepts, with respect to the two ordinal predictors remaining in M3: the number of days since the vessel was last used and the median number of trips undertaken by the vessel. Figure~\ref{fig:m3-reg-a} shows the vessel-level intercepts coloured by vessel type and Figure~\ref{fig:m3-reg-b} shows the vessel-level intercepts coloured by anti-fouling paint type. Shown in each panel are the estimated (median) regression lines from \ref{eq:M3}.
+
+Figure~\ref{fig:m3-reg-a} is suggestive of an interaction between the number of days since the vessel was last used and the vessel type, however an interaction between the median number of trips undertaken by the vessel and the vessel type or the anti-fouling paint (Figure~\ref{fig:m3-reg-b}) type do not appear likely. These observations led to the development of \ref{eq:M4} as the most likely model.
+
+\begin{figure}
+  \centering
+  \subfloat[Vessel-level intercepts coloured by vessel type.\label{fig:m3-reg-a}]{\includegraphics[width=0.9\linewidth]{../graphics/plM3boat.pdf}} \\
+  \subfloat[Vessel-level intercepts coloured by anti-fouling paint type.\label{fig:m3-reg-b}]{\includegraphics[width=0.45\linewidth]{../graphics/plM3paint.pdf}}
+  \caption{Estimated vessel-level intercepts from \ref{eq:M3}, plotted against the two ordinal predictors with interactions being assessed. Regression lines for each estimated interaction are overlaid.}
+  \label{fig:m3-reg}
+\end{figure}
+
+Figure~\ref{fig:m4-reg} shows the regression estimates from \ref{eq:M4}, in relation to the estimated vessel-level intercepts. The left panel of Figure~\ref{fig:m4-reg} shows the number of days since the vessel was last used and the vessel-type estimated interaction, and the right panel shows the estimated effect of the number of days since the vessel was last cleaned (adjusted by vessel-type).
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\linewidth]{../graphics/plM4type.pdf}
+  \caption{Estimated vessel-level intercepts from \ref{eq:M4}, plotted against the two ordinal predictors. Regression lines for each estimated regression are overlaid.}
+  \label{fig:m4-reg}
+\end{figure}
+
+Finally, Figure~\ref{fig:coefs} compares estimates of the measurement-level and vessel-level regression coefficients for each of the models considered.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.45\linewidth]{../graphics/plSummary.pdf}
+  \caption{Estimated coefficients from \ref{eq:M0}--\ref{eq:M4}. Coefficients from each model (where applicable) are shown grouped within coefficient on the y-axis. The median is shown as a point estimate, with 50\% and 90\% intervals.}
+  \label{fig:coefs}
+\end{figure}
+
+\subsubsection{Predictive model comparison}
+\label{sec:pred-model-comp}
+
+Table~\ref{tab:looic} compares the models by their leave-one-out information criterion. \ref{eq:M4} is the best-performing model based on LOOIC, but not significantly so.
+
+<<looic,results="asis",center=TRUE>>=
+looTab <- readRDS("../data/looic.rds")
+latex(looTab[, -c(3:4)],
+      dig = 3,
+      file = "",
+      rowlabel = "Model",
+      rowlabel.just = "l",
+      booktabs = TRUE,
+      col.just = rep("r", 6),
+      where = "!h",
+      caption =
+          "LOOIC-based comparison of models \\ref{eq:M0}--\\ref{eq:M4}. The model with the smallest LOOIC (\\ref{eq:M4}) is shown first, with subsequent rows ordered by increasing LOOIC (smaller LOOIC values are preferred). $\\Delta$LOOIC shows the difference in LOOIC between all models and \\ref{eq:M4}; se($\\Delta$LOOIC) shows the estimated standard error of the difference. Eff. P gives the estimated effective number of parameters; se(Eff. P) shows its standard error.",
+      label="tab:looic")
+
+@ 
+
+\end{document}
