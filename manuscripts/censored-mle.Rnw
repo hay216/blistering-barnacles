@@ -1,4 +1,4 @@
-% Time-stamp: <2017-05-09 16:57:44 (slane)>
+% Time-stamp: <2017-05-10 17:34:21 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -148,20 +148,27 @@ Figure~\ref{fig:obs-weight} shows histograms of the observed wet weight of bioma
   \label{fig:obs-weight}
 \end{figure}
 
-Figure~\ref{fig:obs-weight} suggests that the log-transform of the wet weight of biomass is approximately normal, and that there is likely to be a location effect. We will thus use the log-normal for the distribution of the wet weight of biomass. We use the log-normal for the reason that if $W \sim \text{LN}(\mu, \sigma^{2})$, then $\log(W) \sim \text{N}(\mu, \sigma^{2})$ (i.e. the usual normal regression model).
+Figure~\ref{fig:obs-weight} suggests that the log-transform of the wet weight of biomass is approximately normal, and that there is likely to be a location effect. We thus focus on a log-transform of the wet weight of biomass for the remainder of the analysis. Further, there appears to be the possibility of outliers, especially within the hull and rudder samples. Hence we will also consider a student-$t$ distribution for modelling.
 
 It could be tempting to analyse the total (or average) wet weight biomass per vessel, as this would simplify the modelling procedure. However, as noted above, Figure~\ref{fig:obs-weight} suggests that the wet weight of biomass varies with the location from which a sample was taken; hence averaging will mask this variation. Further, the variable number of samples taken per vessel (Section~\ref{sec:data}) means that the total biomass may be dependent upon the number of samples taken. For these reasons, we chose to use a multilevel regression model, in which a modelled intercept allows for the repeated measurements within vessels, whilst also allowing investigation of vessel-level relationships.
 
-The starting model for analysis included the location of the measurement and a vessel-level predictor in a multilevel regression model:
+Consistent with Figure~\ref{fig:obs-weight}, we tried two specifications for the outcome model. Let $Y_{i}$ be the log wet weight of biomass for the $i\up{th}$ observation, $i=1,\ldots,\Sexpr{sum(quads)}$. Then:
 \begin{align}
-  Y_{i} & \sim \text{log-normal}(\mu_{i}, \sigma) \nonumber \\
+  Y_{i} & \sim \text{normal}(\mu_{i}, \sigma) \label{eq:O1}\tag{O1} \\
+  Y_{i} & \sim t_{\nu}(\mu_{i}, \sigma) \label{eq:O2}\tag{O2} \\
+  \nu & \sim \text{Gamma}(2, 0.1) \nonumber
+\end{align}
+are the models for the outcomes, where \ref{eq:O1} is the model assuming a normal distribution for log weight biomass, and \ref{eq:O2} is the model assuming a $t$ distribution with $\nu$ degrees of freedom.
+
+The starting model specification for analysis included the location of the measurement and a vessel-level predictor in a multilevel regression model:
+\begin{align}
   \mu_{i} & = \mu + \alpha_{j[i]} + \beta^{l1} \cdot \text{location1}_{i} + \beta^{l2} \cdot \text{location2}_{i} \nonumber \\
   \alpha_{j} & \sim \text{cauchy}(0, \sigma_{\alpha}) \label{eq:M0}\tag{M0} \\
   \mu & \sim N(0, 5) \nonumber \\
   \beta^{l1},\beta^{l2} & \sim t_{3}(0, 1) \nonumber \\
   \sigma,\sigma_{\alpha} & \sim \text{cauchy}(0, 2.5) \nonumber
 \end{align}
-where $\mu_{i}$ is the regression at the observation level, $i=1,\ldots,\Sexpr{sum(quads)}$; $\mu,\beta^{l}$ are parameters to be modelled; and $\text{location1}_{i},\text{location2}_{i}$ are indicator variables for whether the observation was measured at the keel or the rudder (as compared to the hull, which is subsumed by the intercept). $\alpha_{j[i]}$ is the vessel-level intercept, $j=1,\ldots,\Sexpr{nrow(vessels)}$\footnote{The notation $\alpha_{j[i]}$ denotes the vessel-level intercept for the $i\up{th}$ observation.}, which is modelled as a cauchy distribution with location 0, and scale $\sigma_{\alpha}$. The intercept is given a $N(0, 5)$ prior; regression parameters $t_{3}(0, 1)$ priors; and scale parameters given $\text{cauchy}(0, 2.5)$ priors.
+where $\mu_{i}$ is the regression at the observation level; $\mu,\beta^{l}$ are parameters to be modelled; and $\text{location1}_{i},\text{location2}_{i}$ are indicator variables for whether the observation was measured at the keel or the rudder (as compared to the hull, which is subsumed by the intercept). $\alpha_{j[i]}$ is the vessel-level intercept, $j=1,\ldots,\Sexpr{nrow(vessels)}$\footnote{The notation $\alpha_{j[i]}$ denotes the vessel-level intercept for the $i\up{th}$ observation.}, which is modelled as a cauchy distribution with location 0, and scale $\sigma_{\alpha}$. The intercept is given a $N(0, 5)$ prior; regression parameters $t_{3}(0, 1)$ priors; and scale parameters given $\text{cauchy}(0, 2.5)$ priors.
 
 We investigated a further four regression specifications for the vessel-level intercepts, consisting of the various vessel-level characteristics and interaction terms:
 \begin{align}
@@ -227,6 +234,13 @@ Figure~\ref{fig:imp-cont} displays the observed and imputed vessel-level data fo
   \caption{Comparison of observed and imputed data for anti-fouling paint type. A random selection from the imputed datasets are shown. The top-left panel (labelled 0) shows the observed distribution.}
   \label{fig:imp-cat}
 \end{figure}
+
+\subsection{Outcome model}
+\label{sec:outcome-model}
+
+The outcome model that used the $t$-distribution \eqref{eq:O2} clearly outperformed that which used the normal distribution \eqref{eq:O1}. The difference in the leave-one-out information criterion (LOOIC, analogous to AIC, see \cite{Vehtari2016-dp}) was XXX (sd YYY).
+
+We are also interested in whether the models produce predictions consistent with the observed data. An obvious choice of posterior predictive check is thus the proportion of posterior predictions that lie below the limit of detection. Figure XXX compares the distribution of the posterior predictive check between each of the outcome models. The observed proportion of samples below the limit of detection (X\%) is shown as a vertical line in each panel. Neither model does a stellar job in generating data consistent with the observed measurements (at least for this posterior predictive check), but \ref{eq:O2} clearly outperforms \ref{eq:O1}. For this reason, the following results pertain to models fit with the $t$ distribution as the outcome model \eqref{eq:O2}.
 
 \subsection{Regression results}
 \label{sec:regression-results}
