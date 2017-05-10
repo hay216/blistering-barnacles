@@ -1,31 +1,15 @@
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-// Title: Censored MLE, Model 3, Group Level, Robust
+// Title: Censored MLE, Model 3, Group Level
 // Author: Steve Lane
 // Date: Wednesday, 08 March 2017
 // Synopsis: Sampling statements to fit a regression with censored outcome data.
 // Includes boat-level intercept, and observation level location ID.
 // Adds in some interactions terms.
-// Based off M3, but with cauchy distribution for outcome for added robustness.
-// Time-stamp: <2017-04-27 14:14:08 (slane)>
+// Based off M3, but with t distribution for outcome for added robustness.
+// Time-stamp: <2017-05-10 12:25:53 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-
-functions{
-  /* Log-cauchy (log) pdf */
-  real logcauchy_p(real y, real mu, real sigma){
-    real lpdf;
-    lpdf = log(sigma) - log(pi()) - log(y) - log((log(y) - mu)^2 + sigma^2);
-    return lpdf;
-  }
-
-  /* Log-cauchy (log) cdf */
-  real logcauchy_c(real y, real mu, real sigma){
-    real lcdf;
-    lcdf = log(atan((log(y) - mu) / sigma)) - log(pi()) - log(2);
-    return lcdf;
-  }
-}
 
 data{
   // Data to be supplied to sampler
@@ -65,6 +49,15 @@ data{
   real<upper=min(Y)> U;
 }
 
+transformed data{
+  real logY[N];
+  real logU;
+  for(n in 1:N){
+    logY[n] = log(Y[n]);
+  }
+  logU = log(U);
+}
+
 parameters{
   // Parameters for the model
   /* Intercept */
@@ -87,6 +80,8 @@ parameters{
   real<lower=0> sigma_alphaBoat;
   /* Error */
   real<lower=0> sigma;
+  /* Degrees of freedom */
+  real<lower=1> nu;
 }
 
 transformed parameters{
@@ -131,26 +126,25 @@ model{
   sigma ~ cauchy(0, 2.5);
   /* Observed log-likelihood */
   for(i in 1:N){
-    target += logcauchy_p(Y[i], muHat[i], sigma);
+    target += student_t_lpdf(logY[i] | nu, muHat[i], sigma);
   }
   /* Censored log-likelihood */
   for(j in 1:nCens){
-    target += logcauchy_c(U, muHatCens[j], sigma);
+    target += student_t_lcdf(logU | nu, muHatCens[j], sigma);
   }
 }
 
 generated quantities{
   /* Need the log likelihood for leave one out prediction errors */
   vector[N + nCens] log_lik;
-  {
-    real linPred;
-    for(i in 1:N){
-      linPred = mu + locID[i] * betaLoc + alphaBoat[boatID[i]];
-      log_lik[i] = logcauchy_p(Y[i], linPred, sigma);
-    }
-    for(j in 1:nCens){
-      linPred = mu + locIDCens[j] * betaLoc + alphaBoat[boatIDCens[j]];
-      log_lik[N + j] = logcauchy_c(U, linPred, sigma);
-    }
+  /* Replications for posterior predictive checks */
+  vector[N + nCens] y_ppc;
+  for(i in 1:N){
+    log_lik[i] = student_t_lpdf(logY[i] | nu, muHat[i], sigma);
+    y_ppc[i] = student_t_rng(nu, muHat[i], sigma);
+  }
+  for(j in 1:nCens){
+    log_lik[N + j] = student_t_lcdf(logU | nu, muHatCens[j], sigma);
+    y_ppc[N + j] = student_t_rng(nu, muHatCens[j], sigma);
   }
 }

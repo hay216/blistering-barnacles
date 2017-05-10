@@ -1,4 +1,4 @@
-# Time-stamp: <2017-05-08 14:03:14 (slane)>
+# Time-stamp: <2017-05-10 12:30:31 (slane)>
 .PHONY: all models input-data output-data clean-models clean-manuscripts clobber \
 	PROC-DATA processed-data paper
 
@@ -12,18 +12,26 @@ all: manuscripts/censored-mle.html \
 models: stan/censored-mle-m0.rds \
 	stan/censored-mle-m0-robust.rds \
 	stan/censored-mle-m1.rds \
+	stan/censored-mle-m1-robust.rds \
 	stan/censored-mle-m2.rds \
+	stan/censored-mle-m2-robust.rds \
 	stan/censored-mle-m3.rds \
-	stan/censored-mle-m4.rds
+	stan/censored-mle-m3-robust.rds \
+	stan/censored-mle-m4.rds \
+	stan/censored-mle-m4-robust.rds
 
 input-data: data/biofouling.rds data/imputations.rds
 
 output-data: data/censored-mle-m0.rds \
 	data/censored-mle-m0-robust.rds \
 	data/censored-mle-m1.rds \
+	data/censored-mle-m1-robust.rds \
 	data/censored-mle-m2.rds \
+	data/censored-mle-m2-robust.rds \
 	data/censored-mle-m3.rds \
-	data/censored-mle-m4.rds
+	data/censored-mle-m3-robust.rds \
+	data/censored-mle-m4.rds \
+	data/censored-mle-m4-robust.rds
 
 PROC-DATA = graphics/obs-hist.pdf \
 	graphics/imp-days1.pdf \
@@ -66,7 +74,17 @@ stan/censored-mle-m1.rds: scripts/compile-model.R stan/censored-mle-m1.stan
 	cd $(<D); \
 	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds)
 
+stan/censored-mle-m1-robust.rds: scripts/compile-model.R \
+	stan/censored-mle-m1-robust.stan
+	cd $(<D); \
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds)
+
 stan/censored-mle-m2.rds: scripts/compile-model.R stan/censored-mle-m2.stan
+	cd $(<D); \
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds)
+
+stan/censored-mle-m2-robust.rds: scripts/compile-model.R \
+	stan/censored-mle-m2-robust.stan
 	cd $(<D); \
 	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds)
 
@@ -74,7 +92,17 @@ stan/censored-mle-m3.rds: scripts/compile-model.R stan/censored-mle-m3.stan
 	cd $(<D); \
 	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds)
 
+stan/censored-mle-m3-robust.rds: scripts/compile-model.R \
+	stan/censored-mle-m3-robust.stan
+	cd $(<D); \
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds)
+
 stan/censored-mle-m4.rds: scripts/compile-model.R stan/censored-mle-m4.stan
+	cd $(<D); \
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds)
+
+stan/censored-mle-m4-robust.rds: scripts/compile-model.R \
+	stan/censored-mle-m4-robust.stan
 	cd $(<D); \
 	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds)
 
@@ -98,8 +126,20 @@ data/censored-mle-m1.rds: scripts/fit-model.R \
 	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds) \
 		myseed=666 iter=$(MCITER)
 
+data/censored-mle-m1-robust.rds: scripts/fit-model.R \
+	stan/censored-mle-m1-robust.rds data/imputations.rds
+	cd $(<D); \
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds) \
+		myseed=666 iter=$(MCITER)
+
 data/censored-mle-m2.rds: scripts/fit-model.R \
 	stan/censored-mle-m2.rds data/imputations.rds
+	cd $(<D); \
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds) \
+		myseed=42 iter=$(MCITER)
+
+data/censored-mle-m2-robust.rds: scripts/fit-model.R \
+	stan/censored-mle-m2-robust.rds data/imputations.rds
 	cd $(<D); \
 	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds) \
 		myseed=42 iter=$(MCITER)
@@ -110,8 +150,20 @@ data/censored-mle-m3.rds: scripts/fit-model.R \
 	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds) \
 		myseed=13 iter=$(MCITER)
 
+data/censored-mle-m3-robust.rds: scripts/fit-model.R \
+	stan/censored-mle-m3-robust.rds data/imputations.rds
+	cd $(<D); \
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds) \
+		myseed=13 iter=$(MCITER)
+
 data/censored-mle-m4.rds: scripts/fit-model.R \
 	stan/censored-mle-m4.rds data/imputations.rds
+	cd $(<D); \
+	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds) \
+		myseed=987 iter=$(MCITER)
+
+data/censored-mle-m4-robust.rds: scripts/fit-model.R \
+	stan/censored-mle-m4-robust.rds data/imputations.rds
 	cd $(<D); \
 	Rscript --no-save --no-restore $(<F) mname=$(basename $(@F) .rds) \
 		myseed=987 iter=$(MCITER)

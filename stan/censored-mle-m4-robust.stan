@@ -1,13 +1,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-// Title: Censored MLE, Model 0, Group Level, Robust
+// Title: Censored MLE, Model 4, Group Level
 // Author: Steve Lane
 // Date: Wednesday, 08 March 2017
 // Synopsis: Sampling statements to fit a regression with censored outcome data.
 // Includes boat-level intercept, and observation level location ID.
-// No boat-level predictors.
-// Based off M0, but with t distribution for outcome for added robustness.
-// Time-stamp: <2017-05-10 12:33:50 (slane)>
+// Restricted model form.
+// Based off M4, but with t distribution for outcome for added robustness.
+// Time-stamp: <2017-05-10 12:27:10 (slane)>
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -17,13 +17,22 @@ data{
   int<lower=1> N;
   /* Number of (censored) observations */
   int<lower=1> nCens;
+  /* Number of boats/vessels */
+  int<lower=1> numBoat;
+  /* Numeric/ordinal predictors */
+  real days1[numBoat];
+  real days2[numBoat];
   /* Categorical predictors, entered as matrices of indicators */
   /* Location of measurement, hull as base case */
   int<lower=1> numLoc;
   matrix[N, numLoc - 1] locID;
   matrix[nCens, numLoc - 1] locIDCens;
+  /* Boat type, yacht as base case */
+  int<lower=1> numType;
+  matrix[numBoat, numType - 1] boatType;
+  /* Days1:BoatType interaction */
+  matrix[numBoat, numType - 1] days1boat;
   /* Boat random effect */
-  int<lower=1> numBoat;
   int<lower=1,upper=numBoat> boatID[N];
   int<lower=1,upper=numBoat> boatIDCens[nCens];
   /* Observed data */
@@ -45,8 +54,14 @@ parameters{
   // Parameters for the model
   /* Intercept */
   real mu;
+  /* Betas for continuous */
+  real betaDays1;
+  real betaDays2;
   /* Betas for categorical indicators */
   vector[numLoc - 1] betaLoc;
+  vector[numType - 1] betaType;
+  /* Betas for interaction terms */
+  vector[numType - 1] betaDaysType;
   /* Alphas for modelled random effect */
   vector[numBoat] alphaBoat;
   /* Errors for categorical predictors */
@@ -59,10 +74,15 @@ parameters{
 
 transformed parameters{
   // Make it easier for some sampling statements (not necessary)
-    /* Regression for observed data */
+  /* Regression for observed data */
   vector[N] muHat;
   /* Regression for censored data */
   vector[nCens] muHatCens;
+  /* Regression for boat-level intercept */
+  vector[numBoat] alphaHat;
+  for(n in 1:numBoat){
+    alphaHat[n] = betaDays1 * days1[n] + betaDays2 * days2[n] + boatType[n] * betaType + days1boat[n] * betaDaysType;
+  }
   for(i in 1:N){
     muHat[i] = mu + locID[i] * betaLoc + alphaBoat[boatID[i]];
   }
@@ -77,8 +97,15 @@ model{
   betaLoc ~ student_t(3, 0, 1);
   /* Priors for modelled random effect */
   mu ~ normal(0, 5);
+  betaDays1 ~ student_t(3, 0, 1);
+  betaDays2 ~ student_t(3, 0, 1);
+  /* Priors for categorical indicators */
+  betaType ~ student_t(3, 0, 1);
+  /* Priors for interactions */
+  betaDaysType ~ student_t(3, 0, 1);
+  /* Priors for modelled effects */
   sigma_alphaBoat ~ cauchy(0, 2.5);
-  alphaBoat ~ cauchy(0, sigma_alphaBoat);
+  alphaBoat ~ cauchy(alphaHat, sigma_alphaBoat);
   /* Prior for observation (model) error */
   sigma ~ cauchy(0, 2.5);
   /* Observed log-likelihood */
