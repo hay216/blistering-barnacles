@@ -4,7 +4,7 @@
 ## Author: Steve Lane
 ## Date: Thursday, 04 May 2017
 ## Synopsis: Post process the output from the regression models
-## Time-stamp: <2017-05-11 09:14:57 (slane)>
+## Time-stamp: <2017-05-11 09:51:12 (slane)>
 ################################################################################
 ################################################################################
 ## Add github packages using gitname/reponame format
@@ -354,12 +354,12 @@ m3loo <- loo(m3ll)
 m4ll <- extract_log_lik(m4)
 m4loo <- loo(m4ll)
 looTab <- compare(m0loo, m1loo, m2loo, m3loo, m4loo)
-rownames(looTab) <- c("M4", "M2", "M3", "M1", "M0")
+rownames(looTab) <- c("M4", "M3", "M2", "M1", "M0")
 ## Model 7 has the lowest looic/elpd, but not more so than model 5:
 diffs <- rbind(
     rep(NA, 2),
-    compare(m2loo, m4loo),
     compare(m3loo, m4loo),
+    compare(m2loo, m4loo),
     compare(m1loo, m4loo),
     compare(m0loo, m4loo)
 )

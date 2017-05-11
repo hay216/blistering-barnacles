@@ -1,4 +1,4 @@
-% Time-stamp: <2017-05-11 09:25:43 (slane)>
+% Time-stamp: <2017-05-11 15:15:34 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -99,9 +99,26 @@ This document provides supplemental results to the main text, \textit{Risk facto
 \subsection{Outcome model}
 \label{sec:outcome-model}
 
-The outcome model that used the $t$-distribution \eqref{eq:O2} clearly outperformed that which used the normal distribution \eqref{eq:O1}. The difference in the leave-one-out information criterion (LOOIC) was XXX (sd YYY).
+The outcome model that used the $t$-distribution (O2) clearly outperformed that which used the normal distribution (O1). The difference in the leave-one-out information criterion (LOOIC) is shown in Table~\ref{tab:looic}.
 
-We are also interested in whether the models produce predictions consistent with the observed data. An obvious choice of posterior predictive check is thus the proportion of posterior predictions that lie below the limit of detection. Figure XXX compares the distribution of the posterior predictive check between each of the outcome models. The observed proportion of samples below the limit of detection (X\%) is shown as a vertical line in each panel. Neither model does a stellar job in generating data consistent with the observed measurements (at least for this posterior predictive check), but \ref{eq:O2} clearly outperforms \ref{eq:O1}. For this reason, the following results pertain to models fit with the $t$ distribution as the outcome model \eqref{eq:O2}.
+<<looic,results="asis",center=TRUE>>=
+compTab <- readRDS("../data/looic-compare.rds")
+latex(compTab %>% select(Model, everything()),
+      dig = 3, file = "",
+      rowname = NULL,
+      booktabs = TRUE,
+      col.just = c("l", rep("r", 14)),
+      where = "!h",
+      cgroup = c("", "$t$ outcome model (O2)", "Normal outcome model (O1)"),
+      n.cgroup = c(1, 7, 7),
+      colheads = c("Model", rep(c("LOOIC", "se(LOOIC)", "ELPD", "se(ELPD)",
+                                  "Eff. P", "se(Eff. P)"), 2),
+                   "\\$Delta$LOOIC", "se(\\$Delta$LOOIC)"),
+      caption =
+          "LOOIC-based comparison of analysis models M0--M4, for outcome models O1 and O2. The model with the smallest LOOIC (M4) is shown first, with subsequent rows ordered by increasing LOOIC (smaller LOOIC values are preferred) within outcome model O2. $\\Delta$LOOIC shows the difference in LOOIC between analysis models fit using the outcome models O2 and O1 (positive values indicate O2 fits better); se($\\Delta$LOOIC) shows the estimated standard error of the difference. Eff. P gives the estimated effective number of parameters; se(Eff. P) shows its standard error.",
+      label="tab:looic")
+
+@ 
 
 \subsection{Regression results}
 \label{sec:regression-results}
