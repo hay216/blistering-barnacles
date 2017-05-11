@@ -1,4 +1,4 @@
-% Time-stamp: <2017-05-11 15:15:34 (slane)>
+% Time-stamp: <2017-05-11 15:56:39 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -101,9 +101,17 @@ This document provides supplemental results to the main text, \textit{Risk facto
 
 The outcome model that used the $t$-distribution (O2) clearly outperformed that which used the normal distribution (O1). The difference in the leave-one-out information criterion (LOOIC) is shown in Table~\ref{tab:looic}.
 
+\begin{landscape}
+\begin{table}[!h]
+  \caption{LOOIC-based comparison of analysis models M0--M4, for outcome models O1 and O2. The model with the smallest LOOIC (M4) is shown first, with subsequent rows ordered by increasing LOOIC (smaller LOOIC values are preferred) within outcome model O2. $\Delta$LOOIC shows the difference in LOOIC between analysis models fit using the outcome models O2 and O1 (positive values indicate O2 fits better); se($\Delta$LOOIC) shows the estimated standard error of the difference. Eff. P gives the estimated effective number of parameters; se(Eff. P) shows its standard error.}
+  \label{tab:looic}
+  %\resizebox{\textwidth}{!}{%
+    \begin{scriptsize}
 <<looic,results="asis",center=TRUE>>=
 compTab <- readRDS("../data/looic-compare.rds")
 latex(compTab %>% select(Model, everything()),
+      center = "none",
+      table.env = FALSE,
       dig = 3, file = "",
       rowname = NULL,
       booktabs = TRUE,
@@ -113,12 +121,13 @@ latex(compTab %>% select(Model, everything()),
       n.cgroup = c(1, 7, 7),
       colheads = c("Model", rep(c("LOOIC", "se(LOOIC)", "ELPD", "se(ELPD)",
                                   "Eff. P", "se(Eff. P)"), 2),
-                   "\\$Delta$LOOIC", "se(\\$Delta$LOOIC)"),
-      caption =
-          "LOOIC-based comparison of analysis models M0--M4, for outcome models O1 and O2. The model with the smallest LOOIC (M4) is shown first, with subsequent rows ordered by increasing LOOIC (smaller LOOIC values are preferred) within outcome model O2. $\\Delta$LOOIC shows the difference in LOOIC between analysis models fit using the outcome models O2 and O1 (positive values indicate O2 fits better); se($\\Delta$LOOIC) shows the estimated standard error of the difference. Eff. P gives the estimated effective number of parameters; se(Eff. P) shows its standard error.",
-      label="tab:looic")
+                   "$\\Delta$LOOIC", "se($\\Delta$LOOIC)"))
 
-@ 
+@
+%}
+\end{scriptsize}
+\end{table}
+\end{landscape}
 
 \subsection{Regression results}
 \label{sec:regression-results}
@@ -126,39 +135,39 @@ latex(compTab %>% select(Model, everything()),
 \subsubsection{Exploration of candidate interaction terms}
 \label{sec:expl-cand-inter}
 
-Figure~\ref{fig:m1-reg} displays the median and 80\% intervals of the estimated vessel-level intercepts, with respect to the four ordinal predictors: the number of days since the vessel was last used; the number of days since the vessel was last cleaned; the median number of trips undertaken by the vessel; and the vessel's hull surface area. Figure~\ref{fig:m1-reg-a} shows the vessel-level intercepts coloured by vessel type, whilst Figure~\ref{fig:m1-reg-b} shows the vessel-level intercepts coloured by anti-fouling paint type. Shown in each panel are the estimated (median) regression lines from \ref{eq:M1}. In each of the figures, we have used a randomly selected imputed dataset for display.
+Figure~\ref{fig:m1-reg} displays the median and 80\% intervals of the estimated vessel-level intercepts, with respect to the four ordinal predictors: the number of days since the vessel was last used; the number of days since the vessel was last cleaned; the median number of trips undertaken by the vessel; and the vessel's hull surface area. Figure~\ref{fig:m1-reg-a} shows the vessel-level intercepts coloured by vessel type, whilst Figure~\ref{fig:m1-reg-b} shows the vessel-level intercepts coloured by anti-fouling paint type. Shown in each panel are the estimated (median) regression lines from M1. In each of the figures, we have used a randomly selected imputed dataset for display.
 
 \begin{figure}
   \centering
   \subfloat[Vessel-level intercepts coloured by vessel type.\label{fig:m1-reg-a}]{\includegraphics[width=0.7\linewidth]{../graphics/plM1boat.pdf}} \\
   \subfloat[Vessel-level intercepts coloured by anti-fouling paint type.\label{fig:m1-reg-b}]{\includegraphics[width=0.7\linewidth]{../graphics/plM1paint.pdf}}
-  \caption{Estimated vessel-level intercepts from \ref{eq:M1}, plotted against the four ordinal predictors. Regression lines for each predictor are overlaid.}
+  \caption{Estimated vessel-level intercepts from M1, plotted against the four ordinal predictors. Regression lines for each predictor are overlaid.}
   \label{fig:m1-reg}
 \end{figure}
 
-Figures~\ref{fig:m1-reg-a} and \ref{fig:m1-reg-b} are suggestive of interactions between the number of days since the vessel was last cleaned and the vessel type, the median number of trips undertaken by the vessel and the vessel type, and the median number of trips taken by the vessel and the anti-fouling paint type. There does not appear to be any relationship between the vessel's hull surface area and the vessel-level intercepts. These observations led to the development of \ref{eq:M2} (removing the hull surface area predictor) and \ref{eq:M3} (including the possible interaction terms).
+Figures~\ref{fig:m1-reg-a} and \ref{fig:m1-reg-b} are suggestive of interactions between the number of days since the vessel was last cleaned and the vessel type, the median number of trips undertaken by the vessel and the vessel type, and the median number of trips taken by the vessel and the anti-fouling paint type. There does not appear to be any relationship between the vessel's hull surface area and the vessel-level intercepts. These observations led to the development of M2 (removing the hull surface area predictor) and M3 (including the possible interaction terms).
 
 \subsubsection{Reduction to final model form}
 \label{sec:reduct-final-model}
 
-Figure~\ref{fig:m3-reg} displays the median and 80\% intervals of the estimated vessel-level intercepts, with respect to the two ordinal predictors remaining in M3: the number of days since the vessel was last used and the median number of trips undertaken by the vessel. Figure~\ref{fig:m3-reg-a} shows the vessel-level intercepts coloured by vessel type and Figure~\ref{fig:m3-reg-b} shows the vessel-level intercepts coloured by anti-fouling paint type. Shown in each panel are the estimated (median) regression lines from \ref{eq:M3}.
+Figure~\ref{fig:m3-reg} displays the median and 80\% intervals of the estimated vessel-level intercepts, with respect to the two ordinal predictors remaining in M3: the number of days since the vessel was last used and the median number of trips undertaken by the vessel. Figure~\ref{fig:m3-reg-a} shows the vessel-level intercepts coloured by vessel type and Figure~\ref{fig:m3-reg-b} shows the vessel-level intercepts coloured by anti-fouling paint type. Shown in each panel are the estimated (median) regression lines from M3.
 
-Figure~\ref{fig:m3-reg-a} is suggestive of an interaction between the number of days since the vessel was last used and the vessel type, however an interaction between the median number of trips undertaken by the vessel and the vessel type or the anti-fouling paint (Figure~\ref{fig:m3-reg-b}) type do not appear likely. These observations led to the development of \ref{eq:M4} as the most likely model.
+Figure~\ref{fig:m3-reg-a} is suggestive of an interaction between the number of days since the vessel was last used and the vessel type, however an interaction between the median number of trips undertaken by the vessel and the vessel type or the anti-fouling paint (Figure~\ref{fig:m3-reg-b}) type do not appear likely. These observations led to the development of M4 as the most likely model.
 
 \begin{figure}
   \centering
   \subfloat[Vessel-level intercepts coloured by vessel type.\label{fig:m3-reg-a}]{\includegraphics[width=0.9\linewidth]{../graphics/plM3boat.pdf}} \\
   \subfloat[Vessel-level intercepts coloured by anti-fouling paint type.\label{fig:m3-reg-b}]{\includegraphics[width=0.45\linewidth]{../graphics/plM3paint.pdf}}
-  \caption{Estimated vessel-level intercepts from \ref{eq:M3}, plotted against the two ordinal predictors with interactions being assessed. Regression lines for each estimated interaction are overlaid.}
+  \caption{Estimated vessel-level intercepts from M3, plotted against the two ordinal predictors with interactions being assessed. Regression lines for each estimated interaction are overlaid.}
   \label{fig:m3-reg}
 \end{figure}
 
-Figure~\ref{fig:m4-reg} shows the regression estimates from \ref{eq:M4}, in relation to the estimated vessel-level intercepts. The left panel of Figure~\ref{fig:m4-reg} shows the number of days since the vessel was last used and the vessel-type estimated interaction, and the right panel shows the estimated effect of the number of days since the vessel was last cleaned (adjusted by vessel-type).
+Figure~\ref{fig:m4-reg} shows the regression estimates from M4, in relation to the estimated vessel-level intercepts. The left panel of Figure~\ref{fig:m4-reg} shows the number of days since the vessel was last used and the vessel-type estimated interaction, and the right panel shows the estimated effect of the number of days since the vessel was last cleaned (adjusted by vessel-type).
 
 \begin{figure}
   \centering
   \includegraphics[width=0.9\linewidth]{../graphics/plM4type.pdf}
-  \caption{Estimated vessel-level intercepts from \ref{eq:M4}, plotted against the two ordinal predictors. Regression lines for each estimated regression are overlaid.}
+  \caption{Estimated vessel-level intercepts from M4, plotted against the two ordinal predictors. Regression lines for each estimated regression are overlaid.}
   \label{fig:m4-reg}
 \end{figure}
 
@@ -167,29 +176,8 @@ Finally, Figure~\ref{fig:coefs} compares estimates of the measurement-level and 
 \begin{figure}
   \centering
   \includegraphics[width=0.45\linewidth]{../graphics/plSummary.pdf}
-  \caption{Estimated coefficients from \ref{eq:M0}--\ref{eq:M4}. Coefficients from each model (where applicable) are shown grouped within coefficient on the y-axis. The median is shown as a point estimate, with 50\% and 90\% intervals.}
+  \caption{Estimated coefficients from M0--M4. Coefficients from each model (where applicable) are shown grouped within coefficient on the y-axis. The median is shown as a point estimate, with 50\% and 90\% intervals.}
   \label{fig:coefs}
 \end{figure}
-
-\subsubsection{Predictive model comparison}
-\label{sec:pred-model-comp}
-
-Table~\ref{tab:looic} compares the models by their leave-one-out information criterion. \ref{eq:M4} is the best-performing model based on LOOIC, but not significantly so.
-
-<<looic,results="asis",center=TRUE>>=
-looTab <- readRDS("../data/looic.rds")
-latex(looTab[, -c(3:4)],
-      dig = 3,
-      file = "",
-      rowlabel = "Model",
-      rowlabel.just = "l",
-      booktabs = TRUE,
-      col.just = rep("r", 6),
-      where = "!h",
-      caption =
-          "LOOIC-based comparison of models \\ref{eq:M0}--\\ref{eq:M4}. The model with the smallest LOOIC (\\ref{eq:M4}) is shown first, with subsequent rows ordered by increasing LOOIC (smaller LOOIC values are preferred). $\\Delta$LOOIC shows the difference in LOOIC between all models and \\ref{eq:M4}; se($\\Delta$LOOIC) shows the estimated standard error of the difference. Eff. P gives the estimated effective number of parameters; se(Eff. P) shows its standard error.",
-      label="tab:looic")
-
-@ 
 
 \end{document}
