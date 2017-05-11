@@ -7,7 +7,7 @@ output:
     highlight: zenburn
 ---
 
-<!-- Time-stamp: <2017-05-02 11:34:52 (slane)> -->
+<!-- Time-stamp: <2017-05-11 14:22:59 (slane)> -->
 
 ```{r,knitr-setup,echo=FALSE,warning=FALSE,message=FALSE,cache=FALSE,results="hide"}
 ## Add github packages using gitname/reponame format
@@ -30,7 +30,8 @@ The basic model (which we denote M0) included the location of the measurement as
 
 $$
 \begin{align}
-  Y_{i} & \sim \text{log-normal}(\mu_{i}, \sigma) \\
+  \log Y_{i} & \sim t_{\nu}(\mu_{i}, \sigma) \\
+  \nu ~ \text{Gamma}(2, 0.1) \\
   \mu_{i} & = \mu + \alpha_{j[i]} + \beta^{l1} \cdot \text{location1}_{i} + \beta^{l2} \cdot \text{location2}_{i} \\
   \alpha_{j} & \sim \text{cauchy}(0, \sigma_{\alpha}) \\
   \mu & \sim N(0, 5) \\
@@ -42,7 +43,7 @@ $$
 where $\text{location1}_{i},\text{location2}_{i}$ are indicator variables for whether the observation was measured at the keel or the rudder; observations made at the hull are aliased with the intercept, $\mu$. Summary output from this model is given below.
 
 ```{r}
-m0 <- readRDS("../data/censored-mle-m0.rds")
+m0 <- readRDS("../data/censored-mle-m0-robust.rds")
 m0ll <- extract_log_lik(m0)
 m0loo <- loo(m0ll)
 print(m0, digits = 2, include = FALSE,
@@ -64,7 +65,7 @@ $$
 where $\text{days1}_{i},\text{days2}_{i}$ are the XXX. Summary output from this model is given below.
 
 ```{r}
-m1 <- readRDS("../data/censored-mle-m1.rds")
+m1 <- readRDS("../data/censored-mle-m1-robust.rds")
 m1ll <- extract_log_lik(m1)
 m1loo <- loo(m1ll)
 print(m1, digits = 2, include = FALSE,
@@ -86,7 +87,7 @@ a1 <- extract(m1, "alphaBoat")$alphaBoat
 a1Sum <- t(apply(a1, 2, quantile, probs = c(0.1, 0.5, 0.9)))
 a1Dat <- tibble(low = a1Sum[,1], mid = a1Sum[,2], high = a1Sum[,3],
                 boatID = 1:nrow(a1Sum))
-imps <- readRDS("../data/imputations.rds")
+imps <- readRDS("../data/imputations-robust.rds")
 set.seed(13)
 lvl2 <- imps[[sample(seq_along(imps), 1)]]$lvl2
 a1Dat <- left_join(a1Dat, lvl2) %>%
@@ -126,7 +127,7 @@ So combining these two exploratory data analyses, and the results from M1, a pos
 The choice of predictors in M2 was made based on the candidate interaction terms in M3. Removing `hullSA` from M1 resulted in the following estimates for M2:
 
 ```{r}
-m2 <- readRDS("../data/censored-mle-m2.rds")
+m2 <- readRDS("../data/censored-mle-m2-robust.rds")
 m2ll <- extract_log_lik(m2)
 m2loo <- loo(m2ll)
 m2comp <- compare(m1loo, m2loo)
@@ -141,7 +142,7 @@ As can be seen in these estimates, there is virtually no change in values from t
 Moving on to M3, where the interactions `days1:boatType`, `midTrips:boatType` and `midTrips:paintType` are added to M2, we get the following estimates:
 
 ```{r}
-m3 <- readRDS("../data/censored-mle-m3.rds")
+m3 <- readRDS("../data/censored-mle-m3-robust.rds")
 m3ll <- extract_log_lik(m3)
 m3loo <- loo(m3ll)
 print(m3, digits = 2, include = FALSE,
@@ -227,7 +228,7 @@ where $\text{days1vesselType1}_{i},\text{days1vesselType2}_{i}$ are the interact
 The output below provides a summary of the estimates from M4, with the figure showing the marginal effects of the `days1:boatType` interaction, and the `days2` marginal effect (adjusted for vessel type in the plot).
 
 ```{r}
-m4 <- readRDS("../data/censored-mle-m4.rds")
+m4 <- readRDS("../data/censored-mle-m4-robust.rds")
 m4ll <- extract_log_lik(m4)
 m4loo <- loo(m4ll)
 print(m4, digits = 2, include = FALSE,
