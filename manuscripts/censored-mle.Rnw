@@ -1,4 +1,4 @@
-% Time-stamp: <2017-05-11 09:10:52 (slane)>
+% Time-stamp: <2017-05-11 17:40:09 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -141,7 +141,7 @@ For more details on the data collected during the survey, see Australian Governm
 
 Figure~\ref{fig:obs-weight} shows histograms of the observed wet weight of biomass from the samples. Samples that were below the limit of detection (1.5gm, of which there were \Sexpr{sum(biofoul[['wetWeight']] < 1.5)}) are not shown in this figure. The left column shows the measured wet weight, whilst the right column shows the log-transformed wet weight; the rows correspond to the sampled locations on each vessel (hull, keel and rudder).
 
-\begin{figure}
+\begin{figure}[!hbp]
   \centering
   \includegraphics[width=0.9\linewidth]{../graphics/obs-hist.pdf}
   \caption{Measured wet weight of sampled biomass from the \Sexpr{nrow(vessels)} vessels. The left column shows the measured wet weight, whilst the right column shows the log-transformed wet weight. Samples that measured less than the limit of detection (1.5gm) have been removed.}
@@ -220,7 +220,7 @@ All analyses were performed using R version 3.4.0 \cite{R_Core_Team2017-zb}; the
 
 Figure~\ref{fig:imp-cont} displays the observed and imputed vessel-level data for both the number of days since the vessel was last used, and the median number of trips by the vessel\footnote{Note that all numeric predictors were scaled to have mean 0, standard deviation 1, prior to modelling.}. Figure~\ref{fig:imp-cat} displays the observed and imputed vessel-level type of paint. Both Figures~\ref{fig:imp-cont} and \ref{fig:imp-cat} show that the distribution of imputed data is broadly consistent with the distribution of the observed data.
 
-\begin{figure}
+\begin{figure}[!hbp]
   \centering
   \subfloat[Number of days since the vessel was last used.\label{fig:imp-cont-a}]{\includegraphics[width=0.7\linewidth]{../graphics/imp-days1.pdf}} \\
   \subfloat[Median number of trips by the vessel.\label{fig:imp-cont-b}]{\includegraphics[width=0.7\linewidth]{../graphics/imp-trips.pdf}}
@@ -228,7 +228,7 @@ Figure~\ref{fig:imp-cont} displays the observed and imputed vessel-level data fo
   \label{fig:imp-cont}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!hbp]
   \centering
   \includegraphics[width=0.7\linewidth]{../graphics/imp-paint.pdf}
   \caption{Comparison of observed and imputed data for anti-fouling paint type. A random selection from the imputed datasets are shown. The top-left panel (labelled 0) shows the observed distribution.}
@@ -238,9 +238,21 @@ Figure~\ref{fig:imp-cont} displays the observed and imputed vessel-level data fo
 \subsection{Outcome model}
 \label{sec:outcome-model}
 
-The outcome model that used the $t$-distribution \eqref{eq:O2} clearly outperformed that which used the normal distribution \eqref{eq:O1}. The difference in the leave-one-out information criterion (LOOIC, analogous to AIC, see \cite{Vehtari2016-dp}) was XXX (sd YYY).
+<<looic-compare>>=
+compTab <- readRDS("../data/looic-compare.rds")
 
-We are also interested in whether the models produce predictions consistent with the observed data. An obvious choice of posterior predictive check is thus the proportion of posterior predictions that lie below the limit of detection. Figure XXX compares the distribution of the posterior predictive check between each of the outcome models. The observed proportion of samples below the limit of detection (X\%) is shown as a vertical line in each panel. Neither model does a stellar job in generating data consistent with the observed measurements (at least for this posterior predictive check), but \ref{eq:O2} clearly outperforms \ref{eq:O1}. For this reason, the following results pertain to models fit with the $t$ distribution as the outcome model \eqref{eq:O2}.
+@ 
+
+The outcome model that used the $t$-distribution \eqref{eq:O2} clearly outperformed that which used the normal distribution \eqref{eq:O1}. The difference in the leave-one-out information criterion (LOOIC, analogous to AIC, see \cite{Vehtari2016-dp}) was \Sexpr{round(compTab[1, "elpd_diff"])} (standard error \Sexpr{round(compTab[1, "se"])}). A full comparison of the outcome models between analysis models (\ref{eq:M0}--\ref{eq:M4}) is provided in the supplemental results.
+
+We are also interested in whether the models produce predictions consistent with the observed data. An obvious choice of posterior predictive check is thus the proportion of posterior predictions that lie below the limit of detection. Figure~\ref{fig:postM0} compares the distribution of the posterior predictive check between each of the outcome models. The observed proportion of samples below the limit of detection (X\%) is shown as a vertical line in each panel. Neither model does a stellar job in generating data consistent with the observed measurements (at least for this posterior predictive check), but \ref{eq:O2} clearly outperforms \ref{eq:O1}. For this reason, the following results pertain to models fit with the $t$ distribution as the outcome model \eqref{eq:O2}.
+
+\begin{figure}[!hbp]
+  \centering
+  \includegraphics[width=0.9\linewidth]{../graphics/ppc-compare.pdf}
+  \caption{Comparison of posterior predictive checks from analysis model \ref{eq:M0} between outcome models \ref{eq:O1} (top row) and \ref{eq:O2} (bottom row). From left to right the panels show posterior predicted histograms of: interquartile range; median; and the proportion of values below the limit of detection (1.5gm). The vertical lines in each panel show the observed values.}
+  \label{fig:postM0}
+\end{figure}
 
 \subsection{Regression results}
 \label{sec:regression-results}
@@ -250,7 +262,7 @@ We are also interested in whether the models produce predictions consistent with
 
 Figure~\ref{fig:m1-reg} displays the median and 80\% intervals of the estimated vessel-level intercepts, with respect to the four ordinal predictors: the number of days since the vessel was last used; the number of days since the vessel was last cleaned; the median number of trips undertaken by the vessel; and the vessel's hull surface area. Figure~\ref{fig:m1-reg-a} shows the vessel-level intercepts coloured by vessel type, whilst Figure~\ref{fig:m1-reg-b} shows the vessel-level intercepts coloured by anti-fouling paint type. Shown in each panel are the estimated (median) regression lines from \ref{eq:M1}. In each of the figures, we have used a randomly selected imputed dataset for display.
 
-\begin{figure}
+\begin{figure}[!hbp]
   \centering
   \subfloat[Vessel-level intercepts coloured by vessel type.\label{fig:m1-reg-a}]{\includegraphics[width=0.7\linewidth]{../graphics/plM1boat-robust.pdf}} \\
   \subfloat[Vessel-level intercepts coloured by anti-fouling paint type.\label{fig:m1-reg-b}]{\includegraphics[width=0.7\linewidth]{../graphics/plM1paint-robust.pdf}}
@@ -267,7 +279,7 @@ Figure~\ref{fig:m3-reg} displays the median and 80\% intervals of the estimated 
 
 Figure~\ref{fig:m3-reg-a} is suggestive of an interaction between the number of days since the vessel was last used and the vessel type, however an interaction between the median number of trips undertaken by the vessel and the vessel type or the anti-fouling paint (Figure~\ref{fig:m3-reg-b}) type do not appear likely. These observations led to the development of \ref{eq:M4} as the most likely model.
 
-\begin{figure}
+\begin{figure}[!hbp]
   \centering
   \subfloat[Vessel-level intercepts coloured by vessel type.\label{fig:m3-reg-a}]{\includegraphics[width=0.9\linewidth]{../graphics/plM3boat-robust.pdf}} \\
   \subfloat[Vessel-level intercepts coloured by anti-fouling paint type.\label{fig:m3-reg-b}]{\includegraphics[width=0.45\linewidth]{../graphics/plM3paint-robust.pdf}}
@@ -277,7 +289,7 @@ Figure~\ref{fig:m3-reg-a} is suggestive of an interaction between the number of 
 
 Figure~\ref{fig:m4-reg} shows the regression estimates from \ref{eq:M4}, in relation to the estimated vessel-level intercepts. The left panel of Figure~\ref{fig:m4-reg} shows the number of days since the vessel was last used and the vessel-type estimated interaction, and the right panel shows the estimated effect of the number of days since the vessel was last cleaned (adjusted by vessel-type).
 
-\begin{figure}
+\begin{figure}[!hbp]
   \centering
   \includegraphics[width=0.9\linewidth]{../graphics/plM4type-robust.pdf}
   \caption{Estimated vessel-level intercepts from \ref{eq:M4}, plotted against the two ordinal predictors. Regression lines for each estimated regression are overlaid.}
@@ -286,7 +298,7 @@ Figure~\ref{fig:m4-reg} shows the regression estimates from \ref{eq:M4}, in rela
 
 Finally, Figure~\ref{fig:coefs} compares estimates of the measurement-level and vessel-level regression coefficients for each of the models considered.
 
-\begin{figure}
+\begin{figure}[!hbp]
   \centering
   \includegraphics[width=0.45\linewidth]{../graphics/plSummary-robust.pdf}
   \caption{Estimated coefficients from \ref{eq:M0}--\ref{eq:M4}. Coefficients from each model (where applicable) are shown grouped within coefficient on the y-axis. The median is shown as a point estimate, with 50\% and 90\% intervals.}

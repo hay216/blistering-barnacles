@@ -4,12 +4,13 @@
 ## Author: Steve Lane
 ## Date: Thursday, 11 May 2017
 ## Synopsis: Performs comparison between outcome models.
-## Time-stamp: <2017-05-11 15:01:31 (slane)>
+## Time-stamp: <2017-05-11 17:32:56 (slane)>
 ################################################################################
 ################################################################################
 ## Add github packages using gitname/reponame format
 source("../scripts/imputation-functions.R")
-packages <- c("tidyr", "dplyr", "tibble", "rstan", "loo")
+packages <- c("tidyr", "dplyr", "tibble", "rstan", "loo", "ggplot2",
+              "RColorBrewer")
 ipak(packages)
 ## This is set for readable text when included at half page width.
 theme_set(theme_bw())
@@ -23,6 +24,7 @@ m1N <- readRDS("../data/censored-mle-m1.rds")
 m2N <- readRDS("../data/censored-mle-m2.rds")
 m3N <- readRDS("../data/censored-mle-m3.rds")
 m4N <- readRDS("../data/censored-mle-m4.rds")
+biofoul <- readRDS("../data/biofoul.rds")
 ################################################################################
 ################################################################################
 
@@ -89,5 +91,47 @@ compTab <- cbind(compTab, diffs)
 compTab$elpd_diff <- 2*compTab$elpd_diff
 compTab$se <- sqrt(2)*compTab$se
 saveRDS(compTab, "../data/looic-compare.rds")
+################################################################################
+################################################################################
+
+################################################################################
+################################################################################
+## Begin Section: PPCs for M0: prop < cens; median; iqr
+################################################################################
+################################################################################
+yPPC <- extract(m0, "y_ppc")$y_ppc
+ppc <- apply(yPPC, 1, function(x){
+    pr <- mean(x < log(1.5))
+    med <- median(exp(x))
+    iqr <- IQR(exp(x))
+    tibble(`Prop(hat(Y)<1.5)` = pr, `Median(hat(Y))` = med,
+           `IQR(hat(Y))` = iqr)
+}) %>% bind_rows() %>%
+    mutate(model = "O2")
+yPPCN <- extract(m0N, "y_ppc")$y_ppc
+ppcN <- apply(yPPCN, 1, function(x){
+    pr <- mean(x < 1.5)
+    med <- median(x)
+    iqr <- IQR(x)
+    tibble(`Prop(hat(Y)<1.5)` = pr, `Median(hat(Y))` = med,
+           `IQR(hat(Y))` = iqr)
+}) %>% bind_rows() %>%
+    mutate(model = "O1")
+allPPC <- bind_rows(ppc, ppcN) %>%
+    gather(ppc, value, -model)
+## Observed data
+obs <- tibble(ppc = c("Prop(hat(Y)<1.5)", "Median(hat(Y))", "IQR(hat(Y))"),
+              value = with(biofoul,
+                           c(mean(wetWeight < 1.5), median(wetWeight),
+                             IQR(wetWeight))))
+plPPC <- ggplot(allPPC, aes(x = value)) +
+    geom_histogram() +
+    facet_grid(model ~ ppc, scales = "free", labeller = label_parsed) +
+    geom_vline(aes(xintercept = value), data = obs) +
+    xlab("") +
+    ylab("Count") +
+    theme(panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank())
+ggsave("../graphics/ppc-compare.pdf", plPPC)
 ################################################################################
 ################################################################################
