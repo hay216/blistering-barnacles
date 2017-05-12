@@ -1,4 +1,4 @@
-% Time-stamp: <2017-05-12 13:45:51 (slane)>
+% Time-stamp: <2017-05-12 16:55:11 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -339,11 +339,27 @@ diffs <- readRDS("../data/diffs.rds")
 
 The (log-transformed) wet weight of biomass found on small vessels was found to be well-described by a $t$-distribution. Posterior predictive checks showed that the analysis regression models generated data consistent with the observed data for the interquartile range, but less so for the median and proportion of observations below the limit of detection. A possible approach to allow for the larger number of censored observations than expected would be to fit a mixture model. It is not directly clear how this would work however, when vessels may contain some samples measured below and some above the limit of detection. Further, given the limited data available, it was considered that an attempt to fit such a mixture model was unfeasible.
 
-The results demonstrate relationships that are largely consistent with prior expectations. The number of days since the vessel was last cleaned is likely the most significant factor in the amount of wet weight of biomass present on the vessel. 
+The results demonstrate relationships that are largely consistent with prior expectations. The number of days since the vessel was last cleaned is a significant factor in the amount of biomass that may be present; for example, consider a yacht that hasn't been used in \Sexpr{round(mean(vessels[['days1']], na.rm = TRUE))} days (the mean number of days since the vessel was last used). The model predicts that for such a vessel, there is an 80\% probability that delaying cleaning by three months would result in an increase of wet weight biomass by \Sexpr{diffs[['diffDays2']][1]}gm, within a 0.5m\up{2} area on the hull of the vessel.
+
+The type of vessel is likewise relevant; compare a yacht to a motor cruiser/other vessel and a fishing vessel, all not having been used in \Sexpr{round(mean(vessels[['days1']], na.rm = TRUE))} days, nor cleaned in \Sexpr{round(mean(vessels[['days2']], na.rm = TRUE))} days (the mean number of days since the vessel was last cleaned). The model predicts that there is an 80\% predicted probability that the yacht has \Sexpr{diffs[['diffType']][1]}gm more wet weight biomass within a 0.5m\up{2} area on the hull than the motor cruiser/other vessel, and \Sexpr{diffs[['diffType']][2]}gm more than the fishing vessel.
+
+There is also clear evidence that the location of the measurement is an important predictor for the wet weight of biomass. Figure~\ref{fig:coefs} shows a consistent result that the wet weight of biomass when sampled from the rudder ($\beta^{l2}$), is no different to samples made along the hull. Measurements made on samples from the keel however, are smaller than those made along the hull. This is not a characteristic of vessels, and thus cannot be used for management purposes; the location of the measurement does however need to be considered in any future work, and in particular may restrict vessel-level summaries of wet weight of biomass being analysed (for example, total wet weight of biomass).
 
 \section{Concluding remarks}
 \label{sec:concluding-remarks}
 
+This study is not without its limitations. The small number of vessels sampled limits the precision at which we can estimate the effect of vessel-level characteristics, and in particular, any interactions between them. We demonstrated a possible interaction between the number of days the vessel was last used and the type of vessel, yet the error in this estimate is sufficient enough that the effect may be either or positive or negative.
+
+Sample size reservations notwithstanding, we have demonstrated that vessel-level characteristics can be used to predict the amount of wet weight of biomass that may be present on small vessels in Australia. The results suggest that in particular, owners of small vessels should be encouraged to regular clean and maintain their vessels, particularly wet areas of the vessel. Further, owners of yachts should be particularly encouraged to maintain a regular cleaning schedule.
+
+Finally, it is encouraging to note that during the preparation of manuscript, the Department of Agriculture and Water Resources were conducting a survey on recreational boating ``into how marine pests move around in Australian waters on boat hulls.'' We look forward to the release of the results of this survey and how they may inform future research\footnote{This last par is not necessary, but may be nice/useful?}.
+
+\section*{Acknowledgements}
+\label{sec:acknowledgements}
+
+The authors would like to acknowledge Dr Enamul Kabir for his contribution to earlier analyses that were not a part of this manuscript.
+
+\clearpage
 
 \printbibliography
 
