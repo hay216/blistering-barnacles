@@ -4,7 +4,7 @@
 ## Author: Steve Lane
 ## Date: Thursday, 04 May 2017
 ## Synopsis: Post process the output from the regression models
-## Time-stamp: <2017-05-11 09:51:12 (slane)>
+## Time-stamp: <2017-05-12 12:21:25 (slane)>
 ################################################################################
 ################################################################################
 ## Add github packages using gitname/reponame format
@@ -273,26 +273,27 @@ ggsave("../graphics/plM4type-robust.pdf", plM4type, height = 3.5)
 ## Start off with m0
 qnts <- c("low5" = 0.05, "low25" = 0.25, "med" = 0.5, "high75" = 0.75,
           "high95" = 0.95)
-coef0 <- extract(m0, pars = c("mu", "betaLoc", "sigma_alphaBoat", "sigma"))
+coef0 <- extract(m0, pars = c("nu", "mu", "betaLoc", "sigma_alphaBoat",
+                              "sigma"))
 m0Summary <- lapply(coef0, sumMC, qnts = qnts) %>% summRename %>%
     mutate(model = "M0")
-coef1 <- extract(m1, pars = c("mu", "betaLoc", "betaDays1", "betaDays2",
+coef1 <- extract(m1, pars = c("nu", "mu", "betaLoc", "betaDays1", "betaDays2",
                               "betaMidTrips", "betaHullSA", "betaPaint",
                               "betaType", "sigma_alphaBoat", "sigma"))
 m1Summary <- lapply(coef1, sumMC, qnts = qnts) %>% summRename %>%
     mutate(model = "M1")
-coef2 <- extract(m2, pars = c("mu", "betaLoc", "betaDays1", "betaDays2",
+coef2 <- extract(m2, pars = c("nu", "mu", "betaLoc", "betaDays1", "betaDays2",
                               "betaMidTrips", "betaPaint",
                               "betaType", "sigma_alphaBoat", "sigma"))
 m2Summary <- lapply(coef2, sumMC, qnts = qnts) %>% summRename %>%
     mutate(model = "M2")
-coef3 <- extract(m3, pars = c("mu", "betaLoc", "betaDays1", "betaDays2",
+coef3 <- extract(m3, pars = c("nu", "mu", "betaLoc", "betaDays1", "betaDays2",
                               "betaMidTrips", "betaPaint",
                               "betaType", "betaDaysType", "betaTripsType",
                               "betaTripsPaint", "sigma_alphaBoat", "sigma"))
 m3Summary <- lapply(coef3, sumMC, qnts = qnts) %>% summRename %>%
     mutate(model = "M3")
-coef4 <- extract(m4, pars = c("mu", "betaLoc", "betaDays1", "betaDays2",
+coef4 <- extract(m4, pars = c("nu", "mu", "betaLoc", "betaDays1", "betaDays2",
                               "betaType", "betaDaysType", "sigma_alphaBoat",
                               "sigma"))
 m4Summary <- lapply(coef4, sumMC, qnts = qnts) %>% summRename %>%
@@ -303,7 +304,8 @@ inds <- which(ords == "betaMidTrips")
 ords <- c(ords[1:inds], "betaHullSA", ords[(inds+1):length(ords)])
 allSummary <- allSummary %>%
     mutate(coef = factor(coef, levels = rev(ords)))
-labs <- c("mu" = expression(mu),
+labs <- c("nu" = expression(nu),
+          "mu" = expression(mu),
           "betaLoc1" = expression(beta^{l1}),
           "betaLoc2" = expression(beta^{l2}),
           "betaDays1" = expression(beta^{d1}),
@@ -370,5 +372,42 @@ looTab[,8] <- sqrt(2)*looTab[,8]
 colnames(looTab) <- c("LOOIC", "se(LOOIC)", "ELPD", "se(ELPD)", "Eff. P",
                       "se(Eff. P)", "$\\Delta$LOOIC", "se($\\Delta$LOOIC)")
 saveRDS(looTab, "../data/looic-robust.rds")
+################################################################################
+################################################################################
+
+################################################################################
+################################################################################
+## Begin Section: Posterior predictive comparisons
+################################################################################
+################################################################################
+## Yacht, with mean days1, mean days2 -> 3 or 6 months longer?, measured at the
+## hull.
+## Data is scaled, so figure out the scaling.
+days2 <- c((365/4) / sd(vessels$days2), (365/2) / sd(vessels$days2))
+aHat <- t(days2 %*% t(coef4$betaDays2)) +
+    cbind(coef4$betaType[, 2], coef4$betaType[, 2])
+alphaHat <- t(sapply(seq_len(nrow(aHat)), function(i){
+    a1 <- rcauchy(1, aHat[i, 1], coef4$sigma_alphaBoat[i])
+    a2 <- rcauchy(1, aHat[i, 2], coef4$sigma_alphaBoat[i])
+    c(a1, a2)
+}))
+muHat <- alphaHat + cbind(coef4$mu, coef4$mu)
+tStd <- t(sapply(seq_len(nrow(aHat)), function(i){
+    coef4$sigma[i] * rt(2, coef4$nu[i])
+}))
+lY <- muHat + tStd
+diffDays2 <- apply(exp(lY), 2, quantile, probs = c(0.1, 0.2, 0.5, 0.9))
+## Difference between yachts and motor cruisers.
+alphaHat <- sapply(seq_len(nrow(aHat)), function(i){
+    rcauchy(1, coef4$betaType[i, 2], coef4$sigma_alphaBoat[i])
+})
+muHat <- alphaHat + coef4$mu
+tStd <- sapply(seq_len(nrow(aHat)), function(i){
+    coef4$sigma[i] * rt(1, coef4$nu[i])
+})
+lY <- muHat + tStd
+diffType <- quantile(exp(lY), probs = c(0.1, 0.2, 0.5, 0.9))
+saveRDS(list(diffDays2 = diffDays2, diffType = diffType),
+        "../data/diffs.rds")
 ################################################################################
 ################################################################################
