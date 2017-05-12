@@ -1,4 +1,4 @@
-# Time-stamp: <2017-05-11 09:31:04 (slane)>
+# Time-stamp: <2017-05-12 16:46:27 (slane)>
 .PHONY: all models robust-models input-data output-data robust-output-data \
 	ROBUST-PROC-DATA PROC-DATA robust-processed-data processed-data \
 	paper supplement \
@@ -47,7 +47,8 @@ ROBUST-PROC-DATA = graphics/obs-hist.pdf \
 	graphics/plM3paint-robust.pdf \
 	graphics/plM4Type-robust.pdf \
 	graphics/plSummary-robust.pdf \
-	data/looic-robust.rds
+	data/looic-robust.rds \
+	data/diffs.rds
 
 PROC-DATA = graphics/plM1boat.pdf \
 	graphics/plM1paint.pdf \
@@ -184,7 +185,7 @@ data/censored-mle-m4-robust.rds: scripts/fit-model.R \
 
 ################################################################################
 # Rules to process data (add dependencies later).
-$(ROBUST-PROC-DATA): scripts/post-process-robust.R robust-output-data
+$(ROBUST-PROC-DATA): scripts/post-process-robust.R robust-output-data input-data
 	cd $(<D); \
 	Rscript --no-save --no-restore $(<F)
 
