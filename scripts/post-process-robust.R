@@ -4,7 +4,7 @@
 ## Author: Steve Lane
 ## Date: Thursday, 04 May 2017
 ## Synopsis: Post process the output from the regression models
-## Time-stamp: <2017-05-12 12:21:25 (slane)>
+## Time-stamp: <2017-05-12 14:56:59 (slane)>
 ################################################################################
 ################################################################################
 ## Add github packages using gitname/reponame format
@@ -383,6 +383,7 @@ saveRDS(looTab, "../data/looic-robust.rds")
 ## Yacht, with mean days1, mean days2 -> 3 or 6 months longer?, measured at the
 ## hull.
 ## Data is scaled, so figure out the scaling.
+set.seed(37)
 days2 <- c((365/4) / sd(vessels$days2), (365/2) / sd(vessels$days2))
 aHat <- t(days2 %*% t(coef4$betaDays2)) +
     cbind(coef4$betaType[, 2], coef4$betaType[, 2])
@@ -396,17 +397,20 @@ tStd <- t(sapply(seq_len(nrow(aHat)), function(i){
     coef4$sigma[i] * rt(2, coef4$nu[i])
 }))
 lY <- muHat + tStd
-diffDays2 <- apply(exp(lY), 2, quantile, probs = c(0.1, 0.2, 0.5, 0.9))
-## Difference between yachts and motor cruisers.
-alphaHat <- sapply(seq_len(nrow(aHat)), function(i){
-    rcauchy(1, coef4$betaType[i, 2], coef4$sigma_alphaBoat[i])
-})
-muHat <- alphaHat + coef4$mu
-tStd <- sapply(seq_len(nrow(aHat)), function(i){
-    coef4$sigma[i] * rt(1, coef4$nu[i])
-})
+diffDays2 <- apply(exp(lY), 2, quantile, probs = 0.2, names = FALSE)
+## Difference between yachts and motor cruisers/fishing.
+alphaHat <- t(sapply(seq_len(nrow(aHat)), function(i){
+    a1 <- rcauchy(1, coef4$betaType[i, 2], coef4$sigma_alphaBoat[i])
+    a2 <- rcauchy(1, coef4$betaType[i, 2] - coef4$betaType[i, 1],
+                  coef4$sigma_alphaBoat[i])
+    c(a1, a2)
+}))
+muHat <- alphaHat + cbind(coef4$mu, coef4$mu)
+tStd <- t(sapply(seq_len(nrow(aHat)), function(i){
+    coef4$sigma[i] * rt(2, coef4$nu[i])
+}))
 lY <- muHat + tStd
-diffType <- quantile(exp(lY), probs = c(0.1, 0.2, 0.5, 0.9))
+diffType <- apply(exp(lY), 2, quantile, probs = 0.2, names = FALSE)
 saveRDS(list(diffDays2 = diffDays2, diffType = diffType),
         "../data/diffs.rds")
 ################################################################################
