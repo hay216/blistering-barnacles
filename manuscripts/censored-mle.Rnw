@@ -1,5 +1,4 @@
-\documentclass[a4paper,12pt]{article}
-% Time-stamp: <2017-08-23 16:51:18 (slane)>
+% Time-stamp: <2017-08-23 16:51:45 (slane)>
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
