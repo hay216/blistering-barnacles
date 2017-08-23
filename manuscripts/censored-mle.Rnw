@@ -1,5 +1,6 @@
-% Time-stamp: <2017-08-23 16:41:57 (slane)>
 \documentclass[a4paper,12pt]{article}
+% Time-stamp: <2017-08-23 16:51:18 (slane)>
+\documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{palatino}
@@ -192,7 +193,7 @@ We investigated a further four regression specifications for the vessel-level in
              & \quad \beta^{mp1} \cdot \text{midTripsPaintType1}_{j} - \beta^{mp2} \cdot \text{midTripsPaintType2}_{j} \label{eq:M4}\tag{M4}
 \end{align}
 
-\ref{eq:M1} includes all vessel-level characteristics, where $\text{days1}_{j}$ is the number of days since vessel $j$ was last used; $\text{days2}_{j}$ is the number of days since the vessel was last cleaned; $\text{midTrips}_{j}$ is the median number of trips undertaken by the vessel per year; $\text{hullSA}_{j}$ is the hull surface area; $\text{paintType1}_{j},\text{paintType2}_{j}$ are indicator variables for whether the vessel had hard or self-polishing anti-fouling paint; and $\text{vesselType1}_{j},\text{vesselType2}_{j}$ are indicator variables for whether the vessel was a fishing vessel or a yacht. \ref{eq:M2} consists of all terms in \ref{eq:M1}, less the hull surface area. \ref{eq:M3} adds interaction terms to \ref{eq:M2} between: the number of days the vessel was last cleaned and the vessel type; the median number of trips and the vessel type; and the median number of trips and the paint type. \ref{eq:M4} removes the interaction terms involving the median number of trips from \ref{eq:M3}.
+\ref{eq:M1} includes all vessel-level characteristics, where $\text{days1}_{j}$ is the number of days since vessel $j$ was last used; $\text{days2}_{j}$ is the number of days since the vessel was last cleaned; $\text{midTrips}_{j}$ is the median number of trips undertaken by the vessel per year; $\text{hullSA}_{j}$ is the hull surface area; $\text{paintType1}_{j},\text{paintType2}_{j}$ are indicator variables for whether the vessel had hard or self-polishing anti-fouling paint; and $\text{vesselType1}_{j},\text{vesselType2}_{j}$ are indicator variables for whether the vessel was a fishing vessel or a yacht. \ref{eq:M2} consists of all terms in \ref{eq:M1}, less the hull surface area. \ref{eq:M3} adds interaction terms to \ref{eq:M2} between: the number of days since the vessel was last used and the vessel type; the median number of trips and the vessel type; and the median number of trips and the paint type. \ref{eq:M4} removes the interaction terms involving the median number of trips from \ref{eq:M3}.
 
 The predictors for the regression models were chosen using graphical exploration of the models; see Section (results) and the accompanying online appendix\footnote{Or github repo as it may be.} for more details.
 
@@ -279,7 +280,7 @@ Figure~\ref{fig:m1-reg} displays the median and 80\% intervals of the estimated 
   \label{fig:m1-reg}
 \end{figure}
 
-Figures~\ref{fig:m1-reg-a} and \ref{fig:m1-reg-b} are suggestive of interactions between the number of days since the vessel was last cleaned and the vessel type, the median number of trips undertaken by the vessel and the vessel type, and the median number of trips taken by the vessel and the anti-fouling paint type. There does not appear to be any relationship between the vessel's hull surface area and the vessel-level intercepts. These observations led to the development of \ref{eq:M2} (removing the hull surface area predictor) and \ref{eq:M3} (including the possible interaction terms).
+Figures~\ref{fig:m1-reg-a} and \ref{fig:m1-reg-b} are suggestive of interactions between the number of days since the vessel was last used and the vessel type, the median number of trips undertaken by the vessel and the vessel type, and the median number of trips taken by the vessel and the anti-fouling paint type. There does not appear to be any relationship between the vessel's hull surface area and the vessel-level intercepts. These observations led to the development of \ref{eq:M2} (removing the hull surface area predictor) and \ref{eq:M3} (including the possible interaction terms).
 
 \subsubsection{Reduction to final model form}
 \label{sec:reduct-final-model}
