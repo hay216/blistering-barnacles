@@ -1,4 +1,4 @@
-% Time-stamp: <2017-08-24 18:57:18 (slane)>
+% Time-stamp: <2017-08-24 20:03:09 (slane)>
 \documentclass[a4paper,12pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -99,11 +99,11 @@ options(digits = 1)
 \section{Introduction}
 \label{sec:introduction}
 
-Invasive marine non indigenous species (NIS) are a major threat to biodiversity leading to dramatic shifts in population, community and ecosystem dynamics, and many have serious environmental and economic implications \citep{Carlton1993-cc,Ruiz1997-ji,Vitousek1996-zr}. Vessels are the single most important vector for the introduction and spread of marine NIS globally \citep{Molnar2008-dm}, effectively removing natural barriers to dispersal, including ocean currents and distance \citep{Paini2012-md,Ruiz1997-ji}. For example, the annual cost (losses and control costs) to the United States resulting from the introduction of the Zebra mussel (species name), Asian clam (species name) and Shipworm (species name)\footnote{Species names to be added.} is estimated at over USD\$3bn\citep{Pimentel2011-pe}.
+Invasive marine non indigenous species (NIS) are a major threat to biodiversity leading to dramatic shifts in population, community and ecosystem dynamics, and many have serious environmental and economic implications \citep{Carlton1993-cc,Ruiz1997-ji,Vitousek1996-zr}. Vessels are the single most important vector for the introduction and spread of marine NIS globally \citep{Molnar2008-dm}, effectively removing natural barriers to dispersal, including ocean currents and distance \citep{Paini2012-md,Ruiz1997-ji}. For example, the annual cost (losses and control costs) to the United States resulting from the introduction of the Zebra mussel (\textit{Dreissena polymorpha}), Asian clam (\textit{Corbicula fluminea}) and Shipworm (\textit{Teredo navalis}) is estimated at over USD\$3bn \citep{Pimentel2011-pe}.
 
 Knowledge of invasion processes and pathways for NIS in marine environments is still relatively poorly understood, and both research studies and government policies have tended to focus exclusively on initial points of invasion which are predominantly biofouling and ballast water from international commercial shipping \citep{Acosta2010-gd,Campbell2011-zq}. However, there is growing recognition of the role of recreational vessels as vectors of NIS \citep{Ashton2014-me,Clarke_Murray2011-wf,Minchin2006-ig}, and recent studies have revealed the significant risk of secondary introductions in stepping stone invasions \citep[e.g.][]{Burgin2011-rj,Clarke_Murray2011-wf,Hewitt2007-eo,Lacoursiere-Roussel2012-cw,Minchin2006-ig}, whereby the movement of vessels within domestic borders has the potential to translocate invasive species from one port or region to another \citep{Campbell2011-zq}. The secondary spread of NIS will ultimately determine the magnitude of economic and environmental damage caused by invasive species \citep{Zabin2014-ea}. Unlike large international and commercial shipping vessels, recreational yachts, boats and domestic fishing vessels are often unregulated by biosecurity agencies, and such vessels represent a significant gap in managing NIS in marine environments \citep{Zabin2014-ea}.
 
-Recreational small vessels have been implicated in several high profile and significantly damaging incursions of NIS including the introduction of the black striped mussel (Mytilopsis sallei) into a recreational marina in Darwin, Australia in 1999. Strong evidence suggests it was introduced by hull fouling on an international yacht, and detections of the mussel outside of the marina were traced to movement of smaller vessels. This species has similar ecological and morphological characteristics to the Zebra mussel and when it was discovered densities were as high as 24,000 per square metre \citep{Thresher1999-et}. This incursion was successfully eradicated, but even despite concerted attempts the majority of marine invasions have proved impossible. Difficulty controlling marine invasions has led to a focus on reducing the human-mediated spread of NIS from major ports via high risk transport vectors \citep{Drake2004-aj,Floerl2005-nu,Forrest2013-cl} and recreational craft may constitute the largest unregulated vector.
+Recreational small vessels have been implicated in several high profile and significantly damaging incursions of NIS including the introduction of the black striped mussel (\textit{Mytilopsis sallei}) into a recreational marina in Darwin, Australia in 1999. Strong evidence suggests it was introduced by hull fouling on an international yacht, and detections of the mussel outside of the marina were traced to movement of smaller vessels. This species has similar ecological and morphological characteristics to the Zebra mussel and when it was discovered densities were as high as 24,000 per square metre \citep{Thresher1999-et}. This incursion was successfully eradicated, but even despite concerted attempts the majority of marine invasions have proved impossible. Difficulty controlling marine invasions has led to a focus on reducing the human-mediated spread of NIS from major ports via high risk transport vectors \citep{Drake2004-aj,Floerl2005-nu,Forrest2013-cl} and recreational craft may constitute the largest unregulated vector.
 
 Biofouling is the most common pathway for introduction of marine NIS for both commercial and recreational vessels \citep{Acosta2010-gd,Hewitt2004-oz,Minchin2006-ig,Thresher1999-et}, and studies of international and domestic recreational boats has demonstrated a range of fouling rates, with most over 50\% and some as high as 80\% \citep{Ashton2014-me,Floerl2005-nu,Lacoursiere-Roussel2012-pk,Minchin2006-ig,Zabin2014-ea}. High variability in the extent of fouling of individual recreational vessels is also reported, irrespective of sample sizes and methodology \citep{Ashton2014-me,Brine2013-dz,Clarke_Murray2011-wf,Floerl2005-nu}. Fouling of ``niche'' areas may be the most important pathway as these areas can have considerably higher levels of fouling than the hull \citep{Lacoursiere-Roussel2012-pk} and include internal water systems and intake pipes, rudder, propeller, anchors/chain cabinets, sea chests, fishing rods and ropes \citep{Acosta2010-gd,Burgin2011-rj,Hewitt2007-eo,Minchin2006-ig}.
 
@@ -242,7 +242,7 @@ We investigated a further four regression specifications for the vessel-level in
 
 \ref{eq:M1} includes all vessel-level characteristics, where $\text{days1}_{j}$ is the number of days since vessel $j$ was last used; $\text{days2}_{j}$ is the number of days since the vessel was last cleaned; $\text{midTrips}_{j}$ is the median number of trips undertaken by the vessel per year; $\text{hullSA}_{j}$ is the hull surface area; $\text{paintType1}_{j},\text{paintType2}_{j}$ are indicator variables for whether the vessel had hard or self-polishing anti-fouling paint; and $\text{vesselType1}_{j},\text{vesselType2}_{j}$ are indicator variables for whether the vessel was a fishing vessel or a yacht. \ref{eq:M2} consists of all terms in \ref{eq:M1}, less the hull surface area. \ref{eq:M3} adds interaction terms to \ref{eq:M2} between: the number of days since the vessel was last used and the vessel type; the median number of trips and the vessel type; and the median number of trips and the paint type. \ref{eq:M4} removes the interaction terms involving the median number of trips from \ref{eq:M3}.
 
-The predictors for the regression models were chosen using graphical exploration of the models; see Section (results) and the accompanying online appendix\footnote{Or github repo as it may be.} for more details.
+The predictors for the regression models were chosen using graphical exploration of the models; see Section~\ref{sec:results} and the accompanying supplementary material for more details.
 
 \subsection{Missing data}
 \label{sec:missing-data}
@@ -251,13 +251,28 @@ The predictors for the regression models were chosen using graphical exploration
 missVessels <- vessels %>% select(days1, midTrips, paintType)
 miss <- md.pattern(missVessels)
 ccData <- biofoul %>% na.omit()
-print(miss)
+miss <- miss[-nrow(miss),]
+pattern <- data_frame(
+    pat = paste0("(", miss[,1], ", ", miss[,2], ", ", miss[,3], ")"),
+    n = rownames(miss)
+)
 
 @
 
-Turn the output into a proper table.
+There is missing data at the vessel-level; Table~\ref{tab:miss} displays the observed data pattern, shown as (Days since last used, Paint type, Days since last trip), where a 1 denotes the variable is observed, and a 0 denotes the variable is missing. We can see that there are \Sexpr{rownames(miss)[1]} observations with complete vessel-level data. There are \Sexpr{paste0(rownames(miss)[2:4], collapse = ",")} vessels missing data on the number of days since the vessel was last used (days1); the median number of trips by the vessel (midTrips); and the paint type (paintType) respectively. There are \Sexpr{paste0(rownames(miss)[5:6], collapse = ",")} vessels missing data on both the number of days since the vessel was last used and the median number of trips by the vessel (days1 and midTrips), and all of the number of days since the vessel was last used, the median number of trips by the vessel, and the type of paint (days1, paintType and midTrips) respectively.
 
-There is missing data at the vessel-level. We can see that there are \Sexpr{rownames(miss)[1]} observations with complete vessel-level data. There are \Sexpr{paste0(rownames(miss)[2:4], collapse = ",")} vessels missing data on the number of days since the vessel was last used (days1); the median number of trips by the vessel (midTrips); and the paint type (paintType) respectively. There are \Sexpr{paste0(rownames(miss)[5:6], collapse = ",")} vessels missing data on both the number of days since the vessel was last used and the median number of trips by the vessel (days1 and midTrips), and all of the number of days since the vessel was last used, the median number of trips by the vessel, and the type of paint (days1, paintType and midTrips) respectively.
+<<missingness-table,results="asis">>=
+latex(pattern, file = "",
+      booktabs = TRUE, rowlabel = NULL, rowname = NULL,
+      colheads = c("Observed data pattern", "Count"),
+      collabel.just = c("r", "r"),
+      col.just = c("r", "r"),
+      where = "!hbp",
+      label = "tab:miss",
+      caption =
+          "Observed data pattern for vessel-level characteristics. The patterns are shown as (Days since last used, Paint type, Days since last trip), where a 1 denotes the variable is observed, and a 0 denotes the variable is missing. A count of each type of pattern is shown.")
+
+@ 
 
 A complete-case data analysis would only utilise \Sexpr{as.integer(rownames(miss)[1])/nrow(vessels)*100}\% of the vessel-level data, and subsequently, this would result in \Sexpr{nrow(ccData)} (\Sexpr{nrow(ccData)/nrow(biofoul)*100}\%) measurements of wet weight biomass being available for the complete-case analysis at the measurement (first) level.
 
@@ -267,7 +282,7 @@ As all missing data was at the vessel-level, we used the median wet weight of bi
 
 To perform inference, we use the advice of \citet{Zhou2010-pc} and mix the draws from the posterior distributions from the analysis of each completed dataset. \citet{Zhou2010-pc} recommend a large number of imputations be used; we generated 50 imputed datasets. For each dataset, 1000 samples were drawn from the posterior after a burn-in of 1000. Convergence was monitored by inspecting the mixed chains across the 50 multiple imputations, and by assessing the Gelman-Rubin statistic \citep{Gelman1992-zo}.
 
-All analyses were performed using R version 3.4.0 \citep{R_Core_Team2017-zb}; the multilevel models were fit using the RStan interface to stan \citep{Stan_Development_Team2016-xb}, and multiple imputation was performed use the R package mice \citep{Van_Buuren2011-ne}.
+All analyses were performed using R version 3.4.0 \citep{R_Core_Team2017-zb}; the multilevel models were fit using the RStan interface to stan \citep{Stan_Development_Team2016-xb}, and multiple imputation was performed use the R package mice \citep{Van_Buuren2011-ne}. R code and data to reproduce the analysis may be found at \href{https://github.com/SteveLane/blistering-barnacles}{https://github.com/SteveLane/blistering-barnacles}.
 
 \section{Results}
 \label{sec:results}
